@@ -1,0 +1,57 @@
+{
+  "id": "shinobiNoSho",
+  "title": "Naruto 'Shinobi no Sho' (SnS)",
+  "description": "Este é um sistema de Naruto 'Shinobi no Sho', um sistema e livro de regras com autoria de Diego 'Fesant' Silva, para a plataforma de RPG de Mesa conhecida como FoundryVTT. O desenvolvimento do sistema foi apoiado por Vallen.",
+  "authors": [
+    {
+      "name": "Mark57449",
+      "email": "souowendel@gmail.com",
+      "discord": "souowendel"
+    },
+		{
+			"name": "Vallen",
+			"discord": "vallen_allond"
+		}
+  ],
+  "url": "https://github.com/SouOWendel/shinobi-no-sho",
+  "readme": "README.md",
+  "bugs": "https://github.com/SouOWendel/shinobi-no-sho/issues",
+  "changelog": "CHANGELOG.md",
+  "media": [
+    {
+      "type": "setup",
+      "url": "systems/boilerplate/assets/anvil-impact.png",
+      "thumbnail": "systems/boilerplate/assets/anvil-impact.png"
+    }
+  ],
+  "version": "0.1.0",
+  "compatibility": {
+    "minimum": 11,
+    "verified": "12.327",
+		"maximum:": 12
+  },
+  "esmodules": ["module/boilerplate.mjs"],
+  "styles": ["css/boilerplate.css"],
+  "languages": [
+		{
+      "lang": "pt-BR",
+      "name": "Português (Brasil)",
+      "path": "lang/pt-BR.json"
+    },
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    }
+  ],
+  "packs": [],
+  "packFolders": [],
+  "socket": true,
+  "manifest": "",
+  "download": "",
+  "background": "systems/boilerplate/assets/anvil-impact.png",
+  "gridDistance": 5,
+  "gridUnits": "m",
+  "primaryTokenAttribute": "health",
+  "secondaryTokenAttribute": "power"
+}
