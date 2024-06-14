@@ -20,8 +20,8 @@
   "media": [
     {
       "type": "setup",
-      "url": "systems/boilerplate/assets/anvil-impact.png",
-      "thumbnail": "systems/boilerplate/assets/anvil-impact.png"
+      "url": "systems/shinobiNoSho/assets/anvil-impact.png",
+      "thumbnail": "systems/shinobiNoSho/assets/anvil-impact.png"
     }
   ],
   "version": "0.1.0",
@@ -30,8 +30,8 @@
     "verified": "12.327",
 		"maximum:": 12
   },
-  "esmodules": ["module/boilerplate.mjs"],
-  "styles": ["css/boilerplate.css"],
+  "esmodules": ["module/shinobiNoSho.mjs"],
+  "styles": ["css/shinobiNoSho.css"],
   "languages": [
 		{
       "lang": "pt-BR",
@@ -49,7 +49,7 @@
   "socket": true,
   "manifest": "",
   "download": "",
-  "background": "systems/boilerplate/assets/anvil-impact.png",
+  "background": "systems/shinobiNoSho/assets/anvil-impact.png",
   "gridDistance": 5,
   "gridUnits": "m",
   "primaryTokenAttribute": "health",
