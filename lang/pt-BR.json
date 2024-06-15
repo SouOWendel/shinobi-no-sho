@@ -1,0 +1,124 @@
+{
+  "shinobiNoSho": {
+    "Ability": {
+      "Str": { "long": "Strength", "abbr": "str" },
+      "Con": { "long": "Constitution", "abbr": "con" },
+      "Dex": { "long": "Dexterity", "abbr": "dex" },
+      "Int": { "long": "Intelligence", "abbr": "int" },
+      "Wis": { "long": "Wisdom", "abbr": "wis" },
+      "Cha": { "long": "Charisma", "abbr": "cha" }
+    },
+    "SheetLabels": {
+      "Actor": "Shinobi Actor Sheet",
+      "Item": "Shinobi Item Sheet"
+    },
+    "Item": {
+      "Spell": {
+        "SpellLVL": "Level {level} Spells",
+        "AddLVL": "Add LVL {level}"
+      }
+    },
+    "Effect": {
+      "Source": "Fonte",
+      "Toggle": "Alternar efeito",
+      "Temporary": "Efeitos temporários",
+      "Passive": "Efeitos passivos",
+      "Inactive": "Efeitos inativos"
+    },
+		"NinjaSheet": {
+			"Vida": "Pontos de Vida"
+		}
+  },
+	"EFFECT": {
+		"TabDuration": "Duração"
+	},
+	"DOCUMENT.Create": "Criar novo(a) {type}",
+  "DOCUMENT.Delete": "Excluir {type}",
+  "DOCUMENT.New": "Novo(a) {type}",
+  "DOCUMENT.Update": "Atualizar {type}",
+  "DOCUMENT.SkipCreate": "Pular Criação",
+  "DOCUMENT.ImportData": "Importar Dados",
+  "DOCUMENT.ImportDataError": "Você não enviou um arquivo de dados!",
+  "DOCUMENT.ImportDataHint1": "Você pode importar dados para este {document} de um arquivo JSON exportado.",
+  "DOCUMENT.ImportDataHint2": "Esta operação atualizará os dados de {name} e não poderá ser desfeita.",
+  "DOCUMENT.ImportSource": "Fonte de Dados",
+  "DOCUMENT.Imported": "Os dados para {document} \"{name}\" foram importados com sucesso do JSON.",
+  "DOCUMENT.SheetPermissionWarn": "Você não tem permissão para visualizar este {document}.",
+  "DOCUMENT.UsePermissionWarn": "Você não tem permissão para usar este {document}.",
+  "DOCUMENT.IdCopiedClipboard": "{label} {type} \"{id}\" copiado para a área de transferência.",
+  "DOCUMENT.ActiveEffect": "Efeito Ativo",
+  "DOCUMENT.ActiveEffects": "Efeitos Ativos",
+  "DOCUMENT.ActorDelta": "Delta do Ator",
+  "DOCUMENT.ActorDeltas": "Deltas do Ator",
+  "DOCUMENT.Actor": "Ator",
+  "DOCUMENT.Actors": "Atores",
+  "DOCUMENT.Adventure": "Aventura",
+  "DOCUMENT.Adventures": "Aventuras",
+  "DOCUMENT.AmbientLight": "Luz Ambiente",
+  "DOCUMENT.AmbientLights": "Luzes Ambientes",
+  "DOCUMENT.AmbientSound": "Som Ambiente",
+  "DOCUMENT.AmbientSounds": "Sons Ambientes",
+  "DOCUMENT.Card": "Carta",
+  "DOCUMENT.Cards": "Baralho",
+  "DOCUMENT.CardsPlural": "Baralhos",
+  "DOCUMENT.ChatMessage": "Mensagem de Chat",
+  "DOCUMENT.ChatMessages": "Mensagens de Chat",
+  "DOCUMENT.Combat": "Encontro de Combate",
+  "DOCUMENT.Combats": "Encontros de Combate",
+  "DOCUMENT.Combatant": "Combatente",
+  "DOCUMENT.Combatants": "Combatentes",
+  "DOCUMENT.CopyOf": "{name} (Cópia)",
+  "DOCUMENT.Drawing": "Desenho",
+  "DOCUMENT.Drawings": "Desenhos",
+  "DOCUMENT.Folder": "Pasta",
+  "DOCUMENT.Folders": "Pastas",
+  "DOCUMENT.Item": "Item",
+  "DOCUMENT.Items": "Itens",
+  "DOCUMENT.JournalEntry": "Registro de Diário",
+  "DOCUMENT.JournalEntries": "Diário",
+  "DOCUMENT.JournalEntryPage": "Página",
+  "DOCUMENT.JournalEntryPages": "Páginas",
+  "DOCUMENT.Macro": "Macro",
+  "DOCUMENT.Macros": "Macros",
+  "DOCUMENT.MeasuredTemplate": "Modelo de Medição",
+  "DOCUMENT.MeasuredTemplates": "Modelos de Medição",
+  "DOCUMENT.Note": "Nota",
+  "DOCUMENT.Notes": "Notas",
+  "DOCUMENT.Playlist": "Playlist",
+  "DOCUMENT.Playlists": "Listas de Reprodução",
+  "DOCUMENT.PlaylistSound": "Som da Playlist",
+  "DOCUMENT.PlaylistSounds": "Sons da Playlist",
+  "DOCUMENT.Scene": "Cena",
+  "DOCUMENT.Scenes": "Cenas",
+  "DOCUMENT.Setting": "Configuração",
+  "DOCUMENT.Settings": "Configurações",
+  "DOCUMENT.RollTable": "Tabela de Rolagem",
+  "DOCUMENT.RollTables": "Tabelas de Rolagem",
+  "DOCUMENT.Region": "Região",
+  "DOCUMENT.Regions": "Regiões",
+  "DOCUMENT.RegionBehavior": "Comportamento da Região",
+  "DOCUMENT.RegionBehaviors": "Comportamentos da Região",
+  "DOCUMENT.TableResult": "Resultado da Tabela",
+  "DOCUMENT.TableResults": "Resultados da Tabela",
+  "DOCUMENT.Tile": "Peça",
+  "DOCUMENT.Tiles": "Peças",
+  "DOCUMENT.Token": "Token",
+  "DOCUMENT.Tokens": "Tokens",
+  "DOCUMENT.User": "Usuário",
+  "DOCUMENT.Users": "Usuários",
+  "DOCUMENT.Wall": "Parede",
+  "DOCUMENT.Walls": "Paredes",
+  "DOCUMENT.TypePageFormat": "{page} de {type}",
+  "TYPES": {
+    "Actor": {
+      "ninja": "Ninja"
+    },
+    "Item": {
+      "armas": "Armas",
+      "armaduras": "Armaduras",
+      "equipamentos": "Equipamentos",
+			"aptidoes": "Aptidões",
+      "poderes": "Poderes"
+    }
+  }
+}
