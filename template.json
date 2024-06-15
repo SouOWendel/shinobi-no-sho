@@ -1,0 +1,60 @@
+{
+	"Actor": {
+		"types": ["Ninja"],
+		"template": {
+			"base": {
+				"health": {
+					"value": 10,
+					"min": 0,
+					"max": 0
+				},
+				"power": {
+					"value": 10,
+					"min": 0,
+					"max": 0
+				}
+			}
+		},
+		"ninja": {
+			"templates": ["base"],
+			"personagem": {
+				"nivel": 1
+			},
+			"atributos": {
+				"for": { "value": 10 },
+				"des": { "value": 10 },
+				"agi": { "value": 10 },
+				"per": { "value": 10 },
+				"int": { "value": 10 },
+				"esp": { "value": 10 }
+			}
+		}
+	},
+	"Item": {
+		"types": ["armas", "armaduras", "equipamentos", "aptidoes", "poderes" ],
+		"templates": {
+			"base": {
+				"descricao": ""
+			},
+			"fisico": {
+				"peso": 1,
+				"preco": 0
+			}
+		},
+		"armas": {
+			"templates": ["base", "fisico"]
+		},
+		"armaduras": {
+			"templates": ["base", "fisico"]
+		},
+		"equipamentos": {
+			"templates": ["base", "fisico"]
+		},
+		"aptidoes": {
+			"templates": ["base"]
+		},
+		"poderes": {
+			"templates": ["base"]
+		}
+	}
+}
