@@ -8,10 +8,10 @@
       "email": "souowendel@gmail.com",
       "discord": "souowendel"
     },
-		{
-			"name": "Vallen",
-			"discord": "vallen_allond"
-		}
+    {
+      "name": "Vallen",
+      "discord": "vallen_allond"
+    }
   ],
   "url": "https://github.com/SouOWendel/shinobi-no-sho",
   "readme": "README.md",
@@ -24,22 +24,26 @@
       "thumbnail": "systems/shinobiNoSho/assets/anvil-impact.png"
     }
   ],
-  "version": "0.1.0",
+  "version": "0.2.0",
   "compatibility": {
     "minimum": 11,
     "verified": "12.327",
-		"maximum:": 12
+    "maximum:": 12
   },
-  "esmodules": ["module/shinobiNoSho.mjs"],
-  "styles": ["css/shinobiNoSho.css"],
-  "languages": [
-		{
-			"lang": "pt-BR",
-			"name": "Português (Brasil)",
-			"path": "lang/pt-BR.json"
-		}
+  "esmodules": [
+    "module/shinobiNoSho.mjs"
   ],
-	"flags": {
+  "styles": [
+    "css/shinobiNoSho.css"
+  ],
+  "languages": [
+    {
+      "lang": "pt-BR",
+      "name": "Português (Brasil)",
+      "path": "lang/pt-BR.json"
+    }
+  ],
+  "flags": {
     "hotReload": {
       "extensions": [
         "css",
