@@ -39,6 +39,21 @@
 			"path": "lang/pt-BR.json"
 		}
   ],
+	"flags": {
+    "hotReload": {
+      "extensions": [
+        "css",
+        "html",
+        "hbs",
+        "json"
+      ],
+      "paths": [
+        "templates",
+        "css",
+        "lang/pt-BR.json"
+      ]
+    }
+  },
   "packs": [],
   "packFolders": [],
   "socket": true,
