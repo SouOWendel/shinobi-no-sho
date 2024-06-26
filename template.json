@@ -17,16 +17,122 @@
 		},
 		"ninja": {
 			"templates": ["base"],
-			"personagem": {
-				"nivel": 1
-			},
-			"atributos": {
+			"abilities": {
 				"for": { "value": 10 },
 				"des": { "value": 10 },
 				"agi": { "value": 10 },
 				"per": { "value": 10 },
 				"int": { "value": 10 },
-				"esp": { "value": 10 }
+				"vig": { "value": 10 },
+				"esp": { "value": 10 },
+				"social": {
+					"car": { "value": 10 },
+					"man": { "value": 10 }
+				},
+				"combate": {
+					"CC": {
+						"value": 0,
+						"base": 3,
+						"bonus": "",
+						"ability": "for"
+					},
+					"CD": {
+						"value": 0,
+						"base": 3,
+						"bonus": "",
+						"ability": "des"
+					},
+					"E": {
+						"value": 0,
+						"base": 3,
+						"bonus": "",
+						"ability": "agi"
+					},
+					"LM": {
+						"value": 0,
+						"base": 3,
+						"bonus": "",
+						"ability": "per"
+					}
+				}
+			},
+			"attributes": {
+				"vitalidade": {
+					"max": 10,
+					"temp": 0,
+					"tempmax": 0,
+					"atual": 0,
+					"mult": 3,
+					"ability": "vig",
+					"multNivel": 5
+				},
+				"chakra": {
+					"max": 0,
+					"temp": 0,
+					"tempmax": 0,
+					"atual": 0,
+					"mult": 3,
+					"ability": "esp"
+				},
+				"movement": {
+					"unidade": "m",
+					"andar": 0,
+					"nadar": 0,
+					"escalar": 0,
+					"mod": {
+						"divisorAndar": 2,
+						"divisorNadar": 4,
+						"divisorEscalar": 4
+					}
+				},
+				"init": {
+					"ability": "",
+					"bonus": "",
+					"roll": {
+						"max": null,
+						"min": null,
+						"mode": 0
+					}
+				}
+			},
+			"details": {
+				"nivelCampanha": 1,
+				"nivelShinobi": 1,
+				"topo": {
+					"nome": "",
+					"idade": "",
+					"cla": "",
+					"vilaAtual": "",
+					"vilaAtuante": "",
+					"tendencia": "",
+					"genero": "",
+					"lateralidade": "",
+					"naturezaPrincipal": "",
+					"naturezaSecundaria": ""
+				},
+				"biografia": {
+					"familia": [],
+					"historia": "",
+					"caracteristicas": ""
+				}
+			},
+			"currency": {
+				"ryos": 0
+			},
+			"skills": {
+				"acrobacia": {
+					"ability": "agi",
+					"caracteristicas": {
+						"social": false,
+						"treinada": false,
+						"armadura": true
+					},
+					"formula": {
+						"atributo1": "agi",
+						"atributo2": "",
+						"divisor": 2
+					}
+				}
 			}
 		}
 	},
