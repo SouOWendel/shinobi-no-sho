@@ -31,7 +31,7 @@
 		}
 	},
 	"Item": {
-		"types": ["armas", "armaduras", "equipamentos", "aptidoes", "poderes" ],
+		"types": ["armas", "armaduras", "geral", "aptidoes", "poderes", "tecnicas"],
 		"templates": {
 			"base": {
 				"descricao": ""
@@ -47,13 +47,16 @@
 		"armaduras": {
 			"templates": ["base", "fisico"]
 		},
-		"equipamentos": {
+		"geral": {
 			"templates": ["base", "fisico"]
 		},
 		"aptidoes": {
 			"templates": ["base"]
 		},
 		"poderes": {
+			"templates": ["base"]
+		},
+		"tecnicas": {
 			"templates": ["base"]
 		}
 	}
