@@ -10,7 +10,6 @@ export class ShinobiItem extends Item {
     // As with the actor class, items are documents that can have their data
     // preparation methods overridden (such as prepareBaseData()).
     super.prepareData();
-		console.log('preparedata item');
 
   }
 

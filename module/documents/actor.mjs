@@ -31,7 +31,6 @@ export class ShinobiActor extends Actor {
     const actorData = this;
     const systemData = actorData.system;
     const flags = actorData.flags.shinobi || {};
-		console.log('preparedereiveddata');
 
     // Make separate methods for each Actor type (character, npc, etc.) to keep
     // things organized.

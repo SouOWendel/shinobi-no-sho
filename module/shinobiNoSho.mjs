@@ -12,12 +12,9 @@ import { shinobiNoSho } from "./helpers/config.mjs";
 /*  Init Hook                                   */
 /* -------------------------------------------- */
 
-console.log()
-
 Hooks.once('init', function () {
   // Add utility classes to the global game object so that they're more easily
   // accessible in global contexts.
-	console.log('ababab');
   game.shinobiNoSho = {
     ShinobiActor,
     ShinobiItem,
