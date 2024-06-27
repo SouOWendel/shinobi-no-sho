@@ -13,7 +13,7 @@ export class ShinobiActorSheet extends ActorSheet {
     return foundry.utils.mergeObject(super.defaultOptions, {
       classes: ['shinobiNoSho', 'sheet', 'actor'],
       width: 600,
-      height: 600,
+      height: 820,
       tabs: [
         {
           navSelector: '.sheet-tabs',
@@ -26,7 +26,8 @@ export class ShinobiActorSheet extends ActorSheet {
 
   /** @override */
   get template() {
-    return `systems/shinobiNoSho/templates/actor/actor-${this.actor.type}-sheet.hbs`;
+		const type = this.actor.type.toLowerCase();
+    return `systems/shinobiNoSho/templates/actor/actor-${type}-sheet.hbs`;
   }
 
   /* -------------------------------------------- */

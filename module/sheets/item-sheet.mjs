@@ -12,9 +12,9 @@ export class ShinobiItemSheet extends ItemSheet {
   static get defaultOptions() {
     return foundry.utils.mergeObject(super.defaultOptions, {
       classes: ['shinobiNoSho', 'sheet', 'item'],
-      width: 520,
+      width: 620,
+			height: 440,
 			template: 'systems/shinobiNoSho/templates/item/item-sheet.hbs',
-      height: 480,
       tabs: [
         {
           navSelector: '.sheet-tabs',
@@ -27,13 +27,9 @@ export class ShinobiItemSheet extends ItemSheet {
 
   /** @override */
   get template() {
+		const type = this.item.type.toLowerCase();
     const path = 'systems/shinobiNoSho/templates/item';
-    // Return a single sheet for all item types.
-    // return `${path}/item-sheet.hbs`;
-
-    // Alternatively, you could use the following return statement to do a
-    // unique item sheet by type, like `weapon-sheet.hbs`.
-    return `${path}/item-${this.item.type}-sheet.hbs`;
+    return `${path}/item-${type}-sheet.hbs`;
   }
 
   /* -------------------------------------------- */
