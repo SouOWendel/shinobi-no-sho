@@ -41,16 +41,8 @@
   ],
 	"flags": {
     "hotReload": {
-      "extensions": [
-        "css",
-        "html",
-        "hbs",
-        "json"
-      ],
-      "paths": [
-        "templates",
-        "css",
-        "lang/pt-BR.json"
+      "extensions": ["css", "html", "hbs", "json"],
+      "paths": ["templates", "css", "lang/pt-BR.json"
       ]
     }
   },
