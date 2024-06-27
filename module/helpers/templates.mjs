@@ -6,10 +6,12 @@
 export const preloadHandlebarsTemplates = async function () {
   return loadTemplates([
     // Actor partials.
-    'systems/shinobiNoSho/templates/actor/parts/actor-features.hbs',
-    'systems/shinobiNoSho/templates/actor/parts/actor-items.hbs',
-    'systems/shinobiNoSho/templates/actor/parts/actor-spells.hbs',
-    'systems/shinobiNoSho/templates/actor/parts/actor-effects.hbs',
+    'systems/shinobiNoSho/templates/actor/parts/actor-aptidoesPoderes.hbs',
+    'systems/shinobiNoSho/templates/actor/parts/actor-combate.hbs',
+    'systems/shinobiNoSho/templates/actor/parts/actor-inventario.hbs',
+    'systems/shinobiNoSho/templates/actor/parts/actor-efeitos.hbs',
+		'systems/shinobiNoSho/templates/actor/parts/actor-pericias.hbs',
+		'systems/shinobiNoSho/templates/actor/parts/actor-tecnicas.hbs',
     // Item partials
     'systems/shinobiNoSho/templates/item/parts/item-effects.hbs',
   ]);
