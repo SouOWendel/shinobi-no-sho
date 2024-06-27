@@ -207,6 +207,12 @@
 .shinobiNoSho .item-form {
   font-family: "Roboto", sans-serif;
 }
+.shinobiNoSho .sheet-header, .shinobiNoSho .atributos,
+.shinobiNoSho .acessoRapido {
+  border: 1px solid #949494;
+  border-radius: 4px;
+  padding: 6px;
+}
 .shinobiNoSho .sheet-header {
   flex: 0 auto;
   overflow: hidden;
@@ -214,15 +220,19 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: flex-start;
-  margin-bottom: 10px;
+  margin-bottom: 6px;
 }
 .shinobiNoSho .sheet-header .profile-img {
   flex: 0 0 100px;
-  height: 100px;
+  height: 125px;
   margin-right: 10px;
 }
 .shinobiNoSho .sheet-header .header-fields {
+  flex: 2;
+}
+.shinobiNoSho .sheet-header .profile {
   flex: 1;
+  padding-right: 10px;
 }
 .shinobiNoSho .sheet-header h1.charname {
   height: 50px;
@@ -231,12 +241,17 @@
   border-bottom: 0;
 }
 .shinobiNoSho .sheet-header h1.charname input {
+  min-width: 235px;
   width: 100%;
   height: 100%;
   margin: 0;
 }
 .shinobiNoSho .sheet-tabs {
   flex: 0;
+  font-size: small;
+}
+.shinobiNoSho .sheet-tabs .item {
+  padding: 8px !important;
 }
 .shinobiNoSho .sheet-body,
 .shinobiNoSho .sheet-body .tab,
@@ -248,6 +263,45 @@
 }
 .shinobiNoSho .tox .tox-edit-area {
   padding: 0 8px;
+}
+.shinobiNoSho #middle-content {
+  flex: 0 auto;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  height: 80px;
+  gap: 6px;
+}
+.shinobiNoSho #middle-content .atributos {
+  flex: 2;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+}
+.shinobiNoSho #middle-content .acessoRapido {
+  flex: 0.6;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+}
+.shinobiNoSho #middle-content .resource {
+  width: 60px;
+}
+.shinobiNoSho #middle-content .resource input {
+  width: 40px;
+  height: 40px;
+}
+.shinobiNoSho #middle-content .resource label {
+  font-size: 11px;
+  font-weight: 400;
 }
 .shinobiNoSho .resource-label {
   font-weight: bold;
@@ -364,3 +418,5 @@
 .shinobiNoSho .effects .item .effect-controls {
   border: none;
 }
+
+/*# sourceMappingURL=shinobiNoSho.css.map */
