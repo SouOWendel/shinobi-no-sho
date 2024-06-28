@@ -137,7 +137,7 @@
 		}
 	},
 	"Item": {
-		"types": ["armas", "armaduras", "geral", "aptidoes", "poderes", "tecnicas"],
+		"types": ["armas", "armaduras", "gerais", "aptidoes", "poderes", "tecnicas"],
 		"templates": {
 			"base": {
 				"descricao": ""
