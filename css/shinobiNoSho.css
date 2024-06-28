@@ -203,9 +203,28 @@
   text-align: center;
 }
 
+.flex {
+  display: flex;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.flex-2 {
+  flex: 2;
+}
+
+.flex-3 {
+  flex: 3;
+}
+
 /* Styles limited to shinobiNoSho sheets */
 .shinobiNoSho .item-form {
   font-family: "Roboto", sans-serif;
+}
+.shinobiNoSho .window-content {
+  overflow: hidden;
 }
 .shinobiNoSho .sheet-header, .shinobiNoSho .atributos,
 .shinobiNoSho .acessoRapido {
@@ -258,6 +277,11 @@
 .shinobiNoSho .sheet-body .tab .editor {
   height: 100%;
 }
+.shinobiNoSho .sheet-body {
+  overflow-y: auto;
+  max-height: 398px !important;
+  padding-right: 2px;
+}
 .shinobiNoSho .tox .tox-editor-container {
   background: #fff;
 }
@@ -302,6 +326,52 @@
 .shinobiNoSho #middle-content .resource label {
   font-size: 11px;
   font-weight: 400;
+}
+.shinobiNoSho .section-title {
+  border: none;
+  text-align: center;
+  background-color: #BEBEBE;
+}
+.shinobiNoSho .sub-body .tab {
+  gap: 5px;
+}
+.shinobiNoSho .sub-body .tab .row {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  margin-bottom: 5px;
+}
+.shinobiNoSho .sub-body .tab .descricao .editor,
+.shinobiNoSho .sub-body .tab .manias .editor,
+.shinobiNoSho .sub-body .tab .filosofia .editor {
+  min-height: 170px !important;
+}
+.shinobiNoSho .sub-body .tab .historia .editor,
+.shinobiNoSho .sub-body .tab .familia .editor {
+  height: 300px !important;
+}
+.shinobiNoSho .container {
+  border: 1px solid #949494;
+  border-radius: 4px;
+  padding: 5px;
+}
+.shinobiNoSho .anotacoes .editor {
+  min-height: 380px;
+}
+.shinobiNoSho #habilidadesCombate, .shinobiNoSho #estatisticasCombate {
+  margin-top: 6px;
+}
+.shinobiNoSho #habilidadesCombate .resource-content i, .shinobiNoSho #estatisticasCombate .resource-content i {
+  padding: 0 5px;
+}
+.shinobiNoSho #habilidadesCombate > div, .shinobiNoSho #estatisticasCombate > div {
+  margin-bottom: 10px;
+}
+.shinobiNoSho #habilidadesCombate > div:last-of-type, .shinobiNoSho #estatisticasCombate > div:last-of-type {
+  margin-bottom: 5px;
+}
+.shinobiNoSho #estatisticasCombate {
+  margin-top: 10px;
 }
 .shinobiNoSho .resource-label {
   font-weight: bold;

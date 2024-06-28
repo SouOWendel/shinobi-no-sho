@@ -2,6 +2,10 @@
   font-family: $font-primary;
 }
 
+.window-content {
+	overflow: hidden;
+}
+
 .sheet-header, .atributos,
 .acessoRapido {
 	border: 1px solid #949494;
@@ -62,6 +66,12 @@
   height: 100%;
 }
 
+.sheet-body {
+	overflow-y: auto;
+	max-height: 398px !important;
+	padding-right: 2px;
+}
+
 .tox {
   .tox-editor-container {
     background: $c-white;
@@ -115,4 +125,58 @@
 		font-size: 11px;
 		font-weight: 400;
 	}
+}
+
+.section-title {
+		border: none;
+		text-align: center;
+		background-color: #BEBEBE;
+}
+
+.sub-body {
+	.tab {
+		gap: 5px;
+
+		.row {
+			display: flex;
+			flex-direction: row;
+			gap: 5px;
+			margin-bottom: 5px;
+		}
+		
+		.descricao .editor,
+		.manias .editor,
+		.filosofia .editor {
+			min-height: 170px !important;
+		}
+
+		.historia .editor,
+		.familia .editor {
+			height: 300px !important;
+		}
+	}
+}
+
+.container {
+	border: 1px solid #949494;
+	border-radius: 4px;
+	padding: 5px;
+}
+
+.anotacoes .editor {
+	min-height: 380px;
+}
+
+#habilidadesCombate, #estatisticasCombate {
+	margin-top: 6px;
+	.resource-content i {
+		padding: 0 5px;
+	}
+
+	& > div { margin-bottom: 10px; }
+	& > div:last-of-type { margin-bottom: 5px; }
+}
+
+#estatisticasCombate {
+	margin-top: 10px;
 }
