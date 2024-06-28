@@ -150,32 +150,54 @@
 
 		{{!-- Biography Tab --}}
     <div class="tab biografia" data-group="primary" data-tab="biografia">
-      {{editor system.biography target="system.biography" 
-			rollData=rollData button=true owner=owner editable=editable}}
+			<nav class="sub-tabs sheet-tabs tabs" data-group="secondary">
+				<a class="item" data-tab="historia">História</a>
+				<a class="item" data-tab="caracteristicas">Características</a>
+				<a class="item" data-tab="familia">Família</a>
+  		</nav>
+
+			<section class="sub-body">
+				<div class="tab historia" data-group="secondary" data-tab="historia">
+					<div class="historia container">
+						<h3>História</h3>
+						{{editor system.a target="system.a" 
+						rollData=rollData button=true owner=owner editable=editable}}
+					</div>
+				</div>
+
+				<div class="tab caracteristicas" data-group="secondary" data-tab="caracteristicas">
+					<div class="row">
+						<div class="descricao container flex-1">
+							<h3 class="section-title">Descrição Física</h3>
+							{{editor system.biography target="system.d" 
+							rollData=rollData button=true owner=owner editable=editable}}
+						</div>
+						<div class="manias container flex-1">
+							<h3 class="section-title">Manias e Peculiaridades</h3>
+							{{editor system.biography target="system.b" 
+							rollData=rollData button=true owner=owner editable=editable}}
+						</div>
+					</div>
+					<div class="filosofia container">
+						<h3 class="section-title">Filosofia de Vida</h3>
+						{{editor system.biography target="system.c" 
+						rollData=rollData button=true owner=owner editable=editable}}
+					</div>
+				</div>
+
+				<div class="tab familia" data-group="secondary" data-tab="familia">
+					<div class="familia container">
+						<h3 class="section-title">Família</h3>
+						{{editor system.biography target="system.e" 
+						rollData=rollData button=true owner=owner editable=editable}}
+					</div>
+				</div>
+			</section>
     </div>
 
     {{!-- Owned Combat Tab --}}
     <div class="tab combate" data-group="primary" data-tab="combate">
-      <section class="grid grid-3col">
-        <aside class="sidebar">
-          <div class="abilities flexcol">
-            {{#each system.abilities as |ability key|}}
-            <div class="ability flexrow flex-group-center">
-              <label for="system.abilities.{{key}}.value" class="resource-label rollable flexlarge align-left" data-roll="d20+@abilities.{{key}}.mod" data-label="{{ability.label}}">{{ability.label}}</label>
-              <input type="text" name="system.abilities.{{key}}.value" value="{{ability.value}}" data-dtype="Number"/>
-              <span class="ability-mod rollable" data-roll="d20+@abilities.{{key}}.mod" data-label="{{ability.label}}">{{numberFormat ability.mod decimals=0 sign=true}}</span>
-            </div>
-            {{/each}}
-          </div>
-        </aside>
-
-        {{!-- For the main features list, span the right two columns --}}
-        <section class="main grid-span-2">
-          {{!-- This is a Handlebars partial. They're stored in the `/parts` folder next to this sheet, and defined in module/helpers/templates.mjs --}}
-          {{> "systems/shinobiNoSho/templates/actor/parts/actor-combate.hbs"}}
-        </section>
-
-      </section>
+    	{{> "systems/shinobiNoSho/templates/actor/parts/actor-combate.hbs"}}
     </div>
 
     {{!-- Owned Skills Tab --}}
@@ -200,8 +222,10 @@
 
 		{{!-- Owned Notes Tab --}}
     <div class="tab anotacoes" data-group="primary" data-tab="anotacoes">
-       {{editor system.biography target="system.biography" 
-			rollData=rollData button=true owner=owner editable=editable}}
+			<div class="anotacoes container">
+				{{editor system.biography target="system.biography" 
+				rollData=rollData button=true owner=owner editable=editable}}
+			</div>
     </div>
 
     {{!-- Active Effects Tab --}}

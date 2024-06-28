@@ -18,7 +18,12 @@ export class ShinobiActorSheet extends ActorSheet {
         {
           navSelector: '.sheet-tabs',
           contentSelector: '.sheet-body',
-          initial: 'features',
+          initial: 'combate',
+        },
+				{
+          navSelector: '.sub-tabs',
+          contentSelector: '.sub-body',
+          initial: 'historia',
         },
       ],
     });
@@ -48,14 +53,9 @@ export class ShinobiActorSheet extends ActorSheet {
     context.flags = actorData.flags;
 
     // Prepare character data and items.
-    if (actorData.type == 'ninja') {
+    if (actorData.type == 'Ninja') {
       this._prepareItems(context);
-      this._prepareCharacterData(context);
-    }
-
-    // Prepare NPC data and items.
-    if (actorData.type == 'npc') {
-      this._prepareItems(context);
+      // this._prepareCharacterData(context);
     }
 
     // Add roll data for TinyMCE editors.
@@ -94,44 +94,30 @@ export class ShinobiActorSheet extends ActorSheet {
    */
   _prepareItems(context) {
     // Initialize containers.
-    const gear = [];
-    const features = [];
-    const spells = {
-      0: [],
-      1: [],
-      2: [],
-      3: [],
-      4: [],
-      5: [],
-      6: [],
-      7: [],
-      8: [],
-      9: [],
-    };
+    const armas = [];
+    const armaduras = [];
+    const gerais = [];
+		const aptidoes = [];
+		const poderes = [];
+		const tecnicas = [];
 
-    // Iterate through items, allocating to containers
     for (let i of context.items) {
       i.img = i.img || Item.DEFAULT_ICON;
-      // Append to gear.
-      if (i.type === 'item') {
-        gear.push(i);
-      }
-      // Append to features.
-      else if (i.type === 'feature') {
-        features.push(i);
-      }
-      // Append to spells.
-      // else if (i.type === 'spell') {
-      //   if (i.system.spellLevel != undefined) {
-      //     spells[i.system.spellLevel].push(i);
-      //   }
-      // }
+      if (i.type === 'armas') { armas.push(i); }
+      else if (i.type === 'armaduras') { armaduras.push(i); }
+			else if (i.type === 'gerais') { gerais.push(i); }
+			else if (i.type === 'aptidoes') { aptidoes.push(i); }
+			else if (i.type === 'poderes') { poderes.push(i); }
+			else if (i.type === 'tecnicas') { tecnicas.push(i); }
     }
 
     // Assign and return
-    context.gear = gear;
-    context.features = features;
-    context.spells = spells;
+    context.armas = armas;
+    context.armaduras = armaduras;
+    context.gerais = gerais;
+		context.aptidoes = aptidoes;
+    context.poderes = poderes;
+    context.tecnicas = tecnicas;
   }
 
   /* -------------------------------------------- */
