@@ -20,8 +20,8 @@
   "media": [
     {
       "type": "setup",
-      "url": "systems/shinobiNoSho/assets/anvil-impact.png",
-      "thumbnail": "systems/shinobiNoSho/assets/anvil-impact.png"
+      "url": "systems/shinobiNoSho/assets/narutowallpaper.png",
+      "thumbnail": "systems/shinobiNoSho/assets/narutowallpaper.png"
     }
   ],
   "version": "0.2.0",
@@ -55,7 +55,7 @@
   "socket": true,
   "manifest": "",
   "download": "https://github.com/SouOWendel/shinobi-no-sho/releases/download/v0.2.0/shinobiNoSho-v0.2.0.zip",
-  "background": "systems/shinobiNoSho/assets/anvil-impact.png",
+  "background": "systems/shinobiNoSho/assets/narutowallpaper.png",
   "gridDistance": 5,
   "gridUnits": "m",
   "primaryTokenAttribute": "health",
