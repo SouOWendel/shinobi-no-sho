@@ -24,7 +24,7 @@
       "thumbnail": "systems/shinobiNoSho/assets/narutowallpaper.png"
     }
   ],
-  "version": "0.2.0",
+  "version": "0.3.0",
   "compatibility": {
     "minimum": 11,
     "verified": "12.327",
@@ -45,8 +45,16 @@
   ],
   "flags": {
     "hotReload": {
-      "extensions": ["css", "html", "hbs", "json"],
-      "paths": ["templates", "css", "lang/pt-BR.json"
+      "extensions": [
+        "css",
+        "html",
+        "hbs",
+        "json"
+      ],
+      "paths": [
+        "templates",
+        "css",
+        "lang/pt-BR.json"
       ]
     }
   },
