@@ -41,7 +41,7 @@
 
   // Item Name
   .item-name {
-    flex: 2;
+    flex: 2 1 120px;
     margin: 0;
     overflow: hidden;
     font-size: 13px;
@@ -58,7 +58,7 @@
   // Control Buttons
   .item-controls {
     display: flex;
-    flex: 0 0 100px;
+    flex: 0 0 50px;
     justify-content: flex-end;
     a {
       font-size: 12px;
@@ -81,6 +81,7 @@
         background-size: 30px;
         border: none;
         margin-right: 5px;
+				margin-top: 2px;
       }
     }
   }
@@ -118,4 +119,46 @@
   
   flex: 0 0 200px;
   padding: 0 8px;
+}
+
+// Example style for shinobiNoSho (can be removed if not needed).
+.item-mini {
+  flex: 0 0 40px;
+  padding: 0 8px;
+}
+
+.item-small {
+  flex: 1 0 70px;
+  padding: 0 8px;
+}
+
+.item-medium {
+  flex: 1 0 100px;
+  padding: 0 8px;
+}
+
+.item-large {
+  flex: 2 0 130px;
+  padding: 0 8px;
+}
+
+.item-extralarge {
+  flex: 2 0 160px;
+  padding: 0 8px;
+}
+
+.effects-list {
+	.item-name {
+		flex: 2 1 200px;
+	}
+
+	.effect-source,
+	.effect-duration,
+	.effect-controls {
+		flex: 1 1 70px;
+	}
+
+	h3 {
+		border-bottom: 0 !important;
+	}
 }
