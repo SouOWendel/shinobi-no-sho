@@ -1,5 +1,19 @@
 # CHANGELOG
 
+## [0.3.0](https://github.com/SouOWendel/shinobi-no-sho/compare/v0.2.0...v0.3.0) (2024-07-02)
+
+
+### Features
+
+* **actor ninja sheet:** was applied the ninja sheet layout with some stylizations ([2b595f5](https://github.com/SouOWendel/shinobi-no-sho/commit/2b595f54a56dbe7b00437c3a4f706accfc9c53d2))
+* **actor sheet, 'inventario' and 'biografia':** created a sub-tabs for biografia tab, and several fields, also was created inventory filter with layout ([5cfc871](https://github.com/SouOWendel/shinobi-no-sho/commit/5cfc8719b586fb5d899d0ab7da6d6711d1fc27c3))
+* **css/sass:** added styles for sheet-body, combat tab, biography tab, and flex utilities ([8699af9](https://github.com/SouOWendel/shinobi-no-sho/commit/8699af97cf69688c7ae253e70efb79a686131fdc))
+* **ninja sheet parts:** added list of items about techniques and aptitudes/powers ([da3fccc](https://github.com/SouOWendel/shinobi-no-sho/commit/da3fccc698f3d1bf973e55efae2be5d907fbb67c))
+* **ninja sheet parts:** applied combat skills and combat statistics section layout with fields ([7eab20c](https://github.com/SouOWendel/shinobi-no-sho/commit/7eab20c95143e3d6753e7966a438cdd55506837d))
+* **system.json:** changed the background image and thumbnail of system to naruto wallpaper ([e679cbe](https://github.com/SouOWendel/shinobi-no-sho/commit/e679cbecea0e665aab690b4685e0bda25489e32c))
+* **template.json:** changed ryos value from 0 to 100, because this is the standard value ([61d9185](https://github.com/SouOWendel/shinobi-no-sho/commit/61d91858b4fe5e465155deaf5158f90fd9dd09d4))
+* **template.json:** changed the item type from 'geral' to 'gerais' ([5ac5ec3](https://github.com/SouOWendel/shinobi-no-sho/commit/5ac5ec34ac50c04c8973c9425e1c7690b4cff1a0))
+
 ## [0.2.0](https://github.com/SouOWendel/shinobi-no-sho/compare/v0.1.0...v0.2.0) (2024-06-26)
 
 
