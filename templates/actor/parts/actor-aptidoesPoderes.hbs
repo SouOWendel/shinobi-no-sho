@@ -1,7 +1,9 @@
 <ol class='items-list'>
   <li class='item flexrow items-header'>
-    <div class='item-name'>{{localize 'Name'}}</div>
-    <div class='item-formula'>{{localize 'Roll Formula'}}</div>
+    <div class='item-name'>{{localize 'Aptidões'}}</div>
+    <div class='item-small'>Tipo</div>
+		<div class='item-medium'>Nível</div>
+		<div class='item-large'>Pré-requisito</div>
     <div class='item-controls'>
       <a
         class='item-control item-create'
@@ -9,14 +11,13 @@
         data-type='aptidoes'
       >
         <i class='fas fa-plus'></i>
-        {{localize 'DOCUMENT.New' type='Aptidão'}}
       </a>
     </div>
   </li>
   {{#each aptidoes as |item id|}}
     <li class='item flexrow' data-item-id='{{item._id}}'>
       <div class='item-name'>
-        <div class='item-image'>
+        <div class='item-image flex-group-center'>
           <a class='rollable' data-roll-type='item'>
             <img
               src='{{item.img}}'
@@ -28,7 +29,9 @@
         </div>
         <h4>{{item.name}}</h4>
       </div>
-      <div class='item-formula item-prop'>{{item.system.formula}}</div>
+      <div class='item-small item-prop'>Tipo</div>
+			<div class='item-medium item-prop'>Nível</div>
+			<div class='item-large item-prop'>Pré-requisito</div>
       <div class='item-controls'>
         <a
           class='item-control item-edit'
@@ -49,8 +52,9 @@
 
 <ol class='items-list'>
   <li class='item flexrow items-header'>
-    <div class='item-name'>{{localize 'Name'}}</div>
-    <div class='item-formula'>{{localize 'Roll Formula'}}</div>
+    <div class='item-name'>{{localize 'Poderes'}}</div>
+		<div class='item-medium'>Nível</div>
+		<div class='item-large'>Pré-requisito</div>
     <div class='item-controls'>
       <a
         class='item-control item-create'
@@ -58,14 +62,13 @@
         data-type='poderes'
       >
         <i class='fas fa-plus'></i>
-        {{localize 'DOCUMENT.New' type='Poder'}}
       </a>
     </div>
   </li>
   {{#each poderes as |item id|}}
     <li class='item flexrow' data-item-id='{{item._id}}'>
       <div class='item-name'>
-        <div class='item-image'>
+        <div class='item-image flex-group-center'>
           <a class='rollable' data-roll-type='item'>
             <img
               src='{{item.img}}'
@@ -77,7 +80,8 @@
         </div>
         <h4>{{item.name}}</h4>
       </div>
-      <div class='item-formula item-prop'>{{item.system.formula}}</div>
+			<div class='item-medium item-prop'>Nível</div>
+			<div class='item-large item-prop'>Pré-requisito</div>
       <div class='item-controls'>
         <a
           class='item-control item-edit'
