@@ -8,14 +8,14 @@
 		</div>
     <div class="header-fields">
 			<div class="resources grid">
-			<div class="resource">
-					<label for="" class="resource-label">Nível de Campanha</label>
+			<div class="resource flex flex-group-center">
+					<label for="" class="resource-label label-padding">Nível de Campanha</label>
           <div class="resource-content flexrow flex-center flex-between">
           	<input type="text" name="" value="" data-dtype="String"/>
           </div>
 			</div>
-			<div class="resource">
-					<label for="" class="resource-label">Nível Shinobi</label>
+			<div class="resource flex flex-group-center">
+					<label for="" class="resource-label label-padding">Nível Shinobi</label>
           <div class="resource-content flexrow flex-center flex-between">
           	<input type="text" name="" value="" data-dtype="String"/>
           </div>
@@ -39,15 +39,27 @@
         <div class="resource">
           <label for="" class="resource-label">Gênero</label>
           <div class="resource-content flexrow flex-center flex-between">
-          	<input type="text" name="" value="" data-dtype="String"/>
+          	<select name="">
+							<option>Gênero</option>
+							<option>Gênero</option>
+							<option>Gênero</option>
+						</select>
           </div>
 					<label for="" class="resource-label">Tendência</label>
           <div class="resource-content flexrow flex-center flex-between">
-          	<input type="text" name="" value="" data-dtype="String"/>
+          	<select name="">
+							<option>Tendência</option>
+							<option>Tendência</option>
+							<option>Tendência</option>
+						</select>
           </div>
 					<label for="" class="resource-label">Lateralidade</label>
           <div class="resource-content flexrow flex-center flex-between">
-          	<input type="text" name="" value="" data-dtype="String"/>
+          	<select name="">
+							<option>Lateral.</option>
+							<option>Lateral.</option>
+							<option>Lateral.</option>
+						</select>
           </div>
         </div>
 				<div class="resource">
@@ -114,19 +126,19 @@
 		</div>
 		<div class="acessoRapido">
 			<div class="resource flex-group-center">
-          <div class="resource-content">
-          <input type="text" name="" value="" data-dtype="Number"/>
-          {{!-- <span> / </span>
-          <input type="text" name="system.health.max" value="{{system.health.max}}" data-dtype="Number"/> --}}
-          </div>
-					<label for="" class="resource-label">Vitalidade</label>
-        </div>
+				<label for="" class="resource-label">Atual / Max</label>
+				<div class="resource-content flex">
+					<input type="text" name="" value="" data-dtype="Number"/>
+					<input type="text" name="system.health.max" value="{{system.health.max}}" data-dtype="Number"/>
+				</div>
+				<label for="" class="resource-label">Vitalidade</label>
+			</div>
 
         <div class="resource flex-group-center">
-          <div class="resource-content">
-          <input type="text" name="" value="" data-dtype="Number"/>
-          {{!-- <span> / </span>
-          <input type="text" name="system.power.max" value="{{system.power.max}}" data-dtype="Number"/> --}}
+					<label for="" class="resource-label">Atual / Max</label>
+          <div class="resource-content flex">
+						<input type="text" name="" value="" data-dtype="Number"/>
+						<input type="text" name="system.power.max" value="{{system.power.max}}" data-dtype="Number"/>
           </div>
 					<label for="" class="resource-label">Chakra</label>
         </div>
@@ -153,13 +165,13 @@
 			<nav class="sub-tabs sheet-tabs tabs" data-group="secondary">
 				<a class="item" data-tab="historia">História</a>
 				<a class="item" data-tab="caracteristicas">Características</a>
-				<a class="item" data-tab="familia">Família</a>
+				<a class="item" data-tab="relacoes">Relações</a>
   		</nav>
 
 			<section class="sub-body">
 				<div class="tab historia" data-group="secondary" data-tab="historia">
 					<div class="historia container">
-						<h3>História</h3>
+						<h3 class="section-title">História</h3>
 						{{editor system.a target="system.a" 
 						rollData=rollData button=true owner=owner editable=editable}}
 					</div>
@@ -169,27 +181,56 @@
 					<div class="row">
 						<div class="descricao container flex-1">
 							<h3 class="section-title">Descrição Física</h3>
-							{{editor system.biography target="system.d" 
+							{{editor system.d target="system.d" 
 							rollData=rollData button=true owner=owner editable=editable}}
 						</div>
 						<div class="manias container flex-1">
 							<h3 class="section-title">Manias e Peculiaridades</h3>
-							{{editor system.biography target="system.b" 
+							{{editor system.b target="system.b" 
 							rollData=rollData button=true owner=owner editable=editable}}
 						</div>
 					</div>
 					<div class="filosofia container">
 						<h3 class="section-title">Filosofia de Vida</h3>
-						{{editor system.biography target="system.c" 
+						{{editor system.c target="system.c" 
 						rollData=rollData button=true owner=owner editable=editable}}
 					</div>
 				</div>
 
-				<div class="tab familia" data-group="secondary" data-tab="familia">
-					<div class="familia container">
-						<h3 class="section-title">Família</h3>
-						{{editor system.biography target="system.e" 
-						rollData=rollData button=true owner=owner editable=editable}}
+				<div class="tab relacoes" data-group="secondary" data-tab="relacoes">
+					<div class="container">
+						<h3 class="section-title">Relações Importantes</h3>
+						<div class="resource-titles flex flex-group-center">
+							<label class="flex-1">Parentesco</label>
+							<label class="flex-2">Nome</label>
+							<label class="flex-1">Idade</label>
+							<label class="flex-1">Gênero</label>
+							<label class="flex-1">Carreira</label>
+						</div>
+						<div class="resource-content flex">
+							<input type="text" name="" value="" class="flex-1" data-dtype="String"/>
+							<input type="text" name="" value="" class="flex-2" data-dtype="String"/>
+							<input type="text" name="" value="" class="flex-1" data-dtype="String"/>
+							<input type="text" name="" value="" class="flex-1" data-dtype="String"/>
+							<input type="text" name="" value="" class="flex-1" data-dtype="String"/>
+						</div>
+						<div class="resource-content flex">
+							<input type="text" name="" value="" class="flex-1" data-dtype="String"/>
+							<input type="text" name="" value="" class="flex-2" data-dtype="String"/>
+							<input type="text" name="" value="" class="flex-1" data-dtype="String"/>
+							<input type="text" name="" value="" class="flex-1" data-dtype="String"/>
+							<input type="text" name="" value="" class="flex-1" data-dtype="String"/>
+						</div>
+						<div class="resource-content flex">
+							<input type="text" name="" value="" class="flex-1" data-dtype="String"/>
+							<input type="text" name="" value="" class="flex-2" data-dtype="String"/>
+							<input type="text" name="" value="" class="flex-1" data-dtype="String"/>
+							<input type="text" name="" value="" class="flex-1" data-dtype="String"/>
+							<input type="text" name="" value="" class="flex-1" data-dtype="String"/>
+						</div>
+						<div class="damage-box align-center" style="padding: 5px 0; opacity: 0.6;">
+							<a class="damage-control add-damage"><i class="fas fa-plus"></i> Adicionar uma relação</a>
+						</div>
 					</div>
 				</div>
 			</section>
