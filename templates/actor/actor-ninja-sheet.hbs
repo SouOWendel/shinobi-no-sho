@@ -9,53 +9,56 @@
     <div class="header-fields">
 			<div class="resources grid">
 			<div class="resource flex flex-group-center">
-					<label for="" class="resource-label label-padding">Nível de Campanha</label>
+					<label for="system.details.nivelCampanha" class="resource-label p-r-10">Nível de Campanha</label>
           <div class="resource-content flexrow flex-center flex-between">
-          	<input type="text" name="" value="" data-dtype="String"/>
+          	<input type="text" name="system.details.nivelCampanha" value="{{system.details.nivelCampanha}}" data-dtype="String"/>
           </div>
 			</div>
 			<div class="resource flex flex-group-center">
-					<label for="" class="resource-label label-padding">Nível Shinobi</label>
+					<label for="system.details.nivelShinobi" class="resource-label p-r-10">Nível Shinobi</label>
           <div class="resource-content flexrow flex-center flex-between">
-          	<input type="text" name="" value="" data-dtype="String"/>
+          	<input type="text" name="system.details.nivelShinobi" value="{{system.details.nivelShinobi}}" data-dtype="String"/>
           </div>
 			</div>
 			</div>
       <div class="resources grid grid-3col">
 				<div class="resource">
-					<label for="" class="resource-label">Clã</label>
+					<label for="system.details.cla" class="resource-label">Clã</label>
           <div class="resource-content flexrow flex-center flex-between">
-          	<input type="text" name="" value="" data-dtype="String"/>
+          	<input type="text" name="system.details.cla" value="{{system.details.cla}}" 
+						data-dtype="String" placeholder="Ex: Uzumaki"/>
           </div>
-					<label for="" class="resource-label">Idade</label>
+					<label for="system.details.idade" class="resource-label">Idade</label>
           <div class="resource-content flexrow flex-center flex-between">
-          	<input type="text" name="" value="" data-dtype="String"/>
+          	<input type="text" name="system.details.idade" value="{{system.details.idade}}" 
+						data-dtype="String" placeholder="Ex: 25 anos"/>
           </div>
-					<label for="" class="resource-label">Vila de Origem</label>
+					<label for="system.details.vilaOrigem" class="resource-label">Vila de Origem</label>
           <div class="resource-content flexrow flex-center flex-between">
-          	<input type="text" name="" value="" data-dtype="String"/>
+          	<input type="text" name="system.details.vilaOrigem" value="{{system.details.vilaOrigem}}" 
+						data-dtype="String" placeholder="Ex: Konoha"/>
           </div>
 				</div>
         <div class="resource">
-          <label for="" class="resource-label">Gênero</label>
+          <label for="system.details.genero" class="resource-label">Gênero</label>
           <div class="resource-content flexrow flex-center flex-between">
-          	<select name="">
+          	<select name="system.details.genero">
 							<option>Gênero</option>
 							<option>Gênero</option>
 							<option>Gênero</option>
 						</select>
           </div>
-					<label for="" class="resource-label">Tendência</label>
+					<label for="system.details.tendencia" class="resource-label">Tendência</label>
           <div class="resource-content flexrow flex-center flex-between">
-          	<select name="">
+          	<select name="system.details.tendencia">
 							<option>Tendência</option>
 							<option>Tendência</option>
 							<option>Tendência</option>
 						</select>
           </div>
-					<label for="" class="resource-label">Lateralidade</label>
+					<label for="system.details.lateralidade" class="resource-label">Lateralidade</label>
           <div class="resource-content flexrow flex-center flex-between">
-          	<select name="">
+          	<select name="system.details.lateralidade">
 							<option>Lateral.</option>
 							<option>Lateral.</option>
 							<option>Lateral.</option>
@@ -63,17 +66,20 @@
           </div>
         </div>
 				<div class="resource">
-          <label for="" class="resource-label">Vila Atuante</label>
+          <label for="system.details.vilaAtuante" class="resource-label">Vila Atuante</label>
           <div class="resource-content flexrow flex-center flex-between">
-          	<input type="text" name="" value="" data-dtype="String"/>
+          	<input type="text" name="system.details.vilaAtuante" value="{{system.details.vilaAtuante}}" 
+						data-dtype="String" placeholder="Ex: Suna"/>
           </div>
-					<label for="" class="resource-label">Natureza Pr.</label>
+					<label for="system.details.naturezaPrincipal" class="resource-label">Natureza Pr.</label>
           <div class="resource-content flexrow flex-center flex-between">
-          	<input type="text" name="" value="" data-dtype="String"/>
+          	<input type="text" name="system.details.naturezaPrincipal" value="{{system.details.naturezaPrincipal}}" 
+						data-dtype="String" placeholder="Ex: Katon"/>
           </div>
-					<label for="" class="resource-label">Natureza Sc.</label>
+					<label for="system.details.naturezaSecundaria" class="resource-label">Natureza Sc.</label>
           <div class="resource-content flexrow flex-center flex-between">
-          	<input type="text" name="" value="" data-dtype="String"/>
+          	<input type="text" name="system.details.naturezaSecundaria" value="{{system.details.naturezaSecundaria}}" 
+						data-dtype="String" placeholder="Ex: Suiton"/>
           </div>
         </div>
       </div>
@@ -83,53 +89,60 @@
 		<div class="atributos">
 			<div class="resource">
           <div class="resource-content">
-          	<input type="text" name="" value="" data-dtype="Number"/>
+          	<input type="text" name="system.abilities.for.value" 
+						value="{{system.abilities.for.value}}" data-dtype="Number"/>
           </div>
-					<label for="" class="resource-label">Força</label>
+					<label for="system.abilities.for.value" class="resource-label">Força</label>
 			</div>
 			<div class="resource">
           <div class="resource-content">
-          	<input type="text" name="" value="" data-dtype="Number"/>
+          	<input type="text" name="system.abilities.des.value" 
+						value="{{system.abilities.des.value}}" data-dtype="Number"/>
           </div>
-					<label for="" class="resource-label">Destreza</label>
+					<label for="system.abilities.des.value" class="resource-label">Destreza</label>
 			</div>
 			<div class="resource">
           <div class="resource-content">
-          	<input type="text" name="" value="" data-dtype="Number"/>
+          	<input type="text" name="system.abilities.agi.value" 
+						value="{{system.abilities.agi.value}}" data-dtype="Number"/>
           </div>
-					<label for="" class="resource-label">Agilidade</label>
+					<label for="system.abilities.agi.value" class="resource-label">Agilidade</label>
 			</div>
 			<div class="resource">
           <div class="resource-content">
-          	<input type="text" name="" value="" data-dtype="Number"/>
+          	<input type="text" name="system.abilities.per.value" 
+						value="{{system.abilities.per.value}}" data-dtype="Number"/>
           </div>
-					<label for="" class="resource-label">Percepção</label>
+					<label for="system.abilities.per.value" class="resource-label">Percepção</label>
 			</div>
 			<div class="resource">
           <div class="resource-content">
-          	<input type="text" name="" value="" data-dtype="Number"/>
+          	<input type="text" name="system.abilities.int.value" 
+						value="{{system.abilities.int.value}}" data-dtype="Number"/>
           </div>
-					<label for="" class="resource-label">Inteligência</label>
+					<label for="system.abilities.int.value" class="resource-label">Inteligência</label>
 			</div>
 			<div class="resource">
           <div class="resource-content">
-          	<input type="text" name="" value="" data-dtype="Number"/>
+          	<input type="text" name="system.abilities.vig.value" 
+						value="{{system.abilities.vig.value}}" data-dtype="Number"/>
           </div>
-					<label for="" class="resource-label">Vigor</label>
+					<label for="system.abilities.vig.value" class="resource-label">Vigor</label>
 			</div>
 			<div class="resource">
           <div class="resource-content">
-          	<input type="text" name="" value="" data-dtype="Number"/>
+          	<input type="text" name="system.abilities.esp.value" 
+						value="{{system.abilities.esp.value}}" data-dtype="Number"/>
           </div>
-					<label for="" class="resource-label">Espírito</label>
+					<label for="system.abilities.esp.value" class="resource-label">Espírito</label>
 			</div>
 		</div>
 		<div class="acessoRapido">
 			<div class="resource flex-group-center">
 				<label for="" class="resource-label">Atual / Max</label>
 				<div class="resource-content flex">
-					<input type="text" name="" value="" data-dtype="Number"/>
-					<input type="text" name="system.health.max" value="{{system.health.max}}" data-dtype="Number"/>
+					<input type="text" name="system.attributes.vitalidade.atual" value="{{system.attributes.vitalidade.atual}}" data-dtype="Number"/>
+					<input type="text" name="system.attributes.vitalidade.max" value="{{system.attributes.vitalidade.max}}" data-dtype="Number"/>
 				</div>
 				<label for="" class="resource-label">Vitalidade</label>
 			</div>
@@ -137,8 +150,8 @@
         <div class="resource flex-group-center">
 					<label for="" class="resource-label">Atual / Max</label>
           <div class="resource-content flex">
-						<input type="text" name="" value="" data-dtype="Number"/>
-						<input type="text" name="system.power.max" value="{{system.power.max}}" data-dtype="Number"/>
+						<input type="text" name="system.attributes.chakra.atual" value="{{system.attributes.chakra.atual}}" data-dtype="Number"/>
+						<input type="text" name="system.attributes.chakra.max" value="{{system.attributes.chakra.max}}" data-dtype="Number"/>
           </div>
 					<label for="" class="resource-label">Chakra</label>
         </div>
@@ -162,6 +175,7 @@
 
 		{{!-- Biography Tab --}}
     <div class="tab biografia" data-group="primary" data-tab="biografia">
+			<div class="content">
 			<nav class="sub-tabs sheet-tabs tabs" data-group="secondary">
 				<a class="item" data-tab="historia">História</a>
 				<a class="item" data-tab="caracteristicas">Características</a>
@@ -172,7 +186,7 @@
 				<div class="tab historia" data-group="secondary" data-tab="historia">
 					<div class="historia container">
 						<h3 class="section-title">História</h3>
-						{{editor system.a target="system.a" 
+						{{editor system.details.biografia.historia target="system.details.biografia.historia" 
 						rollData=rollData button=true owner=owner editable=editable}}
 					</div>
 				</div>
@@ -181,18 +195,21 @@
 					<div class="row">
 						<div class="descricao container flex-1">
 							<h3 class="section-title">Descrição Física</h3>
-							{{editor system.d target="system.d" 
+							{{editor system.details.biografia.caracteristicas.campo1.value 
+							target="system.details.biografia.caracteristicas.campo1.value" 
 							rollData=rollData button=true owner=owner editable=editable}}
 						</div>
 						<div class="manias container flex-1">
 							<h3 class="section-title">Manias e Peculiaridades</h3>
-							{{editor system.b target="system.b" 
+							{{editor system.details.biografia.caracteristicas.campo2.value 
+							target="system.details.biografia.caracteristicas.campo2.value" 
 							rollData=rollData button=true owner=owner editable=editable}}
 						</div>
 					</div>
 					<div class="filosofia container">
 						<h3 class="section-title">Filosofia de Vida</h3>
-						{{editor system.c target="system.c" 
+						{{editor system.details.biografia.caracteristicas.campo3.value 
+						target="system.details.biografia.caracteristicas.campo3.value" 
 						rollData=rollData button=true owner=owner editable=editable}}
 					</div>
 				</div>
@@ -234,44 +251,59 @@
 					</div>
 				</div>
 			</section>
+			</div>
     </div>
 
     {{!-- Owned Combat Tab --}}
     <div class="tab combate" data-group="primary" data-tab="combate">
+			<div class="content">
     	{{> "systems/shinobiNoSho/templates/actor/parts/actor-combate.hbs"}}
+			</div>
     </div>
 
     {{!-- Owned Skills Tab --}}
     <div class="tab pericias" data-group="primary" data-tab="pericias">
+			<div class="content">
        {{> "systems/shinobiNoSho/templates/actor/parts/actor-pericias.hbs"}}
+			 </div>
     </div>
 
     {{!-- Owned Aptitudes and Powers Tab --}}
     <div class="tab aptidoesPoderes" data-group="primary" data-tab="aptidoesPoderes">
+			<div class="content">
       {{> "systems/shinobiNoSho/templates/actor/parts/actor-aptidoesPoderes.hbs"}}
+			</div>
     </div>
 
 		{{!-- Owned Techniques Tab --}}
     <div class="tab tecnicas" data-group="primary" data-tab="tecnicas">
-       {{> "systems/shinobiNoSho/templates/actor/parts/actor-tecnicas.hbs"}}
+			<div class="content">
+       	{{> "systems/shinobiNoSho/templates/actor/parts/actor-tecnicas.hbs"}}
+			 </div>
     </div>
 
 		{{!-- Owned Inventory Tab --}}
     <div class="tab inventario" data-group="primary" data-tab="inventario">
-       {{> "systems/shinobiNoSho/templates/actor/parts/actor-inventario.hbs"}}
+			<div class="content">
+					{{> "systems/shinobiNoSho/templates/actor/parts/actor-inventario.hbs"}}
+				</div>
+			</div>
     </div>
 
 		{{!-- Owned Notes Tab --}}
     <div class="tab anotacoes" data-group="primary" data-tab="anotacoes">
+			<div class="content">
 			<div class="anotacoes container">
-				{{editor system.biography target="system.biography" 
+				{{editor system.details.anotacoes target="system.details.anotacoes" 
 				rollData=rollData button=true owner=owner editable=editable}}
+			</div>
 			</div>
     </div>
 
     {{!-- Active Effects Tab --}}
     <div class="tab efeitos flexcol" data-group="primary" data-tab="efeitos">
       {{> "systems/shinobiNoSho/templates/actor/parts/actor-efeitos.hbs"}}
+			</div>
     </div>
 
   </section>
