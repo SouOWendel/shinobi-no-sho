@@ -1,6 +1,6 @@
 {{!-- This template is a fallback for when items don't have more specific templates. --}}
 {{!-- Generally, you'll want to make more specific templates when possible. --}}
-<form class="{{cssClass}}" autocomplete="off">
+<form id="tecnicas" class="{{cssClass}}" autocomplete="off">
   <header class="sheet-header">
     <img class="profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}"/>
     <div class="header-fields">
@@ -10,21 +10,240 @@
 
   {{!-- Sheet Tab Navigation --}}
   <nav class="sheet-tabs tabs" data-group="primary">
-    <a class="item" data-tab="description">Description</a>
-    <a class="item" data-tab="attributes">Attributes</a>
+    <a class="item" data-tab="descricao">Descrição</a>
+    <a class="item" data-tab="combate">Combate</a>
+		<a class="item" data-tab="detalhes">Detalhes</a>
+		<a class="item" data-tab="efeitos">Efeitos</a>
   </nav>
 
   {{!-- Sheet Body --}}
   <section class="sheet-body">
 
     {{!-- Description Tab --}}
-    <div class="tab" data-group="primary" data-tab="description">
+    <div class="tab" data-group="primary" data-tab="descricao">
       {{editor system.description target="system.description" rollData=rollData button=true owner=owner editable=editable}}
     </div>
 
-    {{!-- Attributes Tab --}}
-    <div class="tab attributes" data-group="primary" data-tab="attributes">
-      {{!-- As you add new fields, add them in here! --}}
+    {{!-- Combat Tab --}}
+    <div class="tab combate" data-group="primary" data-tab="combate">
+      <div class="flex flex-group-center">
+				<div class="resource flex flex-2">
+					<label for="system.details.nivelShinobi" class="resource-label p-r-10">Dano</label>
+					<div class="resource-content">
+						<select name="" class="item-medium">
+							<option>Tipo de Técnica</option>
+							<option>Tipo de Técnica</option>
+							<option>Tipo de Técnica</option>
+						</select>
+					</div>
+				</div>
+				<div class="resource flex flex-2">
+					<label for="system.details.nivelShinobi" class="resource-label p-r-10">Tipo de Dano</label>
+					<div class="resource-content">
+						<select name="" class="item-medium">
+							<option>Subtipo de Técnica</option>
+							<option>Subtipo de Técnica</option>
+							<option>Subtipo de Técnica</option>
+						</select>
+					</div>
+				</div>
+			</div>
+
+			<div class="flex flex-group-center">
+				<div class="resource flex flex-2">
+					<label for="system.details.nivelShinobi" class="resource-label p-r-10">Efeitos ou Aptidões</label>
+					<div class="resource-content">
+						<input type="text" name="" value="" data-dtype="String"/>
+					</div>
+				</div>
+				<div class="resource flex flex-2">
+					<label for="system.details.nivelShinobi" class="resource-label p-r-10">Duração</label>
+					<div class="resource-content">
+						<input type="text" name="" value="" data-dtype="String"/>
+					</div>
+				</div>
+			</div>
+
+			<div class="flex flex-group-center">
+				<div class="resource flex flex-2">
+					<label for="system.details.nivelShinobi" class="resource-label p-r-10">Área de Efeito</label>
+					<div class="resource-content">
+						<select name="" class="item-medium">
+							<option>Área de Efeito</option>
+							<option>Área de Efeito</option>
+							<option>Área de Efeito</option>
+						</select>
+					</div>
+				</div>
+				<div class="resource flex flex-2">
+					<i class="fas fa-arrow-right"></i>
+					<div class="resource-content">
+						<input type="text" name="" value="" data-dtype="String"/>
+					</div>
+				</div>
+			</div>
+
+			<div class="flex flex-group-center">
+				<div class="resource flex flex-2">
+					<label for="system.details.nivelShinobi" class="resource-label p-r-10">Alcance</label>
+					<div class="resource-content">
+						<select name="" class="item-medium">
+							<option>Alcance</option>
+							<option>Alcance</option>
+							<option>Alcance</option>
+						</select>
+					</div>
+				</div>
+				<div class="resource flex flex-2">
+					<i class="fas fa-arrow-right"></i>
+					<div class="resource-content">
+						<input type="text" name="" value="" data-dtype="String"/>
+					</div>
+				</div>
+			</div>
+
+			<div class="flex flex-group-center">
+				<div class="resource flex flex-2">
+					<label for="system.details.nivelShinobi" class="resource-label p-r-10">Ação</label>
+					<div class="resource-content">
+						<select name="" class="item-medium">
+							<option>Ação</option>
+							<option>Ação</option>
+							<option>Ação</option>
+						</select>
+					</div>
+				</div>
+				<div class="resource flex flex-2">
+					<label for="system.details.nivelShinobi" class="resource-label p-r-10">Alvo</label>
+					<div class="resource-content">
+						<input type="text" name="" value="" data-dtype="String"/>
+					</div>
+				</div>
+			</div>
+
+			<div class="flex flex-group-center">
+				<div class="resource flex flex-2">
+					<label for="system.details.nivelShinobi" class="resource-label p-r-10">Teste de Resistência</label>
+					<div class="resource-content">
+						<input type="text" name="" value="" data-dtype="String"/>
+					</div>
+				</div>
+			</div>
+    </div>
+
+		{{!-- Details Tab --}}
+    <div class="tab detalhes" data-group="primary" data-tab="detalhes">
+      <div class="flex flex-group-center">
+				<div class="resource flex flex-2">
+					<label for="system.details.nivelShinobi" class="resource-label p-r-10">Tipo de Técnica</label>
+					<div class="resource-content">
+						<select name="" class="item-medium">
+							<option>Tipo de Técnica</option>
+							<option>Tipo de Técnica</option>
+							<option>Tipo de Técnica</option>
+						</select>
+					</div>
+				</div>
+				<div class="resource flex flex-2">
+					<label for="system.details.nivelShinobi" class="resource-label p-r-10">Subtipo de<br> Técnica</label>
+					<div class="resource-content">
+						<select name="" class="item-medium">
+							<option>Subtipo de Técnica</option>
+							<option>Subtipo de Técnica</option>
+							<option>Subtipo de Técnica</option>
+						</select>
+					</div>
+				</div>
+			</div>
+
+			<div class="flex flex-group-center">
+				<div class="resource flex flex-2">
+					<label for="system.details.nivelShinobi" class="resource-label p-r-10">Custo de Chakra</label>
+					<div class="resource-content">
+						<input type="text" name="" value="" data-dtype="String"/>
+					</div>
+				</div>
+				<div class="resource flex flex-2">
+					<label for="system.details.nivelShinobi" class="resource-label p-r-10">Compartimentos</label>
+					<div class="resource-content">
+						<input type="text" name="" value="" data-dtype="String"/>
+					</div>
+					<i class="">/</i>
+					<div class="resource-content">
+						<input type="text" name="" value="" data-dtype="String"/>
+					</div>
+				</div>
+			</div>
+			<div class="flex flex-group-center">
+				<div class="resource flex flex-2">
+					<label for="system.details.nivelShinobi" class="resource-label p-r-10">Elemento</label>
+					<div class="resource-content">
+						<select name="" class="item-medium">
+							<option>Elemento</option>
+							<option>Elemento</option>
+							<option>Elemento</option>
+						</select>
+					</div>
+				</div>
+				<div class="resource flex flex-2">
+					<i class="fas fa-arrow-right"></i>
+					<div class="resource-content">
+						<input type="text" name="" value="" data-dtype="String"/>
+					</div>
+				</div>
+			</div>
+
+			<div class="flex flex-group-center">
+				<div class="resource flex flex-2">
+					<label for="system.details.nivelShinobi" class="resource-label p-r-10">Tipo de Jutsu</label>
+					<div class="resource-content">
+						<select name="" class="item-medium">
+							<option>Tipo de Jutsu</option>
+							<option>Tipo de Jutsu</option>
+							<option>Tipo de Jutsu</option>
+						</select>
+					</div>
+				</div>
+				<div class="resource flex flex-2">
+					<label for="system.details.nivelShinobi" class="resource-label p-r-10">Ranking</label>
+					<div class="resource-content">
+						<select name="" class="item-medium">
+							<option>Ranking</option>
+							<option>Ranking</option>
+							<option>Ranking</option>
+						</select>
+					</div>
+				</div>
+			</div>
+
+			<div class="flex flex-group-center">
+				<div class="resource flex flex-2">
+					<label for="system.details.nivelShinobi" class="resource-label p-r-10">Pré-requisito</label>
+					<div class="resource-content">
+						<input type="text" name="" value="" data-dtype="String"/>
+					</div>
+				</div>
+			</div>
+
+			<div class="flex">
+				<div class="resource flex">
+					<label for="system.details.nivelShinobi" class="resource-label p-r-10">Selos de Mão</label>
+					<div class="resource-content">
+						<input type="checkbox" name="" value="" data-dtype="String"/>
+					</div>
+				</div>
+				<div class="resource flex">
+					<label for="system.details.nivelShinobi" class="resource-label p-r-10">Escalona com Custo de Chakra</label>
+					<div class="resource-content">
+						<input type="checkbox" name="" value="" data-dtype="String"/>
+					</div>
+				</div>
+			</div>
+    </div>
+
+		{{!-- Effects Tab --}}
+    <div class="tab efeitos" data-group="primary" data-tab="efeitos">
+      {{> "systems/shinobiNoSho/templates/item/parts/item-efeitos.hbs"}}
     </div>
   </section>
 </form>

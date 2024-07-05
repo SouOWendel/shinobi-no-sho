@@ -1,0 +1,67 @@
+<form id="gerais" class="{{cssClass}}" autocomplete="off">
+  <header class="sheet-header">
+    <img class="profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}" />
+    <div class="header-fields">
+      <h1 class="charname"><input name="name" type="text" value="{{item.name}}" placeholder="Name" /></h1>
+      <div class="grid grid-2col">
+        <div class="resource">
+          <label class="resource-label">Quantity</label>
+          <input type="text" name="system.quantity" value="{{system.quantity}}" data-dtype="Number" />
+        </div>
+        <div class="resource">
+          <label class="resource-label">Weight</label>
+          <input type="text" name="system.weight" value="{{system.weight}}" data-dtype="Number" />
+        </div>
+      </div>
+    </div>
+  </header>
+
+  {{!-- Sheet Tab Navigation --}}
+  <nav class="sheet-tabs tabs" data-group="primary">
+    <a class="item" data-tab="detalhes">Detalhes Gerais</a>
+		<a class="item" data-tab="efeitos">Efeitos</a>
+  </nav>
+
+  {{!-- Sheet Body --}}
+  <section class="sheet-body">
+
+    {{!-- Description Tab --}}
+    <div class="tab" data-group="primary" data-tab="descricao">
+      {{editor system.description target="system.description" rollData=rollData button=true owner=owner editable=editable}}
+    </div>
+
+		<div class="tab" data-group="primary" data-tab="detalhes">
+			<div class="flex flex-group-center">
+				<div class="resource flex flex-2">
+					<label for="system.details.nivelShinobi" class="resource-label p-r-10">Tipo de Item Geral</label>
+					<div class="resource-content">
+						<input type="text" name="system.details.nivelShinobi" value="{{system.details.nivelShinobi}}" data-dtype="String"/>
+					</div>
+				</div>
+				<div class="resource flex flex-2">
+						<label for="system.details.nivelShinobi" class="resource-label p-r-10">Compartimentos</label>
+						<div class="resource-content">
+							<input type="text" name="system.details.nivelShinobi" value="{{system.details.nivelShinobi}}" data-dtype="String"/>
+						</div>
+						<i> / </i>
+						<div class="resource-content">
+							<input type="text" name="system.details.nivelShinobi" value="{{system.details.nivelShinobi}}" data-dtype="String"/>
+						</div>
+				</div>
+			</div>
+			<div class="container" style="margin-top: 10px;">
+				<h3 class="section-title">Descrição</h3>
+				{{editor system.details.biografia.caracteristicas.campo2.value 
+				target="system.details.biografia.caracteristicas.campo2.value" 
+				rollData=rollData button=true owner=owner editable=editable}}
+			</div>
+		</div>
+
+    {{!-- Effects Tab --}}
+    <div class="tab efeitos" data-group="primary" data-tab="efeitos">
+      {{> "systems/shinobiNoSho/templates/item/parts/item-efeitos.hbs"}}
+    </div>
+  </section>
+</form>
+
+{{log system}}

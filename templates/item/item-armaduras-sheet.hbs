@@ -1,4 +1,4 @@
-<form class="{{cssClass}}" autocomplete="off">
+<form id="armaduras" class="{{cssClass}}" autocomplete="off">
   <header class="sheet-header">
     <img class="profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}" />
     <div class="header-fields">
@@ -18,43 +18,73 @@
 
   {{!-- Sheet Tab Navigation --}}
   <nav class="sheet-tabs tabs" data-group="primary">
-    <a class="item" data-tab="description">Description</a>
-    <a class="item" data-tab="attributes">Attributes</a>
+    <a class="item" data-tab="descricao">Descrição</a>
+    <a class="item" data-tab="detalhes">Detalhes</a>
+		<a class="item" data-tab="efeitos">Efeitos</a>
   </nav>
 
   {{!-- Sheet Body --}}
   <section class="sheet-body">
 
     {{!-- Description Tab --}}
-    <div class="tab" data-group="primary" data-tab="description">
+    <div class="tab" data-group="primary" data-tab="descricao">
       {{!-- To render inline rolls in a TinyMCE editor, you need to pass the parent actor's (if any) roll data to the
       rollData prop. --}}
       {{editor system.description target="system.description" rollData=rollData button=true owner=owner
       editable=editable}}
     </div>
 
-    {{!-- Attributes Tab --}}
-    <div class="tab attributes" data-group="primary" data-tab="attributes">
-      {{!-- As you add new fields, add them in here! --}}
-      <div class="resource">
-        <label class="resource-label">Roll Formula:</label>
-        <span>{{system.formula}}</span>
-        <div class="grid grid-4col">
-          <div class="grid-span-1">
-            <label class="resource-label">Number of Dice</label>
-            <input type="text" name="system.roll.diceNum" value="{{system.roll.diceNum}}" data-dtype="Number" />
-          </div>
-          <div class="grid-span-1">
-            <label class="resource-label">Die Size</label>
-            <input type="text" name="system.roll.diceSize" value="{{system.roll.diceSize}}" data-dtype="String" />
-          </div>
-          <div class="grid-span-2">
-            <label class="resource-label">Roll Modifier</label>
-            <input type="text" name="system.roll.diceBonus" value="{{system.roll.diceBonus}}" data-dtype="String" />
-          </div>
-        </div>
+    {{!-- Details Tab --}}
+    <div class="tab detalhes" data-group="primary" data-tab="detalhes">
+      <div class="flex flex-group-center">
+				<div class="resource flex flex-2">
+					<label for="system.details.nivelShinobi" class="resource-label p-r-10">Tipo de Armadura</label>
+					<div class="resource-content">
+						<select name="" class="item-medium">
+							<option>Tipo de Armadura</option>
+							<option>Tipo de Armadura</option>
+							<option>Tipo de Armadura</option>
+						</select>
+					</div>
+				</div>
+				<div class="resource flex flex-2">
+					<label for="system.details.nivelShinobi" class="resource-label p-r-10">Bônus de Absorção</label>
+					<div class="resource-content">
+						<input type="text" name="system.details.nivelShinobi" value="{{system.details.nivelShinobi}}" data-dtype="String"/>
+					</div>
+				</div>
+			</div>
 
-      </div>
+			<div class="flex flex-group-center">
+				<div class="resource flex flex-2">
+					<label for="system.details.nivelShinobi" class="resource-label p-r-10">Penalidade de Armadura</label>
+					<div class="resource-content">
+						<input type="text" name="system.details.nivelShinobi" value="{{system.details.nivelShinobi}}" data-dtype="String"/>
+					</div>
+				</div>
+				<div class="resource flex flex-2"></div>
+			</div>
+
+			<div class="flex flex-group-center">
+				<div class="resource flex flex-2">
+					<label for="system.details.nivelShinobi" class="resource-label p-r-10">Compartimentos</label>
+					<div class="resource-content">
+						<input type="text" name="" value="" data-dtype="String"/>
+					</div>
+				</div>
+				<div class="resource flex flex-1">
+					<i class="">/</i>
+					<div class="resource-content">
+						<input type="text" name="" value="" data-dtype="String"/>
+					</div>
+				</div>
+				<div class="resource flex flex-3"></div>
+			</div>
+    </div>
+
+		{{!-- Effects Tab --}}
+    <div class="tab efeitos" data-group="primary" data-tab="efeitos">
+      {{> "systems/shinobiNoSho/templates/item/parts/item-efeitos.hbs"}}
     </div>
   </section>
 </form>
