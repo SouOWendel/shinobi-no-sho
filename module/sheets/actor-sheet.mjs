@@ -55,7 +55,7 @@ export class ShinobiActorSheet extends ActorSheet {
     // Prepare character data and items.
     if (actorData.type == 'Ninja') {
       this._prepareItems(context);
-      // this._prepareCharacterData(context);
+      this._prepareCharacterData(context);
     }
 
     // Add roll data for TinyMCE editors.
@@ -82,6 +82,15 @@ export class ShinobiActorSheet extends ActorSheet {
     // Handle ability scores.
     for (let [k, v] of Object.entries(context.system.abilities)) {
       v.label = game.i18n.localize(CONFIG.shinobiNoSho.abilities[k]) ?? k;
+    }
+
+		for (let [k, v] of Object.entries(context.system.skills.geral)) {
+			console.log(v);
+      v.label = game.i18n.localize(CONFIG.shinobiNoSho.skills.geral[k]) ?? k;
+    }
+
+		for (let [k, v] of Object.entries(context.system.skills.social)) {
+      v.label = game.i18n.localize(CONFIG.shinobiNoSho.skills.social[k]) ?? k;
     }
   }
 
