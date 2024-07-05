@@ -13,6 +13,6 @@ export const preloadHandlebarsTemplates = async function () {
 		'systems/shinobiNoSho/templates/actor/parts/actor-pericias.hbs',
 		'systems/shinobiNoSho/templates/actor/parts/actor-tecnicas.hbs',
     // Item partials
-    'systems/shinobiNoSho/templates/item/parts/item-effects.hbs',
+    'systems/shinobiNoSho/templates/item/parts/item-efeitos.hbs',
   ]);
 };
