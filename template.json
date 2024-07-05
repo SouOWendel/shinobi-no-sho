@@ -3,55 +3,73 @@
 		"types": ["Ninja"],
 		"template": {
 			"base": {
-				"health": {
-					"value": 10,
-					"min": 0,
-					"max": 0
-				},
-				"power": {
-					"value": 10,
-					"min": 0,
-					"max": 0
-				}
+				"teste": ""
 			}
 		},
-		"ninja": {
+		"Ninja": {
 			"templates": ["base"],
 			"abilities": {
-				"for": { "value": 10 },
-				"des": { "value": 10 },
-				"agi": { "value": 10 },
-				"per": { "value": 10 },
-				"int": { "value": 10 },
-				"vig": { "value": 10 },
-				"esp": { "value": 10 },
+				"for": { 
+					"value": 10,
+					"bonus": null 
+				},
+				"des": { 
+					"value": 10,
+					"bonus": null 
+				},
+				"agi": { 
+					"value": 10,
+					"bonus": null 
+				},
+				"per": { 
+					"value": 10,
+					"bonus": null 
+				},
+				"int": { 
+					"value": 10,
+					"bonus": null 
+				},
+				"vig": { 
+					"value": 10,
+					"bonus": null 
+				},
+				"esp": { 
+					"value": 10,
+					"bonus": null 
+				},
 				"social": {
-					"car": { "value": 10 },
-					"man": { "value": 10 }
+					"car": { 
+						"value": 10,
+						"bonus": null 
+					},
+					"man": { 
+						"value": 10,
+						"bonus": null 
+					}
 				},
 				"combate": {
 					"CC": {
 						"value": 0,
 						"base": 3,
-						"bonus": "",
+						"bonus": null,
 						"ability": "for"
 					},
 					"CD": {
 						"value": 0,
 						"base": 3,
-						"bonus": "",
+						"bonus": null,
 						"ability": "des"
 					},
 					"E": {
 						"value": 0,
 						"base": 3,
-						"bonus": "",
+						"bonus": null,
 						"ability": "agi"
 					},
 					"LM": {
 						"value": 0,
 						"base": 3,
-						"bonus": "",
+						"bonus": null,
 						"ability": "per"
 					}
 				}
@@ -76,8 +94,11 @@
 				},
 				"movement": {
 					"unidade": "m",
+					"base": 10,
+					"bonus": null,
 					"andar": 0,
 					"nadar": 0,
+					"ability": "",
 					"escalar": 0,
 					"mod": {
 						"divisorAndar": 2,
@@ -87,50 +108,298 @@
 				},
 				"init": {
 					"ability": "",
-					"bonus": "",
+					"bonus": null,
+					"skill": "",
+					"value": 0,
 					"roll": {
 						"max": null,
 						"min": null,
 						"mode": 0
 					}
+				},
+				"esquiva": {
+					"value": 0,
+					"ability": "",
+					"bonus": null,
+					"variavel": 0
 				}
 			},
 			"details": {
 				"nivelCampanha": 1,
 				"nivelShinobi": 1,
-				"topo": {
-					"nome": "",
-					"idade": "",
-					"cla": "",
-					"vilaAtual": "",
-					"vilaAtuante": "",
-					"tendencia": "",
-					"genero": "",
-					"lateralidade": "",
-					"naturezaPrincipal": "",
-					"naturezaSecundaria": ""
-				},
+				"nome": "",
+				"idade": "",
+				"cla": "",
+				"vilaOrigem": "",
+				"vilaAtuante": "",
+				"tendencia": "",
+				"genero": "",
+				"lateralidade": "",
+				"naturezaPrincipal": "",
+				"naturezaSecundaria": "",
+				"anotacoes": "",
 				"biografia": {
 					"familia": [],
 					"historia": "",
-					"caracteristicas": ""
+					"caracteristicas": {
+						"campo1": {
+							"value": ""
+						},
+						"campo2": {
+							"value": ""
+						},
+						"campo3": {
+							"value": ""
+						}
+					}
 				}
-			},
+			},        
 			"currency": {
 				"ryos": 100
 			},
 			"skills": {
-				"acrobacia": {
-					"ability": "agi",
-					"caracteristicas": {
-						"social": false,
-						"treinada": false,
-						"armadura": true
+				"geral": {
+					"acrobacia": {
+						"ability": "agi",
+						"value": 0,
+						"bonus": null,
+						"caracteristicas": {
+							"social": false,
+							"treinada": false,
+							"armadura": true
+						}
 					},
-					"formula": {
-						"atributo1": "agi",
-						"atributo2": "",
-						"divisor": 2
+					"arte": {
+						"ability": "int",
+						"value": 0,
+						"bonus": null,
+						"caracteristicas": {
+							"social": false,
+							"treinada": false,
+							"armadura": false
+						}
+					},
+					"atletismo": {
+						"ability": "for",
+						"value": 0,
+						"bonus": null,
+						"caracteristicas": {
+							"social": false,
+							"treinada": false,
+							"armadura": true
+						}
+					},
+					"ciencias": {
+						"ability": "int",
+						"value": 0,
+						"bonus": null,
+						"caracteristicas": {
+							"social": false,
+							"treinada": false,
+							"armadura": false
+						}
+					},
+					"cultura": {
+						"ability": "int",
+						"value": 0,
+						"bonus": null,
+						"caracteristicas": {
+							"social": false,
+							"treinada": false,
+							"armadura": false
+						}
+					},
+					"ocultismo": {
+						"ability": "int",
+						"value": 0,
+						"bonus": null,
+						"caracteristicas": {
+							"social": false,
+							"treinada": true,
+							"armadura": false
+						}
+					},
+					"concentracao": {
+						"ability": "int",
+						"value": 0,
+						"bonus": null,
+						"caracteristicas": {
+							"social": false,
+							"treinada": false,
+							"armadura": false
+						}
+					},
+					"disfarces": {
+						"ability": "per",
+						"value": 0,
+						"bonus": null,
+						"caracteristicas": {
+							"social": false,
+							"treinada": false,
+							"armadura": false
+						}
+					},
+					"escapar": {
+						"ability": "des",
+						"value": 0,
+						"bonus": null,
+						"caracteristicas": {
+							"social": false,
+							"treinada": false,
+							"armadura": false
+						}
+					},
+					"furtividade": {
+						"ability": "agi",
+						"value": 0,
+						"bonus": null,
+						"caracteristicas": {
+							"social": false,
+							"treinada": false,
+							"armadura": true
+						}
+					},
+					"animais": {
+						"ability": "per",
+						"value": 0,
+						"bonus": null,
+						"caracteristicas": {
+							"social": false,
+							"treinada": true,
+							"armadura": false
+						}
+					},
+					"mecanismos": {
+						"ability": "int",
+						"value": 0,
+						"bonus": null,
+						"caracteristicas": {
+							"social": false,
+							"treinada": true,
+							"armadura": false
+						}
+					},
+					"medicina": {
+						"ability": "for",
+						"value": 0,
+						"bonus": null,
+						"caracteristicas": {
+							"social": false,
+							"treinada": true,
+							"armadura": false
+						}
+					},
+					"prestidigitacao": {
+						"ability": "des",
+						"value": 0,
+						"bonus": null,
+						"caracteristicas": {
+							"social": false,
+							"treinada": false,
+							"armadura": false
+						}
+					},
+					"procurar": {
+						"ability": "per",
+						"value": 0,
+						"bonus": null,
+						"caracteristicas": {
+							"social": false,
+							"treinada": false,
+							"armadura": false
+						}
+					},
+					"prontidao": {
+						"ability": "per",
+						"value": 0,
+						"bonus": null,
+						"caracteristicas": {
+							"social": false,
+							"treinada": false,
+							"armadura": false
+						}
+					},
+					"rastrear": {
+						"ability": "per",
+						"value": 0,
+						"bonus": null,
+						"caracteristicas": {
+							"social": false,
+							"treinada": false,
+							"armadura": false
+						}
+					},
+					"veneficio": {
+						"ability": "int",
+						"value": 0,
+						"bonus": null,
+						"caracteristicas": {
+							"social": false,
+							"treinada": true,
+							"armadura": false
+						}
+					}
+				},
+				"social": {
+					"atuacao": {
+						"ability": "car",
+						"value": 0,
+						"bonus": null,
+						"caracteristicas": {
+							"social": true,
+							"treinada": false,
+							"armadura": false
+						}
+					},
+					"mudarAtitude": {
+						"ability": "man",
+						"value": 0,
+						"bonus": null,
+						"caracteristicas": {
+							"social": true,
+							"treinada": false,
+							"armadura": false
+						}
+					},
+					"barganha": {
+						"ability": "car",
+						"value": 0,
+						"bonus": null,
+						"caracteristicas": {
+							"social": true,
+							"treinada": false,
+							"armadura": false
+						}
+					},
+					"blefar": {
+						"ability": "man",
+						"value": 0,
+						"bonus": null,
+						"caracteristicas": {
+							"social": true,
+							"treinada": false,
+							"armadura": false
+						}
+					},
+					"intimidacao": {
+						"ability": "man",
+						"value": 0,
+						"bonus": null,
+						"caracteristicas": {
+							"social": true,
+							"treinada": false,
+							"armadura": false
+						}
+					},
+					"obterInfo": {
+						"ability": "car",
+						"value": 0,
+						"bonus": null,
+						"caracteristicas": {
+							"social": true,
+							"treinada": false,
+							"armadura": false
+						}
 					}
 				}
 			}
