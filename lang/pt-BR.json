@@ -27,6 +27,36 @@
     },
 		"NinjaSheet": {
 			"Vida": "Pontos de Vida"
+		},
+		"Skills": {
+			"geral": {
+				"acrobacia": "Acrobacia",
+				"arte": "Arte",
+				"atletismo": "Atletismo",
+				"ciencias": "Ciências",
+				"cultura": "Cultura",
+				"ocultismo": "Ocultismo",
+				"concentracao": "Concentração",
+				"disfarces": "Disfarces",
+				"escapar": "Escapar",
+				"furtividade": "Furtividade",
+				"animais": "Lidar com Animais",
+				"mecanismos": "Mecanismos",
+				"medicina": "Medicina",
+				"prestidigitacao": "Prestidigitação",
+				"procurar": "Procurar",
+				"prontidao": "Prontidão",
+				"rastrear": "Rastrear",
+				"veneficio": "Venefício"
+			},
+			"social": {
+				"atuacao": "Atuação",
+				"mudarAtitude": "Mudar Atitude",
+				"barganha": "Barganha",
+				"blefar": "Blefar",
+				"intimidacao": "Intimidação",
+				"obterInfo": "Obter Informação"
+			}
 		}
   },
 	"EFFECT": {
@@ -116,9 +146,10 @@
     "Item": {
       "armas": "Armas",
       "armaduras": "Armaduras",
-      "equipamentos": "Equipamentos",
+      "gerais": "Itens Gerais",
 			"aptidoes": "Aptidões",
-      "poderes": "Poderes"
+      "poderes": "Poderes",
+			"tecnicas": "Técnicas"
     }
   }
 }
