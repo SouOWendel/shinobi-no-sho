@@ -1,3 +1,8 @@
+.actor {
+	min-width: 600px !important;
+	min-height: 820px !important;
+}
+
 .item-form {
   font-family: $font-primary;
 }
@@ -67,9 +72,28 @@
 }
 
 .tab {
-	overflow-y: auto;
-	max-height: 96%;
+	overflow-y: hidden;
+	height: 100%;
+	align-content: flex-start;
 	padding-right: 2px;
+}
+
+.sheet-body {
+	overflow: hidden;
+}
+
+.window-content {
+	overflow-y: hidden;
+}
+
+form {
+	height: 100%;
+	overflow: hidden;
+}
+
+.content {
+	height: 100%;
+	overflow-y: auto;
 }
 
 .tox {
@@ -215,6 +239,14 @@
 		padding: 0 5px;
 	}
 
+	.resource-label {
+		font-size: 12px;
+	}
+
+	input[type=text] {
+		width: 30px !important;
+	}
+
 	.grid {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
@@ -233,6 +265,14 @@
 		grid-row-gap: 6px;
 		grid-auto-flow: column;
 	}
+
+	.resource-label {
+		font-size: 12px;
+	}
+
+	input[type=text] {
+		width: 30px !important;
+	}
 }
 
 
@@ -245,6 +285,10 @@
 		height: 40px;
 		margin-bottom: 5px;
 	}
+
+	.resource-label {
+		font-size: 12px;
+	}
 	
 	.main-content {
 		height: 70%;
@@ -256,4 +300,8 @@
 .skill-label {
 	text-align: left;
 	padding-left: 5px;
+}
+
+.prestidigitacao {
+	font-size: 12.5px;
 }

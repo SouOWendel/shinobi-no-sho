@@ -220,6 +220,10 @@
 }
 
 /* Styles limited to shinobiNoSho sheets */
+.shinobiNoSho .actor {
+  min-width: 600px !important;
+  min-height: 820px !important;
+}
 .shinobiNoSho .item-form {
   font-family: "Roboto", sans-serif;
 }
@@ -278,9 +282,24 @@
   height: 100%;
 }
 .shinobiNoSho .tab {
-  overflow-y: auto;
-  max-height: 96%;
+  overflow-y: hidden;
+  height: 100%;
+  align-content: flex-start;
   padding-right: 2px;
+}
+.shinobiNoSho .sheet-body {
+  overflow: hidden;
+}
+.shinobiNoSho .window-content {
+  overflow-y: hidden;
+}
+.shinobiNoSho form {
+  height: 100%;
+  overflow: hidden;
+}
+.shinobiNoSho .content {
+  height: 100%;
+  overflow-y: auto;
 }
 .shinobiNoSho .tox .tox-editor-container {
   background: #fff;
@@ -396,6 +415,12 @@
 .shinobiNoSho #periciasGerais .resource-content i {
   padding: 0 5px;
 }
+.shinobiNoSho #periciasGerais .resource-label {
+  font-size: 12px;
+}
+.shinobiNoSho #periciasGerais input[type=text] {
+  width: 30px !important;
+}
 .shinobiNoSho #periciasGerais .grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -411,6 +436,12 @@
   grid-row-gap: 6px;
   grid-auto-flow: column;
 }
+.shinobiNoSho #periciasSociais .resource-label {
+  font-size: 12px;
+}
+.shinobiNoSho #periciasSociais input[type=text] {
+  width: 30px !important;
+}
 .shinobiNoSho #atributosSociais {
   flex: 0.8;
 }
@@ -418,6 +449,9 @@
   width: 40px;
   height: 40px;
   margin-bottom: 5px;
+}
+.shinobiNoSho #atributosSociais .resource-label {
+  font-size: 12px;
 }
 .shinobiNoSho #atributosSociais .main-content {
   height: 70%;
@@ -428,10 +462,13 @@
   text-align: left;
   padding-left: 5px;
 }
+.shinobiNoSho .prestidigitacao {
+  font-size: 12.5px;
+}
 .shinobiNoSho .resource-label {
   font-weight: bold;
 }
-.shinobiNoSho .label-padding {
+.shinobiNoSho .p-r-10 {
   padding-right: 10px;
 }
 .shinobiNoSho .bold {
@@ -569,6 +606,54 @@
 }
 .shinobiNoSho .effects-list h3 {
   border-bottom: 0 !important;
+}
+.shinobiNoSho #aptidao, .shinobiNoSho #armas, .shinobiNoSho #poderes,
+.shinobiNoSho #gerais, .shinobiNoSho #armaduras, .shinobiNoSho #tecnicas {
+  width: 100%;
+}
+.shinobiNoSho #aptidao .tab, .shinobiNoSho #armas .tab, .shinobiNoSho #poderes .tab,
+.shinobiNoSho #gerais .tab, .shinobiNoSho #armaduras .tab, .shinobiNoSho #tecnicas .tab {
+  padding: 0 20px;
+}
+.shinobiNoSho #aptidao .tab > div, .shinobiNoSho #armas .tab > div, .shinobiNoSho #poderes .tab > div,
+.shinobiNoSho #gerais .tab > div, .shinobiNoSho #armaduras .tab > div, .shinobiNoSho #tecnicas .tab > div {
+  margin: 5px 0;
+}
+.shinobiNoSho #aptidao .tab .resource, .shinobiNoSho #armas .tab .resource, .shinobiNoSho #poderes .tab .resource,
+.shinobiNoSho #gerais .tab .resource, .shinobiNoSho #armaduras .tab .resource, .shinobiNoSho #tecnicas .tab .resource {
+  align-items: center;
+  text-align: right;
+  width: 100%;
+}
+.shinobiNoSho #aptidao label, .shinobiNoSho #armas label, .shinobiNoSho #poderes label,
+.shinobiNoSho #gerais label, .shinobiNoSho #armaduras label, .shinobiNoSho #tecnicas label {
+  min-width: 130px;
+  max-width: 130px;
+}
+.shinobiNoSho #aptidao input, .shinobiNoSho #aptidao select, .shinobiNoSho #armas input, .shinobiNoSho #armas select, .shinobiNoSho #poderes input, .shinobiNoSho #poderes select,
+.shinobiNoSho #gerais input,
+.shinobiNoSho #gerais select, .shinobiNoSho #armaduras input, .shinobiNoSho #armaduras select, .shinobiNoSho #tecnicas input, .shinobiNoSho #tecnicas select {
+  width: 100%;
+}
+.shinobiNoSho #aptidao i, .shinobiNoSho #armas i, .shinobiNoSho #poderes i,
+.shinobiNoSho #gerais i, .shinobiNoSho #armaduras i, .shinobiNoSho #tecnicas i {
+  padding: 0 10px;
+}
+.shinobiNoSho #aptidao .resource-content, .shinobiNoSho #armas .resource-content, .shinobiNoSho #poderes .resource-content,
+.shinobiNoSho #gerais .resource-content, .shinobiNoSho #armaduras .resource-content, .shinobiNoSho #tecnicas .resource-content {
+  flex-grow: 1;
+}
+.shinobiNoSho #aptidao .container, .shinobiNoSho #armas .container, .shinobiNoSho #poderes .container,
+.shinobiNoSho #gerais .container, .shinobiNoSho #armaduras .container, .shinobiNoSho #tecnicas .container {
+  height: 150px;
+}
+.shinobiNoSho .traits-grid {
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 6px;
+  grid-row-gap: 6px;
+  grid-auto-flow: column;
+  padding-top: 10px;
 }
 .shinobiNoSho .effects .item .effect-source,
 .shinobiNoSho .effects .item .effect-duration,
