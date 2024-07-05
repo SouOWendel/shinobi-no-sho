@@ -12,7 +12,7 @@ export class ShinobiItemSheet extends ItemSheet {
   static get defaultOptions() {
     return foundry.utils.mergeObject(super.defaultOptions, {
       classes: ['shinobiNoSho', 'sheet', 'item'],
-      width: 620,
+      width: 520,
 			height: 440,
 			template: 'systems/shinobiNoSho/templates/item/item-sheet.hbs',
       tabs: [
