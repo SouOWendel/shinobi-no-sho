@@ -1,54 +1,67 @@
 export const shinobiNoSho = {};
 
 /**
- * The set of Ability Scores used within the system.
+ * The set of ability Scores used within the system.
  * @type {Object}
  */
 shinobiNoSho.abilities = {
-  str: 'shinobiNoSho.Ability.Str.long',
-  dex: 'shinobiNoSho.Ability.Dex.long',
-  con: 'shinobiNoSho.Ability.Con.long',
-  int: 'shinobiNoSho.Ability.Int.long',
-  wis: 'shinobiNoSho.Ability.Wis.long',
-  cha: 'shinobiNoSho.Ability.Cha.long',
+  for: 'shinobiNoSho.ability.for.long',
+  des: 'shinobiNoSho.ability.des.long',
+  agi: 'shinobiNoSho.ability.agi.long',
+  per: 'shinobiNoSho.ability.per.long',
+  int: 'shinobiNoSho.ability.int.long',
+  vig: 'shinobiNoSho.ability.vig.long',
+	esp: 'shinobiNoSho.ability.esp.long',
+  car: 'shinobiNoSho.ability.car.long',
+	man: 'shinobiNoSho.ability.man.long',
 };
 
 shinobiNoSho.abilityAbbreviations = {
-  str: 'shinobiNoSho.Ability.Str.abbr',
-  dex: 'shinobiNoSho.Ability.Dex.abbr',
-  con: 'shinobiNoSho.Ability.Con.abbr',
-  int: 'shinobiNoSho.Ability.Int.abbr',
-  wis: 'shinobiNoSho.Ability.Wis.abbr',
-  cha: 'shinobiNoSho.Ability.Cha.abbr',
+  for: 'shinobiNoSho.ability.for.abbr',
+  des: 'shinobiNoSho.ability.des.abbr',
+  agi: 'shinobiNoSho.ability.agi.abbr',
+  per: 'shinobiNoSho.ability.per.abbr',
+  int: 'shinobiNoSho.ability.int.abbr',
+  vig: 'shinobiNoSho.ability.vig.abbr',
+	esp: 'shinobiNoSho.ability.esp.abbr',
+  car: 'shinobiNoSho.ability.car.abbr',
+	man: 'shinobiNoSho.ability.man.abbr',
 };
 
 shinobiNoSho.skills = {
 	geral: {
-		acrobacia: "shinobiNoSho.Skills.geral.acrobacia",
-		arte: "shinobiNoSho.Skills.geral.arte",
-		atletismo: "shinobiNoSho.Skills.geral.atletismo",
-		ciencias: "shinobiNoSho.Skills.geral.ciencias",
-		cultura: "shinobiNoSho.Skills.geral.cultura",
-		ocultismo: "shinobiNoSho.Skills.geral.ocultismo",
-		concentracao: "shinobiNoSho.Skills.geral.concentracao",
-		disfarces: "shinobiNoSho.Skills.geral.disfarces",
-		escapar: "shinobiNoSho.Skills.geral.escapar",
-		furtividade: "shinobiNoSho.Skills.geral.furtividade",
-		animais: "shinobiNoSho.Skills.geral.animais",
-		mecanismos: "shinobiNoSho.Skills.geral.mecanismos",
-		medicina: "shinobiNoSho.Skills.geral.medicina",
-		prestidigitacao: "shinobiNoSho.Skills.geral.prestidigitacao",
-		procurar: "shinobiNoSho.Skills.geral.procurar",
-		prontidao: "shinobiNoSho.Skills.geral.prontidao",
-		rastrear: "shinobiNoSho.Skills.geral.rastrear",
-		veneficio: "shinobiNoSho.Skills.geral.veneficio"
+		acrobacia: "shinobiNoSho.skills.geral.acrobacia",
+		arte: "shinobiNoSho.skills.geral.arte",
+		atletismo: "shinobiNoSho.skills.geral.atletismo",
+		ciencias: "shinobiNoSho.skills.geral.ciencias",
+		cultura: "shinobiNoSho.skills.geral.cultura",
+		ocultismo: "shinobiNoSho.skills.geral.ocultismo",
+		concentracao: "shinobiNoSho.skills.geral.concentracao",
+		disfarces: "shinobiNoSho.skills.geral.disfarces",
+		escapar: "shinobiNoSho.skills.geral.escapar",
+		furtividade: "shinobiNoSho.skills.geral.furtividade",
+		animais: "shinobiNoSho.skills.geral.animais",
+		mecanismos: "shinobiNoSho.skills.geral.mecanismos",
+		medicina: "shinobiNoSho.skills.geral.medicina",
+		prestidigitacao: "shinobiNoSho.skills.geral.prestidigitacao",
+		procurar: "shinobiNoSho.skills.geral.procurar",
+		prontidao: "shinobiNoSho.skills.geral.prontidao",
+		rastrear: "shinobiNoSho.skills.geral.rastrear",
+		veneficio: "shinobiNoSho.skills.geral.veneficio"
 	},
 	social: {
-		atuacao: "shinobiNoSho.Skills.social.atuacao",
-		mudarAtitude: "shinobiNoSho.Skills.social.mudarAtitude",
-		barganha: "shinobiNoSho.Skills.social.barganha",
-		blefar: "shinobiNoSho.Skills.social.blefar",
-		intimidacao: "shinobiNoSho.Skills.social.intimidacao",
-		obterInfo: "shinobiNoSho.Skills.social.obterInfo",
+		atuacao: "shinobiNoSho.skills.social.atuacao",
+		mudarAtitude: "shinobiNoSho.skills.social.mudarAtitude",
+		barganha: "shinobiNoSho.skills.social.barganha",
+		blefar: "shinobiNoSho.skills.social.blefar",
+		intimidacao: "shinobiNoSho.skills.social.intimidacao",
+		obterInfo: "shinobiNoSho.skills.social.obterInfo",
 	}
 };
+
+shinobiNoSho.combatAbilities = {
+	CC: "shinobiNoSho.combatAbilities.CC",
+	CD: "shinobiNoSho.combatAbilities.CD",
+	E: "shinobiNoSho.combatAbilities.E",
+	LM: "shinobiNoSho.combatAbilities.LM"
+}

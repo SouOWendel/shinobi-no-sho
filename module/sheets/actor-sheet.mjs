@@ -52,6 +52,13 @@ export class ShinobiActorSheet extends ActorSheet {
     context.system = actorData.system;
     context.flags = actorData.flags;
 
+		// Dropdown
+		context.periciasGerais = CONFIG.shinobiNoSho.skills.geral;
+		context.periciasSociais = CONFIG.shinobiNoSho.skills.social;
+		context.atributos = CONFIG.shinobiNoSho.abilities;
+		context.atributosAbv = CONFIG.shinobiNoSho.abilityAbbreviations;
+		context.habilidadesCombate = CONFIG.shinobiNoSho.combatAbilities;
+
     // Prepare character data and items.
     if (actorData.type == 'Ninja') {
       this._prepareItems(context);
@@ -85,7 +92,6 @@ export class ShinobiActorSheet extends ActorSheet {
     }
 
 		for (let [k, v] of Object.entries(context.system.skills.geral)) {
-			console.log(v);
       v.label = game.i18n.localize(CONFIG.shinobiNoSho.skills.geral[k]) ?? k;
     }
 
