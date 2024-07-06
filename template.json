@@ -10,67 +10,69 @@
 			"templates": ["base"],
 			"abilities": {
 				"for": { 
-					"value": 10,
+					"value": 1,
 					"bonus": null 
 				},
 				"des": { 
-					"value": 10,
+					"value": 1,
 					"bonus": null 
 				},
 				"agi": { 
-					"value": 10,
+					"value": 1,
 					"bonus": null 
 				},
 				"per": { 
-					"value": 10,
+					"value": 1,
 					"bonus": null 
 				},
 				"int": { 
-					"value": 10,
+					"value": 1,
 					"bonus": null 
 				},
 				"vig": { 
-					"value": 10,
+					"value": 1,
 					"bonus": null 
 				},
 				"esp": { 
-					"value": 10,
+					"value": 1,
 					"bonus": null 
 				},
-				"social": {
-					"car": { 
-						"value": 10,
-						"bonus": null 
-					},
-					"man": { 
-						"value": 10,
-						"bonus": null 
-					}
+				"car": { 
+					"value": 1,
+					"bonus": null 
+				},
+				"man": { 
+					"value": 1,
+					"bonus": null 
 				},
 				"combate": {
 					"CC": {
 						"value": 0,
 						"base": 3,
 						"bonus": null,
-						"ability": "for"
+						"ability": "for",
+						"skill": ""
 					},
 					"CD": {
 						"value": 0,
 						"base": 3,
 						"bonus": null,
-						"ability": "des"
+						"ability": "des",
+						"skill": ""
 					},
 					"E": {
 						"value": 0,
 						"base": 3,
 						"bonus": null,
-						"ability": "agi"
+						"ability": "agi",
+						"skill": ""
 					},
 					"LM": {
 						"value": 0,
 						"base": 3,
 						"bonus": null,
-						"ability": "per"
+						"ability": "per",
+						"skill": ""
 					}
 				}
 			},
@@ -121,7 +123,7 @@
 					"value": 0,
 					"ability": "",
 					"bonus": null,
-					"variavel": 0
+					"variavel": 9
 				}
 			},
 			"details": {
@@ -161,7 +163,7 @@
 				"geral": {
 					"acrobacia": {
 						"ability": "agi",
-						"value": 0,
+						"value": null,
 						"bonus": null,
 						"caracteristicas": {
 							"social": false,
@@ -171,7 +173,7 @@
 					},
 					"arte": {
 						"ability": "int",
-						"value": 0,
+						"value": null,
 						"bonus": null,
 						"caracteristicas": {
 							"social": false,
@@ -181,7 +183,7 @@
 					},
 					"atletismo": {
 						"ability": "for",
-						"value": 0,
+						"value": null,
 						"bonus": null,
 						"caracteristicas": {
 							"social": false,
@@ -191,7 +193,7 @@
 					},
 					"ciencias": {
 						"ability": "int",
-						"value": 0,
+						"value": null,
 						"bonus": null,
 						"caracteristicas": {
 							"social": false,
@@ -201,7 +203,7 @@
 					},
 					"cultura": {
 						"ability": "int",
-						"value": 0,
+						"value": null,
 						"bonus": null,
 						"caracteristicas": {
 							"social": false,
@@ -211,7 +213,7 @@
 					},
 					"ocultismo": {
 						"ability": "int",
-						"value": 0,
+						"value": null,
 						"bonus": null,
 						"caracteristicas": {
 							"social": false,
@@ -221,7 +223,7 @@
 					},
 					"concentracao": {
 						"ability": "int",
-						"value": 0,
+						"value": null,
 						"bonus": null,
 						"caracteristicas": {
 							"social": false,
@@ -231,7 +233,7 @@
 					},
 					"disfarces": {
 						"ability": "per",
-						"value": 0,
+						"value": null,
 						"bonus": null,
 						"caracteristicas": {
 							"social": false,
@@ -241,7 +243,7 @@
 					},
 					"escapar": {
 						"ability": "des",
-						"value": 0,
+						"value": null,
 						"bonus": null,
 						"caracteristicas": {
 							"social": false,
@@ -251,7 +253,7 @@
 					},
 					"furtividade": {
 						"ability": "agi",
-						"value": 0,
+						"value": null,
 						"bonus": null,
 						"caracteristicas": {
 							"social": false,
@@ -261,7 +263,7 @@
 					},
 					"animais": {
 						"ability": "per",
-						"value": 0,
+						"value": null,
 						"bonus": null,
 						"caracteristicas": {
 							"social": false,
@@ -271,7 +273,7 @@
 					},
 					"mecanismos": {
 						"ability": "int",
-						"value": 0,
+						"value": null,
 						"bonus": null,
 						"caracteristicas": {
 							"social": false,
@@ -281,7 +283,7 @@
 					},
 					"medicina": {
 						"ability": "for",
-						"value": 0,
+						"value": null,
 						"bonus": null,
 						"caracteristicas": {
 							"social": false,
@@ -291,7 +293,7 @@
 					},
 					"prestidigitacao": {
 						"ability": "des",
-						"value": 0,
+						"value": null,
 						"bonus": null,
 						"caracteristicas": {
 							"social": false,
@@ -301,7 +303,7 @@
 					},
 					"procurar": {
 						"ability": "per",
-						"value": 0,
+						"value": null,
 						"bonus": null,
 						"caracteristicas": {
 							"social": false,
@@ -311,7 +313,7 @@
 					},
 					"prontidao": {
 						"ability": "per",
-						"value": 0,
+						"value": null,
 						"bonus": null,
 						"caracteristicas": {
 							"social": false,
@@ -321,7 +323,7 @@
 					},
 					"rastrear": {
 						"ability": "per",
-						"value": 0,
+						"value": null,
 						"bonus": null,
 						"caracteristicas": {
 							"social": false,
@@ -331,7 +333,7 @@
 					},
 					"veneficio": {
 						"ability": "int",
-						"value": 0,
+						"value": null,
 						"bonus": null,
 						"caracteristicas": {
 							"social": false,
@@ -343,7 +345,7 @@
 				"social": {
 					"atuacao": {
 						"ability": "car",
-						"value": 0,
+						"value": null,
 						"bonus": null,
 						"caracteristicas": {
 							"social": true,
@@ -353,7 +355,7 @@
 					},
 					"mudarAtitude": {
 						"ability": "man",
-						"value": 0,
+						"value": null,
 						"bonus": null,
 						"caracteristicas": {
 							"social": true,
@@ -363,7 +365,7 @@
 					},
 					"barganha": {
 						"ability": "car",
-						"value": 0,
+						"value": null,
 						"bonus": null,
 						"caracteristicas": {
 							"social": true,
@@ -373,7 +375,7 @@
 					},
 					"blefar": {
 						"ability": "man",
-						"value": 0,
+						"value": null,
 						"bonus": null,
 						"caracteristicas": {
 							"social": true,
@@ -383,7 +385,7 @@
 					},
 					"intimidacao": {
 						"ability": "man",
-						"value": 0,
+						"value": null,
 						"bonus": null,
 						"caracteristicas": {
 							"social": true,
@@ -393,7 +395,7 @@
 					},
 					"obterInfo": {
 						"ability": "car",
-						"value": 0,
+						"value": null,
 						"bonus": null,
 						"caracteristicas": {
 							"social": true,
@@ -413,26 +415,106 @@
 			},
 			"fisico": {
 				"peso": 1,
-				"preco": 0
+				"preco": 0,
+				"quantidade": 1,
+				"compartimentos": {
+					"qtdItem": null,
+					"compartOcupa": null
+				}
 			}
 		},
 		"armas": {
-			"templates": ["base", "fisico"]
+			"templates": ["base", "fisico"],
+			"combate": {
+				"ataque": {
+					"habilidadeCombate": "",
+					"bonus": null
+				},
+				"alcance": {
+					"tipo": "",
+					"outro": ""
+				},
+				"dano": {
+					"base": null,
+					"modificador": "",
+					"tipo": ""
+				}
+			},
+			"detalhes": {
+				"tipo": "",
+				"subtipo": "",
+				"classificacao": "",
+				"tamanho": "",
+				"preRequisito": "",
+				"caract": {
+					"improvisada": false,
+					"armaDupla": false,
+					"arremessavel": false,
+					"duasMaos": false,
+					"energizavel": false,
+					"ambidestra": false
+				}
+			}
 		},
 		"armaduras": {
-			"templates": ["base", "fisico"]
+			"templates": ["base", "fisico"],
+			"tipo": "",
+			"penalidade": "",
+			"bonusAbsorcao": null
 		},
 		"geral": {
-			"templates": ["base", "fisico"]
+			"templates": ["base", "fisico"],
+			"tipo": ""
 		},
 		"aptidoes": {
-			"templates": ["base"]
+			"templates": ["base"],
+			"caracteristicas": "",
+			"tipoAptidao": "",
+			"nivelAptidao": 0,
+			"preRequisito": ""
 		},
 		"poderes": {
-			"templates": ["base"]
+			"templates": ["base"],
+			"preRequisito": "",
+			"nivelPoder": 0
 		},
 		"tecnicas": {
-			"templates": ["base"]
+			"templates": ["base"],
+			"combate": {
+				"dano": {
+					"value": null,
+					"tipo": ""
+				},
+				"efeitosOuAptidoes": "",
+				"duracao": "",
+				"areaEfeito": {
+					"tipo": "",
+					"outro": ""
+				},
+				"alcance": {
+					"tipo": "",
+					"outro": ""
+				},
+				"acao": "",
+				"alvo": "",
+				"testeResistencia": ""
+			},
+			"detalhes": {
+				"tipo": "",
+				"subtipo": "",
+				"custoChakra": "",
+				"elemento": {
+					"tipo": "",
+					"outro": ""
+				},
+				"tipoJutsu": "",
+				"ranking": "",
+				"preRequisito": "",
+				"caract": {
+					"selos": false,
+					"escalonaChakra": false
+				}
+			}
 		}
 	}
 }
