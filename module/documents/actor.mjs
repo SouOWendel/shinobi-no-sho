@@ -16,6 +16,8 @@ export class ShinobiActor extends Actor {
   prepareBaseData() {
     // Data modifications in this step occur before processing embedded
     // documents or derived data.
+		const actorData = this;
+		this._prepareNinjaBase(actorData);
   }
 
   /**
@@ -34,25 +36,57 @@ export class ShinobiActor extends Actor {
 
     // Make separate methods for each Actor type (character, npc, etc.) to keep
     // things organized.
-    this._prepareCharacterData(actorData);
+		this._prepareNinjaDerived(actorData);
     this._prepareNpcData(actorData);
   }
 
-  /**
-   * Prepare Character type specific data
-   */
-  _prepareCharacterData(actorData) {
-    if (actorData.type !== 'ninja') return;
+  _prepareNinjaBase(actorData) {
+    if (actorData.type !== 'Ninja') return;
 
-    // Make modifications to data here. For example:
-    const systemData = actorData.system;
-
-    // Loop through ability scores, and add their modifiers to our sheet output.
-    // for (let [key, ability] of Object.entries(systemData.abilities)) {
-    //   // Calculate the modifier using d20 rules.
-    //   ability.mod = Math.floor((ability.value - 10) / 2);
-    // }
+    const system = actorData.system;
+		const details = system.details;
+		const attributes = system.attributes;
+		const abilities = system.abilities;
   }
+
+	_prepareNinjaDerived(actorData) {
+		const system = actorData.system;
+		const details = system.details;
+		const attributes = system.attributes;
+		const abilities = system.abilities;
+
+		// const systemClone = actorData.system.deepClone();
+		// Loop de Atributos
+		for (let [abilityKey, ability] of Object.entries(system.abilities)) {
+			// Soma de bônus em atributos
+			ability.tbonus = ability.value + ability.bonus;
+			// Perícias Gerais
+			for (let [skillKey, skill] of Object.entries(system.skills.geral)) {
+				// Soma de bônus em perícias
+				skill.tbonus = skill.value + skill.bonus;
+				// Recuperação do atributo correspondente e divisão por dois.
+				if (skill.ability == abilityKey) skill.abilityValue = ability.tbonus / 2;
+				// Soma do atributo derivado + total derivado.
+				skill.total = Math.round(skill.abilityValue + skill.tbonus);
+			}
+
+			// Perícias Sociais
+			for (let [skillKey, skill] of Object.entries(system.skills.social)) {
+				// Soma de bônus em perícias
+				skill.tbonus = skill.value + skill.bonus;
+				// Recuperação do atributo correspondente e divisão por dois.
+				if (skill.ability == abilityKey) {
+					console.log(skill.ability, abilityKey);
+					skill.abilityValue = ability.tbonus / 2;
+				}
+				// Soma do atributo derivado + total derivado.
+				skill.total = Math.round(skill.abilityValue + skill.tbonus);
+			}
+		}
+		// Vitalidade e Chakra
+		attributes.vitalidade.max = 10 + 3*abilities.vig.tbonus + 5*details.nivelCampanha;
+		attributes.chakra.max = 10 + 3*abilities.esp.tbonus;
+	}
 
   /**
    * Prepare NPC type specific data.
@@ -63,6 +97,12 @@ export class ShinobiActor extends Actor {
     // Make modifications to data here. For example:
     const systemData = actorData.system;
     systemData.xp = systemData.cr * systemData.cr * 100;
+
+		// Loop through ability scores, and add their modifiers to our sheet output.
+    // for (let [key, ability] of Object.entries(systemData.abilities)) {
+    //   // Calculate the modifier using d20 rules.
+    //   ability.mod = Math.floor((ability.value - 10) / 2);
+    // }
   }
 
   /**
