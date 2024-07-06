@@ -5,57 +5,50 @@
 		<div class="flex flex-group-center align-center">
 			<label class="resource-label skill-label flex-1 flex-group-center align-center {{id}}">{{label}}</label>
 			<div class="resource-content flex flex-2 flex-group-center align-center">
-				<input type="text" name="skill.value" value="{{skill.value}}" class="" data-dtype="text" disabled>
+				<input type="text" name="system.skills.geral.{{id}}.total" value="{{skill.total}}" class="" data-dtype="Number" disabled>
 				<i class="fas fa-equals"></i>
-				<select name="system.details.genero">
-							<option>Perícia</option>
-							<option>Perícia</option>
-							<option>Perícia</option>
-						</select>
+				<select name="system.skills.geral.{{id}}.ability">
+					{{selectOptions ../atributosAbv selected=skill.ability localize=true}}
+				</select>
 				<i class="fas fa-plus"></i>
-				<input type="text" name="skill.bonus" value="{{skill.bonus}}" class="" data-dtype="text">
+				<input type="text" name="system.skills.geral.{{id}}.value" value="{{skill.value}}" class="" data-dtype="Number">
 			</div>
 		</div>
 		{{/each}}
 	</div>
 </section>
 
-<div class="flex" style="gap: 6px;">
-	<section id="atributosSociais" class="container">
+<section id="atributosSociais" class="container">
 	<h3 class="section-title">Atributos Sociais</h3>
-		<div class="main-content flex flex-group-center align-center">
-			<div class="resource flex-group-center align-center">
-				<div class="resource-content">
-				<input type="text" name="system.abilities.social.man.value" 
-				value="{{system.abilities.social.man.value}}" data-dtype="Number"/>
-				</div>
-				<label for="system.abilities.social.man.value" class="resource-label">Manipulação</label>
-			</div>
-			<div class="resource flex-group-center">
-				<div class="resource-content">
-				<input type="text" name="system.abilities.social.car.value" 
-				value="{{system.abilities.social.car.value}}" data-dtype="Number"/>
-				</div>
-				<label for="system.abilities.social.car.value" class="resource-label">Carisma</label>
+	<div class="main-content flex flex-group-center align-center">
+		<label for="system.abilities.man.value" class="resource-label">Manipulação</label>
+		<div class="resource-content">
+			<input type="text" name="system.abilities.man.value" 
+			value="{{system.abilities.man.value}}" data-dtype="Number"/>
+		</div>
+		<label for="system.abilities.car.value" class="resource-label">Carisma</label>
+		<div class="resource-content">
+			<input type="text" name="system.abilities.car.value" 
+			value="{{system.abilities.car.value}}" data-dtype="Number"/>
+		</div>
+	</div>
+</section>
+<section id="periciasSociais" class="container flex-2">
+	<h3 class="section-title">Perícias Sociais</h3>
+	<div class="grid resource-content">
+		{{#each system.skills.social as |skill id|}}
+		<div class="flex flex-group-center align-center">
+			<label class="resource-label skill-label flex-1 flex-group-center align-center {{id}}">{{label}}</label>
+			<div class="resource-content flex flex-2 flex-group-center align-center">
+				<input type="text" name="system.skills.social.{{id}}.total" value="{{skill.total}}" class="flex-1" data-dtype="Number" disabled>
+				<i class="fas fa-equals"></i>
+				<select name="system.skills.social.{{id}}.ability">
+					{{selectOptions ../atributosAbv selected=skill.ability localize=true}}
+				</select>
+				<i class="fas fa-plus"></i>
+				<input type="text" name="system.skills.social.{{id}}.value" value="{{skill.value}}" class="flex-1" data-dtype="Number">
 			</div>
 		</div>
-	</section>
-
-	<section id="periciasSociais" class="container flex-2">
-		<h3 class="section-title">Perícias Sociais</h3>
-		<div class="grid resource-content">
-			{{#each system.skills.social as |skill id|}}
-			<div class="flex flex-group-center align-center">
-				<label class="resource-label skill-label flex-1 flex-group-center align-center {{id}}">{{label}}</label>
-				<div class="resource-content flex flex-2 flex-group-center align-center">
-					<input type="text" name="skill.value" value="{{skill.value}}" class="flex-1" data-dtype="text" disabled>
-					<i class="fas fa-equals"></i>
-					<input type="text" name="" value="" class="flex-1" data-dtype="text">
-					<i class="fas fa-plus"></i>
-					<input type="text" name="skill.bonus" value="{{skill.bonus}}" class="flex-1" data-dtype="text">
-				</div>
-			</div>
-			{{/each}}
-		</div>
-	</section>
-</div>
+		{{/each}}
+	</div>
+</section>

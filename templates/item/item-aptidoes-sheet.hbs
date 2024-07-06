@@ -19,34 +19,39 @@
 
     {{!-- Description Tab --}}
     <div class="tab" data-group="primary" data-tab="descricao">
-      {{editor system.description target="system.description" rollData=rollData button=true owner=owner editable=editable}}
+      {{editor system.descricao target="system.descricao" 
+			rollData=rollData button=true owner=owner editable=editable}}
     </div>
 
     {{!-- Characteristics Tab --}}
     <div class="tab caracteristicas" data-group="primary" data-tab="caracteristicas">
-      {{!-- As you add new fields, add them in here! --}}
+      {{editor system.caracteristicas target="system.caracteristicas" 
+			rollData=rollData button=true owner=owner editable=editable}}
     </div>
 
 		{{!-- Details Tab --}}
 		<div class="tab detalhes" data-group="primary" data-tab="detalhes">
 			<div class="flex flex-group-center">
 				<div class="resource flex flex-3">
-					<label for="system.details.nivelShinobi" class="resource-label p-r-10">Tipo de Aptidão</label>
+					<label for="system.tipoAptidao" class="resource-label p-r-10">Tipo de Aptidão</label>
 					<div class="resource-content">
-						<input type="text" name="system.details.nivelShinobi" value="{{system.details.nivelShinobi}}" data-dtype="String"/>
+						<input type="text" name="system.tipoAptidao" 
+						value="{{system.tipoAptidao}}" data-dtype="String"/>
 					</div>
 				</div>
 				<div class="resource flex flex-2">
-						<label for="system.details.nivelShinobi" class="resource-label p-r-10">Nível de Aptidão</label>
+						<label for="system.nivelAptidao" class="resource-label p-r-10">Nível de Aptidão</label>
 						<div class="resource-content">
-							<input type="text" name="system.details.nivelShinobi" value="{{system.details.nivelShinobi}}" data-dtype="String"/>
+							<input type="text" name="system.nivelAptidao" 
+							value="{{system.nivelAptidao}}" data-dtype="String"/>
 						</div>
 				</div>
 			</div>
 			<div class="resource flex">
-				<label for="system.details.nivelShinobi" class="resource-label p-r-10">Pré-requisito</label>
+				<label for="system.preRequisito" class="resource-label p-r-10">Pré-requisito</label>
 				<div class="resource-content">
-					<input type="text" name="system.details.nivelShinobi" value="{{system.details.nivelShinobi}}" data-dtype="String"/>
+					<input type="text" name="system.preRequisito" 
+					value="{{system.preRequisito}}" data-dtype="String"/>
       	</div>
 			</div>
     </div>

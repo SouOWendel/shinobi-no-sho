@@ -2,7 +2,8 @@
   <header class="sheet-header">
     <img class="profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}"/>
     <div class="header-fields">
-      <h1 class="charname"><input name="name" type="text" value="{{item.name}}" placeholder="Name"/></h1>
+      <h1 class="charname"><input name="name" type="text" 
+			value="{{item.name}}" placeholder="Name"/></h1>
     </div>
   </header>
 
@@ -19,15 +20,17 @@
     <div class="tab" data-group="primary" data-tab="detalhes">
 			<div class="flex flex-group-center">
 				<div class="resource flex flex-3">
-					<label for="system.details.nivelShinobi" class="resource-label p-r-10">Pré-requisito</label>
+					<label for="system.preRequisito" class="resource-label p-r-10">Pré-requisito</label>
 					<div class="resource-content">
-						<input type="text" name="system.details.nivelShinobi" value="{{system.details.nivelShinobi}}" data-dtype="String"/>
+						<input type="text" name="system.preRequisito" 
+						value="{{system.preRequisito}}" data-dtype="String"/>
 					</div>
 				</div>
 				<div class="resource flex flex-2">
-						<label for="system.details.nivelShinobi" class="resource-label p-r-10">Nível de Poder</label>
+						<label for="system.nivelPoder" class="resource-label p-r-10">Nível de Poder</label>
 						<div class="resource-content">
-							<input type="text" name="system.details.nivelShinobi" value="{{system.details.nivelShinobi}}" data-dtype="String"/>
+							<input type="text" name="system.nivelPoder" 
+							value="{{system.nivelPoder}}" data-dtype="String"/>
 						</div>
 				</div>
 			</div>

@@ -5,12 +5,12 @@
       <h1 class="charname"><input name="name" type="text" value="{{item.name}}" placeholder="Name" /></h1>
       <div class="grid grid-2col">
         <div class="resource">
-          <label class="resource-label">Quantity</label>
-          <input type="text" name="system.quantity" value="{{system.quantity}}" data-dtype="Number" />
+          <label class="resource-label">Quantidade</label>
+          <input type="text" name="system.quantidade" value="{{system.quantidade}}" data-dtype="Number" />
         </div>
         <div class="resource">
-          <label class="resource-label">Weight</label>
-          <input type="text" name="system.weight" value="{{system.weight}}" data-dtype="Number" />
+          <label class="resource-label">Preço</label>
+          <input type="text" name="system.preco" value="{{system.preco}}" data-dtype="Number" />
         </div>
       </div>
     </div>
@@ -27,33 +27,35 @@
 
     {{!-- Description Tab --}}
     <div class="tab" data-group="primary" data-tab="descricao">
-      {{editor system.description target="system.description" rollData=rollData button=true owner=owner editable=editable}}
+      {{editor system.descricao target="system.descricao" 
+			rollData=rollData button=true owner=owner editable=editable}}
     </div>
 
 		<div class="tab" data-group="primary" data-tab="detalhes">
 			<div class="flex flex-group-center">
 				<div class="resource flex flex-2">
-					<label for="system.details.nivelShinobi" class="resource-label p-r-10">Tipo de Item Geral</label>
+					<label for="system.tipo" class="resource-label p-r-10">Tipo de Item Geral</label>
 					<div class="resource-content">
-						<input type="text" name="system.details.nivelShinobi" value="{{system.details.nivelShinobi}}" data-dtype="String"/>
+						<input type="text" name="system.tipo" value="{{system.tipo}}" data-dtype="String"/>
 					</div>
 				</div>
 				<div class="resource flex flex-2">
-						<label for="system.details.nivelShinobi" class="resource-label p-r-10">Compartimentos</label>
+						<label for="system.compartimentos.qtdItem" class="resource-label p-r-10">Compartimentos</label>
 						<div class="resource-content">
-							<input type="text" name="system.details.nivelShinobi" value="{{system.details.nivelShinobi}}" data-dtype="String"/>
+							<input type="text" name="system.compartimentos.qtdItem" 
+							value="{{system.compartimentos.qtdItem}}" data-dtype="String"/>
 						</div>
 						<i> / </i>
 						<div class="resource-content">
-							<input type="text" name="system.details.nivelShinobi" value="{{system.details.nivelShinobi}}" data-dtype="String"/>
+							<input type="text" name="system.compartimentos.compartOcupa" 
+							value="{{system.compartimentos.compartOcupa}}" data-dtype="String"/>
 						</div>
 				</div>
 			</div>
 			<div class="container" style="margin-top: 10px;">
 				<h3 class="section-title">Descrição</h3>
-				{{editor system.details.biografia.caracteristicas.campo2.value 
-				target="system.details.biografia.caracteristicas.campo2.value" 
-				rollData=rollData button=true owner=owner editable=editable}}
+				{{editor system.descricao target="system.descricao" rollData=rollData
+				 button=true owner=owner editable=editable}}
 			</div>
 		</div>
 
@@ -63,5 +65,3 @@
     </div>
   </section>
 </form>
-
-{{log system}}
