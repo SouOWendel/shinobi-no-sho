@@ -1,15 +1,24 @@
 {
   "shinobiNoSho": {
-    "Ability": {
-      "Str": { "long": "Strength", "abbr": "str" },
-      "Con": { "long": "Constitution", "abbr": "con" },
-      "Dex": { "long": "Dexterity", "abbr": "dex" },
-      "Int": { "long": "Intelligence", "abbr": "int" },
-      "Wis": { "long": "Wisdom", "abbr": "wis" },
-      "Cha": { "long": "Charisma", "abbr": "cha" }
+    "ability": {
+      "for": { "long": "Força", "abbr": "For" },
+      "des": { "long": "Destreza", "abbr": "Des" },
+      "agi": { "long": "Agilidade", "abbr": "Agi" },
+      "per": { "long": "Percepção", "abbr": "Per" },
+      "int": { "long": "Inteligência", "abbr": "Int" },
+      "vig": { "long": "Vigor", "abbr": "Vig" },
+			"esp": { "long": "Espírito", "abbr": "Esp" },
+			"car": { "long": "Carisma", "abbr": "Car" },
+			"man": { "long": "Manipulação", "abbr": "Man" }
     },
+		"combatAbilities": {
+			"CC": "Combate Corporal",
+      "CD": "Combate à Distância",
+      "E": "Esquiva",
+      "LM": "Ler Movimentos"
+		},
     "SheetLabels": {
-      "Actor": "Shinobi Actor Sheet",
+      "Ninja": "Shinobi Actor Sheet",
       "Item": "Shinobi Item Sheet"
     },
     "Item": {
@@ -28,7 +37,7 @@
 		"NinjaSheet": {
 			"Vida": "Pontos de Vida"
 		},
-		"Skills": {
+		"skills": {
 			"geral": {
 				"acrobacia": "Acrobacia",
 				"arte": "Arte",
