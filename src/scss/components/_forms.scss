@@ -231,6 +231,7 @@ form {
 
 #estatisticasCombate {
 	margin-top: 10px;
+	input, select { max-width: 100px;}
 }
 
 #periciasGerais {
@@ -279,6 +280,7 @@ form {
 
 #atributosSociais {
 	flex: 0.8;
+	margin-bottom: 6px;
 
 	.resource input {
 		width: 40px;

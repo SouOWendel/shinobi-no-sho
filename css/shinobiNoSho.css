@@ -409,6 +409,9 @@
 .shinobiNoSho #estatisticasCombate {
   margin-top: 10px;
 }
+.shinobiNoSho #estatisticasCombate input, .shinobiNoSho #estatisticasCombate select {
+  max-width: 100px;
+}
 .shinobiNoSho #periciasGerais {
   margin-bottom: 6px;
 }
@@ -444,6 +447,7 @@
 }
 .shinobiNoSho #atributosSociais {
   flex: 0.8;
+  margin-bottom: 6px;
 }
 .shinobiNoSho #atributosSociais .resource input {
   width: 40px;
@@ -648,6 +652,14 @@
   height: 150px;
 }
 .shinobiNoSho .traits-grid {
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 6px;
+  grid-row-gap: 6px;
+  grid-auto-flow: column;
+  padding-top: 10px;
+}
+.shinobiNoSho .traits-grid- {
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
   grid-column-gap: 6px;
