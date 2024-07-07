@@ -30,10 +30,18 @@
         </div>
         <h4>{{item.name}}</h4>
       </div>
-      <div class='item-small item-prop'>Origem</div>
-			<div class='item-medium item-prop'>Alcance</div>
-			<div class='item-small item-prop'>Ação</div>
-			<div class='item-large item-prop'>Duração</div>
+      <div class='item-small item-prop'>
+				{{ifThen item.system.detalhes.origem item.system.detalhes.origem "—"}}
+			</div>
+			<div class='item-medium item-prop'>
+				{{ifThen item.system.combate.alcance.tipo item.system.combate.alcance.tipo "—"}}
+			</div>
+			<div class='item-small item-prop'>
+				{{ifThen item.system.combate.acao item.system.combate.acao "—"}}
+			</div>
+			<div class='item-large item-prop'>
+				{{ifThen item.system.combate.duracao item.system.combate.duracao "—"}}
+			</div>
       <div class='item-controls'>
         <a
           class='item-control item-edit'

@@ -25,9 +25,15 @@
         </div>
         <h4>{{item.name}}</h4>
       </div>
-      <div class='item-small item-prop'>Tipo</div>
-			<div class='item-medium item-prop'>Nível</div>
-			<div class='item-large item-prop'>Pré-requisito</div>
+      <div class='item-small item-prop'>
+				{{ifThen item.system.tipoAptidao item.system.tipoAptidao "—"}}
+			</div>
+			<div class='item-medium item-prop'>
+				{{ifThen item.system.nivelAptidao item.system.nivelAptidao "—"}}
+			</div>
+			<div class='item-large item-prop'>
+				{{ifThen item.system.preRequisito item.system.preRequisito "—"}}
+			</div>
       <div class='item-controls'>
         <a class='item-control item-edit'
           title='{{localize "DOCUMENT.Update" type='Item'}}'>
@@ -72,8 +78,12 @@
         </div>
         <h4>{{item.name}}</h4>
       </div>
-			<div class='item-medium item-prop'>Nível</div>
-			<div class='item-large item-prop'>Pré-requisito</div>
+			<div class='item-medium item-prop'>
+				{{ifThen item.system.nivelPoder item.system.nivelPoder "—"}}
+			</div>
+			<div class='item-large item-prop'>
+				{{ifThen item.system.preRequisito item.system.preRequisito "—"}}
+			</div>
       <div class='item-controls'>
         <a
           class='item-control item-edit'
