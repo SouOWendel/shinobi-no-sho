@@ -100,18 +100,14 @@
 					"bonus": null,
 					"andar": 0,
 					"nadar": 0,
-					"ability": "",
+					"ability": "agi",
 					"escalar": 0,
-					"mod": {
-						"divisorAndar": 2,
-						"divisorNadar": 4,
-						"divisorEscalar": 4
-					}
+					"divisor": 2
 				},
 				"init": {
-					"ability": "",
+					"ability": "agi",
 					"bonus": null,
-					"skill": "",
+					"skill": "prontidao",
 					"value": 0,
 					"roll": {
 						"max": null,
@@ -121,7 +117,7 @@
 				},
 				"esquiva": {
 					"value": 0,
-					"ability": "",
+					"combatAbility": "E",
 					"bonus": null,
 					"variavel": 9
 				}
@@ -500,6 +496,7 @@
 				"testeResistencia": ""
 			},
 			"detalhes": {
+				"origem": "",
 				"tipo": "",
 				"subtipo": "",
 				"custoChakra": "",

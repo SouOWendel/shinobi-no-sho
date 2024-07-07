@@ -57,30 +57,69 @@ export class ShinobiActor extends Actor {
 
 		// const systemClone = actorData.system.deepClone();
 		// Loop de Atributos
-		for (let [abilityKey, ability] of Object.entries(system.abilities)) {
+		for (let [abilityKey, ability] of Object.entries(abilities)) {
 			// Soma de bônus em atributos
 			ability.tbonus = ability.value + ability.bonus;
+
 			// Perícias Gerais
-			for (let [skillKey, skill] of Object.entries(system.skills.geral)) {
-				// Soma de bônus em perícias
-				skill.tbonus = skill.value + skill.bonus;
-				// Recuperação do atributo correspondente e divisão por dois.
-				if (skill.ability == abilityKey) skill.abilityValue = ability.tbonus / 2;
-				// Soma do atributo derivado + total derivado.
-				skill.total = Math.round(skill.abilityValue + skill.tbonus);
+			for (let [skillKey, skill] of Object.entries(system.skills.geral)) {				
+				if (skill.ability == abilityKey) {
+					// Soma de bônus em perícias
+					skill.tbonus = skill.value + skill.bonus;
+					// Recuperação do atributo correspondente e divisão por dois.
+					skill.abilityValue = ability.tbonus / 2;
+					// Soma do atributo derivado + total derivado.
+					skill.total = Math.round(skill.abilityValue + skill.tbonus);
+
+					// Perícia para Iniciativa
+					if (attributes.init.skill == skillKey) {
+						attributes.init.value += skill.total;
+					}
+				}
 			}
 
 			// Perícias Sociais
 			for (let [skillKey, skill] of Object.entries(system.skills.social)) {
-				// Soma de bônus em perícias
-				skill.tbonus = skill.value + skill.bonus;
-				// Recuperação do atributo correspondente e divisão por dois.
 				if (skill.ability == abilityKey) {
-					console.log(skill.ability, abilityKey);
+					// Soma de bônus em perícias
+					skill.tbonus = skill.value + skill.bonus;
+					// Recuperação do atributo correspondente e divisão por dois.
 					skill.abilityValue = ability.tbonus / 2;
+					// Soma do atributo derivado + total derivado.
+					skill.total = Math.round(skill.abilityValue + skill.tbonus);
 				}
-				// Soma do atributo derivado + total derivado.
-				skill.total = Math.round(skill.abilityValue + skill.tbonus);
+			}
+		}
+
+		for (let [abilityKey, ability] of Object.entries(abilities)) {
+		// Habilidades de Combate
+			for (let [cKey, c] of Object.entries(abilities.combate)) {
+				// Soma de bônus em perícias
+				if (c.ability == abilityKey) {
+					c.value = c.base + Number(c.bonus);
+					c.value = c.value + ability.tbonus;
+
+					// Cálculo de Esquiva
+					if (attributes.esquiva.combatAbility == cKey) {
+						attributes.esquiva.value += c.value;
+						attributes.esquiva.value += attributes.esquiva.bonus;
+						attributes.esquiva.value += attributes.esquiva.variavel;
+					}
+				}
+			}
+
+			// Cálculo de Iniciativa
+			if (attributes.init.ability == abilityKey) {
+				attributes.init.value += attributes.init.bonus;
+				attributes.init.value += ability.tbonus;
+			}
+
+			// Deslocamento
+			if (attributes.movement.ability == abilityKey) {
+				attributes.movement.andar += attributes.movement.base;
+				attributes.movement.andar = attributes.movement.andar + ability.tbonus / attributes.movement.divisor;
+				attributes.movement.andar += attributes.movement.bonus;
+				attributes.movement.andar = Math.round(attributes.movement.andar);
 			}
 		}
 		// Vitalidade e Chakra

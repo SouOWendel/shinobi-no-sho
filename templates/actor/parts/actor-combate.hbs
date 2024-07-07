@@ -1,84 +1,74 @@
 <section id="habilidadesCombate" class="container">
 	<h3 class="section-title">Habilidades de Combate</h3>
 	<div class="item flexrow flex-group-center">
-		<div class='item-large item-prop bold'>Nome</div>
+		<div class='item-medium item-prop bold'>Nome</div>
 		<div class='item-mini item-prop bold'>Total</div>
-		<div class='item-medium item-prop bold'>Perícia</div>
+		{{!-- <div class='item-medium item-prop bold'>Perícia</div> --}}
 		<div class='item-medium item-prop bold'>Atributo</div>
 		<div class='item-small item-prop bold'>Bônus</div>
 	</div>
 	<div class="flexrow flex-group-center align-center">
 		<div class="item-name">
-			<label class="resource-label item-large">Combate Corporal (CC)</label>
+			<label class="resource-label item-medium">Combate Corporal (CC)</label>
 		</div>
 		<div class="resource-content flex flex-2 flex-group-center align-center">
 			<input type="text" name="system.abilities.combate.CC.value" 
-			value="{{system.abilities.combate.CC.value}}" class="item-mini" data-dtype="text" disabled>
-			<i class="fas fa-equals"></i>
-			<select name="system.abilities.combate.CC.skill" class="item-medium">
-				{{selectOptions periciasGerais selected=system.abilities.combate.CC.skill localize=true}}
-			</select>
+			value="{{system.abilities.combate.CC.value}}" class="item-mini" data-dtype="Number" disabled>
 			<i class="fas fa-plus"></i>
 			<select name="system.abilities.combate.CC.ability" class="item-medium">
 				{{selectOptions atributos selected=system.abilities.combate.CC.ability localize=true}}
 			</select>
 			<i class="fas fa-plus"></i>
-			<input type="text" name="system.abilities.combate.CC.bonus" value="{{system.abilities.combate.CC.bonus}}" class="item-small" data-dtype="text">
+			<input type="text" name="system.abilities.combate.CC.bonus" 
+			value="{{system.abilities.combate.CC.bonus}}" class="item-small" data-dtype="Number">
 		</div>
 	</div>
 	<div class="flexrow flex-group-center align-center">
 		<div class="item-name">
-			<label class="resource-label item-large">Combate à Distância (CD)</label>
+			<label class="resource-label item-medium">Combate à Distância (CD)</label>
 		</div>
 		<div class="resource-content flex flex-2 flex-group-center align-center">
 			<input type="text" name="system.abilities.combate.CD.value" 
-			value="{{system.abilities.combate.CD.value}}" class="item-mini" data-dtype="text" disabled>
+			value="{{system.abilities.combate.CD.value}}" class="item-mini" data-dtype="Number" disabled>
 			<i class="fas fa-equals"></i>
-			<select name="system.abilities.combate.CD.skill" class="item-medium">
-				{{selectOptions periciasGerais selected=system.abilities.combate.CD.skill localize=true}}
-			</select>
-			<i class="fas fa-plus"></i>
 			<select name="system.abilities.combate.CD.ability" class="item-medium">
 				{{selectOptions atributos selected=system.abilities.combate.CD.ability localize=true}}
 			</select>
 			<i class="fas fa-plus"></i>
-			<input type="text" name="system.abilities.combate.CD.bonus" value="{{system.abilities.combate.CD.bonus}}" class="item-small" data-dtype="text">
+			<input type="text" name="system.abilities.combate.CD.bonus" 
+			value="{{system.abilities.combate.CD.bonus}}" class="item-small" data-dtype="Number">
 		</div>
 	</div>
 	<div class="flexrow flex-group-center align-center">
 		<div class="item-name">
-			<label class="resource-label item-large">Esquiva</label>
+			<label class="resource-label item-medium">Esquiva</label>
 		</div>
 		<div class="resource-content flex flex-2 flex-group-center align-center">
-			<input type="text" name="system.abilities.combate.E.value" value="{{system.abilities.combate.E.value}}" class="item-mini" data-dtype="text" disabled>
+			<input type="text" name="system.abilities.combate.E.value" 
+			value="{{system.abilities.combate.E.value}}" class="item-mini" data-dtype="Number" disabled>
 			<i class="fas fa-equals"></i>
-			<select name="system.abilities.combate.E.skill" class="item-medium">
-				{{selectOptions periciasGerais selected=system.abilities.combate.E.skill localize=true}}
-			</select>
-			<i class="fas fa-plus"></i>
 			<select name="system.abilities.combate.E.ability" class="item-medium">
 				{{selectOptions atributos selected=system.abilities.combate.E.ability localize=true}}
 			</select>
 			<i class="fas fa-plus"></i>
-			<input type="text" name="system.abilities.combate.E.bonus" value="{{system.abilities.combate.E.bonus}}" class="item-small" data-dtype="text">
+			<input type="text" name="system.abilities.combate.E.bonus" 
+			value="{{system.abilities.combate.E.bonus}}" class="item-small" data-dtype="Number">
 		</div>
 	</div>
 	<div class="flexrow flex-group-center align-center">
 		<div class="item-name">
-			<label class="resource-label item-large">Ler Movimento (LM)</label>
+			<label class="resource-label item-medium">Ler Movimento (LM)</label>
 		</div>
 		<div class="resource-content flex flex-2 flex-group-center align-center">
-			<input type="text" name="system.abilities.combate.LM.value" value="{{system.abilities.combate.LM.value}}" class="item-mini" data-dtype="text" disabled>
+			<input type="text" name="system.abilities.combate.LM.value" 
+			value="{{system.abilities.combate.LM.value}}" class="item-mini" data-dtype="Number" disabled>
 			<i class="fas fa-equals"></i>
-			<select name="system.abilities.combate.LM.skill" class="item-medium">
-				{{selectOptions periciasGerais selected=system.abilities.combate.LM.skill localize=true}}
-			</select>
-			<i class="fas fa-plus"></i>
 			<select name="system.abilities.combate.LM.ability" class="item-medium">
 				{{selectOptions atributos selected=system.abilities.combate.LM.ability localize=true}}
 			</select>
 			<i class="fas fa-plus"></i>
-			<input type="text" name="system.abilities.combate.LM.bonus" value="{{system.abilities.combate.LM.bonus}}" class="item-small" data-dtype="text">
+			<input type="text" name="system.abilities.combate.LM.bonus" 
+			value="{{system.abilities.combate.LM.bonus}}" class="item-small" data-dtype="Number">
 		</div>
 	</div>
 </section>
@@ -95,7 +85,7 @@
 	<div class="flex flex-group-center align-center">
 	<label class="resource-label flex-1 flex-group-center align-center">Iniciativa</label>
 		<div class="resource-content flex flex-2 flex-group-center align-center">
-			<input type="text" name="system.attributes.init.value" value="{{system.attributes.init.value}}" class="item-mini" data-dtype="text" disabled>
+			<input type="text" name="system.attributes.init.value" value="{{system.attributes.init.value}}" class="item-mini" data-dtype="Number" disabled>
 			<i class="fas fa-equals"></i>
 			<select name="system.attributes.init.skill" class="item-medium">
 				{{selectOptions periciasGerais selected=system.attributes.init.skill localize=true}}
@@ -105,40 +95,46 @@
 				{{selectOptions atributos selected=system.attributes.init.ability localize=true}}
 			</select>
 			<i class="fas fa-plus"></i>
-			<input type="text" name="system.attributes.init.bonus" value="{{system.attributes.init.bonus}}" class="item-small" data-dtype="text">
+			<input type="text" name="system.attributes.init.bonus" 
+			value="{{system.attributes.init.bonus}}" class="item-small" data-dtype="Number">
 		</div>
 	</div>
 	<div class="flex flex-group-center align-center">
 	<label class="resource-label flex-1 flex-group-center align-center">Reação de Esquiva</label>
 		<div class="resource-content flex flex-2 flex-group-center align-center">
-			<input type="text" name="system.attributes.esquiva.value" value="{{system.attributes.esquiva.value}}" class="item-mini" data-dtype="text" disabled>
+			<input type="text" name="system.attributes.esquiva.value" 
+			value="{{system.attributes.esquiva.value}}" class="item-mini" data-dtype="Number" disabled>
 			<i class="fas fa-equals"></i>
-			<select name="system.attributes.esquiva.ability" class="item-medium">
-				{{selectOptions habilidadesCombate selected=system.attributes.esquiva.ability localize=true}}
+			<select name="system.attributes.esquiva.combatAbility" class="item-medium">
+				{{selectOptions habilidadesCombate selected=system.attributes.esquiva.combatAbility localize=true}}
 			</select>
 			<i class="fas fa-plus"></i>
-			<input type="text" name="system.attributes.esquiva.variavel" value="{{system.attributes.esquiva.variavel}}" class="item-small" data-dtype="text">
+			<input type="text" name="system.attributes.esquiva.variavel" 
+			value="{{system.attributes.esquiva.variavel}}" class="item-small" data-dtype="Number">
 			<i class="fas fa-plus"></i>
-			<input type="text" name="system.attributes.esquiva.bonus" value="{{system.attributes.esquiva.bonus}}" class="item-small" data-dtype="text">
+			<input type="text" name="system.attributes.esquiva.bonus" 
+			value="{{system.attributes.esquiva.bonus}}" class="item-small" data-dtype="Number">
 		</div>
 	</div>
 	<hr>
 	<div class="flex flex-group-center align-center">
 	<label class="resource-label flex-1 flex-group-center align-center">Deslocamento</label>
 		<div class="resource-content flex flex-2 flex-group-center align-center">
-			<input type="text" name="system.attributes.movement.andar" value="{{system.attributes.movement.andar}}" class="item-mini" data-dtype="text" disabled>
+			<input type="text" name="system.attributes.movement.andar" 
+			value="{{system.attributes.movement.andar}}" class="item-mini" data-dtype="Number" disabled>
 			<i class="fas fa-equals"></i>
-			<input type="text" name="system.attributes.movement.base" value="{{system.attributes.movement.base}}" class="item-mini" data-dtype="text">
+			<input type="text" name="system.attributes.movement.base" 
+			value="{{system.attributes.movement.base}}" class="item-mini" data-dtype="Number">
 			<i class="fas fa-plus"></i>
 			<select name="system.attributes.movement.ability" class="item-medium">
-				<option>Atributos</option>
-				<option>Atributos</option>
-				<option>Atributos</option>
+				{{selectOptions atributos selected=system.attributes.movement.ability localize=true}}
 			</select>
 			<i class="fas fa-divide"></i>
-			<input type="text" name="system.attributes.movement.mod.divisorAndar" value="{{system.attributes.movement.mod.divisorAndar}}" class="item-mini" data-dtype="text" disabled>
+			<input type="text" name="system.attributes.movement.divisor" 
+			value="{{system.attributes.movement.divisor}}" class="item-mini" data-dtype="Number" disabled>
 			<i class="fas fa-plus"></i>
-			<input type="text" name="system.attributes.movement.bonus" value="{{system.attributes.movement.bonus}}" class="item-small" data-dtype="text">
+			<input type="text" name="system.attributes.movement.bonus" 
+			value="{{system.attributes.movement.bonus}}" class="item-small" data-dtype="Number">
 		</div>
 	</div>
 </section>
