@@ -117,11 +117,30 @@
 				</div>
 			</div>
 
+			{{#each system.combate.dano.parts as |damage i|}}
+			<div class="flex flex-group-center" style="padding-top: 2px;" data-damage-part="{{i}}">
+				<div class="resource flex flex-2">
+					<label for="system.dano.base" class="resource-label p-r-10"><i class="fas fa-plus"></i></label>
+					<div class="resource-content">
+						<input type="text" name="system.combate.dano.parts.{{i}}.0" 
+						value="{{lookup this "0"}}" data-dtype="String"/>
+					</div>
+				</div>
+				<div class="resource flex flex-2">
+					<i class="fas fa-plus"></i>
+					<div class="resource-content">
+						<input type="text" name="system.combate.dano.parts.{{i}}.1" 
+						value="{{lookup this "1"}}" data-dtype="String"/>
+					</div>
+				</div>
+			</div>
+			{{/each}}
+
 			<div class="flex flex-group-center">
 				<div class="resource flex flex-1"></div>
 				<div class="resource flex flex-3" style="justify-content: center; border: 1px dashed #BEBEBE">
 					<div class="flex flex-group-center" style="padding: 5px 0; opacity: 0.6;">
-						<a class="add-damage align-center"><i class="fas fa-plus"></i> Adicionar bônus</a>
+						<a class="damage-control add-damage align-center"><i class="fas fa-plus"></i> Adicionar bônus</a>
 					</div>
 				</div>
 			</div>

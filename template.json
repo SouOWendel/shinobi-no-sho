@@ -433,7 +433,8 @@
 				"dano": {
 					"base": null,
 					"modificador": "",
-					"tipo": ""
+					"tipo": "",
+					"parts": []
 				}
 			},
 			"detalhes": {
