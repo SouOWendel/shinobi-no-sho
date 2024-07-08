@@ -36,9 +36,9 @@
 					<label for="system.combate.dano.tipo" class="resource-label p-r-10">Tipo de Dano</label>
 					<div class="resource-content">
 						<select name="system.combate.dano.tipo" class="item-medium">
-							<option>Subtipo de Técnica</option>
-							<option>Subtipo de Técnica</option>
-							<option>Subtipo de Técnica</option>
+							{{selectOptions itemsDropdown.tecnicas.subtipo 
+							selected=system.combate.dano.tipo 
+							localize=true blank="—"}}
 						</select>
 					</div>
 				</div>
