@@ -135,6 +135,23 @@ export class ShinobiActorSheet extends ActorSheet {
     context.tecnicas = tecnicas;
   }
 
+	/** @inheritDoc */
+	_getSubmitData(updateData = {}) {
+		const formData = foundry.utils.expandObject(
+			super._getSubmitData(updateData),
+		);
+
+		// Handle Family array
+		const biografia = formData.system?.details?.biografia;
+		if (biografia) {
+			biografia.familia = Object.values(biografia?.familia || {}).map((d) => [
+				d[0] || '', d[1] || '', d[2] || '', d[3] || '', d[4] || '' ]);
+		}
+
+		// Return the flattened submission data
+		return foundry.utils.flattenObject(formData);
+	}
+
   /* -------------------------------------------- */
 
   /** @override */
@@ -163,6 +180,9 @@ export class ShinobiActorSheet extends ActorSheet {
       li.slideUp(200, () => this.render(false));
     });
 
+		// Relations Handler
+		html.find('.relations-control').click(this._onRelationsControl.bind(this));
+
     // Active Effect management
     html.on('click', '.effect-control', (ev) => {
       const row = ev.currentTarget.closest('li');
@@ -186,6 +206,27 @@ export class ShinobiActorSheet extends ActorSheet {
       });
     }
   }
+
+	async _onRelationsControl(event){
+		event.preventDefault();
+		const a = event.currentTarget;
+
+		if (a.classList.contains('add-relation')) {
+			await this._onSubmit(event);
+			const family = this.actor.system.details.biografia.familia;
+			return this.actor.update({
+				'system.details.biografia.familia': family.concat([['','','','','']]),
+			});
+		}
+
+		if (a.classList.contains('delete-relation')) {
+			await this._onSubmit(event);
+			const html = a.closest('.relation-part');
+			const family = foundry.utils.deepClone(this.actor.system.details.biografia.familia);
+			family.splice(Number(html.dataset.relationPart), 1);
+			return this.actor.update({'system.details.biografia.familia': family});
+		}
+	}
 
   /**
    * Handle creating a new Owned Item for the actor using initial data defined in the HTML dataset
@@ -245,4 +286,17 @@ export class ShinobiActorSheet extends ActorSheet {
       return roll;
     }
   }
+
+	/* -------------------------------------------- */
+
+	/* -------------------------------------------- */
+	/*  Form Submission                             */
+	/* -------------------------------------------- */
+
+	/** @inheritdoc */
+	async _onSubmit(...args) {
+		await super._onSubmit(...args);
+	}
+
+	/* -------------------------------------------- */
 }

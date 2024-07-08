@@ -224,29 +224,23 @@
 							<label class="flex-1">Gênero</label>
 							<label class="flex-1">Carreira</label>
 						</div>
-						<div class="resource-content flex">
-							<input type="text" name="" value="" class="flex-1" data-dtype="String"/>
-							<input type="text" name="" value="" class="flex-2" data-dtype="String"/>
-							<input type="text" name="" value="" class="flex-1" data-dtype="String"/>
-							<input type="text" name="" value="" class="flex-1" data-dtype="String"/>
-							<input type="text" name="" value="" class="flex-1" data-dtype="String"/>
-						</div>
-						<div class="resource-content flex">
-							<input type="text" name="" value="" class="flex-1" data-dtype="String"/>
-							<input type="text" name="" value="" class="flex-2" data-dtype="String"/>
-							<input type="text" name="" value="" class="flex-1" data-dtype="String"/>
-							<input type="text" name="" value="" class="flex-1" data-dtype="String"/>
-							<input type="text" name="" value="" class="flex-1" data-dtype="String"/>
-						</div>
-						<div class="resource-content flex">
-							<input type="text" name="" value="" class="flex-1" data-dtype="String"/>
-							<input type="text" name="" value="" class="flex-2" data-dtype="String"/>
-							<input type="text" name="" value="" class="flex-1" data-dtype="String"/>
-							<input type="text" name="" value="" class="flex-1" data-dtype="String"/>
-							<input type="text" name="" value="" class="flex-1" data-dtype="String"/>
-						</div>
-						<div class="damage-box align-center" style="padding: 5px 0; opacity: 0.6;">
-							<a class="damage-control add-damage"><i class="fas fa-plus"></i> Adicionar uma relação</a>
+						{{#each system.details.biografia.familia as |relation i|}}
+							<div class="resource-content flex relation-part" data-relation-part="{{i}}">
+								<input type="text" name="system.details.biografia.familia.{{i}}.0" 
+								value="{{lookup this "0"}}" class="flex-1" data-dtype="String"/>
+								<input type="text" name="system.details.biografia.familia.{{i}}.1" 
+								value="{{lookup this "1"}}" class="flex-2" data-dtype="String"/>
+								<input type="text" name="system.details.biografia.familia.{{i}}.2" 
+								value="{{lookup this "2"}}" class="flex-1" data-dtype="String"/>
+								<input type="text" name="system.details.biografia.familia.{{i}}.3" 
+								value="{{lookup this "3"}}" class="flex-1" data-dtype="String"/>
+								<input type="text" name="system.details.biografia.familia.{{i}}.4" 
+								value="{{lookup this "4"}}" class="flex-1" data-dtype="String"/>
+								<a class="relations-control delete-relation"><i class="fas fa-trash"></i></a>
+							</div>
+						{{/each}}
+						<div class="relations-box align-center" style="padding: 5px 0; opacity: 0.6;">
+							<a class="relations-control add-relation"><i class="fas fa-plus"></i> Adicionar uma relação</a>
 						</div>
 					</div>
 				</div>
