@@ -28,8 +28,11 @@
 
     {{!-- Description Tab --}}
     <div class="tab" data-group="primary" data-tab="descricao">
-      {{editor system.descricao target="system.descricao" 
+			<div class="container" style="margin-top: 10px;">
+				<h3 class="section-title">Descrição</h3>
+				{{editor system.descricao target="system.descricao" 
 			rollData=rollData button=true owner=owner editable=editable}}
+			</div>
     </div>
 
     {{!-- Details Tab --}}
