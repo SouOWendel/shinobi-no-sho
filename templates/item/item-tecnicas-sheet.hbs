@@ -55,40 +55,43 @@
 				<div class="resource flex flex-2">
 					<label for="system.combate.duracao" class="resource-label p-r-10">Duração</label>
 					<div class="resource-content">
-						<input type="text" name="system.combate.duracao" 
-						value="{{system.combate.duracao}}" data-dtype="String"/>
+						<select name="system.combate.duracao">
+							{{selectOptions itemsDropdown.tecnicas.duracao 
+							selected=system.combate.duracao 
+							localize=true blank="—"}}
+						</select>
 					</div>
 				</div>
 			</div>
 
 			<div class="flex flex-group-center">
 				<div class="resource flex flex-2">
-					<label for="system.areaEfeito.tipo" class="resource-label p-r-10">Área de Efeito</label>
+					<label for="system.combate.areaEfeito.tipo" class="resource-label p-r-10">Área de Efeito</label>
 					<div class="resource-content">
-						<select name="system.areaEfeito.tipo" class="item-medium">
-							<option>Área de Efeito</option>
-							<option>Área de Efeito</option>
-							<option>Área de Efeito</option>
+						<select name="system.combate.areaEfeito.tipo" class="item-medium">
+							{{selectOptions itemsDropdown.tecnicas.areaEfeito 
+							selected=system.combate.areaEfeito.tipo 
+							localize=true blank="—"}}
 						</select>
 					</div>
 				</div>
 				<div class="resource flex flex-2">
 					<i class="fas fa-arrow-right"></i>
 					<div class="resource-content">
-						<input type="text" name="system.areaEfeito.outro" 
-						value="{{system.areaEfeito.outro}}" data-dtype="String"/>
+						<input type="text" name="system.combate.areaEfeito.outro" 
+						value="{{system.combate.areaEfeito.outro}}" data-dtype="String"/>
 					</div>
 				</div>
 			</div>
 
 			<div class="flex flex-group-center">
 				<div class="resource flex flex-2">
-					<label for="system.alcance.tipo" class="resource-label p-r-10">Alcance</label>
+					<label for="system.combate.alcance.tipo" class="resource-label p-r-10">Alcance</label>
 					<div class="resource-content">
-						<select name="system.alcance.tipo" class="item-medium">
-							<option>Alcance</option>
-							<option>Alcance</option>
-							<option>Alcance</option>
+						<select name="system.combate.alcance.tipo" class="item-medium">
+							{{selectOptions itemsDropdown.generico.alcance 
+							selected=system.combate.alcance.tipo 
+							localize=true blank="—"}}
 						</select>
 					</div>
 				</div>
@@ -106,17 +109,17 @@
 					<label for="system.combate.acao" class="resource-label p-r-10">Ação</label>
 					<div class="resource-content">
 						<select name="system.combate.acao" class="item-medium">
-							<option>Ação</option>
-							<option>Ação</option>
-							<option>Ação</option>
+							{{selectOptions itemsDropdown.generico.acao 
+							selected=system.combate.acao 
+							localize=true blank="—"}}
 						</select>
 					</div>
 				</div>
 				<div class="resource flex flex-2">
-					<label for="system.combate.avo" class="resource-label p-r-10">Alvo</label>
+					<label for="system.combate.alvo" class="resource-label p-r-10">Alvo</label>
 					<div class="resource-content">
-						<input type="text" name="system.combate.avo" 
-						value="{{system.combate.avo}}" data-dtype="String"/>
+						<input type="text" name="system.combate.alvo" 
+						value="{{system.combate.alvo}}" data-dtype="String"/>
 					</div>
 				</div>
 			</div>
@@ -139,9 +142,9 @@
 					<label for="system.detalhes.tipo" class="resource-label p-r-10">Tipo de Técnica</label>
 					<div class="resource-content">
 						<select name="system.detalhes.tipo" class="item-medium">
-							<option>Tipo de Técnica</option>
-							<option>Tipo de Técnica</option>
-							<option>Tipo de Técnica</option>
+							{{selectOptions itemsDropdown.tecnicas.tipo 
+							selected=system.detalhes.tipo 
+							localize=true blank="—"}}
 						</select>
 					</div>
 				</div>
@@ -149,9 +152,9 @@
 					<label for="system.detalhes.subtipo" class="resource-label p-r-10">Subtipo de<br> Técnica</label>
 					<div class="resource-content">
 						<select name="system.detalhes.subtipo" class="item-medium">
-							<option>Subtipo de Técnica</option>
-							<option>Subtipo de Técnica</option>
-							<option>Subtipo de Técnica</option>
+							{{selectOptions itemsDropdown.tecnicas.subtipo 
+							selected=system.detalhes.subtipo 
+							localize=true blank="—"}}
 						</select>
 					</div>
 				</div>
@@ -168,11 +171,11 @@
 				<div class="resource flex flex-2">
 					<label for="" class="resource-label p-r-10">Compartimentos</label>
 					<div class="resource-content">
-						<input type="text" name="" value="" data-dtype="String"/>
+						<input type="text" name="system.compartimentos.qtdItem" value="{{system.compartimentos.qtdItem}}" data-dtype="String"/>
 					</div>
 					<i class="">/</i>
 					<div class="resource-content">
-						<input type="text" name="" value="" data-dtype="String"/>
+						<input type="text" name="system.compartimentos.compartOcupa" value="{{system.compartimentos.compartOcupa}}" data-dtype="String"/>
 					</div>
 				</div>
 			</div>
@@ -181,9 +184,9 @@
 					<label for="system.detalhes.elemento.tipo" class="resource-label p-r-10">Elemento</label>
 					<div class="resource-content">
 						<select name="system.detalhes.elemento.tipo" class="item-medium">
-							<option>Elemento</option>
-							<option>Elemento</option>
-							<option>Elemento</option>
+							{{selectOptions itemsDropdown.tecnicas.elemento 
+							selected=system.detalhes.elemento.tipo 
+							localize=true blank="—"}}
 						</select>
 					</div>
 				</div>
@@ -201,9 +204,9 @@
 					<label for="system.detalhes.tipoJutsu" class="resource-label p-r-10">Tipo de Jutsu</label>
 					<div class="resource-content">
 						<select name="system.detalhes.tipoJutsu" class="item-medium">
-							<option>Tipo de Jutsu</option>
-							<option>Tipo de Jutsu</option>
-							<option>Tipo de Jutsu</option>
+							{{selectOptions itemsDropdown.tecnicas.tipoJutsu 
+							selected=system.detalhes.tipoJutsu 
+							localize=true blank="—"}}
 						</select>
 					</div>
 				</div>
@@ -211,9 +214,9 @@
 					<label for="system.detalhes.ranking" class="resource-label p-r-10">Ranking</label>
 					<div class="resource-content">
 						<select name="system.detalhes.ranking" class="item-medium">
-							<option>Ranking</option>
-							<option>Ranking</option>
-							<option>Ranking</option>
+							{{selectOptions itemsDropdown.tecnicas.ranking 
+							selected=system.detalhes.ranking 
+							localize=true blank="—"}}
 						</select>
 					</div>
 				</div>

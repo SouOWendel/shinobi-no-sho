@@ -66,7 +66,120 @@
 				"intimidacao": "Intimidação",
 				"obterInfo": "Obter Informação"
 			}
-		}
+		},
+		"ITEMS": {
+				"aptidoes": {
+					"tipoAptidao": {
+						"combate": "Combate",
+						"manobra": "Manobra",
+						"geral": "Geral",
+						"tecnica": "Técnica",
+						"shinobi": "Shinobi"
+					}
+				},
+				"tecnicas": {
+					"areaEfeito": {
+						"cone": "Cone",
+						"circulo": "Círculo",
+						"cilindro": "Cilindro",
+						"esfera": "Esfera",
+						"linha": "Linha",
+						"onda": "Onda",
+						"outro": "Outro"
+					},
+					"tipo": {
+						"projetil": "Projétil",
+						"area": "Ataque em Área",
+						"suporte": "Suporte",
+						"corpoacorpo": "Corpo-a-Corpo",
+						"toque": "Toque"
+					},
+					"subtipo": {
+						"controleChakra": "Controle de Chakra",
+						"kinjutsu": "Kinjutsu",
+						"hijutsu": "Hijutsu",
+						"outro": "Outro"
+					},
+					"tipoJutsu": {
+						"ninjutsu": "Ninjutsu",
+						"genjutsu": "Genjutsu",
+						"taijutsu": "Taijutsu"
+					},
+					"elemento": {
+						"katon": "Katon",
+						"fuuton": "Fuuton",
+						"raiton": "Raiton",
+						"doton": "Doton",
+						"suiton": "Suiton",
+						"outro": "Outro"
+					},
+					"ranking": {
+						"e": "E",
+						"d": "D",
+						"c": "C",
+						"b": "B",
+						"a": "A",
+						"s": "S"
+					},
+					"duracao": {
+						"instantanea": "Instantânea",
+						"concentracao": "Concentração",
+						"sustentada": "Sustentada",
+						"continua": "Contínua",
+						"permanente": "Permanente"
+					}
+				},
+				"armas": {
+					"tipoDano": {
+						"corte": "Corte",
+						"perfuracao": "Perfuração",
+						"esmagamento": "Esmagamento"
+					},
+					"tipo": {
+						"natural": "Natural",
+						"simples": "Simples",
+						"marcial": "Marcial",
+						"especial": "Especial"
+					},
+					"subtipo": {
+						"leve": "Arma Leve",
+						"mediana": "Arma Mediana",
+						"longa": "Arma Longa",
+						"pesada": "Arma Pesada",
+						"arremesso": "Arma de Arremesso",
+						"disparo": "Arma de Disparo",
+						"explosivo": "Explosivo",
+						"municao": "Munição"
+					}
+				},
+				"armaduras": {
+					"tipo": {
+						"leve": "Armadura Leve",
+						"pesada": "Armadura Pesada"
+					}
+				},
+				"geral": {
+					"tipo": {
+						"comum": "Comum",
+						"animais": "Animal",
+						"veículos": "Veículo"
+					}
+				},
+				"generico": {
+					"alcance": {
+						"pessoal": "Pessoal",
+						"toque": "Toque",
+						"distancia": "Distância"
+					},
+					"acao": {
+						"padrao": "Padrão",
+						"movimento": "Movimento",
+						"parcial": "Parcial",
+						"livre": "Livre",
+						"reacao": "Reação"
+					}
+				}
+			}
   },
 	"EFFECT": {
 		"TabDuration": "Duração"

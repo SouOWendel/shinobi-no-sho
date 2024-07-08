@@ -40,9 +40,9 @@
 					<label for="system.combate.ataque.habilidadeCombate" class="resource-label p-r-10">Teste de Ataque</label>
 					<div class="resource-content">
 					<select name="system.combate.ataque.habilidadeCombate" class="item-medium">
-						<option>Habilidades de Combate</option>
-						<option>Habilidades de Combate</option>
-						<option>Habilidades de Combate</option>
+						{{selectOptions combatAbilities 
+							selected=system.combate.ataque.habilidadeCombate 
+							localize=true blank="—"}}
 					</select>
 					</div>
 				</div>
@@ -57,9 +57,9 @@
 					<label for="system.combate.dano.tipo" class="resource-label p-r-10">Tipo de Dano</label>
 					<div class="resource-content">
 					<select name="system.combate.dano.tipo" class="item-medium">
-						<option>Tipo de Dano</option>
-						<option>Tipo de Dano</option>
-						<option>Tipo de Dano</option>
+						{{selectOptions itemsDropdown.armas.tipoDano 
+							selected=system.combate.dano.tipo 
+							localize=true blank="—"}}
 					</select>
 					</div>
 				</div>
@@ -71,9 +71,9 @@
 					<label for="system.combate.alcance.tipo" class="resource-label p-r-10">Alcance</label>
 					<div class="resource-content">
 					<select name="system.combate.alcance.tipo" class="item-medium">
-						<option>Alcance</option>
-						<option>Alcance</option>
-						<option>Alcance</option>
+						{{selectOptions itemsDropdown.generico.alcance 
+							selected=system.combate.alcance.tipo 
+							localize=true blank="—"}}
 					</select>
 					</div>
 				</div>
@@ -126,11 +126,14 @@
 						value="{{lookup this "0"}}" data-dtype="String"/>
 					</div>
 				</div>
-				<div class="resource flex flex-2">
+				<div class="resource flex flex-1">
 					<i class="fas fa-plus"></i>
 					<div class="resource-content">
-						<input type="text" name="system.combate.dano.parts.{{i}}.1" 
-						value="{{lookup this "1"}}" data-dtype="String"/>
+						<select name="system.combate.dano.parts.{{i}}.1">
+							{{selectOptions ../itemsDropdown.armas.tipoDano 
+							selected=(lookup this "1") 
+							localize=true blank="—"}}
+						</select>
 					</div>
 				</div>
 			</div>
@@ -153,9 +156,9 @@
 					<label for="system.detalhes.tipo" class="resource-label p-r-10">Tipo de Arma</label>
 					<div class="resource-content">
 						<select name="system.detalhes.tipo" class="item-medium">
-							<option>Tipo de Arma</option>
-							<option>Tipo de Arma</option>
-							<option>Tipo de Arma</option>
+							{{selectOptions itemsDropdown.armas.tipo 
+							selected=system.detalhes.tipo 
+							localize=true blank="—"}}
 						</select>
 					</div>
 				</div>
@@ -163,33 +166,30 @@
 					<label for="system.detalhes.subtipo" class="resource-label p-r-10">Subtipo de Arma</label>
 					<div class="resource-content">
 						<select name="system.detalhes.subtipo" class="item-medium">
-							<option>Subtipo de Arma</option>
-							<option>Subtipo de Arma</option>
-							<option>Subtipo de Arma</option>
+							{{selectOptions itemsDropdown.armas.subtipo 
+							selected=system.detalhes.subtipo 
+							localize=true blank="—"}}
 						</select>
 					</div>
 				</div>
 			</div>
 
 			<div class="flex flex-group-center">
-				<div class="resource flex flex-2">
-					<label for="system.detalhes.classificacao" class="resource-label p-r-10">Classificação de Uso</label>
-					<div class="resource-content">
-						<select name="system.detalhes.classificacao" class="item-medium">
-							<option>Classificação de Uso</option>
-							<option>Classificação de Uso</option>
-							<option>Classificação de Uso</option>
-						</select>
+				<div class="resource flex flex-3">
+					<label for="system.compartimentos.qtdItem" class="resource-label p-r-10">Compartimentos</label>
+					<div class="resource-content flex flex-group-center">
+						<input type="text" name="system.compartimentos.qtdItem" 
+						value="{{system.compartimentos.qtdItem}}" data-dtype="String"/>
+						<i class="">/</i>
+						<input type="text" name="system.compartimentos.compartOcupa" 
+						value="{{system.compartimentos.compartOcupa}}" data-dtype="String"/>
 					</div>
 				</div>
-				<div class="resource flex flex-2">
+				<div class="resource flex flex-3">
 					<label for="system.detalhes.tamanho" class="resource-label p-r-10">Tamanho</label>
 					<div class="resource-content">
-						<select name="system.detalhes.tamanho" class="item-medium">
-							<option>Tamanho</option>
-							<option>Tamanho</option>
-							<option>Tamanho</option>
-						</select>
+						<input type="text" name="system.detalhes.tamanho" 
+					value="{{system.detalhes.tamanho}}" data-dtype="String"/>
 					</div>
 				</div>
 			</div>
@@ -199,24 +199,6 @@
 					<input type="text" name="system.detalhes.preRequisito" 
 					value="{{system.detalhes.preRequisito}}" data-dtype="String"/>
       	</div>
-			</div>
-
-			<div class="flex flex-group-center">
-				<div class="resource flex flex-2">
-					<label for="system.compartimentos.qtdItem" class="resource-label p-r-10">Compartimentos</label>
-					<div class="resource-content">
-						<input type="text" name="system.compartimentos.qtdItem" 
-						value="{{system.compartimentos.qtdItem}}" data-dtype="String"/>
-					</div>
-				</div>
-				<div class="resource flex flex-1">
-					<i class="">/</i>
-					<div class="resource-content">
-						<input type="text" name="system.compartimentos.compartOcupa" 
-						value="{{system.compartimentos.compartOcupa}}" data-dtype="String"/>
-					</div>
-				</div>
-				<div class="resource flex flex-3"></div>
 			</div>
 
 			<div class="grid traits-grid">

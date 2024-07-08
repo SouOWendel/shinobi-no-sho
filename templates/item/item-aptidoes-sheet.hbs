@@ -35,8 +35,9 @@
 				<div class="resource flex flex-3">
 					<label for="system.tipoAptidao" class="resource-label p-r-10">Tipo de Aptidão</label>
 					<div class="resource-content">
-						<input type="text" name="system.tipoAptidao" 
-						value="{{system.tipoAptidao}}" data-dtype="String"/>
+						<select name="system.tipoAptidao">
+							{{selectOptions itemsDropdown.aptidoes.tipoAptidao selected=system.tipoAptidao localize=true blank="—"}}
+						</select>
 					</div>
 				</div>
 				<div class="resource flex flex-2">

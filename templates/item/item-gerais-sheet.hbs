@@ -25,18 +25,16 @@
   {{!-- Sheet Body --}}
   <section class="sheet-body">
 
-    {{!-- Description Tab --}}
-    <div class="tab" data-group="primary" data-tab="descricao">
-      {{editor system.descricao target="system.descricao" 
-			rollData=rollData button=true owner=owner editable=editable}}
-    </div>
-
 		<div class="tab" data-group="primary" data-tab="detalhes">
 			<div class="flex flex-group-center">
 				<div class="resource flex flex-2">
 					<label for="system.tipo" class="resource-label p-r-10">Tipo de Item Geral</label>
 					<div class="resource-content">
-						<input type="text" name="system.tipo" value="{{system.tipo}}" data-dtype="String"/>
+						<select name="system.tipo">
+							{{selectOptions itemsDropdown.geral.tipo 
+							selected=system.tipo 
+							localize=true blank="—"}}
+						</select>
 					</div>
 				</div>
 				<div class="resource flex flex-2">

@@ -39,9 +39,9 @@
 					<label for="system.tipo" class="resource-label p-r-10">Tipo de Armadura</label>
 					<div class="resource-content">
 						<select name="system.tipo" class="item-medium">
-							<option>Tipo de Armadura</option>
-							<option>Tipo de Armadura</option>
-							<option>Tipo de Armadura</option>
+							{{selectOptions itemsDropdown.armaduras.tipo 
+							selected=system.tipo 
+							localize=true blank="—"}}
 						</select>
 					</div>
 				</div>
