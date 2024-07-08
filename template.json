@@ -416,7 +416,8 @@
 				"compartimentos": {
 					"qtdItem": null,
 					"compartOcupa": null
-				}
+				},
+				"raridade": ""
 			}
 		},
 		"armas": {
@@ -440,7 +441,6 @@
 			"detalhes": {
 				"tipo": "",
 				"subtipo": "",
-				"classificacao": "",
 				"tamanho": "",
 				"preRequisito": "",
 				"caract": {
