@@ -78,6 +78,14 @@
 					}
 				},
 				"tecnicas": {
+					"origem": {
+						"aptidao": "Aptidão",
+						"poder": "Poder",
+						"tecnica": "Técnica",
+						"arma": "Arma",
+						"armadura": "Armadura",
+						"geral": "Item Geral"
+					},
 					"areaEfeito": {
 						"cone": "Cone",
 						"circulo": "Círculo",
@@ -177,6 +185,14 @@
 						"parcial": "Parcial",
 						"livre": "Livre",
 						"reacao": "Reação"
+					},
+					"raridade": {
+						"comum": "Comum",
+						"incomum": "Incomum",
+						"raro": "Raro",
+						"muitoraro": "Muito Raro",
+						"lendario": "Lendário",
+						"mitico": "Mítico"
 					}
 				}
 			}

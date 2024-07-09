@@ -74,24 +74,32 @@ shinobiNoSho.ITEMS = {
 				manobra: "shinobiNoSho.ITEMS.aptidoes.tipoAptidao.manobra",
 				geral: "shinobiNoSho.ITEMS.aptidoes.tipoAptidao.geral",
 				tecnica: "shinobiNoSho.ITEMS.aptidoes.tipoAptidao.tecnica",
-				shinobi: "shinobiNoSho.ITEMS.aptidoes.tipoAptidao.shinobi",
+				shinobi: "shinobiNoSho.ITEMS.aptidoes.tipoAptidao.shinobi"
 			}
 		},
 		tecnicas: {
+			origem: {
+				aptidao: "shinobiNoSho.ITEMS.tecnicas.origem.aptidao",
+				poder: "shinobiNoSho.ITEMS.tecnicas.origem.poder",
+				tecnica: "shinobiNoSho.ITEMS.tecnicas.origem.tecnica",
+				arma: "shinobiNoSho.ITEMS.tecnicas.origem.arma",
+				armadura: "shinobiNoSho.ITEMS.tecnicas.origem.armadura",
+				geral: "shinobiNoSho.ITEMS.tecnicas.origem.geral"
+			},
 			areaEfeito: {
 				cone: "shinobiNoSho.ITEMS.tecnicas.areaEfeito.cone",
 				circulo: "shinobiNoSho.ITEMS.tecnicas.areaEfeito.circulo",
 				cilindro: "shinobiNoSho.ITEMS.tecnicas.areaEfeito.cilindro",
 				esfera: "shinobiNoSho.ITEMS.tecnicas.areaEfeito.esfera",
 				onda: "shinobiNoSho.ITEMS.tecnicas.areaEfeito.onda",
-				outro: "shinobiNoSho.ITEMS.tecnicas.areaEfeito.outro",
+				outro: "shinobiNoSho.ITEMS.tecnicas.areaEfeito.outro"
 			},
 			tipo: {
 				projetil: "shinobiNoSho.ITEMS.tecnicas.tipo.projetil",
 				area: "shinobiNoSho.ITEMS.tecnicas.tipo.area",
 				suporte: "shinobiNoSho.ITEMS.tecnicas.tipo.suporte",
 				corpoacorpo: "shinobiNoSho.ITEMS.tecnicas.tipo.corpoacorpo",
-				toque: "shinobiNoSho.ITEMS.tecnicas.tipo.toque",
+				toque: "shinobiNoSho.ITEMS.tecnicas.tipo.toque"
 			},
 			subtipo: {
 				controleChakra: "shinobiNoSho.ITEMS.tecnicas.subtipo.controleChakra",
@@ -176,6 +184,14 @@ shinobiNoSho.ITEMS = {
 				parcial: "shinobiNoSho.ITEMS.generico.acao.parcial",
 				livre: "shinobiNoSho.ITEMS.generico.acao.livre",
 				reacao: "shinobiNoSho.ITEMS.generico.acao.reacao",
+			},
+			raridade: {
+				comum: "shinobiNoSho.ITEMS.generico.raridade.comum",
+				incomum: "shinobiNoSho.ITEMS.generico.raridade.incomum",
+				raro: "shinobiNoSho.ITEMS.generico.raridade.raro",
+				muitoraro: "shinobiNoSho.ITEMS.generico.raridade.muitoraro",
+				lendario: "shinobiNoSho.ITEMS.generico.raridade.lendario",
+				mitico: "shinobiNoSho.ITEMS.generico.raridade.mitico",
 			}
 		}
 	}
