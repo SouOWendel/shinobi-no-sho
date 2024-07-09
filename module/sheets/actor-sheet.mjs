@@ -25,6 +25,11 @@ export class ShinobiActorSheet extends ActorSheet {
           contentSelector: '.sub-body',
           initial: 'historia',
         },
+				{
+          navSelector: '.pericias-sheet-tabs',
+          contentSelector: '.pericias-sheet-body',
+          initial: 'gerais',
+        }
       ],
     });
   }
