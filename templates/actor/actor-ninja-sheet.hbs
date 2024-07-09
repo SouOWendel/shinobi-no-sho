@@ -42,27 +42,18 @@
         <div class="resource">
           <label for="system.details.genero" class="resource-label">Gênero</label>
           <div class="resource-content flexrow flex-center flex-between">
-          	<select name="system.details.genero">
-							<option>Gênero</option>
-							<option>Gênero</option>
-							<option>Gênero</option>
-						</select>
+						<input type="text" name="system.details.genero" 
+						value="{{system.details.genero}}" data-dtype="String"/>
           </div>
 					<label for="system.details.tendencia" class="resource-label">Tendência</label>
           <div class="resource-content flexrow flex-center flex-between">
-          	<select name="system.details.tendencia">
-							<option>Tendência</option>
-							<option>Tendência</option>
-							<option>Tendência</option>
-						</select>
+						<input type="text" name="system.details.tendencia" 
+						value="{{system.details.tendencia}}" data-dtype="String"/>
           </div>
 					<label for="system.details.lateralidade" class="resource-label">Lateralidade</label>
           <div class="resource-content flexrow flex-center flex-between">
-          	<select name="system.details.lateralidade">
-							<option>Lateral.</option>
-							<option>Lateral.</option>
-							<option>Lateral.</option>
-						</select>
+						<input type="text" name="system.details.lateralidade" 
+						value="{{system.details.lateralidade}}" data-dtype="String"/>
           </div>
         </div>
 				<div class="resource">
@@ -257,9 +248,16 @@
 
     {{!-- Owned Skills Tab --}}
     <div class="tab pericias" data-group="primary" data-tab="pericias">
-			<div class="content">
-       {{> "systems/shinobiNoSho/templates/actor/parts/actor-pericias.hbs"}}
+			<nav class="pericias-sheet-tabs sheet-tabs tabs" data-group="pericias">
+				<a class="item" data-tab="gerais">Perícias Gerais</a>
+				<a class="item" data-tab="sociais">Perícias Sociais</a>
+			</nav>
+
+			<div class="pericias-sheet-body">
+				<div class="content">
+       		{{> "systems/shinobiNoSho/templates/actor/parts/actor-pericias.hbs"}}
 			 </div>
+			</div>
     </div>
 
     {{!-- Owned Aptitudes and Powers Tab --}}
