@@ -28,19 +28,23 @@
             />
           </a>
         </div>
-        <h4>{{item.name}}</h4>
+        <h4 data-tooltip="{{system.alternativo}}">{{item.name}}</h4>
       </div>
       <div class='item-small item-prop'>
-				{{ifThen item.system.detalhes.origem item.system.detalhes.origem "—"}}
+				{{ifThen item.system.detalhes.origem 
+				(localize (concat "shinobiNoSho.ITEMS.tecnicas.origem." item.system.detalhes.origem)) "—"}}
 			</div>
 			<div class='item-medium item-prop'>
-				{{ifThen item.system.combate.alcance.tipo item.system.combate.alcance.tipo "—"}}
+				{{ifThen item.system.combate.alcance.tipo 
+				(localize (concat "shinobiNoSho.ITEMS.generico.alcance." item.system.combate.alcance.tipo)) "—"}}
 			</div>
 			<div class='item-small item-prop'>
-				{{ifThen item.system.combate.acao item.system.combate.acao "—"}}
+				{{ifThen item.system.combate.acao 
+				(localize (concat "shinobiNoSho.ITEMS.generico.acao." item.system.combate.acao)) "—"}}
 			</div>
 			<div class='item-large item-prop'>
-				{{ifThen item.system.combate.duracao item.system.combate.duracao "—"}}
+				{{ifThen item.system.combate.duracao 
+				(localize (concat "shinobiNoSho.ITEMS.tecnicas.duracao." item.system.combate.duracao)) "—"}}
 			</div>
       <div class='item-controls'>
         <a

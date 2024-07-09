@@ -34,13 +34,15 @@
 				{{ifThen item.system.combate.dano.base item.system.combate.dano.base "—"}}
 			</div>
 			<div class='item-medium item-prop'>
-				{{ifThen item.system.combate.dano.tipo item.system.combate.dano.tipo "—"}}
+				{{ifThen item.system.combate.dano.tipo 
+				(localize (concat "shinobiNoSho.ITEMS.armas.tipoDano." item.system.combate.dano.tipo)) "—"}}
 			</div>
 			<div class='item-small item-prop'>
-				{{ifThen item.system.combate.alcance.tipo item.system.combate.alcance.tipo "—"}}
+				{{ifThen item.system.combate.alcance.tipo 
+				(localize (concat "shinobiNoSho.ITEMS.generico.alcance." item.system.combate.alcance.tipo)) "—"}}
 			</div>
 			<div class='item-small item-prop'>
-				{{ifThen item.system.combate.dano.tipo item.system.combate.dano.tipo "—"}}
+				{{ifThen item.system.quantidade item.system.quantidade "—"}}
 			</div>
       <div class='item-controls'>
         <a
@@ -93,7 +95,8 @@
         <h4>{{item.name}}</h4>
       </div>
       <div class='item-small item-prop'>
-				{{ifThen item.system.tipo item.system.tipo "—"}}
+				{{ifThen item.system.tipo 
+				(localize (concat "shinobiNoSho.ITEMS.armaduras.tipo." item.system.tipo)) "—"}}
 			</div>
 			<div class='item-medium item-prop'>
 				{{ifThen item.system.penalidade item.system.penalidade "—"}}
@@ -151,17 +154,17 @@
         <h4>{{item.name}}</h4>
       </div>
       <div class='item-small item-prop'>
-				{{ifThen item.system.tipo item.system.tipo "—"}}
+				{{ifThen item.system.tipo (localize (concat "shinobiNoSho.ITEMS.geral.tipo." item.system.tipo)) "—"}}
 			</div>
 			<div class='item-medium item-prop'>
-				{{ifThen item.system.preco item.system.preco "—"}}
+				{{ifThen item.system.preco item.system.preco "—"}} Ryos
 			</div>
 			<div class='item-small item-prop'>
 				{{ifThen item.system.compartimentos.qtdItem item.system.compartimentos.qtdItem "—"}} / 
 				{{ifThen item.system.compartimentos.compartOcupa item.system.compartimentos.compartOcupa "—"}}
 			</div>
 			<div class='item-small item-prop'>
-				{{ifThen item.system.tipo item.system.tipo "—"}}
+				{{ifThen item.system.quantidade item.system.quantidade "—"}}
 			</div>
       <div class='item-controls'>
         <a

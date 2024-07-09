@@ -26,12 +26,13 @@
         <h4>{{item.name}}</h4>
       </div>
       <div class='item-small item-prop'>
-				{{ifThen item.system.tipoAptidao item.system.tipoAptidao "—"}}
+				{{ifThen item.system.tipoAptidao 
+				(localize (concat "shinobiNoSho.ITEMS.aptidoes.tipoAptidao." item.system.tipoAptidao)) "—"}}
 			</div>
 			<div class='item-medium item-prop'>
 				{{ifThen item.system.nivelAptidao item.system.nivelAptidao "—"}}
 			</div>
-			<div class='item-large item-prop'>
+			<div class='item-large item-prop' data-tooltip="{{item.system.preRequisito}}">
 				{{ifThen item.system.preRequisito item.system.preRequisito "—"}}
 			</div>
       <div class='item-controls'>
@@ -81,7 +82,7 @@
 			<div class='item-medium item-prop'>
 				{{ifThen item.system.nivelPoder item.system.nivelPoder "—"}}
 			</div>
-			<div class='item-large item-prop'>
+			<div class='item-large item-prop' data-tooltip="{{item.system.preRequisito}}">
 				{{ifThen item.system.preRequisito item.system.preRequisito "—"}}
 			</div>
       <div class='item-controls'>
