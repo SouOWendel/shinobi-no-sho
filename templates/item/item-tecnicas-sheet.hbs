@@ -3,6 +3,27 @@
     <img class="profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}"/>
     <div class="header-fields">
       <h1 class="charname"><input name="name" type="text" value="{{item.name}}" placeholder="Name"/></h1>
+			<div class="flex flex-group-center" style="padding-bottom: 4px;">
+				<label for="system.alternativo" class="resource-label p-r-10 item-small">Alternativo</label>
+        <div class="resource item-large">
+						<div class="resource-content">
+							<input type="text" name="system.alternativo" style="text-align: center; font-size: 12px;"
+							value="{{system.alternativo}}" data-dtype="String" placeholder="Nome alternativo"/>
+						</div>
+				</div>
+    	</div>
+			<div class="flex flex-group-center">
+				<label for="system.detalhes.origem" class="resource-label p-r-10 item-small">Origem</label>
+				<div class="resource item-large">
+						<div class="resource-content">
+							<select name="system.detalhes.origem" style="text-align: center; font-size: 12px;">
+							{{selectOptions itemsDropdown.tecnicas.origem 
+							selected=system.detalhes.origem 
+							localize=true blank="—"}}
+						</select>
+						</div>
+				</div>
+			</div>
     </div>
   </header>
 
@@ -19,7 +40,7 @@
 
     {{!-- Description Tab --}}
     <div class="tab" data-group="primary" data-tab="descricao">
-      <div class="container" style="margin-top: 10px;">
+      <div class="content" style="margin-top: 10px;">
 				<h3 class="section-title">Descrição</h3>
 				{{editor system.descricao target="system.descricao" 
 			rollData=rollData button=true owner=owner editable=editable}}
@@ -28,112 +49,111 @@
 
     {{!-- Combat Tab --}}
     <div class="tab combate" data-group="primary" data-tab="combate">
-      <div class="flex flex-group-center">
-				<div class="resource flex flex-2">
-					<label for="system.combate.dano.value" class="resource-label p-r-10">Dano</label>
-					<div class="resource-content">
-						<input type="text" name="system.combate.dano.value" 
-						value="{{system.combate.dano.value}}" data-dtype="String"/>
+			<div class="content">
+				<div class="flex flex-group-center">
+					<div class="resource flex flex-2">
+						<label for="system.combate.dano.value" class="resource-label p-r-10">Dano</label>
+						<div class="resource-content">
+							<input type="text" name="system.combate.dano.value" 
+							value="{{system.combate.dano.value}}" data-dtype="String"/>
+						</div>
+					</div>
+					<div class="resource flex flex-2">
+						<label for="system.combate.dano.tipo" class="resource-label p-r-10">Tipo de Dano</label>
+						<div class="resource-content">
+							<input type="text" name="system.combate.dano.tipo" 
+							value="{{system.combate.dano.tipo}}" data-dtype="String"/>
+						</div>
 					</div>
 				</div>
-				<div class="resource flex flex-2">
-					<label for="system.combate.dano.tipo" class="resource-label p-r-10">Tipo de Dano</label>
-					<div class="resource-content">
-						<select name="system.combate.dano.tipo" class="item-medium">
-							{{selectOptions itemsDropdown.tecnicas.subtipo 
-							selected=system.combate.dano.tipo 
-							localize=true blank="—"}}
-						</select>
-					</div>
-				</div>
-			</div>
 
-			<div class="flex flex-group-center">
-				<div class="resource flex flex-2">
-					<label for="system.combate.efeitosOuAptidoes" class="resource-label p-r-10">Efeitos ou Aptidões</label>
-					<div class="resource-content">
-						<input type="text" name="system.combate.efeitosOuAptidoes" 
-						value="{{system.combate.efeitosOuAptidoes}}" data-dtype="String"/>
+				<div class="flex flex-group-center">
+					<div class="resource flex flex-2">
+						<label for="system.combate.efeitosOuAptidoes" class="resource-label p-r-10">Efeitos ou Aptidões</label>
+						<div class="resource-content">
+							<input type="text" name="system.combate.efeitosOuAptidoes" 
+							value="{{system.combate.efeitosOuAptidoes}}" data-dtype="String"/>
+						</div>
+					</div>
+					<div class="resource flex flex-2">
+						<label for="system.combate.duracao" class="resource-label p-r-10">Duração</label>
+						<div class="resource-content">
+							<select name="system.combate.duracao">
+								{{selectOptions itemsDropdown.tecnicas.duracao 
+								selected=system.combate.duracao 
+								localize=true blank="—"}}
+							</select>
+						</div>
 					</div>
 				</div>
-				<div class="resource flex flex-2">
-					<label for="system.combate.duracao" class="resource-label p-r-10">Duração</label>
-					<div class="resource-content">
-						<select name="system.combate.duracao">
-							{{selectOptions itemsDropdown.tecnicas.duracao 
-							selected=system.combate.duracao 
-							localize=true blank="—"}}
-						</select>
-					</div>
-				</div>
-			</div>
 
-			<div class="flex flex-group-center">
-				<div class="resource flex flex-2">
-					<label for="system.combate.areaEfeito.tipo" class="resource-label p-r-10">Área de Efeito</label>
-					<div class="resource-content">
-						<select name="system.combate.areaEfeito.tipo" class="item-medium">
-							{{selectOptions itemsDropdown.tecnicas.areaEfeito 
-							selected=system.combate.areaEfeito.tipo 
-							localize=true blank="—"}}
-						</select>
+				<div class="flex flex-group-center">
+					<div class="resource flex flex-2">
+						<label for="system.combate.areaEfeito.tipo" class="resource-label p-r-10">Área de Efeito</label>
+						<div class="resource-content">
+							<select name="system.combate.areaEfeito.tipo" class="item-medium">
+								{{selectOptions itemsDropdown.tecnicas.areaEfeito 
+								selected=system.combate.areaEfeito.tipo 
+								localize=true blank="—"}}
+							</select>
+						</div>
+					</div>
+					<div class="resource flex flex-2">
+						<i class="fas fa-arrow-right"></i>
+						<div class="resource-content">
+							<input type="text" name="system.combate.areaEfeito.outro" 
+							value="{{system.combate.areaEfeito.outro}}" data-dtype="String"/>
+						</div>
 					</div>
 				</div>
-				<div class="resource flex flex-2">
-					<i class="fas fa-arrow-right"></i>
-					<div class="resource-content">
-						<input type="text" name="system.combate.areaEfeito.outro" 
-						value="{{system.combate.areaEfeito.outro}}" data-dtype="String"/>
-					</div>
-				</div>
-			</div>
 
-			<div class="flex flex-group-center">
-				<div class="resource flex flex-2">
-					<label for="system.combate.alcance.tipo" class="resource-label p-r-10">Alcance</label>
-					<div class="resource-content">
-						<select name="system.combate.alcance.tipo" class="item-medium">
-							{{selectOptions itemsDropdown.generico.alcance 
-							selected=system.combate.alcance.tipo 
-							localize=true blank="—"}}
-						</select>
+				<div class="flex flex-group-center">
+					<div class="resource flex flex-2">
+						<label for="system.combate.alcance.tipo" class="resource-label p-r-10">Alcance</label>
+						<div class="resource-content">
+							<select name="system.combate.alcance.tipo" class="item-medium">
+								{{selectOptions itemsDropdown.generico.alcance 
+								selected=system.combate.alcance.tipo 
+								localize=true blank="—"}}
+							</select>
+						</div>
+					</div>
+					<div class="resource flex flex-2">
+						<i class="fas fa-arrow-right"></i>
+						<div class="resource-content">
+							<input type="text" name="system.alcance.outro" 
+							value="{{system.alcance.outro}}" data-dtype="String"/>
+						</div>
 					</div>
 				</div>
-				<div class="resource flex flex-2">
-					<i class="fas fa-arrow-right"></i>
-					<div class="resource-content">
-						<input type="text" name="system.alcance.outro" 
-						value="{{system.alcance.outro}}" data-dtype="String"/>
-					</div>
-				</div>
-			</div>
 
-			<div class="flex flex-group-center">
-				<div class="resource flex flex-2">
-					<label for="system.combate.acao" class="resource-label p-r-10">Ação</label>
-					<div class="resource-content">
-						<select name="system.combate.acao" class="item-medium">
-							{{selectOptions itemsDropdown.generico.acao 
-							selected=system.combate.acao 
-							localize=true blank="—"}}
-						</select>
+				<div class="flex flex-group-center">
+					<div class="resource flex flex-2">
+						<label for="system.combate.acao" class="resource-label p-r-10">Ação</label>
+						<div class="resource-content">
+							<select name="system.combate.acao" class="item-medium">
+								{{selectOptions itemsDropdown.generico.acao 
+								selected=system.combate.acao 
+								localize=true blank="—"}}
+							</select>
+						</div>
+					</div>
+					<div class="resource flex flex-2">
+						<label for="system.combate.alvo" class="resource-label p-r-10">Alvo</label>
+						<div class="resource-content">
+							<input type="text" name="system.combate.alvo" 
+							value="{{system.combate.alvo}}" data-dtype="String"/>
+						</div>
 					</div>
 				</div>
-				<div class="resource flex flex-2">
-					<label for="system.combate.alvo" class="resource-label p-r-10">Alvo</label>
-					<div class="resource-content">
-						<input type="text" name="system.combate.alvo" 
-						value="{{system.combate.alvo}}" data-dtype="String"/>
-					</div>
-				</div>
-			</div>
 
-			<div class="flex flex-group-center">
-				<div class="resource flex flex-2">
-					<label for="system.combate.testeResistencia" class="resource-label p-r-10">Teste de Resistência</label>
-					<div class="resource-content">
-						<input type="text" name="system.combate.testeResistencia" 
-						value="{{system.combate.testeResistencia}}" data-dtype="String"/>
+				<div class="flex flex-group-center">
+					<div class="resource flex flex-2">
+						<label for="system.combate.testeResistencia" class="resource-label p-r-10">Teste de Resistência</label>
+						<div class="resource-content">
+							<input type="text" name="system.combate.testeResistencia" 
+							value="{{system.combate.testeResistencia}}" data-dtype="String"/>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -141,114 +161,108 @@
 
 		{{!-- Details Tab --}}
     <div class="tab detalhes" data-group="primary" data-tab="detalhes">
-      <div class="flex flex-group-center">
-				<div class="resource flex flex-2">
-					<label for="system.detalhes.tipo" class="resource-label p-r-10">Tipo de Técnica</label>
-					<div class="resource-content">
-						<select name="system.detalhes.tipo" class="item-medium">
-							{{selectOptions itemsDropdown.tecnicas.tipo 
-							selected=system.detalhes.tipo 
-							localize=true blank="—"}}
-						</select>
+			<div class="content">
+				<div class="flex flex-group-center">
+					<div class="resource flex flex-2">
+						<label for="system.detalhes.tipo" class="resource-label p-r-10">Tipo de Técnica</label>
+						<div class="resource-content">
+							<select name="system.detalhes.tipo" class="item-medium">
+								{{selectOptions itemsDropdown.tecnicas.tipo 
+								selected=system.detalhes.tipo 
+								localize=true blank="—"}}
+							</select>
+						</div>
+					</div>
+					<div class="resource flex flex-2">
+						<label for="system.detalhes.subtipo" class="resource-label p-r-10">Subtipo de<br> Técnica</label>
+						<div class="resource-content">
+							<select name="system.detalhes.subtipo" class="item-medium">
+								{{selectOptions itemsDropdown.tecnicas.subtipo 
+								selected=system.detalhes.subtipo 
+								localize=true blank="—"}}
+							</select>
+						</div>
 					</div>
 				</div>
-				<div class="resource flex flex-2">
-					<label for="system.detalhes.subtipo" class="resource-label p-r-10">Subtipo de<br> Técnica</label>
-					<div class="resource-content">
-						<select name="system.detalhes.subtipo" class="item-medium">
-							{{selectOptions itemsDropdown.tecnicas.subtipo 
-							selected=system.detalhes.subtipo 
-							localize=true blank="—"}}
-						</select>
-					</div>
-				</div>
-			</div>
 
-			<div class="flex flex-group-center">
-				<div class="resource flex flex-2">
-					<label for="system.detalhes.custoChakra" class="resource-label p-r-10">Custo de Chakra</label>
-					<div class="resource-content">
-						<input type="text" name="system.detalhes.custoChakra" 
-						value="{{system.detalhes.custoChakra}}" data-dtype="String"/>
+				<div class="flex flex-group-center">
+					<div class="resource flex flex-2">
+						<label for="system.detalhes.custoChakra" class="resource-label p-r-10">Custo de Chakra</label>
+						<div class="resource-content">
+							<input type="text" name="system.detalhes.custoChakra" 
+							value="{{system.detalhes.custoChakra}}" data-dtype="String"/>
+						</div>
+					</div>
+					<div class="resource flex flex-2"></div>
+				</div>
+				<div class="flex flex-group-center">
+					<div class="resource flex flex-2">
+						<label for="system.detalhes.elemento.tipo" class="resource-label p-r-10">Elemento</label>
+						<div class="resource-content">
+							<select name="system.detalhes.elemento.tipo" class="item-medium">
+								{{selectOptions itemsDropdown.tecnicas.elemento 
+								selected=system.detalhes.elemento.tipo 
+								localize=true blank="—"}}
+							</select>
+						</div>
+					</div>
+					<div class="resource flex flex-2">
+						<i class="fas fa-arrow-right"></i>
+						<div class="resource-content">
+							<input type="text" name="system.detalhes.elemento.outro" 
+							value="{{system.detalhes.elemento.outro}}" data-dtype="String"/>
+						</div>
 					</div>
 				</div>
-				<div class="resource flex flex-2">
-					<label for="" class="resource-label p-r-10">Compartimentos</label>
-					<div class="resource-content">
-						<input type="text" name="system.compartimentos.qtdItem" value="{{system.compartimentos.qtdItem}}" data-dtype="String"/>
-					</div>
-					<i class="">/</i>
-					<div class="resource-content">
-						<input type="text" name="system.compartimentos.compartOcupa" value="{{system.compartimentos.compartOcupa}}" data-dtype="String"/>
-					</div>
-				</div>
-			</div>
-			<div class="flex flex-group-center">
-				<div class="resource flex flex-2">
-					<label for="system.detalhes.elemento.tipo" class="resource-label p-r-10">Elemento</label>
-					<div class="resource-content">
-						<select name="system.detalhes.elemento.tipo" class="item-medium">
-							{{selectOptions itemsDropdown.tecnicas.elemento 
-							selected=system.detalhes.elemento.tipo 
-							localize=true blank="—"}}
-						</select>
-					</div>
-				</div>
-				<div class="resource flex flex-2">
-					<i class="fas fa-arrow-right"></i>
-					<div class="resource-content">
-						<input type="text" name="system.detalhes.elemento.outro" 
-						value="{{system.detalhes.elemento.outro}}" data-dtype="String"/>
-					</div>
-				</div>
-			</div>
 
-			<div class="flex flex-group-center">
-				<div class="resource flex flex-2">
-					<label for="system.detalhes.tipoJutsu" class="resource-label p-r-10">Tipo de Jutsu</label>
-					<div class="resource-content">
-						<select name="system.detalhes.tipoJutsu" class="item-medium">
-							{{selectOptions itemsDropdown.tecnicas.tipoJutsu 
-							selected=system.detalhes.tipoJutsu 
-							localize=true blank="—"}}
-						</select>
+				<div class="flex flex-group-center">
+					<div class="resource flex flex-2">
+						<label for="system.detalhes.tipoJutsu" class="resource-label p-r-10">Tipo de Jutsu</label>
+						<div class="resource-content">
+							<select name="system.detalhes.tipoJutsu" class="item-medium">
+								{{selectOptions itemsDropdown.tecnicas.tipoJutsu 
+								selected=system.detalhes.tipoJutsu 
+								localize=true blank="—"}}
+							</select>
+						</div>
+					</div>
+					<div class="resource flex flex-2">
+						<label for="system.detalhes.ranking" class="resource-label p-r-10">Ranking</label>
+						<div class="resource-content">
+							<select name="system.detalhes.ranking" class="item-medium">
+								{{selectOptions itemsDropdown.tecnicas.ranking 
+								selected=system.detalhes.ranking 
+								localize=true blank="—"}}
+							</select>
+						</div>
 					</div>
 				</div>
-				<div class="resource flex flex-2">
-					<label for="system.detalhes.ranking" class="resource-label p-r-10">Ranking</label>
-					<div class="resource-content">
-						<select name="system.detalhes.ranking" class="item-medium">
-							{{selectOptions itemsDropdown.tecnicas.ranking 
-							selected=system.detalhes.ranking 
-							localize=true blank="—"}}
-						</select>
-					</div>
-				</div>
-			</div>
 
-			<div class="flex flex-group-center">
-				<div class="resource flex flex-2">
-					<label for="system.detalhes.preRequisito" class="resource-label p-r-10">Pré-requisito</label>
-					<div class="resource-content">
-						<input type="text" name="system.detalhes.preRequisito" 
-						value="{{system.detalhes.preRequisito}}" data-dtype="String"/>
+				<div class="flex flex-group-center">
+					<div class="resource flex flex-2">
+						<label for="system.detalhes.preRequisito" class="resource-label p-r-10">Pré-requisito</label>
+						<div class="resource-content">
+							<input type="text" name="system.detalhes.preRequisito" 
+							value="{{system.detalhes.preRequisito}}" data-dtype="String"/>
+						</div>
 					</div>
 				</div>
-			</div>
 
-			<div class="flex">
-				<div class="resource flex">
-					<label for="system.detalhes.caract.selos" class="resource-label p-r-10">Selos de Mão</label>
-					<div class="resource-content">
-						<input type="checkbox" name="system.detalhes.caract.selos" 
-						value="{{system.detalhes.caract.selos}}" data-dtype="String"/>
+				<div class="flex">
+					<div class="resource flex">
+						<label for="system.detalhes.caract.selos" class="resource-label p-r-10">Selos de Mão</label>
+						<div class="resource-content">
+							<input type="checkbox" name="system.detalhes.caract.selos" 
+							value="{{system.detalhes.caract.selos}}" data-dtype="String"/>
+						</div>
 					</div>
-				</div>
-				<div class="resource flex">
-					<label for="system.detalhes.caract.escalonaChakra" class="resource-label p-r-10">Escalona com Custo de Chakra</label>
-					<div class="resource-content">
-						<input type="checkbox" name="system.detalhes.caract.escalonaChakra" 
-						value="{{system.detalhes.caract.escalonaChakra}}" data-dtype="String"/>
+					<div class="resource flex">
+						<label for="system.detalhes.caract.escalonaChakra" 
+						class="resource-label p-r-10">Escalona com Chakra</label>
+						<div class="resource-content">
+							<input type="checkbox" name="system.detalhes.caract.escalonaChakra" 
+							value="{{system.detalhes.caract.escalonaChakra}}" data-dtype="String"/>
+						</div>
 					</div>
 				</div>
 			</div>

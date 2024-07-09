@@ -3,7 +3,7 @@
     <img class="profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}" />
     <div class="header-fields">
       <h1 class="charname"><input name="name" type="text" value="{{item.name}}" placeholder="Name" /></h1>
-      <div class="grid grid-2col">
+      <div class="grid grid-3col">
         <div class="resource">
           <label class="resource-label">Quantidade</label>
           <input type="text" name="system.quantidade" value="{{system.quantidade}}" data-dtype="Number" />
@@ -11,6 +11,14 @@
         <div class="resource">
           <label class="resource-label">Preço</label>
           <input type="text" name="system.preco" value="{{system.preco}}" data-dtype="Number" />
+        </div>
+				<div class="resource">
+          <label class="resource-label">Raridade</label>
+          <select name="system.raridade">
+						{{selectOptions itemsDropdown.generico.raridade 
+						selected=system.raridade 
+						localize=true blank="—"}}
+					</select>
         </div>
       </div>
     </div>
@@ -29,7 +37,7 @@
 
     {{!-- Description Tab --}}
     <div class="tab" data-group="primary" data-tab="descricao">
-      <div class="container" style="margin-top: 10px;">
+      <div class="content" style="margin-top: 10px;">
 				<h3 class="section-title">Descrição</h3>
 				{{editor system.descricao target="system.descricao" 
 			rollData=rollData button=true owner=owner editable=editable}}
@@ -38,6 +46,7 @@
 
     {{!-- Combat Tab --}}
     <div class="tab combate" data-group="primary" data-tab="combate">
+			<div class="content">
       <div class="flex flex-group-center">
 				<div class="resource flex flex-2">
 					<label for="system.combate.ataque.habilidadeCombate" class="resource-label p-r-10">Teste de Ataque</label>
@@ -150,101 +159,104 @@
 					</div>
 				</div>
 			</div>
+			</div>
     </div>
 
 		{{!-- Details Tab --}}
     <div class="tab detalhes" data-group="primary" data-tab="detalhes">
-      <div class="flex flex-group-center">
-				<div class="resource flex flex-2">
-					<label for="system.detalhes.tipo" class="resource-label p-r-10">Tipo de Arma</label>
-					<div class="resource-content">
-						<select name="system.detalhes.tipo" class="item-medium">
-							{{selectOptions itemsDropdown.armas.tipo 
-							selected=system.detalhes.tipo 
-							localize=true blank="—"}}
-						</select>
+			<div class="content">
+				<div class="flex flex-group-center">
+					<div class="resource flex flex-2">
+						<label for="system.detalhes.tipo" class="resource-label p-r-10">Tipo de Arma</label>
+						<div class="resource-content">
+							<select name="system.detalhes.tipo" class="item-medium">
+								{{selectOptions itemsDropdown.armas.tipo 
+								selected=system.detalhes.tipo 
+								localize=true blank="—"}}
+							</select>
+						</div>
+					</div>
+					<div class="resource flex flex-2">
+						<label for="system.detalhes.subtipo" class="resource-label p-r-10">Subtipo de Arma</label>
+						<div class="resource-content">
+							<select name="system.detalhes.subtipo" class="item-medium">
+								{{selectOptions itemsDropdown.armas.subtipo 
+								selected=system.detalhes.subtipo 
+								localize=true blank="—"}}
+							</select>
+						</div>
 					</div>
 				</div>
-				<div class="resource flex flex-2">
-					<label for="system.detalhes.subtipo" class="resource-label p-r-10">Subtipo de Arma</label>
-					<div class="resource-content">
-						<select name="system.detalhes.subtipo" class="item-medium">
-							{{selectOptions itemsDropdown.armas.subtipo 
-							selected=system.detalhes.subtipo 
-							localize=true blank="—"}}
-						</select>
-					</div>
-				</div>
-			</div>
 
-			<div class="flex flex-group-center">
-				<div class="resource flex flex-3">
-					<label for="system.compartimentos.qtdItem" class="resource-label p-r-10">Compartimentos</label>
-					<div class="resource-content flex flex-group-center">
-						<input type="text" name="system.compartimentos.qtdItem" 
-						value="{{system.compartimentos.qtdItem}}" data-dtype="String"/>
-						<i class="">/</i>
-						<input type="text" name="system.compartimentos.compartOcupa" 
-						value="{{system.compartimentos.compartOcupa}}" data-dtype="String"/>
+				<div class="flex flex-group-center">
+					<div class="resource flex flex-3">
+						<label for="system.compartimentos.qtdItem" class="resource-label p-r-10">Compart.</label>
+						<div class="resource-content flex flex-group-center">
+							<input type="text" name="system.compartimentos.qtdItem" 
+							value="{{system.compartimentos.qtdItem}}" data-dtype="String"/>
+							<i class="">/</i>
+							<input type="text" name="system.compartimentos.compartOcupa" 
+							value="{{system.compartimentos.compartOcupa}}" data-dtype="String"/>
+						</div>
+					</div>
+					<div class="resource flex flex-3">
+						<label for="system.detalhes.tamanho" class="resource-label p-r-10">Tamanho</label>
+						<div class="resource-content">
+							<input type="text" name="system.detalhes.tamanho" 
+						value="{{system.detalhes.tamanho}}" data-dtype="String"/>
+						</div>
 					</div>
 				</div>
-				<div class="resource flex flex-3">
-					<label for="system.detalhes.tamanho" class="resource-label p-r-10">Tamanho</label>
+				<div class="resource flex prerequisito">
+					<label for="system.detalhes.preRequisito" class="resource-label p-r-10">Pré-requisito</label>
 					<div class="resource-content">
-						<input type="text" name="system.detalhes.tamanho" 
-					value="{{system.detalhes.tamanho}}" data-dtype="String"/>
+						<input type="text" name="system.detalhes.preRequisito" 
+						value="{{system.detalhes.preRequisito}}" data-dtype="String"/>
 					</div>
 				</div>
-			</div>
-			<div class="resource flex prerequisito">
-				<label for="system.detalhes.preRequisito" class="resource-label p-r-10">Pré-requisito</label>
-				<div class="resource-content">
-					<input type="text" name="system.detalhes.preRequisito" 
-					value="{{system.detalhes.preRequisito}}" data-dtype="String"/>
-      	</div>
-			</div>
 
-			<div class="grid traits-grid">
-				<div class="resource flex">
-					<label for="system.detalhes.caract.improvisada" class="resource-label p-r-10">Improvisada</label>
-					<div class="resource-content">
-						<input type="checkbox" name="system.detalhes.caract.improvisada" 
-						value="{{system.detalhes.caract.improvisada}}" data-dtype="String"/>
+				<div class="grid traits-grid">
+					<div class="resource flex">
+						<label for="system.detalhes.caract.improvisada" class="resource-label p-r-10">Improvisada</label>
+						<div class="resource-content">
+							<input type="checkbox" name="system.detalhes.caract.improvisada" 
+							value="{{system.detalhes.caract.improvisada}}" data-dtype="String"/>
+						</div>
 					</div>
-				</div>
-				<div class="resource flex">
-					<label for="system.detalhes.caract.armaDupla" class="resource-label p-r-10">Arma Dupla</label>
-					<div class="resource-content">
-						<input type="checkbox" name="system.detalhes.caract.armaDupla" 
-						value="{{system.detalhes.caract.armaDupla}}" data-dtype="String"/>
+					<div class="resource flex">
+						<label for="system.detalhes.caract.armaDupla" class="resource-label p-r-10">Arma Dupla</label>
+						<div class="resource-content">
+							<input type="checkbox" name="system.detalhes.caract.armaDupla" 
+							value="{{system.detalhes.caract.armaDupla}}" data-dtype="String"/>
+						</div>
 					</div>
-				</div>
-				<div class="resource flex">
-					<label for="system.detalhes.caract.arremessavel" class="resource-label p-r-10">Arremessável</label>
-					<div class="resource-content">
-						<input type="checkbox" name="system.detalhes.caract.arremessavel" 
-						value="{{system.detalhes.caract.arremessavel}}" data-dtype="String"/>
+					<div class="resource flex">
+						<label for="system.detalhes.caract.arremessavel" class="resource-label p-r-10">Arremessável</label>
+						<div class="resource-content">
+							<input type="checkbox" name="system.detalhes.caract.arremessavel" 
+							value="{{system.detalhes.caract.arremessavel}}" data-dtype="String"/>
+						</div>
 					</div>
-				</div>
-				<div class="resource flex">
-					<label for="system.detalhes.caract.duasMaos" class="resource-label p-r-10">Duas Mãos</label>
-					<div class="resource-content">
-						<input type="checkbox" name="system.detalhes.caract.duasMaos" 
-						value="{{system.detalhes.caract.duasMaos}}" data-dtype="String"/>
+					<div class="resource flex">
+						<label for="system.detalhes.caract.duasMaos" class="resource-label p-r-10">Duas Mãos</label>
+						<div class="resource-content">
+							<input type="checkbox" name="system.detalhes.caract.duasMaos" 
+							value="{{system.detalhes.caract.duasMaos}}" data-dtype="String"/>
+						</div>
 					</div>
-				</div>
-				<div class="resource flex">
-					<label for="system.detalhes.caract.energizavel" class="resource-label p-r-10">"Energizável"</label>
-					<div class="resource-content">
-						<input type="checkbox" name="system.detalhes.caract.energizavel" 
-						value="{{system.detalhes.caract.energizavel}}" data-dtype="String"/>
+					<div class="resource flex">
+						<label for="system.detalhes.caract.energizavel" class="resource-label p-r-10">"Energizável"</label>
+						<div class="resource-content">
+							<input type="checkbox" name="system.detalhes.caract.energizavel" 
+							value="{{system.detalhes.caract.energizavel}}" data-dtype="String"/>
+						</div>
 					</div>
-				</div>
-				<div class="resource flex">
-					<label for="system.detalhes.caract.ambidestra" class="resource-label p-r-10">Ambidestra</label>
-					<div class="resource-content">
-						<input type="checkbox" name="system.detalhes.caract.ambidestra" 
-						value="{{system.detalhes.caract.ambidestra}}" data-dtype="String"/>
+					<div class="resource flex">
+						<label for="system.detalhes.caract.ambidestra" class="resource-label p-r-10">Ambidestra</label>
+						<div class="resource-content">
+							<input type="checkbox" name="system.detalhes.caract.ambidestra" 
+							value="{{system.detalhes.caract.ambidestra}}" data-dtype="String"/>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -252,7 +264,9 @@
 
 		{{!-- Effects Tab --}}
     <div class="tab efeitos" data-group="primary" data-tab="efeitos">
-      {{> "systems/shinobiNoSho/templates/item/parts/item-efeitos.hbs"}}
+			<div class="content">
+      	{{> "systems/shinobiNoSho/templates/item/parts/item-efeitos.hbs"}}
+			</div>
     </div>
   </section>
 </form>

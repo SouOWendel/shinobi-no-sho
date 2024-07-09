@@ -4,47 +4,65 @@
     <div class="header-fields">
       <h1 class="charname"><input name="name" type="text" 
 			value="{{item.name}}" placeholder="Name"/></h1>
-    </div>
+			<div class="flex flex-group-center">
+				<label for="system.nivelPoder" class="resource-label p-r-10 item-small">Nível de Poder</label>
+				<div class="resource item-small">
+						<div class="resource-content">
+							<input type="text" name="system.nivelPoder" style="text-align: center;"
+							value="{{system.nivelPoder}}" data-dtype="String"/>
+						</div>
+				</div>
+			</div>
+		</div>
   </header>
 
   {{!-- Sheet Tab Navigation --}}
   <nav class="sheet-tabs tabs" data-group="primary">
     <a class="item" data-tab="detalhes">Detalhes Gerais</a>
+		<a class="item" data-tab="caracteristicas">Características</a>
 		<a class="item" data-tab="efeitos">Efeitos</a>
   </nav>
 
   {{!-- Sheet Body --}}
   <section class="sheet-body">
 
-    {{!-- Details Tab --}}
-    <div class="tab" data-group="primary" data-tab="detalhes">
-			<div class="flex flex-group-center">
-				<div class="resource flex flex-3">
-					<label for="system.preRequisito" class="resource-label p-r-10">Pré-requisito</label>
-					<div class="resource-content">
-						<input type="text" name="system.preRequisito" 
-						value="{{system.preRequisito}}" data-dtype="String"/>
-					</div>
-				</div>
-				<div class="resource flex flex-2">
-						<label for="system.nivelPoder" class="resource-label p-r-10">Nível de Poder</label>
-						<div class="resource-content">
-							<input type="text" name="system.nivelPoder" 
-							value="{{system.nivelPoder}}" data-dtype="String"/>
-						</div>
+		{{!-- Characteristics Tab --}}
+    <div class="tab caracteristicas" data-group="primary" data-tab="caracteristicas">
+			<div class="content">
+				<div class="" style="margin-top: 10px;">
+					<h3 class="section-title">Características</h3>
+					{{editor system.caracteristicas target="system.caracteristicas" 
+				rollData=rollData button=true owner=owner editable=editable}}
 				</div>
 			</div>
-			<div class="container" style="margin-top: 10px;">
-				<h3 class="section-title">Descrição</h3>
-				{{editor system.details.biografia.caracteristicas.campo2.value 
-				target="system.details.biografia.caracteristicas.campo2.value" 
-				rollData=rollData button=true owner=owner editable=editable}}
+    </div>
+
+    {{!-- Details Tab --}}
+    <div class="tab" data-group="primary" data-tab="detalhes">
+			<div class="content">
+				<div class="flex flex-group-center">
+					<div class="resource flex flex-3">
+						<label for="system.preRequisito" class="resource-label p-r-10">Pré-requisito</label>
+						<div class="resource-content">
+							<input type="text" name="system.preRequisito" 
+							value="{{system.preRequisito}}" data-dtype="String"/>
+						</div>
+					</div>
+				</div>
+				<div class="" style="margin-top: 10px;">
+					<h3 class="section-title">Descrição</h3>
+					{{editor system.details.biografia.caracteristicas.campo2.value 
+					target="system.details.biografia.caracteristicas.campo2.value" 
+					rollData=rollData button=true owner=owner editable=editable}}
+				</div>
 			</div>
     </div>
 
     {{!-- Effects Tab --}}
     <div class="tab efeitos" data-group="primary" data-tab="efeitos">
-      {{> "systems/shinobiNoSho/templates/item/parts/item-efeitos.hbs"}}
+			<div class="content">
+      	{{> "systems/shinobiNoSho/templates/item/parts/item-efeitos.hbs"}}
+			</div>
     </div>
   </section>
 </form>
