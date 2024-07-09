@@ -56,7 +56,7 @@
   }
 }
 
-.sheet-tabs {
+.sheet-tabs, .pericias-sheet-tab {
   flex: 0;
 	font-size: small;
 
@@ -68,6 +68,12 @@
 .sheet-body,
 .sheet-body .tab,
 .sheet-body .tab .editor {
+  height: 100%;
+}
+
+.pericias-sheet-body,
+.pericias-sheet-body .tab,
+.pericias-sheet-body .tab .editor {
   height: 100%;
 }
 
@@ -140,7 +146,6 @@ form {
 		text-align: center;
 
 		.resource-content {
-			
 			input {
 				width: 40px;
 				height: 25px;

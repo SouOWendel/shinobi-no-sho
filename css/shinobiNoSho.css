@@ -220,6 +220,9 @@
 }
 
 /* Styles limited to shinobiNoSho sheets */
+.shinobiNoSho {
+  /* Chat */
+}
 .shinobiNoSho .actor {
   min-width: 600px !important;
   min-height: 820px !important;
@@ -269,16 +272,21 @@
   height: 100%;
   margin: 0;
 }
-.shinobiNoSho .sheet-tabs {
+.shinobiNoSho .sheet-tabs, .shinobiNoSho .pericias-sheet-tab {
   flex: 0;
   font-size: small;
 }
-.shinobiNoSho .sheet-tabs .item {
+.shinobiNoSho .sheet-tabs .item, .shinobiNoSho .pericias-sheet-tab .item {
   padding: 8px !important;
 }
 .shinobiNoSho .sheet-body,
 .shinobiNoSho .sheet-body .tab,
 .shinobiNoSho .sheet-body .tab .editor {
+  height: 100%;
+}
+.shinobiNoSho .pericias-sheet-body,
+.shinobiNoSho .pericias-sheet-body .tab,
+.shinobiNoSho .pericias-sheet-body .tab .editor {
   height: 100%;
 }
 .shinobiNoSho .tab {
@@ -478,6 +486,11 @@
 .shinobiNoSho .bold {
   font-weight: bold;
 }
+.shinobiNoSho .shinobiNoSho.sheet.item {
+  min-height: 400px;
+  max-height: 95%;
+  min-width: 520px;
+}
 .shinobiNoSho .items-header {
   height: 28px;
   margin: 2px 0;
@@ -611,33 +624,31 @@
 .shinobiNoSho .effects-list h3 {
   border-bottom: 0 !important;
 }
-.shinobiNoSho #aptidao, .shinobiNoSho #armas, .shinobiNoSho #poderes,
-.shinobiNoSho #gerais, .shinobiNoSho #armaduras, .shinobiNoSho #tecnicas {
-  width: 100%;
-}
 .shinobiNoSho #aptidao .tab, .shinobiNoSho #armas .tab, .shinobiNoSho #poderes .tab,
 .shinobiNoSho #gerais .tab, .shinobiNoSho #armaduras .tab, .shinobiNoSho #tecnicas .tab {
-  padding: 0 20px;
+  padding: 0 14px;
 }
-.shinobiNoSho #aptidao .tab > div, .shinobiNoSho #armas .tab > div, .shinobiNoSho #poderes .tab > div,
-.shinobiNoSho #gerais .tab > div, .shinobiNoSho #armaduras .tab > div, .shinobiNoSho #tecnicas .tab > div {
+.shinobiNoSho #aptidao .tab .content > div, .shinobiNoSho #armas .tab .content > div, .shinobiNoSho #poderes .tab .content > div,
+.shinobiNoSho #gerais .tab .content > div, .shinobiNoSho #armaduras .tab .content > div, .shinobiNoSho #tecnicas .tab .content > div {
   margin: 5px 0;
 }
 .shinobiNoSho #aptidao .tab .resource, .shinobiNoSho #armas .tab .resource, .shinobiNoSho #poderes .tab .resource,
 .shinobiNoSho #gerais .tab .resource, .shinobiNoSho #armaduras .tab .resource, .shinobiNoSho #tecnicas .tab .resource {
+  position: relative;
   align-items: center;
   text-align: right;
   width: 100%;
 }
 .shinobiNoSho #aptidao label, .shinobiNoSho #armas label, .shinobiNoSho #poderes label,
 .shinobiNoSho #gerais label, .shinobiNoSho #armaduras label, .shinobiNoSho #tecnicas label {
-  min-width: 130px;
-  max-width: 130px;
+  width: 100px;
+  min-width: 100px;
 }
 .shinobiNoSho #aptidao input, .shinobiNoSho #aptidao select, .shinobiNoSho #armas input, .shinobiNoSho #armas select, .shinobiNoSho #poderes input, .shinobiNoSho #poderes select,
 .shinobiNoSho #gerais input,
 .shinobiNoSho #gerais select, .shinobiNoSho #armaduras input, .shinobiNoSho #armaduras select, .shinobiNoSho #tecnicas input, .shinobiNoSho #tecnicas select {
   width: 100%;
+  text-align: start;
 }
 .shinobiNoSho #aptidao i, .shinobiNoSho #armas i, .shinobiNoSho #poderes i,
 .shinobiNoSho #gerais i, .shinobiNoSho #armaduras i, .shinobiNoSho #tecnicas i {
@@ -649,7 +660,44 @@
 }
 .shinobiNoSho #aptidao .container, .shinobiNoSho #armas .container, .shinobiNoSho #poderes .container,
 .shinobiNoSho #gerais .container, .shinobiNoSho #armaduras .container, .shinobiNoSho #tecnicas .container {
-  height: 150px;
+  min-height: 150px;
+}
+.shinobiNoSho #aptidao .sheet-body,
+.shinobiNoSho #aptidao .sheet-body .tab,
+.shinobiNoSho #aptidao .sheet-body .tab .editor, .shinobiNoSho #armas .sheet-body,
+.shinobiNoSho #armas .sheet-body .tab,
+.shinobiNoSho #armas .sheet-body .tab .editor, .shinobiNoSho #poderes .sheet-body,
+.shinobiNoSho #poderes .sheet-body .tab,
+.shinobiNoSho #poderes .sheet-body .tab .editor,
+.shinobiNoSho #gerais .sheet-body,
+.shinobiNoSho #gerais .sheet-body .tab,
+.shinobiNoSho #gerais .sheet-body .tab .editor, .shinobiNoSho #armaduras .sheet-body,
+.shinobiNoSho #armaduras .sheet-body .tab,
+.shinobiNoSho #armaduras .sheet-body .tab .editor, .shinobiNoSho #tecnicas .sheet-body,
+.shinobiNoSho #tecnicas .sheet-body .tab,
+.shinobiNoSho #tecnicas .sheet-body .tab .editor {
+  height: 100%;
+}
+.shinobiNoSho #aptidao .tab, .shinobiNoSho #armas .tab, .shinobiNoSho #poderes .tab,
+.shinobiNoSho #gerais .tab, .shinobiNoSho #armaduras .tab, .shinobiNoSho #tecnicas .tab {
+  overflow-y: hidden;
+  height: 100%;
+  align-content: flex-start;
+  padding-right: 2px;
+}
+.shinobiNoSho #aptidao .sheet-body, .shinobiNoSho #armas .sheet-body, .shinobiNoSho #poderes .sheet-body,
+.shinobiNoSho #gerais .sheet-body, .shinobiNoSho #armaduras .sheet-body, .shinobiNoSho #tecnicas .sheet-body {
+  overflow: hidden;
+}
+.shinobiNoSho #aptidao .window-content, .shinobiNoSho #armas .window-content, .shinobiNoSho #poderes .window-content,
+.shinobiNoSho #gerais .window-content, .shinobiNoSho #armaduras .window-content, .shinobiNoSho #tecnicas .window-content {
+  overflow-y: hidden;
+}
+.shinobiNoSho #aptidao .content, .shinobiNoSho #armas .content, .shinobiNoSho #poderes .content,
+.shinobiNoSho #gerais .content, .shinobiNoSho #armaduras .content, .shinobiNoSho #tecnicas .content {
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 .shinobiNoSho .traits-grid {
   grid-template-columns: repeat(3, 1fr);
@@ -677,6 +725,46 @@
 }
 .shinobiNoSho .effects .item .effect-controls {
   border: none;
+}
+.shinobiNoSho.item-card h2 {
+  border: 0;
+  margin: 0;
+}
+.shinobiNoSho .header {
+  display: flex;
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+  align-items: center;
+  height: 100%;
+}
+.shinobiNoSho .header .item-name {
+  padding-left: 5px;
+  width: 100%;
+}
+.shinobiNoSho .header span {
+  width: 30px;
+  height: 100%;
+  text-align: center;
+}
+.shinobiNoSho .header img {
+  border-radius: 4px;
+  border: 1px solid #949494;
+}
+.shinobiNoSho main .info span {
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.8352941176);
+}
+.shinobiNoSho .descricao-chat-card,
+.shinobiNoSho .caracteristicas-chat-card {
+  transition: 0.3s;
+}
+.shinobiNoSho .descricao-chat-card summary,
+.shinobiNoSho .caracteristicas-chat-card summary {
+  padding-left: 5px;
+}
+.shinobiNoSho .descricao-chat-card:hover,
+.shinobiNoSho .caracteristicas-chat-card:hover {
+  background-color: #c0c0c0;
 }
 
 /*# sourceMappingURL=shinobiNoSho.css.map */
