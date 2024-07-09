@@ -30,6 +30,31 @@ export class ShinobiItem extends Item {
     return rollData;
   }
 
+	/**
+	 * Prepare an object of chat data used to display a card for the Item in the chat log.
+	 * @param {object} htmlOptions    Options used by the TextEditor.enrichHTML function.
+	 * @returns {object}              An object of chat data to render.
+	 */
+	async getChatData(htmlOptions = {}) {
+		const data = this.toObject().system;
+
+		// Rich text description
+		data.description = await TextEditor.enrichHTML(data.description, {
+			relativeTo: this,
+			rollData: this.getRollData(),
+			...htmlOptions,
+		});
+
+		// Type specific properties
+		// data.properties = [
+		//   ...this.system.chatProperties ?? [],
+		//   ...this.system.equippableItemChatProperties ?? [],
+		//   ...this.system.activatedEffectChatProperties ?? []
+		// ].filter(p => p);
+
+		return data;
+	}
+
   /**
    * Handle clickable rolls.
    * @param {Event} event   The originating click event
@@ -41,15 +66,26 @@ export class ShinobiItem extends Item {
     // Initialize chat data.
     const speaker = ChatMessage.getSpeaker({ actor: this.actor });
     const rollMode = game.settings.get('core', 'rollMode');
-    const label = `[${item.type}] ${item.name}`;
+    // const label = `[${item.type}] ${item.name}`;
+		const token = this.actor.token;
+	
+		const templateData = {
+			actor: this.actor,
+			tokenId: token?.uuid || null,
+			item: this,
+			data: await this.getChatData(),
+			labels: this.labels,
+			system: [],
+			info: [],
+		};
 
     // If there's no roll data, send a chat message.
     if (!this.system.formula) {
       ChatMessage.create({
         speaker: speaker,
         rollMode: rollMode,
-        flavor: label,
-        content: item.system.description ?? '',
+        // flavor: label,
+        content: await renderTemplate('systems/shinobiNoSho/templates/chat/item-card.hbs', templateData),
       });
     }
     // Otherwise, create a roll and send a chat message from it.

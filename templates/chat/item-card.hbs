@@ -1,0 +1,103 @@
+<div class="shinobiNoSho chat-card item-card" data-actor-id="{{actor._id}}" data-item-id="{{item._id}}">
+	<div class="header container">
+		<img src="{{item.img}}" title="{{item.name}}" width="36px" height="36px" style="float: left;" />
+		<div class="item-name">
+			<h2>{{item.name}}</h2>
+		</div>
+		{{#if item.system.detalhes.custoChakra}}
+			<span class="container" data-tooltip="Custo de Chakra">{{item.system.detalhes.custoChakra}}</span>
+		{{/if}}
+	</div>
+	<h4 class="descricao-chat-card">
+		<details class="container">
+			<summary>Descrição</summary>
+			{{{item.system.descricao}}}
+		</details>
+	</h4>
+	{{#ifEquals item.type "aptidoes"}}
+	<h4 class="caracteristicas-chat-card">
+		<details class="container">
+			<summary>Características</summary>
+			{{{item.system.caracteristicas}}}
+		</details>
+	</h4>
+	{{/ifEquals}}
+	{{log item.system}}
+	<main class="container">
+		<ul class="info">
+			{{#ifEquals item.type "aptidoes"}}
+				<li><span>Nível de Aptidão: </span>{{item.system.nivelAptidao}}</li>
+				<li>
+					<span>Tipo de Aptidão: </span>
+					{{localize (concat "shinobiNoSho.ITEMS.aptidoes.tipoAptidao." item.system.tipoAptidao)}}
+				</li>
+				<li><span>Pré-requisito: </span>{{item.system.preRequisito}}</li>
+			{{/ifEquals}}
+
+			{{#ifEquals item.type "poderes"}}
+				<li><span>Nível de Poder: </span>{{item.system.nivelPoder}}</li>
+				<li><span>Pré-requisito: </span>{{item.system.preRequisito}}</li>
+			{{/ifEquals}}
+
+			{{#ifEquals item.type "tecnicas"}}
+				{{#if item.system.origem}} <li>
+					<span>Origem: </span>
+					{{localize (concat "shinobiNoSho.ITEMS.tecnicas.origem." item.system.origem)}}
+				</li> {{/if}}
+				{{#if item.system.combate.acao}} <li>
+					<span>Ação: </span>
+					{{localize (concat "shinobiNoSho.ITEMS.generico.acao." item.system.combate.acao)}}
+				</li>{{/if}}
+				{{#if item.system.combate.alcance.tipo}} <li>
+					<span>Alcance: </span>
+					{{localize (concat "shinobiNoSho.ITEMS.generico.alcance." item.system.combate.alcance.tipo)}}
+				</li>{{/if}}
+				{{#if item.system.combate.alvo}} <li><span>Alvo: </span>{{item.system.combate.alvo}}</li>{{/if}}
+				{{#if item.system.combate.areaEfeito.tipo}} <li>
+					<span>Área de Efeito: </span>
+					{{item.system.combate.areaEfeito.tipo}}
+					{{localize (concat "shinobiNoSho.ITEMS.tecnicas.areaEfeito." item.system.combate.areaEfeito.tipo)}}
+				</li> {{/if}}
+				{{#if item.system.combate.dano.value}} <li><span>Dano: </span>{{item.system.combate.dano.value}}</li>{{/if}}
+				{{#if item.system.combate.dano.tipo}} <li><span>Tipo de Dano: </span>{{item.system.combate.dano.tipo}}</li>{{/if}}
+				{{#if item.system.combate.duracao}} <li>
+					<span>Duração: </span>
+					{{localize (concat "shinobiNoSho.ITEMS.tecnicas.duracao." item.system.combate.duracao)}}
+				</li> {{/if}}
+				{{#if item.system.combate.efeitosOuAptidoes}} <li><span>Efeitos ou Aptidões: </span>{{item.system.combate.efeitosOuAptidoes}}</li>{{/if}}
+				{{#if item.system.combate.testeResistencia}} <li><span>Teste de Resistência: </span>{{item.system.combate.testeResistencia}}</li>{{/if}}
+			{{/ifEquals}}
+
+			{{#ifEquals item.type "armas"}}
+				{{#if item.system.combate.alcance.tipo}} <li>
+					<span>Alcance: </span>
+					{{localize (concat "shinobiNoSho.ITEMS.generico.alcance." item.system.combate.alcance.tipo)}}
+				</li>{{/if}}
+				{{#if item.system.combate.ataque.habilidadeCombate}}<li>
+					<span>Habilidade de Combate: </span><br>
+					{{localize (concat "shinobiNoSho.combatAbilities." item.system.combate.ataque.habilidadeCombate)}} 
+					({{item.actor.system.abilities.combate.CC.value}})
+				</li>{{/if}}
+				{{#if item.system.detalhes.tamanho}}<li><span>Tamanho: </span>{{item.system.detalhes.tamanho}}</li>{{/if}}
+			{{/ifEquals}}
+
+			{{#ifEquals item.type "armaduras"}}
+				<li><span>Bônus de Absorção: </span>{{item.system.bonusAbsorcao}}</li>
+				<li><span>Penalidade: </span>{{item.system.penalidade}}</li>
+				{{#if item.system.tipo}}<li>
+					<span>Tipo: </span>
+					{{localize (concat "shinobiNoSho.ITEMS.armaduras.tipo." item.system.tipo)}} 
+				</li>{{/if}}
+			{{/ifEquals}}
+
+			{{#ifEquals item.type "gerais"}}
+				<li><span>Preço: </span>{{item.system.preco}} ryos</li>
+				{{#if item.system.tipo}}<li>
+					<span>Tipo: </span>
+					{{localize (concat "shinobiNoSho.ITEMS.geral.tipo." item.system.tipo)}} 
+				</li>{{/if}}
+				<li><span>Quantidade: </span>{{item.system.quantidade}}</li>
+			{{/ifEquals}}
+		</ul>
+	</main>
+</div>
