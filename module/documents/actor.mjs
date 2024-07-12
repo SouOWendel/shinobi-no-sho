@@ -77,21 +77,27 @@ export class ShinobiActor extends Actor {
 					}
 				}
 			}
-
-			// Perícias Sociais
-			for (let [skillKey, skill] of Object.entries(system.skills.social)) {
-				if (skill.ability == abilityKey) {
-					// Soma de bônus em perícias
-					skill.tbonus = skill.value + skill.bonus;
-					// Recuperação do atributo correspondente e divisão por dois.
-					skill.abilityValue = ability.tbonus / 2;
-					// Soma do atributo derivado + total derivado.
-					skill.total = Math.round(skill.abilityValue + skill.tbonus);
-				}
-			}
 		}
 
 		for (let [abilityKey, ability] of Object.entries(abilities)) {
+
+			// Perícias Sociais
+			for (let [skillKey, skill] of Object.entries(system.skills.social)) {
+				if (skill.custom == abilityKey) {
+					// Recuperação do atributo correspondente e divisão por dois.
+					skill.customValue = Math.round(ability.tbonus / 2);
+				} 
+				if (skill.custom == "arte") {
+					skill.customValue = Math.round(system.skills.geral.arte.total / 2);
+				}
+
+				if (skill.ability == abilityKey) {
+					// Soma de bônus em perícias
+					skill.tbonus = skill.value + skill.bonus;
+					skill.total = ability.tbonus + skill.tbonus + skill?.customValue;
+				}
+			}
+
 		// Habilidades de Combate
 			for (let [cKey, c] of Object.entries(abilities.combate)) {
 				// Soma de bônus em perícias
@@ -153,7 +159,6 @@ export class ShinobiActor extends Actor {
 
     // Prepare character roll data.
     this._getCharacterRollData(data);
-    this._getNpcRollData(data);
 
     return data;
   }
@@ -162,7 +167,9 @@ export class ShinobiActor extends Actor {
    * Prepare character roll data.
    */
   _getCharacterRollData(data) {
-    if (this.type !== 'ninja') return;
+    if (this.type !== 'Ninja') return;
+
+		data.rollIniciativa = "1d8 + " + data.attributes.init.value;
 
     // Copy the ability scores to the top level, so that rolls can use
     // formulas like `@str.mod + 4`.
@@ -176,14 +183,5 @@ export class ShinobiActor extends Actor {
     // if (data.attributes.level) {
     //   data.lvl = data.attributes.level.value ?? 0;
     // }
-  }
-
-  /**
-   * Prepare NPC roll data.
-   */
-  _getNpcRollData(data) {
-    if (this.type !== 'npc') return;
-
-    // Process additional NPC data here.
   }
 }
