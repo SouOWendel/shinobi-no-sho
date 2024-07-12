@@ -50,13 +50,18 @@
 				</li>{{/if}}
 				{{#if item.system.combate.alcance.tipo}} <li>
 					<span>Alcance: </span>
-					{{localize (concat "shinobiNoSho.ITEMS.generico.alcance." item.system.combate.alcance.tipo)}}
+					{{#ifInequals item.system.combate.alcance.tipo "outro"}}
+						{{localize (concat "shinobiNoSho.ITEMS.generico.alcance." item.system.combate.alcance.tipo)}}
+					{{/ifInequals}}
+					{{#if item.system.combate.alcance.outro}}({{item.system.combate.alcance.outro}}){{/if}}
 				</li>{{/if}}
 				{{#if item.system.combate.alvo}} <li><span>Alvo: </span>{{item.system.combate.alvo}}</li>{{/if}}
 				{{#if item.system.combate.areaEfeito.tipo}} <li>
 					<span>Área de Efeito: </span>
-					{{item.system.combate.areaEfeito.tipo}}
-					{{localize (concat "shinobiNoSho.ITEMS.tecnicas.areaEfeito." item.system.combate.areaEfeito.tipo)}}
+					{{#ifInequals item.system.combate.areaEfeito.tipo "outro"}}
+						{{localize (concat "shinobiNoSho.ITEMS.tecnicas.areaEfeito." item.system.combate.areaEfeito.tipo)}}
+					{{/ifInequals}}
+					{{#if item.system.combate.areaEfeito.outro}}({{item.system.combate.areaEfeito.outro}}){{/if}}
 				</li> {{/if}}
 				{{#if item.system.combate.dano.value}} <li><span>Dano: </span>{{item.system.combate.dano.value}}</li>{{/if}}
 				{{#if item.system.combate.dano.tipo}} <li><span>Tipo de Dano: </span>{{item.system.combate.dano.tipo}}</li>{{/if}}
@@ -66,19 +71,6 @@
 				</li> {{/if}}
 				{{#if item.system.combate.efeitosOuAptidoes}} <li><span>Efeitos ou Aptidões: </span>{{item.system.combate.efeitosOuAptidoes}}</li>{{/if}}
 				{{#if item.system.combate.testeResistencia}} <li><span>Teste de Resistência: </span>{{item.system.combate.testeResistencia}}</li>{{/if}}
-			{{/ifEquals}}
-
-			{{#ifEquals item.type "armas"}}
-				{{#if item.system.combate.alcance.tipo}} <li>
-					<span>Alcance: </span>
-					{{localize (concat "shinobiNoSho.ITEMS.generico.alcance." item.system.combate.alcance.tipo)}}
-				</li>{{/if}}
-				{{#if item.system.combate.ataque.habilidadeCombate}}<li>
-					<span>Habilidade de Combate: </span><br>
-					{{localize (concat "shinobiNoSho.combatAbilities." item.system.combate.ataque.habilidadeCombate)}} 
-					({{item.actor.system.abilities.combate.CC.value}})
-				</li>{{/if}}
-				{{#if item.system.detalhes.tamanho}}<li><span>Tamanho: </span>{{item.system.detalhes.tamanho}}</li>{{/if}}
 			{{/ifEquals}}
 
 			{{#ifEquals item.type "armaduras"}}
@@ -99,5 +91,55 @@
 				<li><span>Quantidade: </span>{{item.system.quantidade}}</li>
 			{{/ifEquals}}
 		</ul>
+		{{#ifEquals item.type "armas"}}
+				<table>
+					<tr>
+						<th>Campo</th>
+						<th>Valor</th>
+					</tr>
+					{{#if item.system.combate.alcance.tipo}} <tr>
+						<td><span>Alcance </span></td>
+						<td>
+							{{localize (concat "shinobiNoSho.ITEMS.generico.alcance." item.system.combate.alcance.tipo)}}
+							{{#if item.system.combate.alcance.outro}}({{item.system.combate.alcance.outro}}){{/if}}
+						</td>
+					</tr>{{/if}}
+					{{#if item.system.combate.dano.critico}} <tr>
+						<td><span>Crítico </span></td>
+						<td>
+							{{item.system.combate.dano.critico}}
+						</td>
+					</tr>{{/if}}
+					{{#if item.system.combate.ataque.habilidadeCombate}}<tr>
+						<td><span>Habilidade de Combate </span><br></td>
+						<td>{{localize (concat "shinobiNoSho.combatAbilities." item.system.combate.ataque.habilidadeCombate)}} 
+						({{item.actor.system.abilities.combate.CC.value}})</td>
+					</tr>{{/if}}
+					{{#if item.system.combate.dano.base}} <tr>
+						<td><span>Dano Base </span></td>
+						<td>{{item.system.combate.dano.base}} {{#if item.system.combate.dano.bonus}}+ {{item.system.combate.dano.bonus}}{{/if}}</td>
+					</tr>{{/if}}
+					{{#if item.system.combate.dano.parts}} <tr>
+						<th colspan="2" class="flex-group-center"><span>Danos Bônus </span></th>
+					</tr>
+					{{#each item.system.combate.dano.parts as |parts id|}} <tr>
+						<td class="flex-group-center">{{this.[0]}}</td>
+						<td class="flex-group-center">
+							{{#if this.[1] }}
+								{{localize (concat "shinobiNoSho.ITEMS.armas.tipoDano." this.[1])}}
+							{{/if}}
+						</td>
+					</tr> {{/each}}
+					{{/if}}
+				</table>
+				<hr>
+				<footer class="card-footer">
+					{{#each info}}
+					<span class="info-span">
+						{{this}}
+					</span>
+					{{/each}}
+				</footer>
+			{{/ifEquals}}
 	</main>
 </div>

@@ -79,6 +79,16 @@ export class ShinobiItem extends Item {
 			info: [],
 		};
 
+		if (item.type == 'armas') {
+			if (this.system?.detalhes?.caract?.improvisada) templateData.info.push("Improvisada");
+			if (this.system?.detalhes?.caract?.armaDupla) templateData.info.push("Arma Dupla");
+			if (this.system?.detalhes?.caract?.arremessavel) templateData.info.push("Arremessável");
+			if (this.system?.detalhes?.caract?.duasMaos) templateData.info.push("Duas Mãos");
+			if (this.system?.detalhes?.caract?.energizavel) templateData.info.push("Energizável");
+			if (this.system?.detalhes?.caract?.ambidestra) templateData.info.push("Ambidestra");
+			if (this.system?.detalhes?.caract?.acuidade) templateData.info.push("Acuidade");
+		}
+
     // If there's no roll data, send a chat message.
     if (!this.system.formula) {
       ChatMessage.create({
