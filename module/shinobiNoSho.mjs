@@ -145,3 +145,61 @@ function rollItemMacro(itemUuid) {
     item.roll();
   });
 }
+
+Hooks.on('renderSettings', async (app, [html]) => {
+	const details = html.querySelector('#game-details');
+	const pip = details.querySelector('.system-info .update');
+	details.querySelector('.system').remove();
+
+	const heading = document.createElement('div');
+	heading.classList.add('shinobi', 'sidebar-heading');
+	heading.innerHTML = `
+    <h2>${game.i18n.localize('WORLD.GameSystem')}</h2>
+    <ul class="links">
+      <li>
+        <a class="credits" href="javascript:void(0)" target="_blank">
+				${game.i18n.localize('shinobiNoSho.creditos')}</a>
+      </li>
+      <li>
+        <a href="https://discord.gg/8vmJ7Mt" target="_blank">
+          ${game.i18n.localize('shinobiNoSho.SOCIAL.discordSistema')}
+        </a>
+      </li>
+			<li>
+        <a href="https://narutod8.weebly.com/" target="_blank">
+          ${game.i18n.localize('shinobiNoSho.SOCIAL.site')}
+        </a>
+      </li>
+    </ul>
+  `;
+	details.insertAdjacentElement('afterend', heading);
+
+	const badge = document.createElement('div');
+	badge.classList.add('shinobi', 'system-badge');
+	badge.innerHTML = `
+    <img src="systems/shinobiNoSho/assets/logoshinobinosho.png" 
+		data-tooltip="${game.i18n.localize('shinobiNoSho.nome')}" alt="${game.system.title}">
+    <span class="system-info">${game.i18n.localize('shinobiNoSho.configuracoesVersao')} 
+		<strong>${game.system.version}</strong> </span>
+		<p><a href="https://discord.gg/7qE4pC2Mfy" target="_blank">
+    <span class="system-info" data-tooltip="${game.i18n.localize('shinobiNoSho.SOCIAL.discordForja')}">
+		<i class="fa-brands fa-discord"></i> Forja dos Narradores</span></a>&nbsp;&nbsp;
+		<a href="https://twitter.com/EuSouOWendel" target="_blank" 
+		data-tooltip="${game.i18n.localize('shinobiNoSho.SOCIAL.twitter')}">
+		<span class="system-info"><i class="fa-brands fa-twitter"></i> eusouowendel</span></p>
+  `;
+	if (pip) badge.querySelector('.system-info').insertAdjacentElement('beforeend', pip);
+	heading.insertAdjacentElement('afterend', badge);
+
+	const credits = html.querySelector('.credits');
+	credits.addEventListener('click', async function (ev) {
+		const content = await renderTemplate('systems/shinobiNoSho/templates/dialog/credits.hbs');
+		new Dialog({
+			title: 'Créditos no Desenvolvimento do Sistema',
+			content: content,
+			buttons: {},
+			render: (html) => console.log('Janela (dialog) de créditos foi renderizada corretamente.'),
+			close: (html) => console.log('Janela (dialog) foi fechada com sucesso!'),
+		}).render(true);
+	});
+});

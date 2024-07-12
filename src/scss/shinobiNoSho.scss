@@ -12,6 +12,9 @@
 @import 'global/grid';
 @import 'global/flex';
 
+/* Sidebar */
+@import 'components/sidebar';
+
 /* Styles limited to shinobiNoSho sheets */
 .shinobiNoSho {
   @import 'components/forms';

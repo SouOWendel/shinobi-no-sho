@@ -1,5 +1,15 @@
 {
   "shinobiNoSho": {
+		"creditos": "Créditos",
+		"discord": "Discord",
+		"nome": "Naruto 'Shinobi no Sho'",
+		"configuracoesVersao": "Versão do Sistema",
+		"SOCIAL": {
+			"discordSistema": "Discord do Sistema",
+			"discordForja": "Forja dos Narradores",
+			"twitter": "Twitter",
+			"site": "Site Oficial"
+		},
     "ability": {
       "for": { "long": "Força", "abbr": "For" },
       "des": { "long": "Destreza", "abbr": "Des" },
@@ -217,6 +227,9 @@
 				}
 			}
   },
+	"WORLD": {
+		"GameSystem": "Sistema"
+	},
 	"EFFECT": {
 		"TabDuration": "Duração"
 	},
