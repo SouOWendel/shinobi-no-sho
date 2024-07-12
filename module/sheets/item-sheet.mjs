@@ -71,6 +71,13 @@ export class ShinobiItemSheet extends ItemSheet {
 				arma.parts = Object.values(arma?.parts || {}).map((d) => [
 					d[0] || '', d[1] || '']);
 			}
+
+			// Handle Family array
+			const system = formData.system;
+			if (system.efeitosAdquiridos) {
+				system.efeitosAdquiridos = Object.values(system.efeitosAdquiridos || {}).map((d) => [
+					d[0] || '', d[1] || '']);
+			}
 	
 			// Return the flattened submission data
 			return foundry.utils.flattenObject(formData);
@@ -88,6 +95,9 @@ export class ShinobiItemSheet extends ItemSheet {
 
     // Damage
 		html.find('.damage-control').click(this._onDamageControl.bind(this));
+
+		// Effects Power
+		html.find('.effectsPower-control').click(this._onEffectsPowerControl.bind(this));
 
     // Active Effect management
     html.on('click', '.effect-control', (ev) =>
@@ -113,6 +123,27 @@ export class ShinobiItemSheet extends ItemSheet {
 			const damage = foundry.utils.deepClone(this.item.system.combate.dano);
 			damage.parts.splice(Number(html.dataset.damagePart), 1);
 			return this.item.update({'system.combate.dano.parts': damage.parts});
+		}
+	}
+
+	async _onEffectsPowerControl(event){
+		event.preventDefault();
+		const a = event.currentTarget;
+
+		if (a.classList.contains('add-effectsPower')) {
+			await this._onSubmit(event);
+			const effects = this.item.system.efeitosAdquiridos;
+			return this.item.update({
+				'system.efeitosAdquiridos': effects.concat([['','']]),
+			});
+		}
+
+		if (a.classList.contains('delete-effectsPower')) {
+			await this._onSubmit(event);
+			const html = a.closest('.effectsPower-part');
+			const effects = foundry.utils.deepClone(this.item.system.efeitosAdquiridos);
+			effects.splice(Number(html.dataset.effectsPart), 1);
+			return this.item.update({'system.efeitosAdquiridos': effects});
 		}
 	}
 

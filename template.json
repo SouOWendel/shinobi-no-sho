@@ -488,7 +488,8 @@
 		"poderes": {
 			"templates": ["base"],
 			"preRequisito": "",
-			"nivelPoder": 0
+			"nivelPoder": 0,
+			"efeitosAdquiridos": []
 		},
 		"tecnicas": {
 			"templates": ["base"],
