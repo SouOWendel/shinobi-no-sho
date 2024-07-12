@@ -120,7 +120,13 @@
 					"combatAbility": "E",
 					"bonus": null,
 					"variavel": 9
-				}
+				},
+				"absorcao": {
+						"max": 0,
+						"temp": 0,
+						"tempmax": 0,
+						"atual": 0
+					}
 			},
 			"details": {
 				"nivelCampanha": 1,
@@ -139,7 +145,7 @@
 				"biografia": {
 					"familia": [],
 					"historia": "",
-					"caracteristicas": {
+					"caract": {
 						"campo1": {
 							"value": ""
 						},
@@ -161,7 +167,7 @@
 						"ability": "agi",
 						"value": null,
 						"bonus": null,
-						"caracteristicas": {
+						"caract": {
 							"social": false,
 							"treinada": false,
 							"armadura": true
@@ -171,7 +177,7 @@
 						"ability": "int",
 						"value": null,
 						"bonus": null,
-						"caracteristicas": {
+						"caract": {
 							"social": false,
 							"treinada": false,
 							"armadura": false
@@ -181,7 +187,7 @@
 						"ability": "for",
 						"value": null,
 						"bonus": null,
-						"caracteristicas": {
+						"caract": {
 							"social": false,
 							"treinada": false,
 							"armadura": true
@@ -191,7 +197,7 @@
 						"ability": "int",
 						"value": null,
 						"bonus": null,
-						"caracteristicas": {
+						"caract": {
 							"social": false,
 							"treinada": false,
 							"armadura": false
@@ -201,7 +207,7 @@
 						"ability": "int",
 						"value": null,
 						"bonus": null,
-						"caracteristicas": {
+						"caract": {
 							"social": false,
 							"treinada": false,
 							"armadura": false
@@ -211,7 +217,7 @@
 						"ability": "int",
 						"value": null,
 						"bonus": null,
-						"caracteristicas": {
+						"caract": {
 							"social": false,
 							"treinada": true,
 							"armadura": false
@@ -221,7 +227,7 @@
 						"ability": "int",
 						"value": null,
 						"bonus": null,
-						"caracteristicas": {
+						"caract": {
 							"social": false,
 							"treinada": false,
 							"armadura": false
@@ -231,7 +237,7 @@
 						"ability": "per",
 						"value": null,
 						"bonus": null,
-						"caracteristicas": {
+						"caract": {
 							"social": false,
 							"treinada": false,
 							"armadura": false
@@ -241,7 +247,7 @@
 						"ability": "des",
 						"value": null,
 						"bonus": null,
-						"caracteristicas": {
+						"caract": {
 							"social": false,
 							"treinada": false,
 							"armadura": false
@@ -251,7 +257,7 @@
 						"ability": "agi",
 						"value": null,
 						"bonus": null,
-						"caracteristicas": {
+						"caract": {
 							"social": false,
 							"treinada": false,
 							"armadura": true
@@ -261,7 +267,7 @@
 						"ability": "per",
 						"value": null,
 						"bonus": null,
-						"caracteristicas": {
+						"caract": {
 							"social": false,
 							"treinada": true,
 							"armadura": false
@@ -271,7 +277,7 @@
 						"ability": "int",
 						"value": null,
 						"bonus": null,
-						"caracteristicas": {
+						"caract": {
 							"social": false,
 							"treinada": true,
 							"armadura": false
@@ -281,7 +287,7 @@
 						"ability": "for",
 						"value": null,
 						"bonus": null,
-						"caracteristicas": {
+						"caract": {
 							"social": false,
 							"treinada": true,
 							"armadura": false
@@ -291,7 +297,7 @@
 						"ability": "des",
 						"value": null,
 						"bonus": null,
-						"caracteristicas": {
+						"caract": {
 							"social": false,
 							"treinada": false,
 							"armadura": false
@@ -301,7 +307,7 @@
 						"ability": "per",
 						"value": null,
 						"bonus": null,
-						"caracteristicas": {
+						"caract": {
 							"social": false,
 							"treinada": false,
 							"armadura": false
@@ -311,7 +317,7 @@
 						"ability": "per",
 						"value": null,
 						"bonus": null,
-						"caracteristicas": {
+						"caract": {
 							"social": false,
 							"treinada": false,
 							"armadura": false
@@ -321,7 +327,7 @@
 						"ability": "per",
 						"value": null,
 						"bonus": null,
-						"caracteristicas": {
+						"caract": {
 							"social": false,
 							"treinada": false,
 							"armadura": false
@@ -331,7 +337,7 @@
 						"ability": "int",
 						"value": null,
 						"bonus": null,
-						"caracteristicas": {
+						"caract": {
 							"social": false,
 							"treinada": true,
 							"armadura": false
@@ -343,7 +349,8 @@
 						"ability": "car",
 						"value": null,
 						"bonus": null,
-						"caracteristicas": {
+						"custom": "arte",
+						"caract": {
 							"social": true,
 							"treinada": false,
 							"armadura": false
@@ -353,7 +360,8 @@
 						"ability": "man",
 						"value": null,
 						"bonus": null,
-						"caracteristicas": {
+						"custom": "per",
+						"caract": {
 							"social": true,
 							"treinada": false,
 							"armadura": false
@@ -363,7 +371,8 @@
 						"ability": "car",
 						"value": null,
 						"bonus": null,
-						"caracteristicas": {
+						"custom": "per",
+						"caract": {
 							"social": true,
 							"treinada": false,
 							"armadura": false
@@ -373,7 +382,8 @@
 						"ability": "man",
 						"value": null,
 						"bonus": null,
-						"caracteristicas": {
+						"custom": "int",
+						"caract": {
 							"social": true,
 							"treinada": false,
 							"armadura": false
@@ -383,7 +393,8 @@
 						"ability": "man",
 						"value": null,
 						"bonus": null,
-						"caracteristicas": {
+						"custom": "per",
+						"caract": {
 							"social": true,
 							"treinada": false,
 							"armadura": false
@@ -393,7 +404,8 @@
 						"ability": "car",
 						"value": null,
 						"bonus": null,
-						"caracteristicas": {
+						"custom": "int",
+						"caract": {
 							"social": true,
 							"treinada": false,
 							"armadura": false
@@ -432,8 +444,9 @@
 					"outro": ""
 				},
 				"dano": {
+					"critico": 16,
 					"base": null,
-					"modificador": "",
+					"bonus": "",
 					"tipo": "",
 					"parts": []
 				}
@@ -449,7 +462,8 @@
 					"arremessavel": false,
 					"duasMaos": false,
 					"energizavel": false,
-					"ambidestra": false
+					"ambidestra": false,
+					"acuidade": false
 				}
 			}
 		},
@@ -457,7 +471,8 @@
 			"templates": ["base", "fisico"],
 			"tipo": "",
 			"penalidade": "",
-			"bonusAbsorcao": null
+			"bonusAbsorcao": null,
+			"dureza": 0
 		},
 		"geral": {
 			"templates": ["base", "fisico"],
@@ -479,9 +494,10 @@
 			"templates": ["base"],
 			"combate": {
 				"dano": {
-					"value": null,
-					"tipo": ""
+					"value": null
 				},
+				"dureza": null,
+				"critico": null,
 				"efeitosOuAptidoes": "",
 				"duracao": "",
 				"areaEfeito": {
