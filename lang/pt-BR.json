@@ -35,7 +35,27 @@
       "Inactive": "Efeitos inativos"
     },
 		"NinjaSheet": {
-			"Vida": "Pontos de Vida"
+			"Vida": "Pontos de Vida",
+			"lateralidade": {
+				"destro": "Destro",
+				"canhoto": "Canhoto",
+				"ambidestro": "Ambidestro"
+			},
+			"tendencia": {
+				"lealBondoso": "Leal e Bondoso",
+				"neutroBondoso": "Neutro e Bondoso",
+				"caoticoBondoso": "Caótico e Bondoso",
+				"lealNeutro": "Leal e Neutro",
+				"neutro": "Neutro",
+				"caoticoNeutro": "Caótico e Neutro",
+				"lealMaligno": "Leal e Maligno",
+				"neutroMaligno": "Neutro e Maligno",
+				"caoticoMaligno": "Caótico e Maligno"
+			},
+			"genero": {
+				"masculino": "Masculino",
+				"feminino": "Feminino"
+			}
 		},
 		"skills": {
 			"geral": {
@@ -56,7 +76,7 @@
 				"procurar": "Procurar",
 				"prontidao": "Prontidão",
 				"rastrear": "Rastrear",
-				"veneficio": "Venefício"
+				"veneficio": "Venefício+"
 			},
 			"social": {
 				"atuacao": "Atuação",
