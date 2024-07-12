@@ -37,18 +37,21 @@
 
     {{!-- Description Tab --}}
     <div class="tab" data-group="primary" data-tab="descricao">
-      <div class="content" style="margin-top: 10px;">
-				<h3 class="section-title">Descrição</h3>
-				{{editor system.descricao target="system.descricao" 
-			rollData=rollData button=true owner=owner editable=editable}}
+			<div class="content">
+				<div style="margin-top: 10px;">
+					<h3 class="section-title">Descrição</h3>
+					{{editor system.descricao target="system.descricao" 
+				rollData=rollData button=true owner=owner editable=editable}}
+				</div>
 			</div>
+      
     </div>
 
     {{!-- Combat Tab --}}
     <div class="tab combate" data-group="primary" data-tab="combate">
 			<div class="content">
       <div class="flex flex-group-center">
-				<div class="resource flex flex-2">
+				<div class="resource flex flex-3">
 					<label for="system.combate.ataque.habilidadeCombate" class="resource-label p-r-10">Teste de Ataque</label>
 					<div class="resource-content">
 					<select name="system.combate.ataque.habilidadeCombate" class="item-medium">
@@ -58,24 +61,11 @@
 					</select>
 					</div>
 				</div>
-				<div class="resource flex flex-1">
+				<div class="resource flex flex-2">
 					<i class="fas fa-plus"></i>
-					<input type="text" name="system.combate.ataque.bonus" 
+					<input type="text" name="system.combate.ataque.bonus" class="item-mini"
 					value="{{system.combate.ataque.bonus}}" data-dtype="String"/>
 				</div>
-			</div>
-			<div class="flex flex-group-center">
-				<div class="resource flex flex-2">
-					<label for="system.combate.dano.tipo" class="resource-label p-r-10">Tipo de Dano</label>
-					<div class="resource-content">
-					<select name="system.combate.dano.tipo" class="item-medium">
-						{{selectOptions itemsDropdown.armas.tipoDano 
-							selected=system.combate.dano.tipo 
-							localize=true blank="—"}}
-					</select>
-					</div>
-				</div>
-				<div class="resource flex flex-1"></div>
 			</div>
 
 			<div class="flex flex-group-center">
@@ -89,7 +79,7 @@
 					</select>
 					</div>
 				</div>
-				<div class="resource flex flex-1">
+				<div class="resource flex flex-2">
 					<i class="fas fa-arrow-right"></i>
 					<div class="resource-content">
 						<input type="text" name="system.combate.alcance.outro" 
@@ -98,7 +88,20 @@
 				</div>
 			</div>
 
-			<div class="flex flex-group-center" style="padding-top: 10px;">
+			<div class="flex flex-group-center">
+				<div class="resource flex flex-2">
+					<label for="system.combate.dano.critico" class="resource-label p-r-10">Crítico</label>
+					<div class="resource-content">
+						<input type="text" name="system.combate.dano.critico" 
+						value="{{system.combate.dano.critico}}" data-dtype="String"/>
+					</div>
+				</div>
+				<div class="resource flex flex-2">
+
+				</div>
+			</div>
+
+			<div class="flex flex-group-center" style="padding-top: 5px;">
 				<div class="resource flex flex-2">
 					<label for="system.dano.base" class="resource-label p-r-10">Dano</label>
 					<div class="resource-content">
@@ -108,29 +111,18 @@
 				</div>
 				<div class="resource flex flex-2">
 					<i class="fas fa-plus"></i>
-					<div class="resource-content">
-						<input type="text" name="system.combate.dano.modificador" 
-						value="{{system.combate.dano.modificador}}" data-dtype="String"/>
-					</div>
-				</div>
-				<div class="resource flex flex-1">
-					<i class="fas fa-divide"></i>
-					<div class="resource-content">
-						<input type="text" name="system.combate.dano.divisor" 
-						value="{{system.combate.dano.divisor}}" data-dtype="String"/>
-					</div>
-				</div>
-				<div class="resource flex flex-1">
-					<i class="fas fa-equals"></i>
-					<div class="resource-content">
-						<input type="text" name="system.combate.dano.total" 
-						value="{{system.combate.dano.total}}" data-dtype="String" disabled/>
+					<div class="resource-content" style="padding-right: 32px;">
+						<select name="system.combate.dano.tipo" class="item-medium">
+						{{selectOptions itemsDropdown.armas.tipoDano 
+							selected=system.combate.dano.tipo 
+							localize=true blank="—"}}
+						</select>
 					</div>
 				</div>
 			</div>
 
 			{{#each system.combate.dano.parts as |damage i|}}
-			<div class="flex flex-group-center" style="padding-top: 2px;" data-damage-part="{{i}}">
+			<div class="flex flex-group-center damage-part" style="padding-top: 2px;" data-damage-part="{{i}}">
 				<div class="resource flex flex-2">
 					<label for="system.dano.base" class="resource-label p-r-10"><i class="fas fa-plus"></i></label>
 					<div class="resource-content">
@@ -147,6 +139,7 @@
 							localize=true blank="—"}}
 						</select>
 					</div>
+					<a class="damage-control delete-damage"><i class="fas fa-trash"></i></a>
 				</div>
 			</div>
 			{{/each}}
@@ -220,42 +213,49 @@
 						<label for="system.detalhes.caract.improvisada" class="resource-label p-r-10">Improvisada</label>
 						<div class="resource-content">
 							<input type="checkbox" name="system.detalhes.caract.improvisada" 
-							value="{{system.detalhes.caract.improvisada}}" data-dtype="String"/>
+							{{checked system.detalhes.caract.improvisada}}/>
 						</div>
 					</div>
 					<div class="resource flex">
 						<label for="system.detalhes.caract.armaDupla" class="resource-label p-r-10">Arma Dupla</label>
 						<div class="resource-content">
 							<input type="checkbox" name="system.detalhes.caract.armaDupla" 
-							value="{{system.detalhes.caract.armaDupla}}" data-dtype="String"/>
+						  {{checked system.detalhes.caract.armaDupla}}/>
 						</div>
 					</div>
 					<div class="resource flex">
 						<label for="system.detalhes.caract.arremessavel" class="resource-label p-r-10">Arremessável</label>
 						<div class="resource-content">
 							<input type="checkbox" name="system.detalhes.caract.arremessavel" 
-							value="{{system.detalhes.caract.arremessavel}}" data-dtype="String"/>
+							{{checked system.detalhes.caract.arremessavel}}/>
 						</div>
 					</div>
 					<div class="resource flex">
 						<label for="system.detalhes.caract.duasMaos" class="resource-label p-r-10">Duas Mãos</label>
 						<div class="resource-content">
 							<input type="checkbox" name="system.detalhes.caract.duasMaos" 
-							value="{{system.detalhes.caract.duasMaos}}" data-dtype="String"/>
+							{{checked system.detalhes.caract.duasMaos}}/>
 						</div>
 					</div>
 					<div class="resource flex">
 						<label for="system.detalhes.caract.energizavel" class="resource-label p-r-10">"Energizável"</label>
 						<div class="resource-content">
 							<input type="checkbox" name="system.detalhes.caract.energizavel" 
-							value="{{system.detalhes.caract.energizavel}}" data-dtype="String"/>
+							{{checked system.detalhes.caract.energizavel}}/>
 						</div>
 					</div>
 					<div class="resource flex">
 						<label for="system.detalhes.caract.ambidestra" class="resource-label p-r-10">Ambidestra</label>
 						<div class="resource-content">
 							<input type="checkbox" name="system.detalhes.caract.ambidestra" 
-							value="{{system.detalhes.caract.ambidestra}}" data-dtype="String"/>
+							{{checked system.detalhes.caract.ambidestra}}/>
+						</div>
+					</div>
+					<div class="resource flex">
+						<label for="system.detalhes.caract.acuidade" class="resource-label p-r-10">Acuidade</label>
+						<div class="resource-content">
+							<input type="checkbox" name="system.detalhes.caract.acuidade" 
+							{{checked system.detalhes.caract.acuidade}}/>
 						</div>
 					</div>
 				</div>
