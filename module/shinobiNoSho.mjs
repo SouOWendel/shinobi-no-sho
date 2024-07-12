@@ -29,7 +29,7 @@ Hooks.once('init', function () {
    * @type {String}
    */
   CONFIG.Combat.initiative = {
-    formula: '1d20 + @abilities.dex.mod',
+    formula: '@rollIniciativa',
     decimals: 2,
   };
 
@@ -64,6 +64,11 @@ Handlebars.registerHelper('toLowerCase', function (str) {
 Handlebars.registerHelper('ifEquals', function (arg1, arg2, options) {
 	// eslint-disable-next-line no-invalid-this
 	return arg1 == arg2 ? options.fn(this) : options.inverse(this);
+});
+
+Handlebars.registerHelper('ifInequals', function (arg1, arg2, options) {
+	// eslint-disable-next-line no-invalid-this
+	return arg1 != arg2 ? options.fn(this) : options.inverse(this);
 });
 
 /* -------------------------------------------- */
