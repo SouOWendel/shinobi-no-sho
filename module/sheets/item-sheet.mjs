@@ -111,8 +111,8 @@ export class ShinobiItemSheet extends ItemSheet {
 			await this._onSubmit(event);
 			const html = a.closest('.damage-part');
 			const damage = foundry.utils.deepClone(this.item.system.combate.dano);
-			family.splice(Number(html.dataset.damagePart), 1);
-			return this.item.update({'system.combate.dano.parts': damage});
+			damage.parts.splice(Number(html.dataset.damagePart), 1);
+			return this.item.update({'system.combate.dano.parts': damage.parts});
 		}
 	}
 
