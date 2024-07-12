@@ -42,18 +42,27 @@
         <div class="resource">
           <label for="system.details.genero" class="resource-label">Gênero</label>
           <div class="resource-content flexrow flex-center flex-between">
-						<input type="text" name="system.details.genero" 
-						value="{{system.details.genero}}" data-dtype="String"/>
+						<select name="system.details.genero" class="item-medium">
+							{{selectOptions header.genero 
+							selected=system.details.genero 
+							localize=true blank="—"}}
+						</select>
           </div>
 					<label for="system.details.tendencia" class="resource-label">Tendência</label>
           <div class="resource-content flexrow flex-center flex-between">
-						<input type="text" name="system.details.tendencia" 
-						value="{{system.details.tendencia}}" data-dtype="String"/>
+						<select name="system.details.tendencia" class="item-medium">
+							{{selectOptions header.tendencia 
+							selected=system.details.tendencia 
+							localize=true blank="—"}}
+						</select>
           </div>
 					<label for="system.details.lateralidade" class="resource-label">Lateralidade</label>
           <div class="resource-content flexrow flex-center flex-between">
-						<input type="text" name="system.details.lateralidade" 
-						value="{{system.details.lateralidade}}" data-dtype="String"/>
+						<select name="system.details.lateralidade" class="item-medium">
+							{{selectOptions header.lateralidade 
+							selected=system.details.lateralidade 
+							localize=true blank="—"}}
+						</select>
           </div>
         </div>
 				<div class="resource">
@@ -64,13 +73,19 @@
           </div>
 					<label for="system.details.naturezaPrincipal" class="resource-label">Natureza Pr.</label>
           <div class="resource-content flexrow flex-center flex-between">
-          	<input type="text" name="system.details.naturezaPrincipal" value="{{system.details.naturezaPrincipal}}" 
-						data-dtype="String" placeholder="Ex: Katon"/>
+						<select name="system.details.naturezaPrincipal" class="item-medium">
+							{{selectOptions header.afinidade 
+							selected=system.details.naturezaPrincipal 
+							localize=true blank="—"}}
+						</select>
           </div>
 					<label for="system.details.naturezaSecundaria" class="resource-label">Natureza Sc.</label>
           <div class="resource-content flexrow flex-center flex-between">
-          	<input type="text" name="system.details.naturezaSecundaria" value="{{system.details.naturezaSecundaria}}" 
-						data-dtype="String" placeholder="Ex: Suiton"/>
+						<select name="system.details.naturezaSecundaria" class="item-medium">
+							{{selectOptions header.afinidade 
+							selected=system.details.naturezaSecundaria 
+							localize=true blank="—"}}
+						</select>
           </div>
         </div>
       </div>
@@ -83,49 +98,63 @@
           	<input type="text" name="system.abilities.for.value" 
 						value="{{system.abilities.for.value}}" data-dtype="Number"/>
           </div>
-					<label for="system.abilities.for.value" class="resource-label">Força</label>
+					<label for="system.abilities.for.value" class="resource-label">
+						{{localize "shinobiNoSho.ability.for.abbr"}}
+					</label>
 			</div>
 			<div class="resource">
           <div class="resource-content">
           	<input type="text" name="system.abilities.des.value" 
 						value="{{system.abilities.des.value}}" data-dtype="Number"/>
           </div>
-					<label for="system.abilities.des.value" class="resource-label">Destreza</label>
+					<label for="system.abilities.des.value" class="resource-label">
+						{{localize "shinobiNoSho.ability.des.abbr"}}
+					</label>
 			</div>
 			<div class="resource">
           <div class="resource-content">
           	<input type="text" name="system.abilities.agi.value" 
 						value="{{system.abilities.agi.value}}" data-dtype="Number"/>
           </div>
-					<label for="system.abilities.agi.value" class="resource-label">Agilidade</label>
+					<label for="system.abilities.agi.value" class="resource-label">
+						{{localize "shinobiNoSho.ability.agi.abbr"}}
+					</label>
 			</div>
 			<div class="resource">
           <div class="resource-content">
           	<input type="text" name="system.abilities.per.value" 
 						value="{{system.abilities.per.value}}" data-dtype="Number"/>
           </div>
-					<label for="system.abilities.per.value" class="resource-label">Percepção</label>
+					<label for="system.abilities.per.value" class="resource-label">
+						{{localize "shinobiNoSho.ability.per.abbr"}}
+					</label>
 			</div>
 			<div class="resource">
           <div class="resource-content">
           	<input type="text" name="system.abilities.int.value" 
 						value="{{system.abilities.int.value}}" data-dtype="Number"/>
           </div>
-					<label for="system.abilities.int.value" class="resource-label">Inteligência</label>
+					<label for="system.abilities.int.value" class="resource-label">
+						{{localize "shinobiNoSho.ability.int.abbr"}}
+					</label>
 			</div>
 			<div class="resource">
           <div class="resource-content">
           	<input type="text" name="system.abilities.vig.value" 
 						value="{{system.abilities.vig.value}}" data-dtype="Number"/>
           </div>
-					<label for="system.abilities.vig.value" class="resource-label">Vigor</label>
+					<label for="system.abilities.vig.value" class="resource-label">
+						{{localize "shinobiNoSho.ability.vig.abbr"}}
+					</label>
 			</div>
 			<div class="resource">
           <div class="resource-content">
           	<input type="text" name="system.abilities.esp.value" 
 						value="{{system.abilities.esp.value}}" data-dtype="Number"/>
           </div>
-					<label for="system.abilities.esp.value" class="resource-label">Espírito</label>
+					<label for="system.abilities.esp.value" class="resource-label">
+						{{localize "shinobiNoSho.ability.esp.abbr"}}
+					</label>
 			</div>
 		</div>
 		<div class="acessoRapido">
@@ -138,13 +167,22 @@
 				<label for="" class="resource-label">Vitalidade</label>
 			</div>
 
-        <div class="resource flex-group-center">
+			<div class="resource flex-group-center">
+				<label for="" class="resource-label">Atual / Max</label>
+				<div class="resource-content flex">
+					<input type="text" name="system.attributes.chakra.atual" value="{{system.attributes.chakra.atual}}" data-dtype="Number"/>
+					<input type="text" name="system.attributes.chakra.max" value="{{system.attributes.chakra.max}}" data-dtype="Number"/>
+				</div>
+				<label for="" class="resource-label">Chakra</label>
+			</div>
+
+			<div class="resource flex-group-center">
 					<label for="" class="resource-label">Atual / Max</label>
           <div class="resource-content flex">
-						<input type="text" name="system.attributes.chakra.atual" value="{{system.attributes.chakra.atual}}" data-dtype="Number"/>
-						<input type="text" name="system.attributes.chakra.max" value="{{system.attributes.chakra.max}}" data-dtype="Number"/>
+						<input type="text" name="system.attributes.absorcao.atual" value="{{system.attributes.absorcao.atual}}" data-dtype="Number"/>
+						<input type="text" name="system.attributes.absorcao.max" value="{{system.attributes.absorcao.max}}" data-dtype="Number"/>
           </div>
-					<label for="" class="resource-label">Chakra</label>
+					<label for="" class="resource-label">Absorção</label>
         </div>
 		</div>
 	</div>
