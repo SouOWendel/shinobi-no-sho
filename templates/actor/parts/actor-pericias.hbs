@@ -18,6 +18,8 @@
 			{{/each}}
 		</div>
 	</section>
+	<p style="font-size: 14px;"><i>+: perícias que necessitam treinamento.</i></p>
+	<p style="font-size: 14px;"><i>*: perícias que são afetadas por armadura.</i></p>
 </div>
 
 <div class="tab sociais" data-group="pericias" data-tab="sociais">
@@ -38,7 +40,7 @@
 	</section>
 	<section id="periciasSociais" class="container flex-2">
 		<h3 class="section-title">Perícias Sociais</h3>
-		<div class="grid resource-content">
+		<div class="flex flexcol resource-content">
 			{{#each system.skills.social as |skill id|}}
 			<div class="flex flex-group-center align-center">
 				<label class="resource-label skill-label flex-1 flex-group-center align-center {{id}}">{{label}}</label>
@@ -46,7 +48,11 @@
 					<input type="text" name="system.skills.social.{{id}}.total" value="{{skill.total}}" class="flex-1" data-dtype="Number" disabled>
 					<i class="fas fa-equals"></i>
 					<select name="system.skills.social.{{id}}.ability">
-						{{selectOptions ../atributosAbv selected=skill.ability localize=true}}
+						{{selectOptions ../atributos selected=skill.ability localize=true}}
+					</select>
+					<i class="fas fa-plus"></i>
+					<select name="system.skills.social.{{id}}.custom">
+						{{selectOptions ../socialCustom selected=skill.custom localize=true blank="—"}}
 					</select>
 					<i class="fas fa-plus"></i>
 					<input type="text" name="system.skills.social.{{id}}.value" value="{{skill.value}}" class="flex-1" data-dtype="Number">
