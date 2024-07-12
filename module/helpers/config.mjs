@@ -28,6 +28,19 @@ shinobiNoSho.abilityAbbreviations = {
 	man: 'shinobiNoSho.ability.man.abbr',
 };
 
+shinobiNoSho.periciasSociaisCustom = {
+	for: 'shinobiNoSho.ability.for.long',
+  des: 'shinobiNoSho.ability.des.long',
+  agi: 'shinobiNoSho.ability.agi.long',
+  per: 'shinobiNoSho.ability.per.long',
+  int: 'shinobiNoSho.ability.int.long',
+  vig: 'shinobiNoSho.ability.vig.long',
+	esp: 'shinobiNoSho.ability.esp.long',
+  car: 'shinobiNoSho.ability.car.long',
+	man: 'shinobiNoSho.ability.man.long',
+	arte: "shinobiNoSho.skills.geral.arte",
+};
+
 shinobiNoSho.skills = {
 	geral: {
 		acrobacia: "shinobiNoSho.skills.geral.acrobacia",
@@ -56,6 +69,36 @@ shinobiNoSho.skills = {
 		blefar: "shinobiNoSho.skills.social.blefar",
 		intimidacao: "shinobiNoSho.skills.social.intimidacao",
 		obterInfo: "shinobiNoSho.skills.social.obterInfo",
+	}
+};
+
+shinobiNoSho.header = {
+	lateralidade: {
+		destro: "shinobiNoSho.NinjaSheet.lateralidade.destro",
+		canhoto: "shinobiNoSho.NinjaSheet.lateralidade.canhoto",
+		ambidestro: "shinobiNoSho.NinjaSheet.lateralidade.ambidestro"
+	},
+	tendencia: {
+		lealBondoso: "shinobiNoSho.NinjaSheet.tendencia.lealBondoso",
+		neutroBondoso: "shinobiNoSho.NinjaSheet.tendencia.neutroBondoso",
+		caoticoBondoso: "shinobiNoSho.NinjaSheet.tendencia.caoticoBondoso",
+		lealNeutro: "shinobiNoSho.NinjaSheet.tendencia.lealNeutro",
+		neutro: "shinobiNoSho.NinjaSheet.tendencia.neutro",
+		caoticoNeutro: "shinobiNoSho.NinjaSheet.tendencia.caoticoNeutro",
+		lealMaligno: "shinobiNoSho.NinjaSheet.tendencia.lealMaligno",
+		neutroMaligno: "shinobiNoSho.NinjaSheet.tendencia.neutroMaligno",
+		caoticoMaligno: "shinobiNoSho.NinjaSheet.tendencia.caoticoMaligno",
+	},
+	genero: {
+		masculino: "shinobiNoSho.NinjaSheet.genero.masculino",
+		feminino: "shinobiNoSho.NinjaSheet.genero.feminino"
+	},
+	afinidade: {
+		katon: "shinobiNoSho.ITEMS.tecnicas.elemento.katon",
+		fuuton: "shinobiNoSho.ITEMS.tecnicas.elemento.fuuton",
+		raiton: "shinobiNoSho.ITEMS.tecnicas.elemento.raiton",
+		doton: "shinobiNoSho.ITEMS.tecnicas.elemento.doton",
+		suiton: "shinobiNoSho.ITEMS.tecnicas.elemento.suiton",
 	}
 };
 
