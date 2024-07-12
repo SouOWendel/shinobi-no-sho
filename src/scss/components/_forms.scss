@@ -16,6 +16,7 @@
 	border: 1px solid #949494;
 	border-radius: 4px;
 	padding: 6px;
+	select { width: 100%; }
 }
 
 .sheet-header {
@@ -123,7 +124,7 @@ form {
 	gap: 6px;
 
 	.atributos {
-		flex: 2;
+		flex: 0;
 		display: flex;
   	flex-direction: row;
   	flex-wrap: nowrap;
@@ -134,10 +135,14 @@ form {
 		input {
 			font-size: large;
 		}
+
+		.resource {
+			width: 50px;
+		}
 	}
 
 	.acessoRapido {
-		flex: 0.6;
+		flex: 1;
 		display: flex;
   	flex-direction: row;
   	flex-wrap: nowrap;
@@ -151,10 +156,10 @@ form {
 				height: 25px;
 			}
 		}
-	}
 
-	.resource {
-		width: 60px;
+		.resource {
+			width: 60px;
+		}
 	}
 
 	.resource input {
@@ -270,6 +275,7 @@ form {
 		grid-column-gap: 6px;
 		grid-row-gap: 6px;
 		grid-auto-flow: column;
+		padding: 0 8px;
 	}
 
 	.resource-label {

@@ -30,6 +30,8 @@ main {
 			color: #000000d5;
 		}
 	}
+
+	table { border-top: 0; border-bottom: 0; }
 }
 
 .descricao-chat-card,
@@ -41,4 +43,11 @@ main {
 .descricao-chat-card:hover,
 .caracteristicas-chat-card:hover {
 	background-color: #c0c0c0;
+}
+
+.info-span {
+	padding: 0px 4px;
+	border: 1px solid #818181;
+	border-radius: 4px;
+	font-size: 12px;
 }

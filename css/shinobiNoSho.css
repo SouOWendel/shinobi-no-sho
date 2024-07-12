@@ -239,6 +239,10 @@
   border-radius: 4px;
   padding: 6px;
 }
+.shinobiNoSho .sheet-header select, .shinobiNoSho .atributos select,
+.shinobiNoSho .acessoRapido select {
+  width: 100%;
+}
 .shinobiNoSho .sheet-header {
   flex: 0 auto;
   overflow: hidden;
@@ -326,7 +330,7 @@
   gap: 6px;
 }
 .shinobiNoSho #middle-content .atributos {
-  flex: 2;
+  flex: 0;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -337,8 +341,11 @@
 .shinobiNoSho #middle-content .atributos input {
   font-size: large;
 }
+.shinobiNoSho #middle-content .atributos .resource {
+  width: 50px;
+}
 .shinobiNoSho #middle-content .acessoRapido {
-  flex: 0.6;
+  flex: 1;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -350,7 +357,7 @@
   width: 40px;
   height: 25px;
 }
-.shinobiNoSho #middle-content .resource {
+.shinobiNoSho #middle-content .acessoRapido .resource {
   width: 60px;
 }
 .shinobiNoSho #middle-content .resource input {
@@ -446,6 +453,7 @@
   grid-column-gap: 6px;
   grid-row-gap: 6px;
   grid-auto-flow: column;
+  padding: 0 8px;
 }
 .shinobiNoSho #periciasSociais .resource-label {
   font-size: 12px;
@@ -701,19 +709,11 @@
 }
 .shinobiNoSho .traits-grid {
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
   grid-column-gap: 6px;
-  grid-row-gap: 6px;
-  grid-auto-flow: column;
-  padding-top: 10px;
-}
-.shinobiNoSho .traits-grid- {
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  grid-column-gap: 6px;
-  grid-row-gap: 6px;
-  grid-auto-flow: column;
-  padding-top: 10px;
+  grid-row-gap: 3px;
+  grid-auto-flow: row;
+  padding-top: 5px;
 }
 .shinobiNoSho .effects .item .effect-source,
 .shinobiNoSho .effects .item .effect-duration,
@@ -754,6 +754,10 @@
   font-weight: bold;
   color: rgba(0, 0, 0, 0.8352941176);
 }
+.shinobiNoSho main table {
+  border-top: 0;
+  border-bottom: 0;
+}
 .shinobiNoSho .descricao-chat-card,
 .shinobiNoSho .caracteristicas-chat-card {
   transition: 0.3s;
@@ -765,6 +769,12 @@
 .shinobiNoSho .descricao-chat-card:hover,
 .shinobiNoSho .caracteristicas-chat-card:hover {
   background-color: #c0c0c0;
+}
+.shinobiNoSho .info-span {
+  padding: 0px 4px;
+  border: 1px solid #818181;
+  border-radius: 4px;
+  font-size: 12px;
 }
 
 /*# sourceMappingURL=shinobiNoSho.css.map */
