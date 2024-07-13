@@ -1,5 +1,17 @@
 # CHANGELOG
 
+## [1.0.0](https://github.com/SouOWendel/shinobi-no-sho/compare/v0.4.0...v1.0.0) (2024-07-13)
+
+
+### ⚠ BREAKING CHANGES
+
+* **first official release:** none, just launched the first version
+
+### Features
+
+* **first official release:** launch the v1 version ([a290db3](https://github.com/SouOWendel/shinobi-no-sho/commit/a290db346f75f4ea2a77c3975fe85aa7a700e025))
+* **first official release:** launch the v1 version ([c32e3ef](https://github.com/SouOWendel/shinobi-no-sho/commit/c32e3ef6ea4cb3eb2b418db3c692b620658ec39f))
+
 ## [0.4.0](https://github.com/SouOWendel/shinobi-no-sho/compare/v0.3.0...v0.4.0) (2024-07-13)
 
 
