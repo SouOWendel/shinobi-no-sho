@@ -203,3 +203,11 @@ Hooks.on('renderSettings', async (app, [html]) => {
 		}).render(true);
 	});
 });
+
+Hooks.on('preCreateActor', function (actor, data) {
+	// Filtrando por tipos de Actors disponíveis no sistema.
+	if (actor.type === 'Ninja') {
+		const prototypeToken = { disposition: 0, actorLink: true }; // Set disposition to "Friendly"
+		actor.updateSource({ prototypeToken });
+	}
+});
