@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## [1.1.1](https://github.com/SouOWendel/shinobi-no-sho/compare/v1.1.0...v1.1.1) (2024-07-13)
+
+
+### Bug Fixes
+
+* **aptitude item sheet:** fixed the aptitude type on dropdown, added restrict type and special type ([e007bd4](https://github.com/SouOWendel/shinobi-no-sho/commit/e007bd48f3198bf4006a7a4c6aa00ffeac8ee011))
+
 ## [1.1.0](https://github.com/SouOWendel/shinobi-no-sho/compare/v1.0.0...v1.1.0) (2024-07-13)
 
 
