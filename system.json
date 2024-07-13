@@ -66,6 +66,6 @@
   "background": "systems/shinobiNoSho/assets/narutowallpaper.jpeg",
   "gridDistance": 1,
   "gridUnits": "m",
-  "primaryTokenAttribute": "attributes.vitalidade.atual",
-  "secondaryTokenAttribute": "attributes.chakra.atual"
+  "primaryTokenAttribute": "attributes.vitalidade",
+  "secondaryTokenAttribute": "attributes.chakra"
 }

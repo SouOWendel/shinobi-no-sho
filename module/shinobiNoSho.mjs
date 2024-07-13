@@ -72,6 +72,21 @@ Handlebars.registerHelper('ifInequals', function (arg1, arg2, options) {
 });
 
 /* -------------------------------------------- */
+/*  Foundry VTT Setup                           */
+/* -------------------------------------------- */
+
+/**
+ * Prepare attribute lists.
+ */
+Hooks.once("setup", function() {
+	CONFIG.Actor.trackableAttributes = {
+    Ninja: {
+      bar: ['attributes.vitalidade', 'attributes.chakra'],
+    }
+  };
+});
+
+/* -------------------------------------------- */
 /*  Ready Hook                                  */
 /* -------------------------------------------- */
 

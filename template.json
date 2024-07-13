@@ -81,7 +81,7 @@
 					"max": 10,
 					"temp": 0,
 					"tempmax": 0,
-					"atual": 0,
+					"value": 0,
 					"mult": 3,
 					"ability": "vig",
 					"multNivel": 5
@@ -90,7 +90,7 @@
 					"max": 0,
 					"temp": 0,
 					"tempmax": 0,
-					"atual": 0,
+					"value": 0,
 					"mult": 3,
 					"ability": "esp"
 				},
@@ -125,7 +125,7 @@
 						"max": 0,
 						"temp": 0,
 						"tempmax": 0,
-						"atual": 0
+						"value": 0
 					}
 			},
 			"details": {
@@ -488,6 +488,7 @@
 		"poderes": {
 			"templates": ["base"],
 			"preRequisito": "",
+			"caracteristicas": "",
 			"nivelPoder": 0,
 			"efeitosAdquiridos": []
 		},
