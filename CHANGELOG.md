@@ -1,5 +1,57 @@
 # CHANGELOG
 
+## [0.4.0](https://github.com/SouOWendel/shinobi-no-sho/compare/v0.3.0...v0.4.0) (2024-07-13)
+
+
+### Features
+
+* **actor sheet and config file:** added header informations and custom dropdown of social skills, also added filter to skills for trained and armor condition ([66b61a0](https://github.com/SouOWendel/shinobi-no-sho/commit/66b61a07b82ac372f95a900f1cf577f40718312b))
+* **actor sheet:** added one new tab on options about skills part ([fc029e7](https://github.com/SouOWendel/shinobi-no-sho/commit/fc029e73c96f61ccfd11c93c36a81fa99dcaa99e))
+* **actor:** added calculation of custom social skill field ([6ec5dd6](https://github.com/SouOWendel/shinobi-no-sho/commit/6ec5dd6977d3c1a0186a38ae35350f21936cb306))
+* **armor item sheet:** fixed all checkbox of traits, added critical field, remove some fiels to damage ([52264f0](https://github.com/SouOWendel/shinobi-no-sho/commit/52264f06dc0bac4b9b01be8d7df1c35dc0b4b6f9))
+* **armor item:** added toughness field ([0459db3](https://github.com/SouOWendel/shinobi-no-sho/commit/0459db3eb5fe614d4a8afa8d0a4ddd627763ff79))
+* **assets:** added logo from rpg system Naruto 'Shinobi no Sho' ([44736f7](https://github.com/SouOWendel/shinobi-no-sho/commit/44736f7282d13e211818d325d465e59a72a91bc3))
+* **chat item card:** added traits to card, the critical field, and 'other' fields ([08334b3](https://github.com/SouOWendel/shinobi-no-sho/commit/08334b3bf099b733cc87182de488591c7fcea59d))
+* **chat item-card:** added item-card to display item info on chat ([04dc2d3](https://github.com/SouOWendel/shinobi-no-sho/commit/04dc2d3c20e8edbdc46803c6493884db230545af))
+* **combat tab:** added all calculation of combat abilities and combat statistics, displayed the data and changed the data template ([b98f4d4](https://github.com/SouOWendel/shinobi-no-sho/commit/b98f4d4aa6600e9641ebad79d1fda0b4438134df))
+* **config.mjs:** was added dropdowns about skills and combat abilities ([8fb7197](https://github.com/SouOWendel/shinobi-no-sho/commit/8fb7197d248f41969e276bc5f2eff40bee596f64))
+* **css/sass:** added styles for tabs, overflow and scroll, also was added styles for chat item-card template ([3722b09](https://github.com/SouOWendel/shinobi-no-sho/commit/3722b09cb3eba412a5be46673fe0e1f1a09809de))
+* **css/sass:** defined the max-width of input and select on combat statistics section ([00930ef](https://github.com/SouOWendel/shinobi-no-sho/commit/00930ef575eea08e687675beeb265d54300cb03b))
+* **css/sass:** several adjustments and stylizations ([b60fd44](https://github.com/SouOWendel/shinobi-no-sho/commit/b60fd445b35895412806d5084fa8e9be8f41673b))
+* **custom sidebar + credits:** added custom sidebar with links to system discord, twitter, author, official site, etc ([05224c6](https://github.com/SouOWendel/shinobi-no-sho/commit/05224c6e9a309cc1200e0a4f3b868e931b22cf9a))
+* **initiative:** added initiative and IfInequals handlebars helper ([e730331](https://github.com/SouOWendel/shinobi-no-sho/commit/e730331eec1844fbd587c32354c5799605937dc5))
+* **item-sheet:** changed the height of item-sheet from '440px' to '445px' ([e8fb4b5](https://github.com/SouOWendel/shinobi-no-sho/commit/e8fb4b523aee66f2974551c7319c8d0d16abead4))
+* **items dropdown:** added all dropdown data and configuration of items (aptitudes, armors, weapons, general item, techniques and powers) ([2af6369](https://github.com/SouOWendel/shinobi-no-sho/commit/2af6369da7377a1125996fa412ae3077ed86dcee))
+* **items sheet:** added 'rarity', 'alternative name', 'origin' fields and div content to tempt to overflow the scroll of sheets ([19746bb](https://github.com/SouOWendel/shinobi-no-sho/commit/19746bbe587c812688fc6fda47f6f9e2f6d31d54))
+* **items sheet:** added container to description and characteristics editors ([7597124](https://github.com/SouOWendel/shinobi-no-sho/commit/75971244f86df3e7066f7457ec6162e9601ec94f))
+* **items sheet:** added flexcol to form html to all items, this fixed the overflow of scroll ([5d67f31](https://github.com/SouOWendel/shinobi-no-sho/commit/5d67f31dd221060d64a7d90cd6252ec4b70f71cd))
+* **localization:** added translates for header informations and added plus symbol to venefício skill ([a64e447](https://github.com/SouOWendel/shinobi-no-sho/commit/a64e4472d20ec5a7b49e30845f4aa4509e84bed1))
+* **localization:** changed and added new abilities translates, also added combat abilities ([c9d4a4e](https://github.com/SouOWendel/shinobi-no-sho/commit/c9d4a4e95eea5998474143e60bc08de6d84b5fc5))
+* **ninja combat tab:** added base field to combat abilities ([9f7c4b9](https://github.com/SouOWendel/shinobi-no-sho/commit/9f7c4b985451b9b2127638627d1d5cce924515f4))
+* **ninja inventory:** added ryos field ([74fe1b1](https://github.com/SouOWendel/shinobi-no-sho/commit/74fe1b104e85278107a2404ee1684492c5a0d63f))
+* **ninja sheet parts:** added data to display in tabulated items informations of aptitudes and powers, inventory and techniques ([e3d19e9](https://github.com/SouOWendel/shinobi-no-sho/commit/e3d19e914530acb5c0a3e23bb5bc874265d94764))
+* **ninja sheet parts:** added localization for all displayed data ([bbebdd8](https://github.com/SouOWendel/shinobi-no-sho/commit/bbebdd8afbb3ac2dd20326a5ef6795153007f4dc))
+* **ninja sheet skills:** splited the skills tab in general skills tab and social skills tab ([1a45d21](https://github.com/SouOWendel/shinobi-no-sho/commit/1a45d211c7a9d4e2ca0b9d1f8de631fc899a5448))
+* **ninja sheet:** added dropdown fields to header, changed the abilities label to abbreviation and added absortion field to quick access container ([d16718d](https://github.com/SouOWendel/shinobi-no-sho/commit/d16718de6dbac7107223c60a78cb073e314e7527))
+* **ninja sheet:** added feature to add multiple relations on biography t ab ([003389b](https://github.com/SouOWendel/shinobi-no-sho/commit/003389b16e6dcc03bd4a69bda2347c8b29d7f434))
+* **ninja sheet:** changed dropdowns to input type text and added tabs to skills tab ([e3a9e33](https://github.com/SouOWendel/shinobi-no-sho/commit/e3a9e339ac0c1a0876a1b6f87307df6b7a0fb570))
+* **ninja skills tab:** added custom field to calculate social skills value, also added guide to general skills treats ([e301068](https://github.com/SouOWendel/shinobi-no-sho/commit/e301068ec52c2bc481b675df39cac2175c781d02))
+* **power item sheet:** added new tab to add acquired effects for powers ([b163736](https://github.com/SouOWendel/shinobi-no-sho/commit/b163736d66d478cafb77543804bc3210a99d3037))
+* **shinobiNoSho main file:** created the 'ifEquals' helper of handlebars for conditions in layouts ([b573c42](https://github.com/SouOWendel/shinobi-no-sho/commit/b573c42b9318cb4c11d67dc690d91ff733d6824c))
+* **system.json:** changed the wallpaper, was added manifest, changed the primary and secondary token bars, changed the grid distance ([fbfb840](https://github.com/SouOWendel/shinobi-no-sho/commit/fbfb8402d5881f25301152b2355ebaa7cd8c653b))
+* **techniques item sheet:** added critical field and toughness field ([60d2428](https://github.com/SouOWendel/shinobi-no-sho/commit/60d2428ca863f6f056fa3350d6ab31d962a74eb1))
+* **techniques item:** added subtype technique dropdown field ([7b6f20a](https://github.com/SouOWendel/shinobi-no-sho/commit/7b6f20a8a9b891215c016522a430f8950bb24efa))
+* **template.json:** added 'raridade' key and deleted the 'classificao' key ([e59b55f](https://github.com/SouOWendel/shinobi-no-sho/commit/e59b55ff7251af979ff8da755c701b6b37363e5e))
+* **template.json:** added all items data, changed all value of abilities from '10' to '1', added skill key to combat abilities and changed the value of skills to null ([2d492a0](https://github.com/SouOWendel/shinobi-no-sho/commit/2d492a001969c7cba0c13b955b5469eb982a381f))
+* **template.json:** changed 'caracteristicas' to skills for 'caract', added 'acuidade', 'custom', 'dureza' e 'critico' ([848e359](https://github.com/SouOWendel/shinobi-no-sho/commit/848e359e2c7fd23ae5a28074d903d7d37b444094))
+* **weapon sheet:** added new feature to add multiple damages to one weapon ([6c105b3](https://github.com/SouOWendel/shinobi-no-sho/commit/6c105b33df62daa7e5c7e2ad28cc97afb79da4c8))
+
+
+### Bug Fixes
+
+* **effects item part:** fixed the effects control icons style ([1604e4c](https://github.com/SouOWendel/shinobi-no-sho/commit/1604e4cf5d2bc63d11d84f442c25442d1d88af1b))
+* **item-sheet:** fixed the delete feature of multiple damages in weapon item ([06615ed](https://github.com/SouOWendel/shinobi-no-sho/commit/06615ed7d47df65ba23d3d3943fcbfd967b143c8))
+
 ## [0.3.0](https://github.com/SouOWendel/shinobi-no-sho/compare/v0.2.0...v0.3.0) (2024-07-05)
 
 
