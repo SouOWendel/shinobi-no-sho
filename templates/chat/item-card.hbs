@@ -44,6 +44,14 @@
 					<span>Origem: </span>
 					{{localize (concat "shinobiNoSho.ITEMS.tecnicas.origem." item.system.origem)}}
 				</li> {{/if}}
+				{{#if item.system.combate.critico}} <li>
+					<span>Crítico: </span>
+					{{item.system.combate.critico}}
+				</li>{{/if}}
+				{{#if item.system.combate.dureza}} <li>
+					<span>Dureza: </span>
+					{{item.system.combate.dureza}}
+				</li>{{/if}}
 				{{#if item.system.combate.acao}} <li>
 					<span>Ação: </span>
 					{{localize (concat "shinobiNoSho.ITEMS.generico.acao." item.system.combate.acao)}}
