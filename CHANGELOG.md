@@ -1,5 +1,20 @@
 # CHANGELOG
 
+## [1.2.0](https://github.com/SouOWendel/shinobi-no-sho/compare/v1.1.1...v1.2.0) (2024-07-13)
+
+
+### Features
+
+* **trackableAttributes:** added vitality and chakra to trackableAttributes, changed the 'atual' key to 'value' and the standard bars to new reference ([86fdd3f](https://github.com/SouOWendel/shinobi-no-sho/commit/86fdd3f03e981c4b0f5a58c82a48d04b8b28234a))
+
+
+### Bug Fixes
+
+* **chat item card:** added characteristics to display on chat ([c33bfd1](https://github.com/SouOWendel/shinobi-no-sho/commit/c33bfd16dc80f68f217ad2849b3150c56b8fc564))
+* **localization:** changed actor type ninja to uppercase ([7b6e1ca](https://github.com/SouOWendel/shinobi-no-sho/commit/7b6e1ca94084dd11761478c3a87f8284d1e139af))
+* **power item sheet:** fixed the description reference on system data ([477f483](https://github.com/SouOWendel/shinobi-no-sho/commit/477f48300f51d01416326b4ac7372c42573c9607))
+* **techniques item sheet:** fixed the checkbox write function with handlebars helper ([02b3831](https://github.com/SouOWendel/shinobi-no-sho/commit/02b38311738d1e8ec93068261fd13c0f35da6781))
+
 ## [1.1.1](https://github.com/SouOWendel/shinobi-no-sho/compare/v1.1.0...v1.1.1) (2024-07-13)
 
 
