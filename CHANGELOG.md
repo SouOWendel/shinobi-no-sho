@@ -1,5 +1,25 @@
 # CHANGELOG
 
+## [1.1.0](https://github.com/SouOWendel/shinobi-no-sho/compare/v1.0.0...v1.1.0) (2024-07-13)
+
+
+### Features
+
+* **chat item card:** added critical and toughness to technique item card on chat ([92cbe2a](https://github.com/SouOWendel/shinobi-no-sho/commit/92cbe2ad975d4c1b89fc1b34af3ab48b4f5d13f0))
+* **core system:** added hook preCreateActor to apply prototypeToken modifications (actor link true, and disposition neutral) ([a3a0f83](https://github.com/SouOWendel/shinobi-no-sho/commit/a3a0f8365cf7eeea76716f3865739ec7101eda8d))
+
+
+### Bug Fixes
+
+* **initiative:** fixed the initiative roll data ([5006c68](https://github.com/SouOWendel/shinobi-no-sho/commit/5006c68eda3106c2e97ac430bc781f3360fa4ed7))
+* **items sheet editor:** added min-height to fix display editor enter the all item sheet ([a4ade7d](https://github.com/SouOWendel/shinobi-no-sho/commit/a4ade7db537461fec4185a927c0153ead0b7c19b))
+* **techniques item sheet:** added critical label ([a810cac](https://github.com/SouOWendel/shinobi-no-sho/commit/a810cac0fade8073fccca29c2dc3ec383825180e))
+
+
+### Performance Improvements
+
+* **template.json:** changed 'nivelCampanha' from 1 to 4, and changed the 'nivelShinobi' from 1 to Genin ([2ac7ffc](https://github.com/SouOWendel/shinobi-no-sho/commit/2ac7ffc475ef3f2edd37d6091b2019abd28e94ad))
+
 ## [1.0.0](https://github.com/SouOWendel/shinobi-no-sho/compare/v0.4.0...v1.0.0) (2024-07-13)
 
 
