@@ -78,13 +78,13 @@ Handlebars.registerHelper('ifInequals', function (arg1, arg2, options) {
 /**
  * Prepare attribute lists.
  */
-Hooks.once("setup", function() {
-	CONFIG.Actor.trackableAttributes = {
-    Ninja: {
-      bar: ['attributes.vitalidade', 'attributes.chakra'],
-    }
-  };
-});
+// Hooks.once("setup", function() {
+// 	CONFIG.Actor.trackableAttributes = {
+//     Ninja: {
+//       bar: ['attributes.vitalidade', 'attributes.chakra'],
+//     }
+//   };
+// });
 
 /* -------------------------------------------- */
 /*  Ready Hook                                  */
@@ -222,7 +222,7 @@ Hooks.on('renderSettings', async (app, [html]) => {
 Hooks.on('preCreateActor', function (actor, data) {
 	// Filtrando por tipos de Actors disponíveis no sistema.
 	if (actor.type === 'Ninja') {
-		const prototypeToken = { disposition: 0, actorLink: true }; // Set disposition to "Friendly"
+		const prototypeToken = { actorLink: true }; // Set disposition to "Friendly"
 		actor.updateSource({ prototypeToken });
 	}
 });
