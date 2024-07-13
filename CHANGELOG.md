@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## [1.2.1](https://github.com/SouOWendel/shinobi-no-sho/compare/v1.2.0...v1.2.1) (2024-07-13)
+
+
+### Bug Fixes
+
+* **core system:** the setup code was commented out due to an inconsistency in the code ([cbcaaca](https://github.com/SouOWendel/shinobi-no-sho/commit/cbcaacaef3ad7c4f13d437e4b1c09997710efeab))
+
 ## [1.2.0](https://github.com/SouOWendel/shinobi-no-sho/compare/v1.1.1...v1.2.0) (2024-07-13)
 
 
