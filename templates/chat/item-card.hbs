@@ -22,6 +22,14 @@
 		</details>
 	</h4>
 	{{/ifEquals}}
+	{{#ifEquals item.type "poderes"}}
+	<h4 class="caracteristicas-chat-card">
+		<details class="container">
+			<summary>Características</summary>
+			{{{item.system.caracteristicas}}}
+		</details>
+	</h4>
+	{{/ifEquals}}
 	{{log item.system}}
 	<main class="container">
 		<ul class="info">
