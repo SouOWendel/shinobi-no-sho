@@ -684,6 +684,11 @@
 .shinobiNoSho .effects-list h3 {
   border-bottom: 0 !important;
 }
+.shinobiNoSho #aptidao .editor, .shinobiNoSho #aptidao .editor-content, .shinobiNoSho #armas .editor, .shinobiNoSho #armas .editor-content, .shinobiNoSho #poderes .editor, .shinobiNoSho #poderes .editor-content,
+.shinobiNoSho #gerais .editor,
+.shinobiNoSho #gerais .editor-content, .shinobiNoSho #armaduras .editor, .shinobiNoSho #armaduras .editor-content, .shinobiNoSho #tecnicas .editor, .shinobiNoSho #tecnicas .editor-content {
+  min-height: 130px;
+}
 .shinobiNoSho #aptidao .tab, .shinobiNoSho #armas .tab, .shinobiNoSho #poderes .tab,
 .shinobiNoSho #gerais .tab, .shinobiNoSho #armaduras .tab, .shinobiNoSho #tecnicas .tab {
   padding: 0 14px;
