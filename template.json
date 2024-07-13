@@ -47,28 +47,28 @@
 				},
 				"combate": {
 					"CC": {
-						"value": 0,
+						"value": null,
 						"base": 3,
 						"bonus": null,
 						"ability": "for",
 						"skill": ""
 					},
 					"CD": {
-						"value": 0,
+						"value": null,
 						"base": 3,
 						"bonus": null,
 						"ability": "des",
 						"skill": ""
 					},
 					"E": {
-						"value": 0,
+						"value": null,
 						"base": 3,
 						"bonus": null,
 						"ability": "agi",
 						"skill": ""
 					},
 					"LM": {
-						"value": 0,
+						"value": null,
 						"base": 3,
 						"bonus": null,
 						"ability": "per",
@@ -108,15 +108,15 @@
 					"ability": "agi",
 					"bonus": null,
 					"skill": "prontidao",
-					"value": 0,
+					"value": null,
 					"roll": {
 						"max": null,
 						"min": null,
 						"mode": 0
 					}
 				},
-				"esquiva": {
-					"value": 0,
+				"reacaoEsquiva": {
+					"value": null,
 					"combatAbility": "E",
 					"bonus": null,
 					"variavel": 9

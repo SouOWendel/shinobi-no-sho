@@ -37,7 +37,6 @@ export class ShinobiActor extends Actor {
     // Make separate methods for each Actor type (character, npc, etc.) to keep
     // things organized.
 		this._prepareNinjaDerived(actorData);
-    this._prepareNpcData(actorData);
   }
 
   _prepareNinjaBase(actorData) {
@@ -73,7 +72,7 @@ export class ShinobiActor extends Actor {
 
 					// Perícia para Iniciativa
 					if (attributes.init.skill == skillKey) {
-						attributes.init.value += skill.total;
+						attributes.init.total = skill.total;
 					}
 				}
 			}
@@ -102,22 +101,24 @@ export class ShinobiActor extends Actor {
 			for (let [cKey, c] of Object.entries(abilities.combate)) {
 				// Soma de bônus em perícias
 				if (c.ability == abilityKey) {
-					c.value = c.base + Number(c.bonus);
-					c.value = c.value + ability.tbonus;
+					c.total = c.base + Number(c.value) + c.bonus;
+					c.total = c.total + ability.tbonus;
 
 					// Cálculo de Esquiva
-					if (attributes.esquiva.combatAbility == cKey) {
-						attributes.esquiva.value += c.value;
-						attributes.esquiva.value += attributes.esquiva.bonus;
-						attributes.esquiva.value += attributes.esquiva.variavel;
+					if (attributes.reacaoEsquiva.combatAbility == cKey) {
+						attributes.reacaoEsquiva.total = c.total;
+						attributes.reacaoEsquiva.total += attributes.reacaoEsquiva.value;
+						attributes.reacaoEsquiva.total += attributes.reacaoEsquiva.bonus;
+						attributes.reacaoEsquiva.total += attributes.reacaoEsquiva.variavel;
 					}
 				}
 			}
 
 			// Cálculo de Iniciativa
 			if (attributes.init.ability == abilityKey) {
-				attributes.init.value += attributes.init.bonus;
-				attributes.init.value += ability.tbonus;
+				attributes.init.total += ability.tbonus;
+				attributes.init.total += attributes.init?.value;
+				attributes.init.total += attributes.init?.bonus;
 			}
 
 			// Deslocamento
@@ -132,23 +133,6 @@ export class ShinobiActor extends Actor {
 		attributes.vitalidade.max = 10 + 3*abilities.vig.tbonus + 5*details.nivelCampanha;
 		attributes.chakra.max = 10 + 3*abilities.esp.tbonus;
 	}
-
-  /**
-   * Prepare NPC type specific data.
-   */
-  _prepareNpcData(actorData) {
-    if (actorData.type !== 'npc') return;
-
-    // Make modifications to data here. For example:
-    const systemData = actorData.system;
-    systemData.xp = systemData.cr * systemData.cr * 100;
-
-		// Loop through ability scores, and add their modifiers to our sheet output.
-    // for (let [key, ability] of Object.entries(systemData.abilities)) {
-    //   // Calculate the modifier using d20 rules.
-    //   ability.mod = Math.floor((ability.value - 10) / 2);
-    // }
-  }
 
   /**
    * Override getRollData() that's supplied to rolls.
@@ -170,18 +154,5 @@ export class ShinobiActor extends Actor {
     if (this.type !== 'Ninja') return;
 
 		data.rollIniciativa = "1d8 + " + data.attributes.init.value;
-
-    // Copy the ability scores to the top level, so that rolls can use
-    // formulas like `@str.mod + 4`.
-    // if (data.abilities) {
-    //   for (let [k, v] of Object.entries(data.abilities)) {
-    //     data[k] = foundry.utils.deepClone(v);
-    //   }
-    // }
-
-    // Add level for easier access, or fall back to 0.
-    // if (data.attributes.level) {
-    //   data.lvl = data.attributes.level.value ?? 0;
-    // }
   }
 }
