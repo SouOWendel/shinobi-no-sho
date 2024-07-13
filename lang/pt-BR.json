@@ -314,7 +314,7 @@
   "DOCUMENT.TypePageFormat": "{page} de {type}",
   "TYPES": {
     "Actor": {
-      "ninja": "Ninja"
+      "Ninja": "Ninja"
     },
     "Item": {
       "armas": "Armas",
