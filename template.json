@@ -129,8 +129,8 @@
 					}
 			},
 			"details": {
-				"nivelCampanha": 1,
-				"nivelShinobi": 1,
+				"nivelCampanha": 4,
+				"nivelShinobi": "Genin",
 				"nome": "",
 				"idade": "",
 				"cla": "",
