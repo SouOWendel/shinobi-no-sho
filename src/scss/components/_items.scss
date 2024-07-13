@@ -4,6 +4,17 @@
 	min-width: 520px;
 }
 
+.item-effects {
+	.item-name {
+		flex: 1 1 200px !important;
+	}
+
+	a.effect-control {
+		margin: 0 !important;
+		width: 10px;
+	}
+}
+
 // Section Header
 .items-header {
   height: 28px;

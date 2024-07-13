@@ -544,6 +544,13 @@
   max-height: 95%;
   min-width: 520px;
 }
+.shinobiNoSho .item-effects .item-name {
+  flex: 1 1 200px !important;
+}
+.shinobiNoSho .item-effects a.effect-control {
+  margin: 0 !important;
+  width: 10px;
+}
 .shinobiNoSho .items-header {
   height: 28px;
   margin: 2px 0;
