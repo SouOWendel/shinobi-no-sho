@@ -104,7 +104,9 @@
 						"manobra": "Manobra",
 						"geral": "Geral",
 						"tecnica": "Técnica",
-						"shinobi": "Shinobi"
+						"shinobi": "Shinobi",
+						"restrita": "Restrita",
+						"especial": "Especial"
 					}
 				},
 				"tecnicas": {

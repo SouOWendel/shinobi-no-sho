@@ -117,7 +117,9 @@ shinobiNoSho.ITEMS = {
 				manobra: "shinobiNoSho.ITEMS.aptidoes.tipoAptidao.manobra",
 				geral: "shinobiNoSho.ITEMS.aptidoes.tipoAptidao.geral",
 				tecnica: "shinobiNoSho.ITEMS.aptidoes.tipoAptidao.tecnica",
-				shinobi: "shinobiNoSho.ITEMS.aptidoes.tipoAptidao.shinobi"
+				shinobi: "shinobiNoSho.ITEMS.aptidoes.tipoAptidao.shinobi",
+				restrita: "shinobiNoSho.ITEMS.aptidoes.tipoAptidao.restrita",
+				especial: "shinobiNoSho.ITEMS.aptidoes.tipoAptidao.especial"
 			}
 		},
 		tecnicas: {
