@@ -84,7 +84,8 @@
 					"value": 0,
 					"mult": 3,
 					"ability": "vig",
-					"multNivel": 5
+					"multNivel": 5,
+					"bonus": null
 				},
 				"chakra": {
 					"max": 0,
@@ -92,7 +93,8 @@
 					"tempmax": 0,
 					"value": 0,
 					"mult": 3,
-					"ability": "esp"
+					"ability": "esp",
+					"bonus": null
 				},
 				"movement": {
 					"unidade": "m",

@@ -130,8 +130,8 @@ export class ShinobiActor extends Actor {
 			}
 		}
 		// Vitalidade e Chakra
-		attributes.vitalidade.max = 10 + 3*abilities.vig.tbonus + 5*details.nivelCampanha;
-		attributes.chakra.max = 10 + 3*abilities.esp.tbonus;
+		attributes.vitalidade.max = 10 + 3*abilities.vig.tbonus + 5*details.nivelCampanha + attributes.vitalidade.bonus;
+		attributes.chakra.max = 10 + 3*abilities.esp.tbonus + attributes.chakra.bonus;
 	}
 
   /**
