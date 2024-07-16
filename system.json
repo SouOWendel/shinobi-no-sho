@@ -1,15 +1,15 @@
 {
-  "id": "shinobiNoSho",
+  "id": "shinobinosho",
   "title": "Naruto 'Shinobi no Sho' (SnS)",
   "description": "Este é um sistema de Naruto 'Shinobi no Sho', um sistema e livro de regras com autoria de Diego 'Fesant' Silva, para a plataforma de RPG de Mesa conhecida como FoundryVTT. O desenvolvimento do sistema foi apoiado por Vallen.",
   "authors": [
     {
-      "name": "Mark57449",
+      "name": "Mark57449 (SouOWendel)",
       "email": "souowendel@gmail.com",
       "discord": "souowendel"
     },
     {
-      "name": "Vallen",
+      "name": "Vallen (Arthur)",
       "discord": "vallen_allond"
     }
   ],
