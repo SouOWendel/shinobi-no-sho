@@ -62,13 +62,8 @@
   "packFolders": [],
   "socket": true,
   "manifest": "https://raw.githubusercontent.com/souowendel/shinobi-no-sho/main/system.json",
-<<<<<<< HEAD
-  "download": "https://github.com/SouOWendel/shinobi-no-sho/releases/download/v1.3.0/shinobiNoSho-v1.3.0.zip",
-  "background": "systems/shinobinosho/assets/narutowallpaper.jpeg",
-=======
   "download": "https://github.com/SouOWendel/shinobi-no-sho/releases/download/v1.3.1/shinobiNoSho-v1.3.1.zip",
-  "background": "systems/shinobiNoSho/assets/narutowallpaper.jpeg",
->>>>>>> 636d10a1da57caf1af94845e59edf499303ce40a
+  "background": "systems/shinobinosho/assets/narutowallpaper.jpeg",
   "gridDistance": 1,
   "gridUnits": "m",
   "primaryTokenAttribute": "attributes.vitalidade",

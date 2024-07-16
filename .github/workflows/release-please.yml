@@ -42,8 +42,8 @@ jobs:
               run: |
                 TAG=${{steps.release.outputs.tag_name}}
                 echo "TAG_NAME=$TAG" >> $GITHUB_OUTPUT
-                echo "ZIP_NAME=shinobiNoSho-$TAG.zip" >> $GITHUB_OUTPUT
-                echo "RELEASE_DOWNLOAD_URL=https://github.com/${{github.repository}}/releases/download/$TAG/shinobiNoSho-$TAG.zip" >> $GITHUB_OUTPUT
+                echo "ZIP_NAME=shinobinosho-$TAG.zip" >> $GITHUB_OUTPUT
+                echo "RELEASE_DOWNLOAD_URL=https://github.com/${{github.repository}}/releases/download/$TAG/shinobinosho-$TAG.zip" >> $GITHUB_OUTPUT
 
             # Run some tests to make sure our `system.json` is correct
             # Exit before setting up node if not
