@@ -192,7 +192,7 @@ Hooks.on('renderSettings', async (app, [html]) => {
 	const badge = document.createElement('div');
 	badge.classList.add('shinobi', 'system-badge');
 	badge.innerHTML = `
-    <img src="systems/shinobiNoSho/assets/logoshinobinosho.png" 
+    <img src="systems/shinobinosho/assets/logoshinobinosho.png" 
 		data-tooltip="${game.i18n.localize('shinobiNoSho.nome')}" alt="${game.system.title}">
     <span class="system-info">${game.i18n.localize('shinobiNoSho.configuracoesVersao')} 
 		<strong>${game.system.version}</strong> </span>
@@ -208,7 +208,7 @@ Hooks.on('renderSettings', async (app, [html]) => {
 
 	const credits = html.querySelector('.credits');
 	credits.addEventListener('click', async function (ev) {
-		const content = await renderTemplate('systems/shinobiNoSho/templates/dialog/credits.hbs');
+		const content = await renderTemplate('systems/shinobinosho/templates/dialog/credits.hbs');
 		new Dialog({
 			title: 'Créditos no Desenvolvimento do Sistema',
 			content: content,

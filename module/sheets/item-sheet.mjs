@@ -14,7 +14,7 @@ export class ShinobiItemSheet extends ItemSheet {
       classes: ['shinobiNoSho', 'sheet', 'item'],
       width: 520,
 			height: 445,
-			template: 'systems/shinobiNoSho/templates/item/item-sheet.hbs',
+			template: 'systems/shinobinosho/templates/item/item-sheet.hbs',
       tabs: [
         {
           navSelector: '.sheet-tabs',
@@ -28,7 +28,7 @@ export class ShinobiItemSheet extends ItemSheet {
   /** @override */
   get template() {
 		const type = this.item.type.toLowerCase();
-    const path = 'systems/shinobiNoSho/templates/item';
+    const path = 'systems/shinobinosho/templates/item';
     return `${path}/item-${type}-sheet.hbs`;
   }
 

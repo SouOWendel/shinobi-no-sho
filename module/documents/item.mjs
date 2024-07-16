@@ -95,7 +95,7 @@ export class ShinobiItem extends Item {
         speaker: speaker,
         rollMode: rollMode,
         // flavor: label,
-        content: await renderTemplate('systems/shinobiNoSho/templates/chat/item-card.hbs', templateData),
+        content: await renderTemplate('systems/shinobinosho/templates/chat/item-card.hbs', templateData),
       });
     }
     // Otherwise, create a roll and send a chat message from it.
