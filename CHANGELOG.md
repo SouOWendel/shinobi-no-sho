@@ -1,5 +1,13 @@
 # CHANGELOG
 
+## [1.3.1](https://github.com/SouOWendel/shinobi-no-sho/compare/v1.3.0...v1.3.1) (2024-07-16)
+
+
+### Bug Fixes
+
+* **credits:** changed the name of contributor and the discord tag ([05a9216](https://github.com/SouOWendel/shinobi-no-sho/commit/05a9216ff1f0e3064777e1ef7d7869ba384c08d5))
+* **system:** changed the id for lowercase and added more info in authors array ([27e846b](https://github.com/SouOWendel/shinobi-no-sho/commit/27e846b3165f5b86f81d27b5d76733691ff0160d))
+
 ## [1.3.0](https://github.com/SouOWendel/shinobi-no-sho/compare/v1.2.1...v1.3.0) (2024-07-15)
 
 
