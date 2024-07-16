@@ -1,5 +1,13 @@
 # CHANGELOG
 
+## [1.3.2](https://github.com/SouOWendel/shinobi-no-sho/compare/v1.3.1...v1.3.2) (2024-07-16)
+
+
+### Bug Fixes
+
+* **rename path:** renamed all path with new name of system ([0aee48b](https://github.com/SouOWendel/shinobi-no-sho/commit/0aee48b9d1975768229a9eaa031d2e3f55900bf3))
+* **test:** test ([b647a61](https://github.com/SouOWendel/shinobi-no-sho/commit/b647a618ff3addeb9a055f64ea604c5d4d24e7a1))
+
 ## [1.3.1](https://github.com/SouOWendel/shinobi-no-sho/compare/v1.3.0...v1.3.1) (2024-07-16)
 
 
