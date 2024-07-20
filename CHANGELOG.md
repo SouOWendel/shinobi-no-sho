@@ -1,5 +1,20 @@
 # CHANGELOG
 
+## [1.4.0](https://github.com/SouOWendel/shinobi-no-sho/compare/v1.3.2...v1.4.0) (2024-07-20)
+
+
+### Features
+
+* **localization:** added english language, changed name and book discord, also added action and techniques translates ([5b6f961](https://github.com/SouOWendel/shinobi-no-sho/commit/5b6f961f4494d5aa3c4f59403236273abe595018))
+* **sidebar:** changed the logo and added some styles for header ([8ddc89d](https://github.com/SouOWendel/shinobi-no-sho/commit/8ddc89db2243b7f0cf10d587d09463bbce2dd879))
+* **system.json:** changed the title of system, removed the background, updated the verified version and grid keys ([8ed0012](https://github.com/SouOWendel/shinobi-no-sho/commit/8ed0012365e76acad663ebb9258422aa01874d54))
+* **techniques and actions dropdown:** added subtypes (jikuukan and shunjutsu) and added more actions ([d271aba](https://github.com/SouOWendel/shinobi-no-sho/commit/d271aba3e092978abccb3f8a4987a36ddebbb3ba))
+
+
+### Bug Fixes
+
+* **template.json:** fixed the skill medicine, changed the ability from 'for' to 'int' ([ee639e5](https://github.com/SouOWendel/shinobi-no-sho/commit/ee639e58b8036ac8c5616a6e33c130c827b53754))
+
 ## [1.3.2](https://github.com/SouOWendel/shinobi-no-sho/compare/v1.3.1...v1.3.2) (2024-07-16)
 
 
