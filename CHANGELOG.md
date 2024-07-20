@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## [1.6.0](https://github.com/SouOWendel/shinobi-no-sho/compare/v1.5.0...v1.6.0) (2024-07-20)
+
+
+### Features
+
+* **chat item card:** added characteristics spans to display on techniques items ([435bbf5](https://github.com/SouOWendel/shinobi-no-sho/commit/435bbf56e1677177ec642e5b4d40bef23c45e30a))
+
 ## [1.5.0](https://github.com/SouOWendel/shinobi-no-sho/compare/v1.4.0...v1.5.0) (2024-07-20)
 
 
