@@ -1,6 +1,6 @@
 {
   "id": "shinobinosho",
-  "title": "Naruto 'Shinobi no Sho' (SnS)",
+  "title": "Shinobi no Sho (SnS)",
   "description": "Este é um sistema de Naruto 'Shinobi no Sho', um sistema e livro de regras com autoria de Diego 'Fesant' Silva, para a plataforma de RPG de Mesa conhecida como FoundryVTT. O desenvolvimento do sistema foi apoiado por Vallen.",
   "authors": [
     {
@@ -17,17 +17,10 @@
   "readme": "README.md",
   "bugs": "https://github.com/SouOWendel/shinobi-no-sho/issues",
   "changelog": "CHANGELOG.md",
-  "media": [
-    {
-      "type": "setup",
-      "url": "systems/shinobinosho/assets/narutowallpaper.jpeg",
-      "thumbnail": "systems/shinobinosho/assets/narutowallpaper.jpeg"
-    }
-  ],
   "version": "1.3.2",
   "compatibility": {
     "minimum": 11,
-    "verified": "12.327",
+    "verified": "12.329",
     "maximum:": 12
   },
   "esmodules": [
@@ -41,6 +34,11 @@
       "lang": "pt-BR",
       "name": "Português (Brasil)",
       "path": "lang/pt-BR.json"
+    },
+		{
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
     }
   ],
   "flags": {
@@ -54,7 +52,7 @@
       "paths": [
         "templates",
         "css",
-        "lang/pt-BR.json"
+        "lang"
       ]
     }
   },
@@ -63,9 +61,12 @@
   "socket": true,
   "manifest": "https://raw.githubusercontent.com/souowendel/shinobi-no-sho/main/system.json",
   "download": "https://github.com/SouOWendel/shinobi-no-sho/releases/download/v1.3.2/shinobinosho-v1.3.2.zip",
-  "background": "systems/shinobinosho/assets/narutowallpaper.jpeg",
   "gridDistance": 1,
   "gridUnits": "m",
+	"grid": {
+    "distance": 1,
+    "units": "m"
+  },
   "primaryTokenAttribute": "attributes.vitalidade",
   "secondaryTokenAttribute": "attributes.chakra"
 }
