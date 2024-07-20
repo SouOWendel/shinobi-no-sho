@@ -286,7 +286,7 @@
 						}
 					},
 					"medicina": {
-						"ability": "for",
+						"ability": "int",
 						"value": null,
 						"bonus": null,
 						"caract": {
