@@ -150,6 +150,8 @@ shinobiNoSho.ITEMS = {
 				controleChakra: "shinobiNoSho.ITEMS.tecnicas.subtipo.controleChakra",
 				kinjutsu: "shinobiNoSho.ITEMS.tecnicas.subtipo.kinjutsu",
 				hijutsu: "shinobiNoSho.ITEMS.tecnicas.subtipo.hijutsu",
+				jikuukan: "shinobiNoSho.ITEMS.tecnicas.subtipo.jikuukan",
+				shunjutsu: "shinobiNoSho.ITEMS.tecnicas.subtipo.shunjutsu",
 				outro: "shinobiNoSho.ITEMS.tecnicas.subtipo.outro"
 			},
 			tipoJutsu: {
@@ -229,6 +231,8 @@ shinobiNoSho.ITEMS = {
 				parcial: "shinobiNoSho.ITEMS.generico.acao.parcial",
 				livre: "shinobiNoSho.ITEMS.generico.acao.livre",
 				reacao: "shinobiNoSho.ITEMS.generico.acao.reacao",
+				completa: "shinobiNoSho.ITEMS.generico.acao.completa",
+				vertexto: "shinobiNoSho.ITEMS.generico.acao.vertexto",
 			},
 			raridade: {
 				comum: "shinobiNoSho.ITEMS.generico.raridade.comum",
