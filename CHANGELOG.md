@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## [1.5.0](https://github.com/SouOWendel/shinobi-no-sho/compare/v1.4.0...v1.5.0) (2024-07-20)
+
+
+### Features
+
+* **readme:** added badges and getting started ([e9c4df6](https://github.com/SouOWendel/shinobi-no-sho/commit/e9c4df6ae23b27d87d588cc51db07ae68695b678))
+
 ## [1.4.0](https://github.com/SouOWendel/shinobi-no-sho/compare/v1.3.2...v1.4.0) (2024-07-20)
 
 
