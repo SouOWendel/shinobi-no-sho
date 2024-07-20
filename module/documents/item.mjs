@@ -88,6 +88,12 @@ export class ShinobiItem extends Item {
 			if (this.system?.detalhes?.caract?.ambidestra) templateData.info.push("Ambidestra");
 			if (this.system?.detalhes?.caract?.acuidade) templateData.info.push("Acuidade");
 		}
+		
+		if (item.type == 'tecnicas') {
+			if (this.system?.detalhes?.caract?.selos) templateData.info.push("Selos de Mão");
+			if (this.system?.detalhes?.caract?.escalonaChakra) templateData.info.push("Escalona com Chakra");
+			console.log(templateData.info);
+		}
 
     // If there's no roll data, send a chat message.
     if (!this.system.formula) {
