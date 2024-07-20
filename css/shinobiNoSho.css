@@ -251,12 +251,13 @@
   display: flex;
   gap: 8px;
   margin: 0;
-  font-size: 11px;
+  font-size: 10px;
 }
 .shinobi.sidebar-heading h2 {
   background-color: initial;
   border: initial;
   margin: 0;
+  font-size: 12px;
 }
 
 .no-orange-hyperlink a {

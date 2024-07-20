@@ -177,7 +177,7 @@ Hooks.on('renderSettings', async (app, [html]) => {
       </li>
       <li>
         <a href="https://discord.gg/8vmJ7Mt" target="_blank">
-          ${game.i18n.localize('shinobiNoSho.SOCIAL.discordSistema')}
+          ${game.i18n.localize('shinobiNoSho.SOCIAL.discordLivro')}
         </a>
       </li>
 			<li>
@@ -192,7 +192,7 @@ Hooks.on('renderSettings', async (app, [html]) => {
 	const badge = document.createElement('div');
 	badge.classList.add('shinobi', 'system-badge');
 	badge.innerHTML = `
-    <img src="systems/shinobinosho/assets/logoshinobinosho.png" 
+    <img src="systems/shinobinosho/assets/logoshinobinosho.webp" 
 		data-tooltip="${game.i18n.localize('shinobiNoSho.nome')}" alt="${game.system.title}">
     <span class="system-info">${game.i18n.localize('shinobiNoSho.configuracoesVersao')} 
 		<strong>${game.system.version}</strong> </span>
