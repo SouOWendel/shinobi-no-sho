@@ -138,8 +138,6 @@
 						"controleChakra": "Controle de Chakra",
 						"kinjutsu": "Kinjutsu",
 						"hijutsu": "Hijutsu",
-						"jikuukan": "Jikuukan",
-						"shunjutsu": "Shunjutsu",
 						"outro": "Outro"
 					},
 					"tipoJutsu": {
@@ -218,9 +216,7 @@
 						"movimento": "Movimento",
 						"parcial": "Parcial",
 						"livre": "Livre",
-						"reacao": "Reação",
-						"completa": "Completa",
-						"vertexto": "Ver Texto"
+						"reacao": "Reação"
 					},
 					"raridade": {
 						"comum": "Comum",
