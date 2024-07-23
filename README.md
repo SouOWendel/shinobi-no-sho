@@ -24,7 +24,8 @@ Há duas opções, uma para o desenvolvimento e outra apenas para instalar o sis
 
 Certifique-se de estar na versão correta para o Foundry para que o sistema seja compatível.
 ## 🔗 Links
-Para encontrar em contato comigo, estou disponível em algumas redes sociais (com algumas variações de tempo de resposta). [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/wendel-henrique/)
+Para encontrar em contato comigo, estou disponível em algumas redes sociais (com algumas variações de tempo de resposta).<br>
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/wendel-henrique/)
 [![twitter](https://img.shields.io/badge/twitter-1DA1F2?style=flat-square&logo=twitter&logoColor=white)](https://x.com/EuSouOWendel)
 [![Meu gmail: souowendel@gmail.com](https://img.shields.io/badge/Gmail-D14836?style=flat-square&logo=gmail&logoColor=white&style=flat&compact=true)](https://mail.google.com/mail/u/0/?fs=1&to=souowendel@gmail.com&su=Enquiry&tf=cm)
 ![Meu usuário do Discord: souowendel](https://dcbadge.vercel.app/api/shield/294989840104161280?style=flat-square&compact=true)
