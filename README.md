@@ -4,7 +4,6 @@
 
 # Um sistema para FoundryVTT.
 
-Uma breve descrição sobre o que esse projeto faz e para quem ele é
 Este é um sistema para o tabletop conhecido como Foundry baseado no livro de regras de 'Shinobi no Sho' (SnS), incluindo dentro de suas funções, uma ficha de ninja para criar os seus personagens, e também, seis tipos de itens para complementar ataques, defesas e descrições (armas, armaduras, itens gerais, aptidões, poderes e também técnicas).
 
 ## Baixando manualmente.
