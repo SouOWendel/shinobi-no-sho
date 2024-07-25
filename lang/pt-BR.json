@@ -222,13 +222,13 @@
 						"completa": "Completa",
 						"vertexto": "Ver Texto"
 					},
-					"raridade": {
-						"comum": "Comum",
-						"incomum": "Incomum",
-						"raro": "Raro",
-						"muitoraro": "Muito Raro",
-						"lendario": "Lendário",
-						"mitico": "Mítico"
+					"rarity": {
+						"common": "Comum",
+						"uncommon": "Incomum",
+						"rare": "Raro",
+						"veryrare": "Muito Raro",
+						"legendary": "Lendário",
+						"artifact": "Mítico"
 					}
 				}
 			}
