@@ -137,6 +137,7 @@ shinobiNoSho.ITEMS = {
 				cilindro: "shinobiNoSho.ITEMS.tecnicas.areaEfeito.cilindro",
 				esfera: "shinobiNoSho.ITEMS.tecnicas.areaEfeito.esfera",
 				onda: "shinobiNoSho.ITEMS.tecnicas.areaEfeito.onda",
+				linha: "shinobiNoSho.ITEMS.tecnicas.areaEfeito.linha",
 				outro: "shinobiNoSho.ITEMS.tecnicas.areaEfeito.outro"
 			},
 			tipo: {
@@ -181,6 +182,7 @@ shinobiNoSho.ITEMS = {
 				sustentada: "shinobiNoSho.ITEMS.tecnicas.duracao.sustentada",
 				continua: "shinobiNoSho.ITEMS.tecnicas.duracao.continua",
 				permanente: "shinobiNoSho.ITEMS.tecnicas.duracao.permanente",
+				vertexto: "shinobiNoSho.ITEMS.generico.acao.vertexto"
 			}
 		},
 		armas: {
@@ -234,13 +236,13 @@ shinobiNoSho.ITEMS = {
 				completa: "shinobiNoSho.ITEMS.generico.acao.completa",
 				vertexto: "shinobiNoSho.ITEMS.generico.acao.vertexto",
 			},
-			raridade: {
-				comum: "shinobiNoSho.ITEMS.generico.raridade.comum",
-				incomum: "shinobiNoSho.ITEMS.generico.raridade.incomum",
-				raro: "shinobiNoSho.ITEMS.generico.raridade.raro",
-				muitoraro: "shinobiNoSho.ITEMS.generico.raridade.muitoraro",
-				lendario: "shinobiNoSho.ITEMS.generico.raridade.lendario",
-				mitico: "shinobiNoSho.ITEMS.generico.raridade.mitico",
+			rarity: {
+				common: "shinobiNoSho.ITEMS.generico.rarity.common",
+				uncommon: "shinobiNoSho.ITEMS.generico.rarity.uncommon",
+				rare: "shinobiNoSho.ITEMS.generico.rarity.rare",
+				veryrare: "shinobiNoSho.ITEMS.generico.rarity.veryrare",
+				legendary: "shinobiNoSho.ITEMS.generico.rarity.legendary",
+				artifact: "shinobiNoSho.ITEMS.generico.rarity.artifact",
 			}
 		}
 	}
