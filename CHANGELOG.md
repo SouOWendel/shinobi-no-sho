@@ -1,5 +1,14 @@
 # CHANGELOG
 
+## [1.7.0](https://github.com/SouOWendel/shinobi-no-sho/compare/v1.6.0...v1.7.0) (2024-07-25)
+
+
+### Features
+
+* **config.mjs:** added linha to areaEfeito, vertexto on duration, and also replaced raridade to rarity ([97c5fe8](https://github.com/SouOWendel/shinobi-no-sho/commit/97c5fe8f6e0544b190943b559a163d32953b8f63))
+* **localization:** added vertexto and linha translates for english and portuguese files ([2685230](https://github.com/SouOWendel/shinobi-no-sho/commit/268523069b350ad42caa324af696dceb32f2f823))
+* **rarity:** changed the rarity field and keys for compatibility with Rarity Colors and modules for DND5e system ([2141ee6](https://github.com/SouOWendel/shinobi-no-sho/commit/2141ee6941b6a7d4fa7d5d59993e79ed3588833e))
+
 ## [1.6.0](https://github.com/SouOWendel/shinobi-no-sho/compare/v1.5.0...v1.6.0) (2024-07-20)
 
 
