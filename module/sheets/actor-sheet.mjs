@@ -289,11 +289,11 @@ export class ShinobiActorSheet extends ActorSheet {
         if (item) return item.roll();
       }
 
-			if (dataset.rollType == 'ability' && dataset.ability) {
-				const data = system.abilities[dataset.ability];
+			if (dataset.rollType == 'ability' && dataset.key) {
+				const data = system.abilities[dataset.key];
 				const formula = ['1d8', dataset.roll, data.tbonus];
 				const formulaStr = formula.join('+');
-				let label =  'Fazendo um teste de ' + game.i18n.localize(`shinobiNoSho.ability.${dataset.ability}.long`) + '.';
+				let label =  'Fazendo um teste de ' + game.i18n.localize(`shinobiNoSho.ability.${dataset.key}.long`) + '.';
         let roll = new Roll(formulaStr, this.actor.getRollData());
 				roll.toMessage({
 					speaker: ChatMessage.getSpeaker({ actor: this.actor }),
