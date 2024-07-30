@@ -275,6 +275,11 @@ export class ShinobiActorSheet extends ActorSheet {
     event.preventDefault();
     const element = event.currentTarget;
     const dataset = element.dataset;
+		const context = super.getData();
+    // Use a safe clone of the actor data for further operations.
+    const actorData = context.data;
+    // Add the actor's data to context.data for easier access, as well as flags.
+    const system = actorData.system;
 
     // Handle item rolls.
     if (dataset.rollType) {
@@ -282,6 +287,20 @@ export class ShinobiActorSheet extends ActorSheet {
         const itemId = element.closest('.item').dataset.itemId;
         const item = this.actor.items.get(itemId);
         if (item) return item.roll();
+      }
+
+			if (dataset.rollType == 'ability' && dataset.ability) {
+				const data = system.abilities[dataset.ability];
+				const formula = ['1d8', dataset.roll, data.tbonus];
+				const formulaStr = formula.join('+');
+				let label =  'Fazendo um teste de ' + game.i18n.localize(`shinobiNoSho.ability.${dataset.ability}.long`) + '.';
+        let roll = new Roll(formulaStr, this.actor.getRollData());
+				roll.toMessage({
+					speaker: ChatMessage.getSpeaker({ actor: this.actor }),
+					flavor: label,
+					rollMode: game.settings.get('core', 'rollMode'),
+				});
+				return roll;
       }
     }
 
