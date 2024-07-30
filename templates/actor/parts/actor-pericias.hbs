@@ -4,7 +4,8 @@
 		<div class="grid">
 			{{#each system.skills.geral as |skill id|}}
 			<div class="flex flex-group-center align-center">
-				<label class="resource-label skill-label flex-1 flex-group-center align-center {{id}}">{{label}}</label>
+				<label class="resource-label skill-label flex-1 flex-group-center align-center {{id}} rollable"
+				data-roll-type="skill" data-key="{{id}}">{{label}}</label>
 				<div class="resource-content flex flex-2 flex-group-center align-center">
 					<input type="text" name="system.skills.geral.{{id}}.total" value="{{skill.total}}" class="" data-dtype="Number" disabled>
 					<i class="fas fa-equals"></i>
@@ -43,7 +44,8 @@
 		<div class="flex flexcol resource-content">
 			{{#each system.skills.social as |skill id|}}
 			<div class="flex flex-group-center align-center">
-				<label class="resource-label skill-label flex-1 flex-group-center align-center {{id}}">{{label}}</label>
+				<label class="resource-label skill-label flex-1 flex-group-center align-center {{id}} rollable"
+				data-roll-type="skill" data-key="{{id}}">{{label}}</label>
 				<div class="resource-content flex flex-2 flex-group-center align-center">
 					<input type="text" name="system.skills.social.{{id}}.total" value="{{skill.total}}" class="flex-1" data-dtype="Number" disabled>
 					<i class="fas fa-equals"></i>
