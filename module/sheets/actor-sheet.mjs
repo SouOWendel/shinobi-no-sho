@@ -293,7 +293,7 @@ export class ShinobiActorSheet extends ActorSheet {
 				const data = system.abilities[dataset.key];
 				const formula = ['1d8', dataset.roll, data.tbonus];
 				const formulaStr = formula.join('+');
-				let label =  'Fazendo um teste de ' + game.i18n.localize(`shinobiNoSho.ability.${dataset.key}.long`) + ':';
+				const label =  'Fazendo um teste de ' + game.i18n.localize(`shinobiNoSho.ability.${dataset.key}.long`) + ':';
         let roll = new Roll(formulaStr, this.actor.getRollData());
 				roll.toMessage({
 					speaker: ChatMessage.getSpeaker({ actor: this.actor }),
@@ -313,7 +313,22 @@ export class ShinobiActorSheet extends ActorSheet {
 				} else if (game.i18n.has(`shinobiNoSho.skills.social.${dataset.key}`)) {
 					getLabel = game.i18n.localize(`shinobiNoSho.skills.social.${dataset.key}`);
 				}
-				let label =  'Fazendo um teste de ' + getLabel + ':';
+				const label =  'Fazendo um teste de ' + getLabel + ':';
+        let roll = new Roll(formulaStr, this.actor.getRollData());
+				roll.toMessage({
+					speaker: ChatMessage.getSpeaker({ actor: this.actor }),
+					flavor: label,
+					rollMode: game.settings.get('core', 'rollMode'),
+				});
+				return roll;
+      }
+
+			if (dataset.rollType == 'combatAbilities' && dataset.key) {
+				const data = system.abilities.combate[dataset.key];
+				const formula = ['2d8', dataset.roll, data.total];
+				const formulaStr = formula.join('+');
+				let getLabel = game.i18n.localize(`shinobiNoSho.combatAbilities.${dataset.key}`);
+				const label =  'Fazendo um teste de ' + getLabel + ':';
         let roll = new Roll(formulaStr, this.actor.getRollData());
 				roll.toMessage({
 					speaker: ChatMessage.getSpeaker({ actor: this.actor }),
