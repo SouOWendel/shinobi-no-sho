@@ -146,6 +146,14 @@ export class ShinobiActorSheet extends ActorSheet {
     context.tecnicas = tecnicas;
   }
 
+	_applyDegree(diceResult, critical) {
+		if (diceResult >= critical ) console.log("Acerto crítico!")
+		else if (diceResult >= 12 ) console.log("Um ótimo golpe!")
+		else if (diceResult >= 9 ) console.log("Um golpe razoável.")
+		else if (diceResult >= 4 ) console.log("Um golpe ruim.")
+		else if (diceResult >= 2 ) console.log("Falha Crítica!")
+	}
+
 	/** @inheritDoc */
 	_getSubmitData(updateData = {}) {
 		const formData = foundry.utils.expandObject(
@@ -271,7 +279,7 @@ export class ShinobiActorSheet extends ActorSheet {
    * @param {Event} event   The originating click event
    * @private
    */
-  _onRoll(event) {
+  async _onRoll(event) {
     event.preventDefault();
     const element = event.currentTarget;
     const dataset = element.dataset;
@@ -330,11 +338,12 @@ export class ShinobiActorSheet extends ActorSheet {
 				let getLabel = game.i18n.localize(`shinobiNoSho.combatAbilities.${dataset.key}`);
 				const label =  'Fazendo um teste de ' + getLabel + ':';
         let roll = new Roll(formulaStr, this.actor.getRollData());
-				roll.toMessage({
+				await roll.toMessage({
 					speaker: ChatMessage.getSpeaker({ actor: this.actor }),
 					flavor: label,
 					rollMode: game.settings.get('core', 'rollMode'),
 				});
+				this._applyDegree(roll.terms[0].total, 15);
 				return roll;
       }
     }
