@@ -70,7 +70,7 @@ export default class D8Roll extends Roll {
    * Is this roll a critical failure? Returns undefined if roll isn't evaluated.
    * @type {boolean|void}
    */
-  get isFumble() {
+  get isFailure() {
     if ( !this.validD8Roll || !this._evaluated ) return undefined;
     if ( !Number.isNumeric(this.options.fumble) ) return false;
     return this.dice[0].total <= this.options.fumble;
@@ -94,7 +94,7 @@ export default class D8Roll extends Roll {
 			total,
 			critical: this.options.critical,
 			isCritical: this.isCritical,
-			isFumble: this.isFumble,
+			isFailure: this.isFailure,
 			flavor: this.options.flavor,
 			degree: this.getDegree
 		};
