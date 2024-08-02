@@ -1,6 +1,6 @@
 export async function d8Roll({
   parts=[], data={}, event, critical=15, fumble=3,
-  fastForward, chooseModifier=false, template, title, dialogOptions,
+  shiftFastForward, chooseModifier=false, template, title, dialogOptions,
   chatMessage=true, messageData={}, rollMode, flavor
 }={}) {
 
@@ -18,14 +18,16 @@ export async function d8Roll({
   });
 
 	// Variável com os dados do Dialog
-  const configured = await roll.configureDialog({
-		title,
-		chooseModifier,
-		defaultRollMode,
-		defaultAbility: data?.item?.ability || data?.defaultAbility,
-		template
-	}, dialogOptions);
-	if (configured === null) return null;
+	if (shiftFastForward) {
+		const configured = await roll.configureDialog({
+			title,
+			chooseModifier,
+			defaultRollMode,
+			defaultAbility: data?.item?.ability || data?.defaultAbility,
+			template
+		}, dialogOptions);
+		if (configured === null) return null;
+	} else roll.options.rollMode ??= defaultRollMode;
 
   // Evaluate the configured roll
   await roll.evaluate({ 
@@ -38,6 +40,6 @@ export async function d8Roll({
 	if ( messageId ) foundry.utils.setProperty(messageData, "flags.shinobinosho.originatingMessage", messageId);
 
   // Create a Chat Message
-  if ( roll && chatMessage ) await roll.toMessage(messageData, {data: configured});
+  if ( roll && chatMessage ) await roll.toMessage(messageData);
   return roll;
 }
