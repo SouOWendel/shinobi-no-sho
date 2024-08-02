@@ -1,7 +1,7 @@
 export async function d8Roll({
-  parts=[], data={}, event, critical=15, fumble=3,
-  shiftFastForward, chooseModifier=false, template, title, dialogOptions,
-  chatMessage=true, messageData={}, rollMode, flavor
+  parts=[], data={}, event, critical=15, failure=3,
+  shiftFastForward, chooseModifier=false, template, title,
+  chatMessage=true, messageData={}, rollMode, flavor, hasDegree=false, hasCritical=false
 }={}) {
 
   // Handle input arguments
@@ -14,7 +14,9 @@ export async function d8Roll({
     defaultRollMode,
     rollMode,
     critical,
-    fumble,
+    failure,
+		hasDegree,
+		hasCritical
   });
 
 	// Variável com os dados do Dialog
@@ -25,7 +27,7 @@ export async function d8Roll({
 			defaultRollMode,
 			defaultAbility: data?.item?.ability || data?.defaultAbility,
 			template
-		}, dialogOptions);
+		});
 		if (configured === null) return null;
 	} else roll.options.rollMode ??= defaultRollMode;
 

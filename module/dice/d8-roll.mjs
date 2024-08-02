@@ -51,13 +51,27 @@ export default class D8Roll extends Roll {
    * @type {boolean|void}
    */
   get isCritical() {
-    if ( !this.validD8Roll || !this._evaluated ) return undefined;
+    if ( !this.validD8Roll || !this._evaluated || !this.hasCritical) return undefined;
     if ( !Number.isNumeric(this.options.critical) ) return false;
     return this.dice[0].total >= this.options.critical;
   }
 
+	/**
+   * Is this roll a critical failure? Returns undefined if roll isn't evaluated.
+   * @type {boolean|void}
+   */
+  get isFailure() {
+    if ( !this.validD8Roll || !this._evaluated || !this.hasCritical) return undefined;
+    if ( !Number.isNumeric(this.options.failure) ) return false;
+    return this.dice[0].total <= this.options.failure;
+  }
+
   /* -------------------------------------------- */
 
+	/**
+   * Does this roll require a degree calculation? Returns the degree based on the roll result.
+   * @type {string}
+   */
 	get getDegree() {
 		if (this.dice[0].total >= this.options.critical ) return "Grau 4"
 		else if (this.dice[0].total >= 12 ) return "Grau 3"
@@ -66,15 +80,13 @@ export default class D8Roll extends Roll {
 		else if (this.dice[0].total >= 2 ) return "Falha"
 	}
 
-  /**
-   * Is this roll a critical failure? Returns undefined if roll isn't evaluated.
-   * @type {boolean|void}
-   */
-  get isFailure() {
-    if ( !this.validD8Roll || !this._evaluated ) return undefined;
-    if ( !Number.isNumeric(this.options.fumble) ) return false;
-    return this.dice[0].total <= this.options.fumble;
-  }
+	get hasCritical() {
+		return this.options.hasCritical;
+	}
+
+	get hasDegree() {
+		return this.options.hasDegree;
+	}
 
   /* -------------------------------------------- */
   /*  D8 Roll Methods                            */
@@ -86,17 +98,19 @@ export default class D8Roll extends Roll {
 		const total = this.total ?? NaN;
 		const tooltip = await this.getTooltip();
 		const formula = this._formula;
-
+		
 		const chatData = {
+			user: game.user,
+			flavor: this.options.flavor,
 			formula,
 			tooltip,
-			user: game.user,
 			total,
 			critical: this.options.critical,
+			degree: this.getDegree,
 			isCritical: this.isCritical,
 			isFailure: this.isFailure,
-			flavor: this.options.flavor,
-			degree: this.getDegree
+			hasCritical: this.hasCritical,
+			hasDegree: this.hasDegree,
 		};
 
 		return renderTemplate(template, chatData);
@@ -113,9 +127,9 @@ export default class D8Roll extends Roll {
     d8.modifiers = [];
     d8.number = 2;
 
-    // Assign critical and fumble thresholds
+    // Assign critical and failure thresholds
     if ( this.options.critical ) d8.options.critical = this.options.critical;
-    if ( this.options.fumble ) d8.options.fumble = this.options.fumble;
+    if ( this.options.failure ) d8.options.failure = this.options.failure;
 
     // Re-compile the underlying formula
     this._formula = this.constructor.getFormula(this.terms);

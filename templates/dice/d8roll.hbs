@@ -7,13 +7,15 @@
 			{{formula}}
 		</div>
 		{{{tooltip}}}
-		<div class="grid {{#if isCritical}}itsCritical{{/if}} {{#if isFailure}}itsFailure{{/if}}">
+		<div class="{{#if hasDegree}}grid{{/if}} {{#if isCritical}}itsCritical{{/if}} {{#if isFailure}}itsFailure{{/if}}">
 			<h4 class="dice-total">
 				{{total}}
 			</h4>
-			<h4 class="dice-total degree">
-				{{degree}}
-			</h4>
+			{{#if hasDegree }}
+				<h4 class="dice-total degree">
+					{{degree}}
+				</h4>
+			{{/if}}
 		</div>
 	</div>
 </div>
