@@ -7,6 +7,7 @@ import { ShinobiItemSheet } from "./sheets/item-sheet.mjs";
 // Import helper/utility classes and constants.
 import { preloadHandlebarsTemplates } from "./helpers/templates.mjs";
 import { shinobiNoSho } from "./helpers/config.mjs";
+import D8Roll from "./dice/d8-roll.mjs";
 
 /* -------------------------------------------- */
 /*  Init Hook                                   */
@@ -19,10 +20,16 @@ Hooks.once('init', function () {
     ShinobiActor,
     ShinobiItem,
     rollItemMacro,
+		D8Roll
   };
 
   // Add custom constants for configuration.
   CONFIG.shinobiNoSho = shinobiNoSho;
+	CONFIG.Dice.D8Roll = D8Roll;
+	CONFIG.Dice.rolls = [D8Roll];
+
+	// Template for Rolls
+	// CONFIG.Dice.rolls[0].CHAT_TEMPLATE = 'systems/shinobinosho/templates/dice/roll.hbs';
 
   /**
    * Set an initiative formula for the system
