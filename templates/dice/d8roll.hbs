@@ -1,0 +1,21 @@
+<div id="d8roll" class="dice-roll d8roll">
+	{{#if flavor}}
+	<div class="dice-flavor">{{flavor}}</div>
+	{{#if isCritical}}Foi crítico{{/if}}
+	{{/if}}
+	<div class="dice-result">
+		<div class="dice-formula">
+			{{formula}}
+		</div>
+		{{{tooltip}}}
+		<div class="grid">
+			<h4 class="dice-total">
+				{{total}}
+			</h4>
+			<h4 class="dice-total">
+				Grau
+			</h4>
+		</div>
+		{{log this}}
+	</div>
+</div>
