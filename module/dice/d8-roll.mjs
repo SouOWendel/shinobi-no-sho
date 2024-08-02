@@ -53,11 +53,18 @@ export default class D8Roll extends Roll {
   get isCritical() {
     if ( !this.validD8Roll || !this._evaluated ) return undefined;
     if ( !Number.isNumeric(this.options.critical) ) return false;
-		this.applyDegree(this.dice[0].total, this.options.critical);
     return this.dice[0].total >= this.options.critical;
   }
 
   /* -------------------------------------------- */
+
+	get getDegree() {
+		if (this.dice[0].total >= this.options.critical ) return "Grau 4"
+		else if (this.dice[0].total >= 12 ) return "Grau 3"
+		else if (this.dice[0].total >= 9 ) return "Grau 2"
+		else if (this.dice[0].total >= 4 ) return "Grau 1"
+		else if (this.dice[0].total >= 2 ) return "Falha"
+	}
 
   /**
    * Is this roll a critical failure? Returns undefined if roll isn't evaluated.
@@ -72,14 +79,6 @@ export default class D8Roll extends Roll {
   /* -------------------------------------------- */
   /*  D8 Roll Methods                            */
   /* -------------------------------------------- */
-
-	applyDegree(diceResult, critical) {
-		if (diceResult >= critical ) console.log("Acerto crítico!")
-		else if (diceResult >= 12 ) console.log("Um ótimo golpe!")
-		else if (diceResult >= 9 ) console.log("Um golpe razoável.")
-		else if (diceResult >= 4 ) console.log("Um golpe ruim.")
-		else if (diceResult >= 2 ) console.log("Falha Crítica!")
-	}
 
 	/** Work around upstream issue in which display base formula is used for chat messages instead of display formula */
 	async render({template = this.constructor.CHAT_TEMPLATE}){
@@ -96,7 +95,8 @@ export default class D8Roll extends Roll {
 			critical: this.options.critical,
 			isCritical: this.isCritical,
 			isFumble: this.isFumble,
-			flavor: this.options.flavor
+			flavor: this.options.flavor,
+			degree: this.getDegree
 		};
 
 		return renderTemplate(template, chatData);
