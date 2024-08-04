@@ -147,14 +147,6 @@ export class ShinobiActorSheet extends ActorSheet {
     context.tecnicas = tecnicas;
   }
 
-	_applyDegree(diceResult, critical) {
-		if (diceResult >= critical ) console.log("Acerto crítico!")
-		else if (diceResult >= 12 ) console.log("Um ótimo golpe!")
-		else if (diceResult >= 9 ) console.log("Um golpe razoável.")
-		else if (diceResult >= 4 ) console.log("Um golpe ruim.")
-		else if (diceResult >= 2 ) console.log("Falha Crítica!")
-	}
-
 	/** @inheritDoc */
 	_getSubmitData(updateData = {}) {
 		const formData = foundry.utils.expandObject(
