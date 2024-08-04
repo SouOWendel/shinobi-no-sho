@@ -1,5 +1,30 @@
 # CHANGELOG
 
+## [1.8.0](https://github.com/SouOWendel/shinobi-no-sho/compare/v1.7.0...v1.8.0) (2024-08-04)
+
+
+### Features
+
+* **actor sheet rolls:** added ability feature to onRoll handler for roll abilities with total bonus with flavor on chat ([f6d2231](https://github.com/SouOWendel/shinobi-no-sho/commit/f6d2231655e1f6a67c25da832986eed16593d74b))
+* **actor sheet rolls:** added roll of skill type using dataset and onRoll listener/hook ([8aace4e](https://github.com/SouOWendel/shinobi-no-sho/commit/8aace4e28602dbae9c2478aa15acfc7388d2bde0))
+* **actor sheet rolls:** added rolls to combat abilities with dataset roll type and key ([26a4193](https://github.com/SouOWendel/shinobi-no-sho/commit/26a4193513535328400d5cd54a28003a91ef9ad6))
+* **actor sheet rolls:** changed the object dataset ability name to generic name as 'key' ([25be504](https://github.com/SouOWendel/shinobi-no-sho/commit/25be504aaee6d897fc493243b1df368008dc746c))
+* **d8roll class:** changed the static property isFumble to IsFailure ([b79b4a8](https://github.com/SouOWendel/shinobi-no-sho/commit/b79b4a8c41aca016bec73b2489f5a6eb5f6d6953))
+* **d8Roll system function:** added condition to open the dialog to configure roll only when shift key boolean is true ([d48a8b3](https://github.com/SouOWendel/shinobi-no-sho/commit/d48a8b3f365f3bf5ca7921f9e4c4be0bf190a5bc))
+* **d8roll template:** added the classes: degree, itsCritical, ItsFailure. Removed the critical data test ([b562cf0](https://github.com/SouOWendel/shinobi-no-sho/commit/b562cf0ed3eb90ecc82ac280e642483b21417f6e))
+* **d8roll:** added chatTemplate option to d8roll ([a45d344](https://github.com/SouOWendel/shinobi-no-sho/commit/a45d344bc8432e946a9c45e5bdc12849a1a87d6f))
+* **d8roll:** added d8roll class (extended for foundry Roll class) with some changes to display system rolls with critical, degree, bonus, and rollmode ([5bbcb4b](https://github.com/SouOWendel/shinobi-no-sho/commit/5bbcb4b453571cfc34cefcc127e30c7ddc1a9c4c))
+* **d8roll:** added d8roll to dices of system and configure the rolls for abilities, skills and combat abilities ([8e6d962](https://github.com/SouOWendel/shinobi-no-sho/commit/8e6d962127040ebb351db1b4f5179733415afd05))
+* **d8roll:** added hasDegree and hasCritical to filter when display or no that roll traits, changed 'fumble' to 'failure' ([e6e8f1c](https://github.com/SouOWendel/shinobi-no-sho/commit/e6e8f1c04f921ef40e7f357cebf987b9cbc40e6e))
+* **d8roll:** added static method to calculate the degree for display on roll template ([bc82d5b](https://github.com/SouOWendel/shinobi-no-sho/commit/bc82d5b3eccd5a2d3437a0ebd00b579bbddbe9ac))
+* **dice sass/css:** added styles for fix dice-flavor, added degree font styles, and styles for critical and failure dice results ([6874d9a](https://github.com/SouOWendel/shinobi-no-sho/commit/6874d9a98d6b5bc6bb1b39154d703fbd96991fa9))
+* **roll degree:** the base calculation of grade for rolls was added along with its logic and the critical variable ([9bde03c](https://github.com/SouOWendel/shinobi-no-sho/commit/9bde03c6b4e170ae8737a6ce56d0a5fb2e577c0d))
+
+
+### Bug Fixes
+
+* **technique item sheet:** changed the chakra field cost to dropdown and added another field, update the item card ([9579edb](https://github.com/SouOWendel/shinobi-no-sho/commit/9579edbfd12f2d049c871ad354b4dd374231a2f7))
+
 ## [1.7.0](https://github.com/SouOWendel/shinobi-no-sho/compare/v1.6.0...v1.7.0) (2024-07-25)
 
 
