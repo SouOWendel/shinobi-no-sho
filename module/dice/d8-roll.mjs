@@ -93,7 +93,7 @@ export default class D8Roll extends Roll {
   /* -------------------------------------------- */
 
 	/** Work around upstream issue in which display base formula is used for chat messages instead of display formula */
-	async render({template = this.constructor.CHAT_TEMPLATE}){
+	async render({template = this.options.chatTemplate ?? this.constructor.CHAT_TEMPLATE}){
 		if (!this._evaluated) await this.evaluate();
 		const total = this.total ?? NaN;
 		const tooltip = await this.getTooltip();
@@ -165,14 +165,12 @@ export default class D8Roll extends Roll {
    * @param {string} [data.title]             The title of the shown dialog window
    * @param {number} [data.defaultRollMode]   The roll mode that the roll mode select element should default to
    * @param {number} [data.defaultAction]     The button marked as default
-   * @param {boolean} [data.chooseModifier]   Choose which ability modifier should be applied to the roll?
-   * @param {string} [data.defaultAbility]    For tool rolls, the default ability modifier applied to the roll
    * @param {string} [data.template]          A custom path to an HTML template to use instead of the default
    * @param {object} options                  Additional Dialog customization options
    * @returns {Promise<D8Roll|null>}         A resulting D8Roll object constructed with the dialog, or null if the
    *                                          dialog was closed
    */
-  async configureDialog({title, defaultRollMode, chooseModifier=false,
+  async configureDialog({title, defaultRollMode,
     defaultAbility, template}={}, options={}) {
 
     // Render the Dialog inner HTML
@@ -180,8 +178,10 @@ export default class D8Roll extends Roll {
       formula: this.formula,
       defaultRollMode,
       rollModes: CONFIG.Dice.rollModes,
-      chooseModifier,
-      defaultAbility,
+			hasCritical: this.hasCritical,
+			hasDegree: this.hasDegree,
+			actor: options?.actor,
+			dropdown: options?.dropdown
     });
 
     let defaultButton = "normal";
@@ -221,6 +221,15 @@ export default class D8Roll extends Roll {
 				this.terms.push(new OperatorTerm({operator: "+"}));
 			}
 			this.terms = this.terms.concat(bonus.terms);
+		}
+
+		if (form.dropdown?.value) {
+			const dropdown = new Roll(form.dropdown.value, this.data);
+			if ( !(dropdown.terms[0] instanceof OperatorTerm) ) {
+				this.terms.push(new OperatorTerm({operator: "+"}));
+			}
+			this.terms = this.terms.concat(dropdown.terms);
+			this.options.selectedIndex = form.dropdown.selectedIndex;
 		}
 
 		if (form.critical?.value) this.options.critical = form.critical.value;

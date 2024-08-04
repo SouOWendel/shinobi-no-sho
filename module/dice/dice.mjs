@@ -1,7 +1,8 @@
 export async function d8Roll({
   parts=[], data={}, event, critical=15, failure=3,
-  shiftFastForward, chooseModifier=false, template, title,
-  chatMessage=true, messageData={}, rollMode, flavor, hasDegree=false, hasCritical=false
+  shiftFastForward, template, title,
+  chatMessage=true, messageData={}, rollMode, flavor,
+	hasDegree=false, hasCritical=false, chatTemplate
 }={}) {
 
   // Handle input arguments
@@ -16,16 +17,15 @@ export async function d8Roll({
     critical,
     failure,
 		hasDegree,
-		hasCritical
+		hasCritical,
+		chatTemplate
   });
 
 	// Variável com os dados do Dialog
 	if (shiftFastForward) {
 		const configured = await roll.configureDialog({
 			title,
-			chooseModifier,
 			defaultRollMode,
-			defaultAbility: data?.item?.ability || data?.defaultAbility,
 			template
 		});
 		if (configured === null) return null;
