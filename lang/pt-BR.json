@@ -110,6 +110,9 @@
 					}
 				},
 				"tecnicas": {
+					"tipoCustoChakra": {
+						"numero": "Número"
+					},
 					"origem": {
 						"aptidao": "Aptidão",
 						"poder": "Poder",

@@ -265,6 +265,39 @@
   text-decoration: underline;
 }
 
+/* Dice */
+#d8roll .dice-flavor {
+  text-align: left !important;
+  color: var(--color-text-dark-secondary);
+  line-height: 20px;
+}
+#d8roll .dice-flex {
+  width: 100%;
+}
+#d8roll .grid {
+  gap: 5px;
+  margin: 0;
+}
+#d8roll .itsCritical .dice-total {
+  border: #006c00 1px solid;
+  background-color: #c7d0c0;
+  color: inherit;
+}
+#d8roll .itsFailure .dice-total {
+  border: #6e0000 1px solid;
+  background-color: #ffdddd;
+  color: inherit;
+}
+#d8roll .degree {
+  font-size: 18px;
+  font-weight: normal;
+}
+
+.dice-total {
+  border-radius: 3px;
+  padding: 0.25rem;
+}
+
 /* Styles limited to shinobiNoSho sheets */
 .shinobiNoSho {
   /* Chat */
@@ -800,7 +833,7 @@
   width: 100%;
 }
 .shinobiNoSho .header span {
-  width: 30px;
+  width: 45px;
   height: 100%;
   text-align: center;
 }

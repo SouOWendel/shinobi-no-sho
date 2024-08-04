@@ -2,6 +2,7 @@ import {
   onManageActiveEffect,
   prepareActiveEffectCategories,
 } from '../helpers/effects.mjs';
+import { d8Roll } from '../dice/dice.mjs';
 
 /**
  * Extend the basic ActorSheet with some very simple modifications
@@ -271,10 +272,16 @@ export class ShinobiActorSheet extends ActorSheet {
    * @param {Event} event   The originating click event
    * @private
    */
-  _onRoll(event) {
+  async _onRoll(event) {
     event.preventDefault();
+		event.stopPropagation();
     const element = event.currentTarget;
     const dataset = element.dataset;
+		const context = super.getData();
+    // Use a safe clone of the actor data for further operations.
+    const actorData = context.data;
+    // Add the actor's data to context.data for easier access, as well as flags.
+    const system = actorData.system;
 
     // Handle item rolls.
     if (dataset.rollType) {
@@ -282,6 +289,65 @@ export class ShinobiActorSheet extends ActorSheet {
         const itemId = element.closest('.item').dataset.itemId;
         const item = this.actor.items.get(itemId);
         if (item) return item.roll();
+      }
+
+			if (dataset.rollType == 'ability' && dataset.key) {
+				const data = system.abilities[dataset.key];
+				const getLabel = game.i18n.localize(`shinobiNoSho.ability.${dataset.key}.long`);
+				const label =  'Fazendo um teste de ' + getLabel + ':';
+        const roll = await d8Roll({
+					data,
+					title: `Configuração de ${getLabel}`,
+					flavor: label,
+					messageData: {speaker: ChatMessage.getSpeaker({ actor: this.actor })},
+					event,
+					parts: [data.tbonus],
+					shiftFastForward: event.shiftKey,
+					hasDegree: false,
+					hasCritical: false,
+				});
+				return roll;
+      }
+
+			if (dataset.rollType == 'skill' && dataset.key) {
+				const data = system.skills.geral[dataset.key] || system.skills.social[dataset.key];
+				let getLabel = '';
+				if (game.i18n.has(`shinobiNoSho.skills.geral.${dataset.key}`)) {
+					getLabel = game.i18n.localize(`shinobiNoSho.skills.geral.${dataset.key}`);
+				} else if (game.i18n.has(`shinobiNoSho.skills.social.${dataset.key}`)) {
+					getLabel = game.i18n.localize(`shinobiNoSho.skills.social.${dataset.key}`);
+				}
+				const label =  'Fazendo um teste de ' + getLabel + ':';
+        const roll = await d8Roll({
+					data,
+					title: `Configuração de ${getLabel}`,
+					flavor: label,
+					messageData: {speaker: ChatMessage.getSpeaker({ actor: this.actor })},
+					event,
+					parts: [data.total],
+					shiftFastForward: event.shiftKey,
+					hasDegree: false,
+					hasCritical: false,
+				});
+				return roll;
+      }
+
+			if (dataset.rollType == 'combatAbilities' && dataset.key) {
+				const data = system.abilities.combate[dataset.key];
+				let getLabel = game.i18n.localize(`shinobiNoSho.combatAbilities.${dataset.key}`);
+				const label =  'Fazendo um teste de ' + getLabel + ':';
+				const roll = await d8Roll({
+					data,
+					title: `Configuração de ${getLabel}`,
+					flavor: label,
+					messageData: {speaker: ChatMessage.getSpeaker({ actor: this.actor })},
+					event,
+					parts: [data.total],
+					shiftFastForward: event.shiftKey,
+					hasDegree: (dataset.key == "CC" || dataset.key == "CD"),
+					hasCritical: (dataset.key == "CC" || dataset.key == "CD"),
+				});
+				return roll;
       }
     }
 
