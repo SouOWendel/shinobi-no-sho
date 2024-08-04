@@ -123,6 +123,10 @@ shinobiNoSho.ITEMS = {
 			}
 		},
 		tecnicas: {
+			tipoCustoChakra: {
+				numero: "shinobiNoSho.ITEMS.tecnicas.tipoCustoChakra.numero",
+				vertexto: "shinobiNoSho.ITEMS.generico.acao.vertexto"
+			},
 			origem: {
 				aptidao: "shinobiNoSho.ITEMS.tecnicas.origem.aptidao",
 				poder: "shinobiNoSho.ITEMS.tecnicas.origem.poder",

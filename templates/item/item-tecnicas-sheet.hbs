@@ -196,11 +196,22 @@
 					<div class="resource flex flex-2">
 						<label for="system.detalhes.custoChakra" class="resource-label p-r-10">Custo de Chakra</label>
 						<div class="resource-content">
-							<input type="text" name="system.detalhes.custoChakra" 
-							value="{{system.detalhes.custoChakra}}" data-dtype="String"/>
+							<select name="system.detalhes.tipoCustoChakra" class="item-medium">
+								{{selectOptions itemsDropdown.tecnicas.tipoCustoChakra 
+								selected=system.detalhes.tipoCustoChakra 
+								localize=true blank="—"}}
+							</select>
 						</div>
 					</div>
-					<div class="resource flex flex-2"></div>
+					<div class="resource flex flex-2">
+						<i class="fas fa-arrow-right"></i>
+						<div class="resource-content">
+							<input type="text" name="system.detalhes.custoChakra" 
+							value="{{system.detalhes.custoChakra}}" 
+							data-dtype="{{#ifEquals system.detalhes.tipoCustoChakra "vertexto"}}String{{/ifEquals}}
+							{{#ifEquals system.detalhes.tipoCustoChakra "numero"}}Number{{/ifEquals}}"/>
+						</div>
+					</div>
 				</div>
 				<div class="flex flex-group-center">
 					<div class="resource flex flex-2">

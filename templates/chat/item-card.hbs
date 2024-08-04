@@ -4,8 +4,13 @@
 		<div class="item-name">
 			<h2>{{item.name}}</h2>
 		</div>
-		{{#if item.system.detalhes.custoChakra}}
-			<span class="container" data-tooltip="Custo de Chakra">{{item.system.detalhes.custoChakra}}</span>
+		{{#if item.system.detalhes.tipoCustoChakra}}
+			{{#ifEquals item.system.detalhes.tipoCustoChakra "numero"}}
+				<span class="container" data-tooltip="Custo de Chakra">{{item.system.detalhes.custoChakra}}</span>
+			{{/ifEquals}}
+			{{#ifEquals item.system.detalhes.tipoCustoChakra "vertexto"}}
+				<span class="container" data-tooltip="{{item.system.detalhes.custoChakra}}"><i class="fas fa-align-center"></i></span>
+			{{/ifEquals}}
 		{{/if}}
 	</div>
 	<h4 class="descricao-chat-card">
