@@ -93,20 +93,19 @@ export default class D8Roll extends Roll {
   /* -------------------------------------------- */
 
 	/** Work around upstream issue in which display base formula is used for chat messages instead of display formula */
-	async render({template = this.options.chatTemplate ?? this.constructor.CHAT_TEMPLATE}){
-		if (!this._evaluated) await this.evaluate();
+	async render({template = this.options.chatTemplate ?? this.constructor.CHAT_TEMPLATE, isPrivate}){
+		if (!this._evaluated) await this.evaluate({ allowInteractive: !isPrivate });
 		const total = this.total ?? NaN;
 		const tooltip = await this.getTooltip();
-		const formula = this._formula;
-		
+
 		const chatData = {
 			user: game.user,
-			flavor: this.options.flavor,
-			formula,
+			flavor: isPrivate ? null : this.options.flavor,
+			formula: isPrivate ? "???" : this._formula,
 			tooltip,
-			total,
+			total: isPrivate ? "?" : total,
 			critical: this.options.critical,
-			degree: this.getDegree,
+			degree: isPrivate ? "?" : this.getDegree,
 			isCritical: this.isCritical,
 			isFailure: this.isFailure,
 			hasCritical: this.hasCritical,
@@ -125,7 +124,7 @@ export default class D8Roll extends Roll {
 
     const d8 = this.terms[0];
     d8.modifiers = [];
-    d8.number = 2;
+    // d8.number = 2;
 
     // Assign critical and failure thresholds
     if ( this.options.critical ) d8.options.critical = this.options.critical;
