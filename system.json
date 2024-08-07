@@ -56,7 +56,16 @@
       ]
     }
   },
-  "packs": [],
+  "packs": [
+		{
+			"name": "macros",
+      "label": "Macros",
+      "system": "shinobinosho",
+      "path": "packs/macros",
+      "type": "Macro",
+      "private": false
+		}
+	],
   "packFolders": [],
   "socket": true,
   "manifest": "https://raw.githubusercontent.com/souowendel/shinobi-no-sho/main/system.json",
