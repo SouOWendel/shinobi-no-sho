@@ -1,5 +1,19 @@
 # CHANGELOG
 
+## [1.9.0](https://github.com/SouOWendel/shinobi-no-sho/compare/v1.8.0...v1.9.0) (2024-08-07)
+
+
+### Features
+
+* **packs:** added foundry cli as dev dependency, added a script and also added a util script ([b4c83f7](https://github.com/SouOWendel/shinobi-no-sho/commit/b4c83f7a18f71b334f125e3a68e359e9d1ce90b5))
+* **packs:** added macro pack on the system ([0261f6a](https://github.com/SouOWendel/shinobi-no-sho/commit/0261f6a62a830b9bdcda3e4ad46080a92db6be3c))
+
+
+### Bug Fixes
+
+* **d8roll:** fixed the roll mode of rolls assigning the private var to chat data with conditions ([d8fe869](https://github.com/SouOWendel/shinobi-no-sho/commit/d8fe8697b6f6d10c16ddd5b41c50d042a9203a07))
+* **d8roll:** removed the number of dices on d8 dices to fix a problem with generic rolls with this type ([e9aba2e](https://github.com/SouOWendel/shinobi-no-sho/commit/e9aba2e8d0a3108714d5e53d06a830a664696b85))
+
 ## [1.8.0](https://github.com/SouOWendel/shinobi-no-sho/compare/v1.7.0...v1.8.0) (2024-08-04)
 
 
