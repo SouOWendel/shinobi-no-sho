@@ -2,3 +2,4 @@
 *.map
 *.rar
 /project
+/nodes_modules
