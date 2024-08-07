@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## [1.9.1](https://github.com/SouOWendel/shinobi-no-sho/compare/v1.9.0...v1.9.1) (2024-08-07)
+
+
+### Bug Fixes
+
+* **macro pack:** fixed an error on general skill macro ([66d1c45](https://github.com/SouOWendel/shinobi-no-sho/commit/66d1c450f1e619aeac90e266184780c228a8a061))
+
 ## [1.9.0](https://github.com/SouOWendel/shinobi-no-sho/compare/v1.8.0...v1.9.0) (2024-08-07)
 
 
