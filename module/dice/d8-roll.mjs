@@ -124,7 +124,7 @@ export default class D8Roll extends Roll {
 
     const d8 = this.terms[0];
     d8.modifiers = [];
-    d8.number = 2;
+    // d8.number = 2;
 
     // Assign critical and failure thresholds
     if ( this.options.critical ) d8.options.critical = this.options.critical;
