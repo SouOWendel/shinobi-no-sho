@@ -184,12 +184,12 @@ Hooks.on('renderSettings', async (app, [html]) => {
       </li>
       <li>
         <a href="https://discord.gg/8vmJ7Mt" target="_blank">
-          ${game.i18n.localize('shinobiNoSho.SOCIAL.discordLivro')}
+          ${game.i18n.localize('shinobiNoSho.social.discordLivro')}
         </a>
       </li>
 			<li>
         <a href="https://narutod8.weebly.com/" target="_blank">
-          ${game.i18n.localize('shinobiNoSho.SOCIAL.site')}
+          ${game.i18n.localize('shinobiNoSho.social.site')}
         </a>
       </li>
     </ul>
@@ -204,10 +204,10 @@ Hooks.on('renderSettings', async (app, [html]) => {
     <span class="system-info">${game.i18n.localize('shinobiNoSho.configuracoesVersao')} 
 		<strong>${game.system.version}</strong> </span>
 		<p><a href="https://discord.gg/7qE4pC2Mfy" target="_blank">
-    <span class="system-info" data-tooltip="${game.i18n.localize('shinobiNoSho.SOCIAL.discordForja')}">
+    <span class="system-info" data-tooltip="${game.i18n.localize('shinobiNoSho.social.discordForja')}">
 		<i class="fa-brands fa-discord"></i> Forja dos Narradores</span></a>&nbsp;&nbsp;
 		<a href="https://twitter.com/EuSouOWendel" target="_blank" 
-		data-tooltip="${game.i18n.localize('shinobiNoSho.SOCIAL.twitter')}">
+		data-tooltip="${game.i18n.localize('shinobiNoSho.social.twitter')}">
 		<span class="system-info"><i class="fa-brands fa-twitter"></i> eusouowendel</span></p>
   `;
 	if (pip) badge.querySelector('.system-info').insertAdjacentElement('beforeend', pip);

@@ -4,7 +4,7 @@
 		"discord": "Discord",
 		"nome": "Shinobi no Sho (SnS)",
 		"configuracoesVersao": "Versão do Sistema",
-		"SOCIAL": {
+		"social": {
 			"discordLivro": "Discord do Livro",
 			"discordForja": "Forja dos Narradores",
 			"twitter": "Twitter",
@@ -32,10 +32,75 @@
       "Item": "Shinobi Item Sheet"
     },
     "Item": {
-      "Spell": {
-        "SpellLVL": "Level {level} Spells",
-        "AddLVL": "Add LVL {level}"
-      }
+			"descricaoLabel": "Descrição",
+			"efeitosLabel": "Efeitos",
+			"caracteristicasLabel": "Características",
+			"compartimentos": { "long": "Compartimentos", "abbr": "Compart." },
+			"preco": "Preço",
+			"raridade": "Raridade",
+			"detalhesLabel": "Detalhes",
+			"detalhesGeraisLabel": "Detalhes Gerais",
+			"preRequisito": "Pré-requisito",
+			"quantidade": { "long": "Quantidade", "abbr": "Qtd" },
+			"detalhesGerais": "Detalhes Gerais",
+			"nivel": "Nível",
+			"dano": "Dano",
+			"alcance": "Alcance",
+			"critico": "Crítico",
+			"dureza": "Dureza",
+      "aptidoes": {
+				"tipoAptidao": "Tipo de Aptidão",
+				"nivelAptidao": "Nível de Aptidão"
+			},
+			"armaduras": {
+				"tipoArmadura": "Tipo de Armadura",
+				"bonusAbsorcao": "Bônus de Absorção",
+				"penalidadeArmadura": "Penalidade de Armadura"
+			},
+			"armas": {
+				"combate": "Combate",
+				"testeAtaque": "Teste de Ataque",
+				"adicionarBonus": "Adicionar Bônus",
+				"tipoArma": "Tipo de Arma",
+				"subtipoArma": "Subtipo de Arma",
+				"tamanho": "Tamanho",
+				"improvisada": "Improvisada",
+				"armaDupla": "Arma Dupla",
+				"arremessavel": "Arremessável",
+				"duasMaos": "Duas Mãos",
+				"energizavel": "Energizável",
+				"ambidestra": "Ambidestra",
+				"acuidade": "Acuidade"
+			},
+			"itensGerais": {
+				"tipoItemGeral": "Tipo de Item Geral"
+			},
+			"poderes": {
+				"nivelPoder": "Nível de Poder",
+				"efeitosAdquiridos": "Efeitos Adquiridos",
+				"nomeEfeitoAdquirido": "Nome do Efeito Adquirido",
+				"adicionarEfeitoAdquirido": "Adicionar Efeito Adquirido"
+			},
+			"tecnicas": {
+				"alternativo": "Alternativo",
+				"origem": "Origem",
+				"combate": "Combate",
+				"efeitosOuAptidoes": "Efeitos ou Aptidões",
+				"duracao": "Duração",
+				"areaEfeito": "Área de Efeito",
+				"alcance": "Alcance",
+				"acao": "Ação",
+				"alvo": "Alvo",
+				"testeResistencia": "Teste de Resistência",
+				"tipoTecnica": "Tipo de Técnica",
+				"subtipoTecnica": "Subtipo de Técnica",
+				"custoChakra": "Custo de Chakra",
+				"elemento": "Elemento",
+				"tipoJutsu": "Tipo de Jutsu",
+				"ranking": "Ranking",
+				"selosDeMao": "Selos de Mão",
+				"escalonaComChakra": "Escalona com Chakra"
+			}
     },
     "Effect": {
       "Source": "Fonte",
@@ -44,8 +109,53 @@
       "Passive": "Efeitos passivos",
       "Inactive": "Efeitos inativos"
     },
+		"TYPES": {
+    "Actor": {
+      "Ninja": "Ninja"
+    },
+    "Item": {
+      "armas": "Armas",
+      "armaduras": "Armaduras",
+      "gerais": "Itens Gerais",
+			"aptidoes": "Aptidões",
+      "poderes": "Poderes",
+			"tecnicas": "Técnicas"
+    }
+  },
 		"NinjaSheet": {
-			"Vida": "Pontos de Vida",
+			"vida": "Pontos de Vida",
+			"nome": "Nome",
+			"tipo": "Tipo",
+			"nivel": "Nível",
+			"preRequisito": "Pré-requisito",
+			"nivelCampanha": "Nível de Campanha",
+			"nivelShinobi": "Nível Shinobi",
+			"cla": "Clã",
+			"idade": "Idade",
+			"vilaOrigem": "Vila de Origem",
+			"generoLabel": "Gênero",
+			"tendenciaLabel": "Tendência",
+			"lateralidadeLabel": "Lateralidade",
+			"vilaAtuante": "Vila Atuante",
+			"naturezaPrincipal": { "long": "Natureza Principal", "abbr": "Natureza Pr." },
+			"naturezaSecundaria": { "long": "Natureza Secundária", "abbr": "Natureza Sc." },
+			"atual": "Atual",
+			"max": { "long": "Máximo", "abbr": "Max" },
+			"vitalidade": "Vitalidade",
+			"chakra": "Chakra",
+			"absorcao": "Absorção",
+			"quantidade": "Quantidade",
+			"biografiaLabel": "Biografia",
+			"combateLabel": "Combate",
+			"periciasLabel": "Perícias",
+			"aptidoesLabel": "Aptidões",
+			"poderesLabel": "Poderes",
+			"tecnicasLabel": "Técnicas",
+			"inventarioLabel": "Inventário",
+			"anotacoesLabel": "Anotações",
+			"efeitosLabel": "Efeitos",
+			"periciasGerais": "Perícias Gerais",
+			"periciasSociais": "Perícias Sociais",
 			"lateralidade": {
 				"destro": "Destro",
 				"canhoto": "Canhoto",
@@ -65,6 +175,58 @@
 			"genero": {
 				"masculino": "Masculino",
 				"feminino": "Feminino"
+			},
+			"biografia": {
+				"historia": "História",
+				"caracteristicas": "Características",
+				"relacoes": "Relações",
+				"descricaoFisica": "Descrição Física",
+				"maniasPeculiaridades": "Manias e Peculiaridades",
+				"filosofiaDeVida": "Filosofia de Vida",
+				"relacoesImportantes": "Relações Importantes",
+				"parentesco": "Parentesco",
+				"nome": "Nome",
+				"idade": "Idade",
+				"genero": "Gênero",
+				"carreira": "Carreira",
+				"adicionarRelacao": "Adicionar uma relação"
+			},
+			"habilidadesCombate": {
+				"label": "Habilidades de Combate",
+				"base": "Base",
+				"atributo": "Atributo",
+				"combateCorporal": "Combate Corporal (CC)",
+				"combateDistancia": "Combate à Distância (CD)",
+				"esquiva": "Esquiva",
+				"lerMovimento": "Ler Movimento (LM)"
+			},
+			"estatisticasCombate": {
+				"label": "Estatísticas de Combate",
+				"pericia": "Perícia",
+				"variável": "Variável",
+				"iniciativa": "Iniciativa",
+				"reacaoEsquiva": "Reação de Esquiva",
+				"deslocamento": "Deslocamento"
+			},
+			"inventario": {
+				"ryos": "Ryos",
+				"tipoDano": "Tipo de Dano",
+				"alcance": "Alcance",
+				"penalidade": "Penalidade",
+				"absorcao": "Absorção"
+			},
+			"pericias": {
+				"periciasTreinoLegenda": "+: perícias que necessitam treinamento.",
+				"periciasArmaduraLegenda": "*: perícias que são afetadas por armadura.",
+				"atributosSociais": "Atributos Sociais",
+				"manipulacao": "Manipulação",
+				"carisma": "Carisma"
+			},
+			"tecnicas": {
+				"origem": "Origem",
+				"alcance": "Alcance",
+				"acao": "Ação",
+				"duracao": "Duração"
 			}
 		},
 		"skills": {
@@ -110,6 +272,9 @@
 					}
 				},
 				"tecnicas": {
+					"tipoCustoChakra": {
+						"numero": "Número"
+					},
 					"origem": {
 						"aptidao": "Aptidão",
 						"poder": "Poder",
@@ -138,6 +303,8 @@
 						"controleChakra": "Controle de Chakra",
 						"kinjutsu": "Kinjutsu",
 						"hijutsu": "Hijutsu",
+						"jikuukan": "Jikuukan",
+						"shunjutsu": "Shunjutsu",
 						"outro": "Outro"
 					},
 					"tipoJutsu": {
@@ -217,7 +384,9 @@
 						"movimento": "Movimento",
 						"parcial": "Parcial",
 						"livre": "Livre",
-						"reacao": "Reação"
+						"reacao": "Reação",
+						"completa": "Completa",
+						"vertexto": "Ver Texto"
 					},
 					"rarity": {
 						"common": "Comum",
@@ -312,18 +481,5 @@
   "DOCUMENT.Users": "Usuários",
   "DOCUMENT.Wall": "Parede",
   "DOCUMENT.Walls": "Paredes",
-  "DOCUMENT.TypePageFormat": "{page} de {type}",
-  "TYPES": {
-    "Actor": {
-      "Ninja": "Ninja"
-    },
-    "Item": {
-      "armas": "Armas",
-      "armaduras": "Armaduras",
-      "gerais": "Itens Gerais",
-			"aptidoes": "Aptidões",
-      "poderes": "Poderes",
-			"tecnicas": "Técnicas"
-    }
-  }
+  "DOCUMENT.TypePageFormat": "{page} de {type}"
 }
