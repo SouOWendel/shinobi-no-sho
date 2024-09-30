@@ -6,11 +6,13 @@
     {
       "name": "Mark57449 (SouOWendel)",
       "email": "souowendel@gmail.com",
-      "discord": "souowendel"
+      "discord": "souowendel",
+      "flags": {}
     },
     {
       "name": "Vallen (Arthur)",
-      "discord": "vallen_allond"
+      "discord": "vallen_allond",
+      "flags": {}
     }
   ],
   "url": "https://github.com/SouOWendel/shinobi-no-sho",
@@ -19,9 +21,8 @@
   "changelog": "CHANGELOG.md",
   "version": "1.9.1",
   "compatibility": {
-    "minimum": 11,
-    "verified": "12.329",
-    "maximum:": 12
+    "minimum": "11",
+    "verified": "12"
   },
   "esmodules": [
     "module/shinobiNoSho.mjs"
@@ -33,12 +34,14 @@
     {
       "lang": "pt-BR",
       "name": "Português (Brasil)",
-      "path": "lang/pt-BR.json"
+      "path": "lang/pt-BR.json",
+      "flags": {}
     },
     {
       "lang": "en",
       "name": "English",
-      "path": "lang/en.json"
+      "path": "lang/en.json",
+      "flags": {}
     }
   ],
   "flags": {
@@ -63,17 +66,17 @@
       "system": "shinobinosho",
       "path": "packs/macros",
       "type": "Macro",
-      "private": false
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
     }
   ],
-  "packFolders": [],
   "socket": true,
   "manifest": "https://raw.githubusercontent.com/souowendel/shinobi-no-sho/main/system.json",
   "download": "https://github.com/SouOWendel/shinobi-no-sho/releases/download/v1.9.1/shinobinosho-v1.9.1.zip",
-  "gridDistance": 1,
-  "gridUnits": "m",
   "grid": {
-    "distance": 1,
     "units": "m"
   },
   "primaryTokenAttribute": "attributes.vitalidade",
