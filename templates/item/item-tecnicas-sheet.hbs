@@ -163,6 +163,42 @@
 						</div>
 					</div>
 				</div>
+
+				<div class="itemAreaTemplate">
+					<h3 class="section-title">Predefinições de Área</h3>
+					<div id="areaTemplate">
+						{{#each system.areaTemplate as |areas i|}}
+						<div class="predefinedAreas areaTemplate-part" data-area-part="{{i}}">
+							<div class="area flex-group-center">
+								<i class="fa-solid fa-shapes"></i>
+								<select name="system.areaTemplate.{{i}}.0">
+									{{selectOptions ../areas selected=(lookup this "0") localize=true}}
+								</select>
+								de
+								<input type="text" name="system.areaTemplate.{{i}}.1" value="{{lookup this "1"}}" class=""/>
+								<i class="fa-solid fa-plus"></i>
+								<input type="text" name="system.areaTemplate.{{i}}.2" value="{{lookup this "2"}}" class=""/>
+								<select name="system.areaTemplate.{{i}}.3">
+									{{selectOptions ../regraArea selected=(lookup this "3") localize=true}}
+								</select>
+								<i class="fa-solid fa-equals"></i>
+								<input type="text" name="system.areaTemplate.{{i}}.4" value="{{lookup this "4"}}"  class="" disabled/>
+								<a class="areaTemplate-control delete-areaTemplate"><i class="fa-solid fa-trash"></i></a>
+							</div>
+						</div>
+						{{/each}}
+					</div>
+					<div class="flex flex-group-center" style="margin-top: 6px;">
+						<div class="resource" style="justify-content: center; border: 1px dashed #BEBEBE">
+							<div class="flex flex-group-center" style="padding: 5px 0; opacity: 0.6;">
+								<a class="areaTemplate-control add-areaTemplate align-center">
+									<i class="fas fa-plus"></i> Adicionar nova área
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
 			</div>
     </div>
 

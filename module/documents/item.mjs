@@ -1,3 +1,5 @@
+import areaTemplate from "../applications/areaTemplate.mjs";
+
 /**
  * Extend the basic Item with some very simple modifications.
  * @extends {Item}
@@ -55,6 +57,71 @@ export class ShinobiItem extends Item {
 		return data;
 	}
 
+	/**
+	 * Apply listeners to chat messages.
+	 * @param {HTML} html  Rendered chat message.
+	 */
+	static chatListeners(html) {
+		html.on('click', '.card-buttons button', this._onChatCardAction.bind(this));
+	}
+
+	/**
+	 * Handle execution of a chat card action via a click event on one of the card buttons
+	 * @param {Event} event       The originating click event
+	 * @returns {Promise}         A promise which resolves once the handler workflow is complete
+	 * @private
+	 */
+	static async _onChatCardAction(event) {
+		event.preventDefault();
+		event.stopPropagation();
+
+		// Extract card data
+		const button = event.currentTarget;
+		// button.disabled = true;
+		const card = button.closest('.chat-card');
+		const messageId = card.closest('.message').dataset.messageId;
+		const message = game.messages.get(messageId);
+		const action = button.dataset.action;
+
+		// Recover the actor for the chat card
+		const actor = await this._getChatCardActor(card);
+		if (!actor) return;
+
+		// Validate permission to proceed with the roll
+		const isTargetted = action === 'save';
+		if (!(isTargetted || game.user.isGM || actor.isOwner)) return;
+
+		// Get the Item from stored flag data or by the item ID on the Actor
+		const storedData = message.getFlag('shinobinosho', 'itemData');
+		const item = storedData ? new this(storedData, { parent: actor }) : actor.items.get(card.dataset.itemId);
+
+		switch (action) {
+			case 'areaTemplate': {
+				const app = new areaTemplate(item);
+				app.render(true);
+			}
+		}
+	}
+
+	/**
+	 * Get the Actor which is the author of a chat card
+	 * @param {HTMLElement} card    The chat card being used
+	 * @returns {Actor|null}        The Actor document or null
+	 * @private
+	 */
+	static async _getChatCardActor(card) {
+		// Case 1 - a synthetic actor from a Token
+		if (card.dataset.tokenId) {
+			const token = await fromUuid(card.dataset.tokenId);
+			if (!token) return null;
+			return token.actor;
+		}
+
+		// Case 2 - use Actor ID directory
+		const actorId = card.dataset.actorId;
+		return game.actors.get(actorId) || null;
+	}
+
   /**
    * Handle clickable rolls.
    * @param {Event} event   The originating click event
@@ -75,6 +142,7 @@ export class ShinobiItem extends Item {
 			item: this,
 			data: await this.getChatData(),
 			labels: this.labels,
+			hasAreaTemplate: (this.type == "tecnicas" || this.type == "gerais"),
 			system: [],
 			info: [],
 		};

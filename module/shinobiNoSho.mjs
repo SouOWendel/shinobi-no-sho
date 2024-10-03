@@ -8,6 +8,11 @@ import { ShinobiItemSheet } from "./sheets/item-sheet.mjs";
 import { preloadHandlebarsTemplates } from "./helpers/templates.mjs";
 import { shinobiNoSho } from "./helpers/config.mjs";
 import D8Roll from "./dice/d8-roll.mjs";
+import * as chat from './documents/chat-message.mjs';
+
+globalThis.shinobinosho = {
+	chat
+};
 
 /* -------------------------------------------- */
 /*  Init Hook                                   */
@@ -19,6 +24,8 @@ Hooks.once('init', function () {
   game.shinobiNoSho = {
     ShinobiActor,
     ShinobiItem,
+		ShinobiActorSheet,
+		ShinobiItemSheet,
     rollItemMacro,
 		D8Roll
   };
@@ -101,6 +108,10 @@ Hooks.once('ready', function () {
   // Wait to register hotbar drop hook on ready so that modules could register earlier if they want to
   Hooks.on('hotbarDrop', (bar, data, slot) => createItemMacro(data, slot));
 });
+
+Hooks.on('renderChatMessage', chat.onRenderChatMessage);
+Hooks.on('renderChatLog', (app, html, data) => ShinobiItem.chatListeners(html));
+Hooks.on('renderChatPopout', (app, html, data) => ShinobiItem.chatListeners(html));
 
 /* -------------------------------------------- */
 /*  Hotbar Macros                               */
