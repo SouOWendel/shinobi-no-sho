@@ -298,6 +298,93 @@
   padding: 0.25rem;
 }
 
+/* Area Template Application */
+#areaTemplate {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+#areaTemplate legend {
+  font-size: 15px;
+  font-weight: bold;
+}
+#areaTemplate fieldset {
+  display: flex;
+  gap: 0.1rem;
+  border-radius: 8px;
+  flex-wrap: nowrap;
+  flex-direction: column;
+}
+#areaTemplate .predefinedAreas {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  padding-top: 10px;
+}
+#areaTemplate .area {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 6px 12px;
+  gap: 5px;
+  border-radius: 4px;
+  background-color: rgba(255, 255, 240, 0.8);
+  border: 1px solid #aaaaaa;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+  text-align: start;
+}
+#areaTemplate .area span, #areaTemplate .area i {
+  pointer-events: none;
+  padding: 0 15px;
+}
+#areaTemplate .adjusts {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+}
+#areaTemplate .adjusts .numberSelector {
+  display: flex;
+  gap: 2px;
+}
+#areaTemplate .adjusts .numberSelector button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 28px;
+}
+#areaTemplate .adjusts .numberSelector input {
+  min-width: 30px;
+}
+#areaTemplate .adjusts .hint {
+  font-size: 14px;
+  margin: 0;
+}
+
+.itemAreaTemplate #areaTemplate {
+  gap: 0.2rem !important;
+}
+.itemAreaTemplate .predefinedAreas {
+  padding: 0 !important;
+}
+.itemAreaTemplate input {
+  width: auto;
+}
+.itemAreaTemplate input[type=text] {
+  min-width: 30px !important;
+  width: auto !important;
+  text-align: center;
+}
+
+.areaTemplate {
+  box-shadow: 0 0 10x #000 !important;
+  font-family: "Signika", "Roboto", sans-serif;
+}
+.areaTemplate .window-header {
+  font-size: 13px;
+}
+
 /* Styles limited to shinobiNoSho sheets */
 .shinobiNoSho {
   /* Chat */
@@ -747,7 +834,6 @@
 .shinobiNoSho #gerais input,
 .shinobiNoSho #gerais select, .shinobiNoSho #armaduras input, .shinobiNoSho #armaduras select, .shinobiNoSho #tecnicas input, .shinobiNoSho #tecnicas select {
   width: 100%;
-  text-align: start;
 }
 .shinobiNoSho #aptidao i, .shinobiNoSho #armas i, .shinobiNoSho #poderes i,
 .shinobiNoSho #gerais i, .shinobiNoSho #armaduras i, .shinobiNoSho #tecnicas i {
@@ -866,6 +952,9 @@
   border: 1px solid #818181;
   border-radius: 4px;
   font-size: 12px;
+}
+.shinobiNoSho .card-buttons {
+  margin-top: 6px;
 }
 
 /*# sourceMappingURL=shinobiNoSho.css.map */
