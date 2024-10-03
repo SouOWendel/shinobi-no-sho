@@ -22,6 +22,7 @@ export class ShinobiItemSheet extends ItemSheet {
           initial: 'description',
         },
       ],
+			scrollY: [".content"],
     });
   }
 
@@ -45,6 +46,8 @@ export class ShinobiItemSheet extends ItemSheet {
 		// Dropdown
 		context.itemsDropdown = CONFIG.shinobiNoSho.ITEMS.dropdown;
 		context.combatAbilities = CONFIG.shinobiNoSho.combatAbilities;
+		context.areas = CONFIG.shinobiNoSho.templateAreas;
+		context.regraArea = CONFIG.shinobiNoSho.areaRule;
 
     // Retrieve the roll data for TinyMCE editors.
     context.rollData = this.item.getRollData();
@@ -64,6 +67,7 @@ export class ShinobiItemSheet extends ItemSheet {
 			const formData = foundry.utils.expandObject(
 				super._getSubmitData(updateData),
 			);
+			const system = formData.system;
 	
 			// Handle Family array
 			const arma = formData.system?.combate?.dano;
@@ -73,10 +77,15 @@ export class ShinobiItemSheet extends ItemSheet {
 			}
 
 			// Handle Family array
-			const system = formData.system;
 			if (system.efeitosAdquiridos) {
 				system.efeitosAdquiridos = Object.values(system.efeitosAdquiridos || {}).map((d) => [
 					d[0] || '', d[1] || '']);
+			}
+
+			// Handle Area array
+			if (system.areaTemplate) {
+				system.areaTemplate = Object.values(system.areaTemplate || {}).map((d) => [
+					d[0] || '', d[1] || '', d[2] || '', d[3] || '', d[4] || '']);
 			}
 	
 			// Return the flattened submission data
@@ -98,6 +107,9 @@ export class ShinobiItemSheet extends ItemSheet {
 
 		// Effects Power
 		html.find('.effectsPower-control').click(this._onEffectsPowerControl.bind(this));
+
+		// Area Template Control
+		html.find('.areaTemplate-control').click(this._onAreaTemplateControl.bind(this));
 
     // Active Effect management
     html.on('click', '.effect-control', (ev) =>
@@ -128,6 +140,7 @@ export class ShinobiItemSheet extends ItemSheet {
 
 	async _onEffectsPowerControl(event){
 		event.preventDefault();
+		event.stopPropagation();
 		const a = event.currentTarget;
 
 		if (a.classList.contains('add-effectsPower')) {
@@ -144,6 +157,28 @@ export class ShinobiItemSheet extends ItemSheet {
 			const effects = foundry.utils.deepClone(this.item.system.efeitosAdquiridos);
 			effects.splice(Number(html.dataset.effectsPart), 1);
 			return this.item.update({'system.efeitosAdquiridos': effects});
+		}
+	}
+
+	async _onAreaTemplateControl(event){
+		event.preventDefault();
+		event.stopPropagation();
+		const a = event.currentTarget;
+
+		if (a.classList.contains('add-areaTemplate')) {
+			await this._onSubmit(event);
+			const areas = this.item.system.areaTemplate;
+			return this.item.update({
+				'system.areaTemplate': areas.concat([['','','','','']]),
+			});
+		}
+
+		if (a.classList.contains('delete-areaTemplate')) {
+			await this._onSubmit(event);
+			const html = a.closest('.areaTemplate-part');
+			const areas = foundry.utils.deepClone(this.item.system.areaTemplate);
+			areas.splice(Number(html.dataset.effectsPart), 1);
+			return this.item.update({'system.areaTemplate': areas});
 		}
 	}
 

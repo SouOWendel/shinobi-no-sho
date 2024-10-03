@@ -432,6 +432,9 @@
 					"compartOcupa": null
 				},
 				"rarity": "common"
+			},
+			"areaTemplate": {
+				"areaTemplate": []
 			}
 		},
 		"armas": {
@@ -477,7 +480,7 @@
 			"dureza": 0
 		},
 		"geral": {
-			"templates": ["base", "fisico"],
+			"templates": ["base", "fisico", "areaTemplate"],
 			"tipo": ""
 		},
 		"aptidoes": {
@@ -495,7 +498,7 @@
 			"efeitosAdquiridos": []
 		},
 		"tecnicas": {
-			"templates": ["base"],
+			"templates": ["base", "areaTemplate"],
 			"combate": {
 				"dano": {
 					"value": null
