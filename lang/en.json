@@ -396,6 +396,19 @@
 						"legendary": "Lendário",
 						"artifact": "Mítico"
 					}
+				},
+				"areas": {
+					"onda": "Onda",
+					"linha": "Linha",
+					"esfera": "Esfera",
+					"cilindro": "Cilindro",
+					"circulo": "Círculo",
+					"cone": "Cone",
+					"meiaEsfera": "Meia-esfera"
+				},
+				"areaRule": {
+					"porEspirito": "Por Espírito",
+					"custom": "Customizado"
 				}
 			}
   },

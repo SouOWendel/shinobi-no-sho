@@ -251,3 +251,18 @@ shinobiNoSho.ITEMS = {
 		}
 	}
 }
+
+shinobiNoSho.templateAreas = {
+		onda: 'shinobiNoSho.ITEMS.areas.onda',
+		linha: 'shinobiNoSho.ITEMS.areas.linha',
+		esfera: 'shinobiNoSho.ITEMS.areas.esfera',
+		cilindro: 'shinobiNoSho.ITEMS.areas.cilindro',
+		circulo: 'shinobiNoSho.ITEMS.areas.circulo',
+		cone: 'shinobiNoSho.ITEMS.areas.cone',
+		meiaEsfera: 'shinobiNoSho.ITEMS.areas.meiaEsfera',
+};
+
+shinobiNoSho.areaRule = {
+	porEspirito: "shinobiNoSho.ITEMS.areaRule.porEspirito",
+	custom: "shinobiNoSho.ITEMS.areaRule.custom"
+};
