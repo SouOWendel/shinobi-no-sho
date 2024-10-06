@@ -8,7 +8,7 @@ import { ShinobiItemSheet } from "./sheets/item-sheet.mjs";
 import { preloadHandlebarsTemplates } from "./helpers/templates.mjs";
 import { shinobiNoSho } from "./helpers/config.mjs";
 import D8Roll from "./dice/d8-roll.mjs";
-import * as chat from './documents/chat-message.mjs';
+import * as chat from './helpers/chat-message.mjs';
 
 globalThis.shinobinosho = {
 	chat
