@@ -438,7 +438,7 @@
 			}
 		},
 		"armas": {
-			"templates": ["base", "fisico"],
+			"templates": ["base", "fisico", "areaTemplate"],
 			"combate": {
 				"ataque": {
 					"habilidadeCombate": "",
@@ -479,8 +479,9 @@
 			"bonusAbsorcao": null,
 			"dureza": 0
 		},
-		"geral": {
+		"gerais": {
 			"templates": ["base", "fisico", "areaTemplate"],
+			"areaTemplate": [],
 			"tipo": ""
 		},
 		"aptidoes": {
