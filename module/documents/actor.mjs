@@ -20,24 +20,18 @@ export class ShinobiActor extends Actor {
 		this._prepareNinjaBase(actorData);
   }
 
-  /**
-   * @override
-   * Augment the actor source data with additional dynamic data. Typically,
-   * you'll want to handle most of your calculated/derived data in this step.
-   * Data calculated in this step should generally not exist in template.json
-   * (such as ability modifiers rather than ability scores) and should be
-   * available both inside and outside of character sheets (such as if an actor
-   * is queried and has a roll executed directly from it).
-   */
-  prepareDerivedData() {
-    const actorData = this;
-    const systemData = actorData.system;
-    const flags = actorData.flags.shinobi || {};
+	prepareEmbbededData() {
+		// TODOS OS ITENS
+		// TODOS OS EFEITOS
+		// applyActiveEffects();
+	}
 
-    // Make separate methods for each Actor type (character, npc, etc.) to keep
-    // things organized.
-		this._prepareNinjaDerived(actorData);
-  }
+	prepareDerivedData() {
+		this._prepareNinjaDerived(this);
+		this.items.forEach(i => i._prepareTemplate(i));
+	}
+
+  
 
   _prepareNinjaBase(actorData) {
     if (actorData.type !== 'Ninja') return;

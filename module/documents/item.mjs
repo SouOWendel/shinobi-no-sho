@@ -1,4 +1,4 @@
-import areaTemplate from "../applications/areaTemplate.mjs";
+import areaTemplateWindow from "../applications/areaTemplate.mjs";
 
 /**
  * Extend the basic Item with some very simple modifications.
@@ -14,7 +14,7 @@ export class ShinobiItem extends Item {
     super.prepareData();
 
   }
-
+	
   /**
    * Prepare a data object which defines the data schema used by dice roll commands against this Item
    * @override
@@ -31,6 +31,25 @@ export class ShinobiItem extends Item {
 
     return rollData;
   }
+
+	/**
+	 * Make calculations for area template.
+	 *
+	 * @param {Object} actorData The item to prepare.
+	 *
+	 * @return {undefined}
+	 */
+	_prepareTemplate(itemData){
+		const data = itemData;
+		if (data.type !== "tecnicas" && data.type !== "gerais" && data.type !== "armas") return;
+		if (data?.system?.areaTemplate.length === 0 && !data.parent.system.abilities.esp.tbonus) return;
+		const esp = data.parent.system.abilities.esp;
+
+		for ( let area of data.system.areaTemplate) {
+			if (area[3] === "porEspirito") area[4] = area[1] + area[2] * esp.tbonus;
+			else area[4] = area[1] + area[2];
+		}
+	}
 
 	/**
 	 * Prepare an object of chat data used to display a card for the Item in the chat log.
@@ -97,7 +116,7 @@ export class ShinobiItem extends Item {
 
 		switch (action) {
 			case 'areaTemplate': {
-				const app = new areaTemplate(item);
+				const app = new areaTemplateWindow(item);
 				app.render(true);
 			}
 		}
@@ -142,7 +161,7 @@ export class ShinobiItem extends Item {
 			item: this,
 			data: await this.getChatData(),
 			labels: this.labels,
-			hasAreaTemplate: (this.type == "tecnicas" || this.type == "gerais"),
+			hasAreaTemplate: (this.type == "tecnicas" || this.type == "gerais" || this.type == "armas"),
 			system: [],
 			info: [],
 		};
