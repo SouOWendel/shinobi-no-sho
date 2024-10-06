@@ -175,14 +175,14 @@
 									{{selectOptions ../areas selected=(lookup this "0") localize=true}}
 								</select>
 								de
-								<input type="text" name="system.areaTemplate.{{i}}.1" value="{{lookup this "1"}}" class=""/>
+								<input type="text" name="system.areaTemplate.{{i}}.1" value="{{lookup this "1"}}" data-dtype="Number"/>
 								<i class="fa-solid fa-plus"></i>
-								<input type="text" name="system.areaTemplate.{{i}}.2" value="{{lookup this "2"}}" class=""/>
+								<input type="text" name="system.areaTemplate.{{i}}.2" value="{{lookup this "2"}}" data-dtype="Number"/>
 								<select name="system.areaTemplate.{{i}}.3">
 									{{selectOptions ../regraArea selected=(lookup this "3") localize=true}}
 								</select>
 								<i class="fa-solid fa-equals"></i>
-								<input type="text" name="system.areaTemplate.{{i}}.4" value="{{lookup this "4"}}"  class="" disabled/>
+								<input type="text" name="system.areaTemplate.{{i}}.4" value="{{lookup this "4"}}" data-dtype="Number" disabled/>
 								<a class="areaTemplate-control delete-areaTemplate"><i class="fa-solid fa-trash"></i></a>
 							</div>
 						</div>
