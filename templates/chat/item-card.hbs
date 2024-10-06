@@ -133,7 +133,7 @@
 					{{#if item.system.combate.ataque.habilidadeCombate}}<tr>
 						<td><span>Habilidade de Combate </span><br></td>
 						<td>{{localize (concat "shinobiNoSho.combatAbilities." item.system.combate.ataque.habilidadeCombate)}} 
-						({{item.actor.system.abilities.combate.CC.value}})</td>
+						({{ item.actor.system.abilities.combate.CC.total}})</td>
 					</tr>{{/if}}
 					{{#if item.system.combate.dano.base}} <tr>
 						<td><span>Dano Base </span></td>
