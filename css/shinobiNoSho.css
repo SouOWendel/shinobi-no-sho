@@ -334,7 +334,7 @@
 }
 #areaTemplate .area span, #areaTemplate .area i {
   pointer-events: none;
-  padding: 0 15px;
+  padding: 0 1px !important;
 }
 #areaTemplate .adjusts {
   display: flex;
@@ -353,6 +353,11 @@
   align-items: center;
   text-align: center;
   height: 28px;
+  background: rgba(255, 255, 240, 0.8);
+  border: 1px solid #b5b3a4;
+  border-radius: 3px;
+  font-size: 14px;
+  cursor: pointer;
 }
 #areaTemplate .adjusts .numberSelector input {
   min-width: 30px;
@@ -360,6 +365,23 @@
 #areaTemplate .adjusts .hint {
   font-size: 14px;
   margin: 0;
+}
+#areaTemplate .submit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 38px;
+  background: rgba(255, 255, 240, 0.8);
+  border: 1px solid #b5b3a4;
+  border-radius: 3px;
+  font-size: 14px;
+  cursor: pointer;
+  width: 100%;
+  margin: 0;
+}
+#areaTemplate .submit i {
+  padding: 4px;
 }
 
 .itemAreaTemplate #areaTemplate {
@@ -374,14 +396,14 @@
 .itemAreaTemplate input[type=text] {
   min-width: 30px !important;
   width: auto !important;
-  text-align: center;
+  text-align: center !important;
 }
 
-.areaTemplate {
+.areaTemplateWindow {
   box-shadow: 0 0 10x #000 !important;
   font-family: "Signika", "Roboto", sans-serif;
 }
-.areaTemplate .window-header {
+.areaTemplateWindow .window-header {
   font-size: 13px;
 }
 
@@ -834,6 +856,7 @@
 .shinobiNoSho #gerais input,
 .shinobiNoSho #gerais select, .shinobiNoSho #armaduras input, .shinobiNoSho #armaduras select, .shinobiNoSho #tecnicas input, .shinobiNoSho #tecnicas select {
   width: 100%;
+  text-align: start;
 }
 .shinobiNoSho #aptidao i, .shinobiNoSho #armas i, .shinobiNoSho #poderes i,
 .shinobiNoSho #gerais i, .shinobiNoSho #armaduras i, .shinobiNoSho #tecnicas i {

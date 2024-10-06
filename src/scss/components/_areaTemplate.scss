@@ -34,7 +34,7 @@
 		box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
 		text-align: start;
 
-		span, i { pointer-events: none; padding: 0 15px;}
+		span, i { pointer-events: none; padding: 0 1px !important;}
 	}
 
 	.adjusts {
@@ -55,6 +55,11 @@
 				align-items: center;
 				text-align: center;
 				height: 28px;
+				background: rgba(255, 255, 240, 0.8);
+				border: 1px solid #b5b3a4;
+				border-radius: 3px;
+				font-size: 14px;
+				cursor: pointer;
 			}
 
 			input {
@@ -66,6 +71,25 @@
 			font-size: 14px;
 			margin: 0;
 		}
+	}
+
+	.submit {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+			height: 38px;
+			background: rgba(255, 255, 240, 0.8);
+			border: 1px solid #b5b3a4;
+			border-radius: 3px;
+			font-size: 14px;
+			cursor: pointer;
+			width: 100%;
+			margin: 0;
+
+			i {
+				padding: 4px;
+			}
 	}
 }
 
@@ -79,11 +103,11 @@
 	input[type="text"] {
 		min-width: 30px !important;
 		width: auto !important;
-		text-align: center;
+		text-align: center !important;
 	}
 }
 
-.areaTemplate {
+.areaTemplateWindow {
 	box-shadow: 0 0 10x #000 !important;
 	font-family: 'Signika', 'Roboto', sans-serif;
 
