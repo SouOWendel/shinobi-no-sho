@@ -177,7 +177,7 @@ export class ShinobiItemSheet extends ItemSheet {
 			await this._onSubmit(event);
 			const html = a.closest('.areaTemplate-part');
 			const areas = foundry.utils.deepClone(this.item.system.areaTemplate);
-			areas.splice(Number(html.dataset.effectsPart), 1);
+			areas.splice(Number(html.dataset.areaPart), 1);
 			return this.item.update({'system.areaTemplate': areas});
 		}
 	}
