@@ -1,5 +1,31 @@
 # CHANGELOG
 
+## [1.10.0](https://github.com/SouOWendel/shinobi-no-sho/compare/v1.9.1...v1.10.0) (2024-10-07)
+
+
+### Features
+
+* **areaTemplate.hbs:** adjusted the layout, classes and names ([a967f9c](https://github.com/SouOWendel/shinobi-no-sho/commit/a967f9cee8936e2520b42b0dbf6b428ca5fe39d0))
+* **areaTemplate:** filter and define area dat according to the system, add template controls and change the class name ([e58faa9](https://github.com/SouOWendel/shinobi-no-sho/commit/e58faa954f7ae4105d22404cd95441c80a4d834a))
+* **areaTemplate:** prepare the environment for chat features and created the areaTemplate with layout and logic ([f396bfc](https://github.com/SouOWendel/shinobi-no-sho/commit/f396bfc125c89635eeb24680f06ee4c04fc985d7))
+* **areaTemplate:** re-render the data of items on prepareTemplate calculations ([b032fa3](https://github.com/SouOWendel/shinobi-no-sho/commit/b032fa39b84e55b2e9039b46aba318d73f342329))
+* **armas and gerais sheet:** has been added the areaTemplate in this items ([0cec6ed](https://github.com/SouOWendel/shinobi-no-sho/commit/0cec6ed0b3d90a4993e40254df2035a7291f76b9))
+* **config and localizations:** added config variables for dropdowns with the respectives translates ([e615678](https://github.com/SouOWendel/shinobi-no-sho/commit/e6156782106bcf2d2cc4f70ac2e81842f24c898c))
+* **css/sass:** adjusted the buttons and other properties of areaTemplate ([52bc0af](https://github.com/SouOWendel/shinobi-no-sho/commit/52bc0af855c31066cd1e6f78df34d6a92a1a4440))
+* **css/sass:** layout for areaTemplate, adjusts on item-card ([814aa7b](https://github.com/SouOWendel/shinobi-no-sho/commit/814aa7bebe325eb733919e262f8fece69b4ec340))
+* **item tecnicas sheet:** added data-dtype number for areaTemplate fields ([ad649ab](https://github.com/SouOWendel/shinobi-no-sho/commit/ad649ab3823d1e334e6aae6242555f5b34c68d57))
+* **item-sheet:** added content class to scrollY, dropdowns, and array handler for techniques and equipments items ([e242d23](https://github.com/SouOWendel/shinobi-no-sho/commit/e242d236874f29208dc86608b844ccb0e471fb94))
+* **localization:** changed 'Meia-esfera' to 'Meia esfera' ([065575e](https://github.com/SouOWendel/shinobi-no-sho/commit/065575e73de8b6ef5e456fc70a6dd1cb88457013))
+* **localization:** changed and created a lot of keys and values with translates ([93950d6](https://github.com/SouOWendel/shinobi-no-sho/commit/93950d6df5d5a35b39400dedd949989218c394cc))
+* **system.json:** changed the compatibility to v12 and changes on packs, grids and flags ([18369be](https://github.com/SouOWendel/shinobi-no-sho/commit/18369be7a96139df8ea107bf2c17196a9b45a657))
+
+
+### Bug Fixes
+
+* **field control:** fixed the areaTemplate control on item sheet changing the dataset ([4dddc68](https://github.com/SouOWendel/shinobi-no-sho/commit/4dddc6898adf726e9e9bbccbfa0efef1e7d7ec5b))
+* **item-card:** fixed the path of combatAbilities ([f7981a2](https://github.com/SouOWendel/shinobi-no-sho/commit/f7981a2dc961c9add31adc3724b44b80465941f6))
+* **ninja inventory:** fixed an 'a' tag variable syntax ([3d38e4a](https://github.com/SouOWendel/shinobi-no-sho/commit/3d38e4a9d951a737da974e883ecc44fd6fde3035))
+
 ## [1.9.1](https://github.com/SouOWendel/shinobi-no-sho/compare/v1.9.0...v1.9.1) (2024-08-07)
 
 
