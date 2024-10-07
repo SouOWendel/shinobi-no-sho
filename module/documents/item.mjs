@@ -49,6 +49,7 @@ export class ShinobiItem extends Item {
 			if (area[3] === "porEspirito") area[4] = area[1] + area[2] * esp.tbonus;
 			else area[4] = area[1] + area[2];
 		}
+		this.render();
 	}
 
 	/**
