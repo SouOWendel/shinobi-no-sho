@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## [1.10.1](https://github.com/SouOWendel/shinobi-no-sho/compare/v1.10.0...v1.10.1) (2024-10-09)
+
+
+### Bug Fixes
+
+* **hasAreaTemplate:** fixed the condition that checks whether an area template exists ([4dbdc4a](https://github.com/SouOWendel/shinobi-no-sho/commit/4dbdc4a6a9794f6bee8663726be074b15e26075a))
+
 ## [1.10.0](https://github.com/SouOWendel/shinobi-no-sho/compare/v1.9.1...v1.10.0) (2024-10-07)
 
 
