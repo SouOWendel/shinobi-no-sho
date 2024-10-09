@@ -155,6 +155,10 @@ export class ShinobiItem extends Item {
     const rollMode = game.settings.get('core', 'rollMode');
     // const label = `[${item.type}] ${item.name}`;
 		const token = this.actor.token;
+
+		let hasAreaTemplate;
+		hasAreaTemplate = (this.type == "tecnicas" || this.type == "gerais" || this.type == "armas");
+		hasAreaTemplate = this.system.areaTemplate.length !== 0;
 	
 		const templateData = {
 			actor: this.actor,
@@ -162,7 +166,7 @@ export class ShinobiItem extends Item {
 			item: this,
 			data: await this.getChatData(),
 			labels: this.labels,
-			hasAreaTemplate: (this.type == "tecnicas" || this.type == "gerais" || this.type == "armas"),
+			hasAreaTemplate: hasAreaTemplate,
 			system: [],
 			info: [],
 		};
