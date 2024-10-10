@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## [1.10.2](https://github.com/SouOWendel/shinobi-no-sho/compare/v1.10.1...v1.10.2) (2024-10-10)
+
+
+### Bug Fixes
+
+* **areaTemplate:** fixed the condition that defines when the button is displayed ([4d79bb2](https://github.com/SouOWendel/shinobi-no-sho/commit/4d79bb260a9d082dd35a1a6dec32044a2e8b8d0a))
+
 ## [1.10.1](https://github.com/SouOWendel/shinobi-no-sho/compare/v1.10.0...v1.10.1) (2024-10-09)
 
 
