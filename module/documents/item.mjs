@@ -158,7 +158,7 @@ export class ShinobiItem extends Item {
 
 		let hasAreaTemplate;
 		hasAreaTemplate = (this.type == "tecnicas" || this.type == "gerais" || this.type == "armas");
-		hasAreaTemplate = this.system.areaTemplate.length !== 0;
+		hasAreaTemplate = (this.system?.areaTemplate && this.system?.areaTemplate.length !== 0) ? true : false;
 	
 		const templateData = {
 			actor: this.actor,
