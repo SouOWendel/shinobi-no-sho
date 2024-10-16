@@ -1,5 +1,16 @@
 # CHANGELOG
 
+## [1.11.0](https://github.com/SouOWendel/shinobi-no-sho/compare/v1.10.2...v1.11.0) (2024-10-16)
+
+
+### Features
+
+* **actor ninja sheet:** added new row on inventory for device items ([2c95141](https://github.com/SouOWendel/shinobi-no-sho/commit/2c951419e70b75764776fe898e52a763148c0da4))
+* **css/sass:** refactor the header fields with second version and added input center utils class ([ff48508](https://github.com/SouOWendel/shinobi-no-sho/commit/ff48508c960d61049474ac36dcd77193625deeed))
+* **general item sheet:** rearrangement of the layout and added 'usos' fields ([113cf48](https://github.com/SouOWendel/shinobi-no-sho/commit/113cf48d4b7c315cc9072121f2a1abdc5b0860ab))
+* **general item:** added new types for techniques and general items and damage type for weapons ([d14a66a](https://github.com/SouOWendel/shinobi-no-sho/commit/d14a66a82ea9eedfe171e1b7df9590b1a7e7d308))
+* **template.json:** added 'usos' for general items ([beaa5dc](https://github.com/SouOWendel/shinobi-no-sho/commit/beaa5dc45ba71d0b3708b21f793ecf3bff38b843))
+
 ## [1.10.2](https://github.com/SouOWendel/shinobi-no-sho/compare/v1.10.1...v1.10.2) (2024-10-10)
 
 
