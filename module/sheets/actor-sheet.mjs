@@ -127,13 +127,16 @@ export class ShinobiActorSheet extends ActorSheet {
 		const aptidoes = [];
 		const poderes = [];
 		const tecnicas = [];
+		const dispositivos = [];
 
     for (let i of context.items) {
       i.img = i.img || Item.DEFAULT_ICON;
       if (i.type === 'armas') { armas.push(i); }
       else if (i.type === 'armaduras') { armaduras.push(i); }
-			else if (i.type === 'gerais') { gerais.push(i); }
-			else if (i.type === 'aptidoes') { aptidoes.push(i); }
+			else if (i.type === 'gerais') { 
+				if (i.system.tipo.includes("dispositivo")) dispositivos.push(i);
+				else gerais.push(i);
+			} else if (i.type === 'aptidoes') { aptidoes.push(i); }
 			else if (i.type === 'poderes') { poderes.push(i); }
 			else if (i.type === 'tecnicas') { tecnicas.push(i); }
     }
@@ -145,6 +148,7 @@ export class ShinobiActorSheet extends ActorSheet {
 		context.aptidoes = aptidoes;
     context.poderes = poderes;
     context.tecnicas = tecnicas;
+		context.dispositivos = dispositivos;
   }
 
 	/** @inheritDoc */
