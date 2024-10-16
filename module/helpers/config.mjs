@@ -149,7 +149,10 @@ shinobiNoSho.ITEMS = {
 				area: "shinobiNoSho.ITEMS.tecnicas.tipo.area",
 				suporte: "shinobiNoSho.ITEMS.tecnicas.tipo.suporte",
 				corpoacorpo: "shinobiNoSho.ITEMS.tecnicas.tipo.corpoacorpo",
-				toque: "shinobiNoSho.ITEMS.tecnicas.tipo.toque"
+				toque: "shinobiNoSho.ITEMS.tecnicas.tipo.toque",
+				aflicao: "shinobiNoSho.ITEMS.tecnicas.tipo.aflicao",
+				compulsao: "shinobiNoSho.ITEMS.tecnicas.tipo.compulsao",
+				fantasma: "shinobiNoSho.ITEMS.tecnicas.tipo.fantasma"
 			},
 			subtipo: {
 				controleChakra: "shinobiNoSho.ITEMS.tecnicas.subtipo.controleChakra",
@@ -193,7 +196,8 @@ shinobiNoSho.ITEMS = {
 			tipoDano: {
 				corte: "shinobiNoSho.ITEMS.armas.tipoDano.corte",
 				perfuracao: "shinobiNoSho.ITEMS.armas.tipoDano.perfuracao",
-				esmagamento: "shinobiNoSho.ITEMS.armas.tipoDano.esmagamento"
+				esmagamento: "shinobiNoSho.ITEMS.armas.tipoDano.esmagamento",
+				fogo: "shinobiNoSho.ITEMS.armas.tipoDano.fogo"
 			},
 			tipo: {
 				natural: "shinobiNoSho.ITEMS.armas.tipo.natural",
@@ -222,7 +226,11 @@ shinobiNoSho.ITEMS = {
 			tipo: {
 				comum: "shinobiNoSho.ITEMS.geral.tipo.comum",
 				animais: "shinobiNoSho.ITEMS.geral.tipo.animais",
-				veículos: "shinobiNoSho.ITEMS.geral.tipo.veículos",
+				veiculos: "shinobiNoSho.ITEMS.geral.tipo.veiculos",
+				servicos: "shinobiNoSho.ITEMS.geral.tipo.servicos",
+				dispositivoLeve: "shinobiNoSho.ITEMS.geral.tipo.dispositivoLeve",
+				dispositivoMedio: "shinobiNoSho.ITEMS.geral.tipo.dispositivoMedio",
+				dispositivoPesado: "shinobiNoSho.ITEMS.geral.tipo.dispositivoPesado",
 			}
 		},
 		generico: {

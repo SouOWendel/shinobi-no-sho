@@ -73,7 +73,7 @@
 				"acuidade": "Acuidade"
 			},
 			"itensGerais": {
-				"tipoItemGeral": "Tipo de Item Geral"
+				"tipoItemGeral": "Tipo de Item"
 			},
 			"poderes": {
 				"nivelPoder": "Nível de Poder",
@@ -297,7 +297,10 @@
 						"area": "Ataque em Área",
 						"suporte": "Suporte",
 						"corpoacorpo": "Corpo-a-Corpo",
-						"toque": "Toque"
+						"toque": "Toque",
+						"aflicao": "Aflição",
+						"compulsao": "Compulsão",
+						"fantasma": "Fantasma"
 					},
 					"subtipo": {
 						"controleChakra": "Controle de Chakra",
@@ -341,7 +344,8 @@
 					"tipoDano": {
 						"corte": "Corte",
 						"perfuracao": "Perfuração",
-						"esmagamento": "Esmagamento"
+						"esmagamento": "Esmagamento",
+						"fogo": "Fogo"
 					},
 					"tipo": {
 						"natural": "Natural",
@@ -370,7 +374,19 @@
 					"tipo": {
 						"comum": "Comum",
 						"animais": "Animal",
-						"veículos": "Veículo"
+						"veiculos": "Veículo",
+						"servicos": "Serviços",
+						"dispositivoLeve": "Dispositivo Leve",
+						"dispositivoMedio": "Dispositivo Médio",
+						"dispositivoPesado": "Dispositivo Pesado"
+					},
+					"tipoAbv": {
+						"comum": "Comum",
+						"animais": "Animal",
+						"veiculos": "Veículo",
+						"dispositivoLeve": "Leve",
+						"dispositivoMedio": "Médio",
+						"dispositivoPesado": "Pesado"
 					}
 				},
 				"generico": {
