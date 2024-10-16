@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+.inputCenter {
+  text-align: center !important;
+}
+
 /* Global styles */
 .window-app {
   font-family: "Roboto", sans-serif;
@@ -826,6 +830,11 @@
 }
 .shinobiNoSho .effects-list h3 {
   border-bottom: 0 !important;
+}
+.shinobiNoSho #aptidao .header-fields-2, .shinobiNoSho #armas .header-fields-2, .shinobiNoSho #poderes .header-fields-2,
+.shinobiNoSho #gerais .header-fields-2, .shinobiNoSho #armaduras .header-fields-2, .shinobiNoSho #tecnicas .header-fields-2 {
+  display: flex;
+  gap: 10px;
 }
 .shinobiNoSho #aptidao .editor, .shinobiNoSho #aptidao .editor-content, .shinobiNoSho #armas .editor, .shinobiNoSho #armas .editor-content, .shinobiNoSho #poderes .editor, .shinobiNoSho #poderes .editor-content,
 .shinobiNoSho #gerais .editor,

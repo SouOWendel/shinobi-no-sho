@@ -182,6 +182,11 @@
 
 #aptidao, #armas, #poderes,
 #gerais, #armaduras, #tecnicas {
+	.header-fields-2 {
+		display: flex;
+		gap: 10px;
+	}
+
 	.editor, .editor-content {
 		min-height: 130px;
 	}
