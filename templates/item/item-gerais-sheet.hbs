@@ -3,22 +3,34 @@
     <img class="profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}" />
     <div class="header-fields">
       <h1 class="charname"><input name="name" type="text" value="{{item.name}}" placeholder="Name" /></h1>
-      <div class="grid grid-3col">
-        <div class="resource">
-          <label class="resource-label">Quantidade</label>
-          <input type="text" name="system.quantidade" value="{{system.quantidade}}" data-dtype="Number" />
+      <div class="flex header-fields-2">
+        <div class="resource flex-1">
+          <label class="resource-label">Qtd</label>
+          <input type="text" name="system.quantidade" value="{{system.quantidade}}" data-dtype="Number" class="inputCenter"/>
         </div>
-        <div class="resource">
+        <div class="resource flex-1">
           <label class="resource-label">Preço</label>
-          <input type="text" name="system.preco" value="{{system.preco}}" data-dtype="Number" />
+          <input type="text" name="system.preco" value="{{system.preco}}" data-dtype="Number" class="inputCenter"/>
         </div>
-				<div class="resource">
+				<div class="resource flex-2">
           <label class="resource-label">Raridade</label>
           <select name="system.rarity">
 						{{selectOptions itemsDropdown.generico.rarity 
 						selected=system.rarity 
 						localize=true blank="—"}}
 					</select>
+        </div>
+				<div class="resource flex-3">
+          <label for="system.tipo" class="resource-label">
+							{{localize "shinobiNoSho.Item.itensGerais.tipoItemGeral"}}
+						</label>
+						<div class="resource-content">
+							<select name="system.tipo">
+								{{selectOptions itemsDropdown.geral.tipo 
+								selected=system.tipo 
+								localize=true blank="—"}}
+							</select>
+						</div>
         </div>
       </div>
     </div>
@@ -38,25 +50,27 @@
 			<div class="content">
 				<div class="flex flex-group-center">
 					<div class="resource flex flex-2">
-						<label for="system.tipo" class="resource-label p-r-10">Tipo de Item Geral</label>
-						<div class="resource-content">
-							<select name="system.tipo">
-								{{selectOptions itemsDropdown.geral.tipo 
-								selected=system.tipo 
-								localize=true blank="—"}}
-							</select>
-						</div>
-					</div>
-					<div class="resource flex flex-2">
 							<label for="system.compartimentos.qtdItem" class="resource-label p-r-10">Compart.</label>
 							<div class="resource-content">
 								<input type="text" name="system.compartimentos.qtdItem" 
-								value="{{system.compartimentos.qtdItem}}" data-dtype="String"/>
+								value="{{system.compartimentos.qtdItem}}" data-dtype="Number" class="inputCenter"/>
 							</div>
 							<i> / </i>
 							<div class="resource-content">
 								<input type="text" name="system.compartimentos.compartOcupa" 
-								value="{{system.compartimentos.compartOcupa}}" data-dtype="String"/>
+								value="{{system.compartimentos.compartOcupa}}" data-dtype="Number" class="inputCenter"/>
+							</div>
+					</div>
+					<div class="resource flex flex-2">
+							<label for="system.compartimentos.qtdItem" class="resource-label p-r-10">Usos</label>
+							<div class="resource-content">
+								<input type="text" name="system.usos.value" 
+								value="{{system.usos.value}}" data-dtype="Number" class="inputCenter"/>
+							</div>
+							<i> / </i>
+							<div class="resource-content">
+								<input type="text" name="system.usos.max" 
+								value="{{system.usos.max}}" data-dtype="Number" class="inputCenter"/>
 							</div>
 					</div>
 				</div>
