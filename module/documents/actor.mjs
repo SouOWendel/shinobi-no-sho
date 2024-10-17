@@ -126,6 +126,59 @@ export class ShinobiActor extends Actor {
 		// Vitalidade e Chakra
 		attributes.vitalidade.max = 10 + 3*abilities.vig.tbonus + 5*details.nivelCampanha + attributes.vitalidade.bonus;
 		attributes.chakra.max = 10 + 3*abilities.esp.tbonus + attributes.chakra.bonus;
+
+		this._sizeCalculations(system);
+	}
+
+	_sizeCalculations(system) {
+		const size = system.details.tamanho;
+		switch (size) {
+			case "minusculo":
+				system.skills.geral.furtividade.total += 5;
+				system.skills.social.intimidacao.total += -2;
+				system.attributes.movement.andar += -12;
+			break;
+			case "diminuto":
+				system.skills.geral.furtividade.total += 3;
+				system.skills.social.intimidacao.total += -2;
+				system.attributes.movement.andar += -9;
+			break;
+			case "miudo":
+				system.skills.geral.furtividade.total += 2;
+				system.skills.social.intimidacao.total += -1;
+				system.attributes.movement.andar += -6;
+			break;
+			case "pequeno":
+				system.skills.geral.furtividade.total += 1;
+				system.skills.social.intimidacao.total += -1;
+				system.attributes.movement.andar += -3;
+			break;
+			case "grande":
+				system.skills.geral.furtividade.total += -1;
+				system.skills.social.intimidacao.total += 1;
+				system.attributes.movement.andar += 3;
+			break;
+			case "enorme":
+				system.skills.geral.furtividade.total += -2;
+				system.skills.social.intimidacao.total += 1;
+				system.attributes.movement.andar += 6;
+			break;
+			case "imenso":
+				system.skills.geral.furtividade.total += -3;
+				system.skills.social.intimidacao.total += 2;
+				system.attributes.movement.andar += 9;
+			break;
+			case "colossal":
+				system.skills.geral.furtividade.total += -5;
+				system.skills.social.intimidacao.total += 2;
+				system.attributes.movement.andar += 12;
+			break;
+			case "incrivel":
+				system.skills.geral.furtividade.total += -7;
+				system.skills.social.intimidacao.total += 3;
+				system.attributes.movement.andar += 15;
+			break;
+		}
 	}
 
   /**
