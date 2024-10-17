@@ -270,7 +270,20 @@ shinobiNoSho.templateAreas = {
 		meiaEsfera: 'shinobiNoSho.ITEMS.areas.meiaEsfera',
 };
 
-shinobiNoSho.areaRule = {
-	porEspirito: "shinobiNoSho.ITEMS.areaRule.porEspirito",
-	custom: "shinobiNoSho.ITEMS.areaRule.custom"
+shinobiNoSho.regraDeArea = {
+	porEspirito: "shinobiNoSho.ITEMS.regraDeArea.porEspirito",
+	custom: "shinobiNoSho.ITEMS.regraDeArea.custom"
+};
+
+shinobiNoSho.tamanhos = {
+	minusculo: "shinobiNoSho.tamanhos.minusculo",
+	diminuto: "shinobiNoSho.tamanhos.diminuto",
+	miudo: "shinobiNoSho.tamanhos.miudo",
+	pequeno: "shinobiNoSho.tamanhos.pequeno",
+	medio: "shinobiNoSho.tamanhos.medio",
+	grande: "shinobiNoSho.tamanhos.grande",
+	enorme: "shinobiNoSho.tamanhos.enorme",
+	imenso: "shinobiNoSho.tamanhos.imenso",
+	colossal: "shinobiNoSho.tamanhos.colossal",
+	incrivel: "shinobiNoSho.tamanhos.incrivel",
 };

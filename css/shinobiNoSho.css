@@ -452,6 +452,13 @@
 .shinobiNoSho .sheet-header .header-fields {
   flex: 2;
 }
+.shinobiNoSho .sheet-header .header-fields input, .shinobiNoSho .sheet-header .header-fields select {
+  height: 27px;
+  margin-bottom: 2px;
+}
+.shinobiNoSho .sheet-header .header-fields .resources {
+  grid-row-gap: 80px;
+}
 .shinobiNoSho .sheet-header .profile {
   flex: 1;
   padding-right: 10px;

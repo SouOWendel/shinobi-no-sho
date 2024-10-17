@@ -31,6 +31,18 @@
       "Ninja": "Shinobi Actor Sheet",
       "Item": "Shinobi Item Sheet"
     },
+		"tamanhos": {
+			"minusculo": "Minúsculo",
+			"diminuto": "Diminuto",
+			"miudo": "Miúdo",
+			"pequeno": "Pequeno",
+			"medio": "Médio",
+			"grande": "Grande",
+			"enorme": "Enorme",
+			"imenso": "Imenso",
+			"colossal": "Colossal",
+			"incrivel": "Incrível"
+		},
     "Item": {
 			"descricaoLabel": "Descrição",
 			"efeitosLabel": "Efeitos",
@@ -128,7 +140,7 @@
 			"tipo": "Tipo",
 			"nivel": "Nível",
 			"preRequisito": "Pré-requisito",
-			"nivelCampanha": "Nível de Campanha",
+			"nivelCampanha": "Nível (NC)",
 			"nivelShinobi": "Nível Shinobi",
 			"cla": "Clã",
 			"idade": "Idade",
@@ -422,7 +434,7 @@
 					"cone": "Cone",
 					"meiaEsfera": "Meia esfera"
 				},
-				"areaRule": {
+				"regraDeArea": {
 					"porEspirito": "Por Espírito",
 					"custom": "Customizado"
 				}

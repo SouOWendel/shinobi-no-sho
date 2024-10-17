@@ -66,6 +66,7 @@ export class ShinobiActorSheet extends ActorSheet {
 		context.habilidadesCombate = CONFIG.shinobiNoSho.combatAbilities;
 		context.header = CONFIG.shinobiNoSho.header;
 		context.socialCustom = CONFIG.shinobiNoSho.periciasSociaisCustom;
+		context.tamanhos = CONFIG.shinobiNoSho.tamanhos;
 
     // Prepare character data and items.
     if (actorData.type == 'Ninja') {

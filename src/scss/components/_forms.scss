@@ -36,6 +36,15 @@
 
   .header-fields {
     flex: 2;
+
+		input, select {
+			height: 27px;
+			margin-bottom: 2px;
+		}
+
+		.resources {
+			grid-row-gap: 80px;
+		}
   }
 
 	.profile {

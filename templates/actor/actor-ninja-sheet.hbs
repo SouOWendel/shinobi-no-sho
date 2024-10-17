@@ -7,22 +7,15 @@
 			<h1 class="charname"><input name="name" type="text" value="{{actor.name}}" placeholder="Name"/></h1>
 		</div>
     <div class="header-fields">
-			<div class="resources grid">
-			<div class="resource flex flex-group-center">
-					<label for="system.details.nivelCampanha" class="resource-label p-r-10">{{localize "shinobiNoSho.NinjaSheet.nivelCampanha"}}</label>
-          <div class="resource-content flexrow flex-center flex-between">
-          	<input type="text" name="system.details.nivelCampanha" value="{{system.details.nivelCampanha}}" data-dtype="String"/>
-          </div>
-			</div>
-			<div class="resource flex flex-group-center">
-					<label for="system.details.nivelShinobi" class="resource-label p-r-10">Nível Shinobi</label>
-          <div class="resource-content flexrow flex-center flex-between">
-          	<input type="text" name="system.details.nivelShinobi" value="{{system.details.nivelShinobi}}" data-dtype="String"/>
-          </div>
-			</div>
-			</div>
       <div class="resources grid grid-3col">
 				<div class="resource">
+					<label for="system.details.nivelCampanha" class="resource-label">
+						{{localize "shinobiNoSho.NinjaSheet.nivelCampanha"}}
+					</label>
+          <div class="resource-content flexrow flex-center flex-between">
+          	<input type="text" name="system.details.nivelCampanha" 
+						value="{{system.details.nivelCampanha}}" data-dtype="String"/>
+          </div>
 					<label for="system.details.cla" class="resource-label">Clã</label>
           <div class="resource-content flexrow flex-center flex-between">
           	<input type="text" name="system.details.cla" value="{{system.details.cla}}" 
@@ -40,32 +33,34 @@
           </div>
 				</div>
         <div class="resource">
+					<label for="system.details.tamanho" class="resource-label">Tamanho</label>
+          <select name="system.details.tamanho" class="item-medium">
+						{{selectOptions tamanhos selected=system.details.tamanho localize=true blank="—"}}
+					</select>
           <label for="system.details.genero" class="resource-label">Gênero</label>
           <div class="resource-content flexrow flex-center flex-between">
 						<select name="system.details.genero" class="item-medium">
-							{{selectOptions header.genero 
-							selected=system.details.genero 
-							localize=true blank="—"}}
+							{{selectOptions header.genero selected=system.details.genero localize=true blank="—"}}
 						</select>
           </div>
 					<label for="system.details.tendencia" class="resource-label">Tendência</label>
           <div class="resource-content flexrow flex-center flex-between">
 						<select name="system.details.tendencia" class="item-medium">
-							{{selectOptions header.tendencia 
-							selected=system.details.tendencia 
-							localize=true blank="—"}}
+							{{selectOptions header.tendencia selected=system.details.tendencia localize=true blank="—"}}
 						</select>
           </div>
 					<label for="system.details.lateralidade" class="resource-label">Lateralidade</label>
           <div class="resource-content flexrow flex-center flex-between">
 						<select name="system.details.lateralidade" class="item-medium">
-							{{selectOptions header.lateralidade 
-							selected=system.details.lateralidade 
-							localize=true blank="—"}}
+							{{selectOptions header.lateralidade selected=system.details.lateralidade localize=true blank="—"}}
 						</select>
           </div>
         </div>
 				<div class="resource">
+					<label for="system.details.nivelShinobi" class="resource-label">Nível Shinobi</label>
+          <div class="resource-content flexrow flex-center flex-between">
+          	<input type="text" name="system.details.nivelShinobi" value="{{system.details.nivelShinobi}}" data-dtype="String"/>
+          </div>
           <label for="system.details.vilaAtuante" class="resource-label">Vila Atuante</label>
           <div class="resource-content flexrow flex-center flex-between">
           	<input type="text" name="system.details.vilaAtuante" value="{{system.details.vilaAtuante}}" 
@@ -74,17 +69,13 @@
 					<label for="system.details.naturezaPrincipal" class="resource-label">Natureza Pr.</label>
           <div class="resource-content flexrow flex-center flex-between">
 						<select name="system.details.naturezaPrincipal" class="item-medium">
-							{{selectOptions header.afinidade 
-							selected=system.details.naturezaPrincipal 
-							localize=true blank="—"}}
+							{{selectOptions header.afinidade selected=system.details.naturezaPrincipal localize=true blank="—"}}
 						</select>
           </div>
 					<label for="system.details.naturezaSecundaria" class="resource-label">Natureza Sc.</label>
           <div class="resource-content flexrow flex-center flex-between">
 						<select name="system.details.naturezaSecundaria" class="item-medium">
-							{{selectOptions header.afinidade 
-							selected=system.details.naturezaSecundaria 
-							localize=true blank="—"}}
+							{{selectOptions header.afinidade selected=system.details.naturezaSecundaria localize=true blank="—"}}
 						</select>
           </div>
         </div>
