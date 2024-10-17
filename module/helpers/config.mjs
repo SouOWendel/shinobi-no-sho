@@ -60,7 +60,9 @@ shinobiNoSho.skills = {
 		procurar: "shinobiNoSho.skills.geral.procurar",
 		prontidao: "shinobiNoSho.skills.geral.prontidao",
 		rastrear: "shinobiNoSho.skills.geral.rastrear",
-		veneficio: "shinobiNoSho.skills.geral.veneficio"
+		veneficio: "shinobiNoSho.skills.geral.veneficio",
+		voo: "shinobiNoSho.skills.geral.voo",
+		pericia_1: "shinobiNoSho.skills.geral.pericia_1"
 	},
 	social: {
 		atuacao: "shinobiNoSho.skills.social.atuacao",
@@ -287,3 +289,16 @@ shinobiNoSho.tamanhos = {
 	colossal: "shinobiNoSho.tamanhos.colossal",
 	incrivel: "shinobiNoSho.tamanhos.incrivel",
 };
+
+shinobiNoSho.tokenSizes = {
+	minusculo: 1,
+	diminuto: 2,
+	miudo: 3,
+	pequeno: 4,
+	medio: 5,
+	grande: 6,
+	enorme: 7,
+	imenso: 8,
+	colossal: 9,
+	incrivel: 10,
+}

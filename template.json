@@ -345,6 +345,26 @@
 							"treinada": true,
 							"armadura": false
 						}
+					},
+					"voo": {
+						"ability": "agi",
+						"value": null,
+						"bonus": null,
+						"caract": {
+							"social": false,
+							"treinada": true,
+							"armadura": false
+						}
+					},
+					"pericia_1": {
+						"ability": "",
+						"value": null,
+						"bonus": null,
+						"caract": {
+							"social": false,
+							"treinada": false,
+							"armadura": false
+						}
 					}
 				},
 				"social": {
