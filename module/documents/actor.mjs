@@ -194,6 +194,23 @@ export class ShinobiActor extends Actor {
     return data;
   }
 
+	/* -------------------------------------------- */
+
+	/** @inheritdoc */
+	async _preUpdate(changed, options, user) {
+		await super._preUpdate(changed, options, user);
+		// Apply changes in Actor Size to Token Width and Height.
+		const newSize = foundry.utils.getProperty(changed, "system.details.tamanho");
+		if (newSize) {
+			const size = CONFIG.shinobiNoSho.tokenSizes[newSize];
+			if (!foundry.utils.hasProperty(changed, "prototypeToken.width")) {
+				changed.prototypeToken = changed.prototypeToken || {};
+				changed.prototypeToken.height = size;
+				changed.prototypeToken.width = size;
+			}
+		}
+	}
+
   /**
    * Prepare character roll data.
    */
