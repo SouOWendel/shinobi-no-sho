@@ -44,8 +44,19 @@
 				{{ifThen item.system.combate.alcance.tipo 
 				(localize (concat "shinobiNoSho.ITEMS.generico.alcance." item.system.combate.alcance.tipo)) "—"}}
 			</div>
-			<div class='item-small item-prop'>
-				{{ifThen item.system.quantidade item.system.quantidade "—"}}
+			<div class='item-small item-prop item-quantity'>
+				{{#if @root.owner}}
+				<a class="adjustment-button" data-action="decrease" data-property="system.quantidade">
+					<i class="fas fa-minus"></i>
+				</a>
+				{{/if}}
+				<input type="number" value="{{item.system.quantidade}}" placeholder="0" data-dtype="Number"
+				data-name="system.quantidade" inputmode="numeric" pattern="[0-9+=\-]*" min="0">
+				{{#if @root.owner}}
+				<a class="adjustment-button" data-action="increase" data-property="system.quantidade">
+					<i class="fas fa-plus"></i>
+				</a>
+				{{/if}}
 			</div>
       <div class='item-controls'>
         <a class='item-control item-edit' title='{{localize "DOCUMENT.Update" type='Arma'}}'>
@@ -92,8 +103,19 @@
 			<div class='item-small item-prop'>
 				{{ifThen item.system.bonusAbsorcao item.system.bonusAbsorcao "—"}}
 			</div>
-			<div class='item-small item-prop'>
-				{{ifThen item.system.quantidade item.system.quantidade "—"}}
+			<div class='item-small item-prop item-quantity'>
+				{{#if @root.owner}}
+				<a class="adjustment-button" data-action="decrease" data-property="system.quantidade">
+					<i class="fas fa-minus"></i>
+				</a>
+				{{/if}}
+				<input type="number" value="{{item.system.quantidade}}" placeholder="0" data-dtype="Number"
+				data-name="system.quantidade" inputmode="numeric" pattern="[0-9+=\-]*" min="0">
+				{{#if @root.owner}}
+				<a class="adjustment-button" data-action="increase" data-property="system.quantidade">
+					<i class="fas fa-plus"></i>
+				</a>
+				{{/if}}
 			</div>
       <div class='item-controls'>
         <a class='item-control item-edit'
@@ -138,12 +160,25 @@
 			<div class='item-medium item-prop'>
 				{{ifThen item.system.preco item.system.preco "—"}} Ryos
 			</div>
-			<div class='item-small item-prop'>
-				{{ifThen item.system.compartimentos.qtdItem item.system.compartimentos.qtdItem "—"}} / 
-				{{ifThen item.system.compartimentos.compartOcupa item.system.compartimentos.compartOcupa "—"}}
+			<div class='item-small item-prop item-uses'>
+				<input type="number" value="{{item.system.usos.value}}" placeholder="0" data-dtype="Number"
+				data-name="system.usos.value" inputmode="numeric" pattern="[0-9+=\-]*" min="0"> / 
+				<input type="number" value="{{item.system.usos.max}}" placeholder="0" data-dtype="Number"
+				data-name="system.usos.max" inputmode="numeric" pattern="[0-9+=\-]*" min="0">
 			</div>
-			<div class='item-small item-prop'>
-				{{ifThen item.system.quantidade item.system.quantidade "—"}}
+			<div class='item-small item-prop item-quantity'>
+				{{#if @root.owner}}
+				<a class="adjustment-button" data-action="decrease" data-property="system.quantidade">
+					<i class="fas fa-minus"></i>
+				</a>
+				{{/if}}
+				<input type="number" value="{{item.system.quantidade}}" placeholder="0" data-dtype="Number"
+				data-name="system.quantidade" inputmode="numeric" pattern="[0-9+=\-]*" min="0">
+				{{#if @root.owner}}
+				<a class="adjustment-button" data-action="increase" data-property="system.quantidade">
+					<i class="fas fa-plus"></i>
+				</a>
+				{{/if}}
 			</div>
       <div class='item-controls'>
         <a class='item-control item-edit' title='{{localize "DOCUMENT.Update" type='Item Geral'}}'>
@@ -187,12 +222,25 @@
 			<div class='item-medium item-prop'>
 				{{ifThen item.system.preco item.system.preco "—"}} Ryos
 			</div>
-			<div class='item-small item-prop'>
-				{{ifThen item.system.usos.value item.system.usos.value "—"}} / 
-				{{ifThen item.system.usos.max item.system.usos.max "—"}}
+			<div class='item-small item-prop item-uses'>
+				<input type="number" value="{{item.system.usos.value}}" placeholder="0" data-dtype="Number"
+				data-name="system.usos.value" inputmode="numeric" pattern="[0-9+=\-]*" min="0"> / 
+				<input type="number" value="{{item.system.usos.max}}" placeholder="0" data-dtype="Number"
+				data-name="system.usos.max" inputmode="numeric" pattern="[0-9+=\-]*" min="0">
 			</div>
-			<div class='item-small item-prop'>
-				{{ifThen item.system.quantidade item.system.quantidade "—"}}
+			<div class='item-small item-prop item-quantity'>
+				{{#if @root.owner}}
+				<a class="adjustment-button" data-action="decrease" data-property="system.quantidade">
+					<i class="fas fa-minus"></i>
+				</a>
+				{{/if}}
+				<input type="number" value="{{item.system.quantidade}}" placeholder="0" data-dtype="Number"
+				data-name="system.quantidade" inputmode="numeric" pattern="[0-9+=\-]*" min="0">
+				{{#if @root.owner}}
+				<a class="adjustment-button" data-action="increase" data-property="system.quantidade">
+					<i class="fas fa-plus"></i>
+				</a>
+				{{/if}}
 			</div>
       <div class='item-controls'>
         <a class='item-control item-edit'

@@ -60,7 +60,8 @@ export class ShinobiActor extends Actor {
 					// Soma de bônus em perícias
 					skill.tbonus = skill.value + skill.bonus;
 					// Recuperação do atributo correspondente e divisão por dois.
-					skill.abilityValue = ability.tbonus / 2;
+					if (skillKey == "voo") skill.abilityValue = ability.tbonus;
+					else skill.abilityValue = ability.tbonus / 2;
 					// Soma do atributo derivado + total derivado.
 					skill.total = Math.round(skill.abilityValue + skill.tbonus);
 
@@ -123,6 +124,15 @@ export class ShinobiActor extends Actor {
 				attributes.movement.andar = Math.round(attributes.movement.andar);
 			}
 		}
+
+		for (let [skillKey, skill] of Object.entries(system.skills.geral)) {				
+			if (skill.ability == "arte") {
+				skill.abilityValue = system.skills.geral.arte.total;
+				skill.tbonus = skill.bonus + skill.value;
+				skill.total = Math.round(skill.abilityValue + skill.tbonus);
+			}
+		}
+
 		// Vitalidade e Chakra
 		attributes.vitalidade.max = 10 + 3*abilities.vig.tbonus + 5*details.nivelCampanha + attributes.vitalidade.bonus;
 		attributes.chakra.max = 10 + 3*abilities.esp.tbonus + attributes.chakra.bonus;

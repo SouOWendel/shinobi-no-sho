@@ -66,6 +66,7 @@ export class ShinobiActorSheet extends ActorSheet {
 		context.habilidadesCombate = CONFIG.shinobiNoSho.combatAbilities;
 		context.header = CONFIG.shinobiNoSho.header;
 		context.socialCustom = CONFIG.shinobiNoSho.periciasSociaisCustom;
+		context.vooCustom = CONFIG.shinobiNoSho.periciaVooCustom;
 		context.tamanhos = CONFIG.shinobiNoSho.tamanhos;
 
     // Prepare character data and items.
@@ -104,6 +105,7 @@ export class ShinobiActorSheet extends ActorSheet {
       v.label = game.i18n.localize(CONFIG.shinobiNoSho.skills.geral[k]) ?? k;
 			if (v.caract.treinada) v.label += "+";
 			if (v.caract.armadura) v.label += "*";
+			if (k == "voo") v.caract.isVoo = true;
     }
 
 		for (let [k, v] of Object.entries(context.system.skills.social)) {
@@ -222,6 +224,15 @@ export class ShinobiActorSheet extends ActorSheet {
         li.addEventListener('dragstart', handler, false);
       });
     }
+
+		for (const input of this.form.querySelectorAll("input[type='number']")) {
+			input.addEventListener("change", this._onChangeInput.bind(this));
+		}
+
+		for (const button of this.form.querySelectorAll(".adjustment-button")) {
+			button.addEventListener("click", this._onAdjustInput.bind(this));
+		}
+
   }
 
 	async _onRelationsControl(event){
@@ -270,6 +281,35 @@ export class ShinobiActorSheet extends ActorSheet {
 
     // Finally, create the item!
     return await Item.create(itemData, { parent: this.actor });
+  }
+
+	_onAdjustInput(event) {
+		const button = event.currentTarget;
+		const { action } = button.dataset;
+		const input = button.parentElement.querySelector("input");
+		const min = input.min ? Number(input.min) : -Infinity;
+		const max = input.max ? Number(input.max) : Infinity;
+		let value = Number(input.value);
+		if (isNaN(value)) return;
+		value += action === "increase" ? 1 : -1;
+		input.value = Math.clamp(value, min, max);
+		input.dispatchEvent(new Event("change"));
+	}
+
+	async _onChangeInput(event) {
+    const itemId = event.target.closest("[data-item-id]")?.dataset.itemId;
+    if ( !itemId ) return;
+
+    event.stopImmediatePropagation();
+    const item = this.document.items.get(itemId);
+    const min = event.target.min !== "" ? Number(event.target.min) : -Infinity;
+    const max = event.target.max !== "" ? Number(event.target.max) : Infinity;
+    const value = Math.clamp(event.target.valueAsNumber, min, max);
+
+    if ( !item || Number.isNaN(value) ) return;
+
+    event.target.value = value;
+    item.update({[event.target.dataset.name]: value});
   }
 
   /**

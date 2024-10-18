@@ -41,6 +41,11 @@ shinobiNoSho.periciasSociaisCustom = {
 	arte: "shinobiNoSho.skills.geral.arte",
 };
 
+shinobiNoSho.periciaVooCustom = {
+	esp: 'shinobiNoSho.ability.esp.abbr',
+	arte: 'shinobiNoSho.skills.geral.arte'
+};
+
 shinobiNoSho.skills = {
 	geral: {
 		acrobacia: "shinobiNoSho.skills.geral.acrobacia",

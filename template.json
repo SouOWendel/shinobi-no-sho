@@ -357,13 +357,15 @@
 						}
 					},
 					"pericia_1": {
-						"ability": "",
+						"nome": "",
+						"ability": "for",
 						"value": null,
 						"bonus": null,
 						"caract": {
 							"social": false,
 							"treinada": false,
-							"armadura": false
+							"armadura": false,
+							"livre": true
 						}
 					}
 				},

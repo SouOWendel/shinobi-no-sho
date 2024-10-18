@@ -47,7 +47,7 @@ export class ShinobiItemSheet extends ItemSheet {
 		context.itemsDropdown = CONFIG.shinobiNoSho.ITEMS.dropdown;
 		context.combatAbilities = CONFIG.shinobiNoSho.combatAbilities;
 		context.areas = CONFIG.shinobiNoSho.templateAreas;
-		context.regraArea = CONFIG.shinobiNoSho.areaRule;
+		context.regraArea = CONFIG.shinobiNoSho.regraDeArea;
 
     // Retrieve the roll data for TinyMCE editors.
     context.rollData = this.item.getRollData();
