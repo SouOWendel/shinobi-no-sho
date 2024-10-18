@@ -254,6 +254,7 @@ form {
 }
 
 #periciasGerais {
+	position: relative;
 	margin-bottom: 6px;
 	.resource-content i {
 		padding: 0 5px;
@@ -274,6 +275,13 @@ form {
 		grid-column-gap: 6px;
 		grid-row-gap: 3px;
 		grid-auto-flow: column;
+	}
+
+	.rollPericiaLivre {
+		position: absolute;
+		left: 63.5%;
+		right: 0px;
+		width: 24px;
 	}
 }
 
@@ -326,4 +334,19 @@ form {
 
 .prestidigitacao {
 	font-size: 12.5px;
+}
+
+.item-quantity, .item-uses {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	i { padding: 0 6px; }
+
+	input { 
+		background: none;
+		border: none;
+		text-align: center;
+		width: 30px !important;
+	}
 }

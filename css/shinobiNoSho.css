@@ -627,6 +627,7 @@
   max-width: 100px;
 }
 .shinobiNoSho #periciasGerais {
+  position: relative;
   margin-bottom: 6px;
 }
 .shinobiNoSho #periciasGerais .resource-content i {
@@ -645,6 +646,12 @@
   grid-column-gap: 6px;
   grid-row-gap: 3px;
   grid-auto-flow: column;
+}
+.shinobiNoSho #periciasGerais .rollPericiaLivre {
+  position: absolute;
+  left: 63.5%;
+  right: 0px;
+  width: 24px;
 }
 .shinobiNoSho #periciasSociais .resource-content {
   grid-template-columns: repeat(2, 1fr);
@@ -683,6 +690,20 @@
 }
 .shinobiNoSho .prestidigitacao {
   font-size: 12.5px;
+}
+.shinobiNoSho .item-quantity, .shinobiNoSho .item-uses {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.shinobiNoSho .item-quantity i, .shinobiNoSho .item-uses i {
+  padding: 0 6px;
+}
+.shinobiNoSho .item-quantity input, .shinobiNoSho .item-uses input {
+  background: none;
+  border: none;
+  text-align: center;
+  width: 30px !important;
 }
 .shinobiNoSho .resource-label {
   font-weight: bold;
