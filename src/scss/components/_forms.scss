@@ -146,7 +146,7 @@ form {
 		}
 
 		.resource {
-			width: 50px;
+			width: 40px;
 		}
 	}
 
@@ -160,20 +160,18 @@ form {
 		text-align: center;
 
 		.resource-content {
+			justify-content: center;
+			gap: 2px;
 			input {
-				width: 40px;
-				height: 25px;
+				width: 35px;
+				height: 30px;
 			}
-		}
-
-		.resource {
-			width: 60px;
 		}
 	}
 
 	.resource input {
-		width: 40px;
-		height: 40px;
+		width: 35px;
+		height: 35px;
 	}
 
 	.resource label {

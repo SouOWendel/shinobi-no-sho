@@ -541,7 +541,7 @@
   font-size: large;
 }
 .shinobiNoSho #middle-content .atributos .resource {
-  width: 50px;
+  width: 40px;
 }
 .shinobiNoSho #middle-content .acessoRapido {
   flex: 1;
@@ -552,16 +552,17 @@
   align-items: center;
   text-align: center;
 }
-.shinobiNoSho #middle-content .acessoRapido .resource-content input {
-  width: 40px;
-  height: 25px;
+.shinobiNoSho #middle-content .acessoRapido .resource-content {
+  justify-content: center;
+  gap: 2px;
 }
-.shinobiNoSho #middle-content .acessoRapido .resource {
-  width: 60px;
+.shinobiNoSho #middle-content .acessoRapido .resource-content input {
+  width: 35px;
+  height: 30px;
 }
 .shinobiNoSho #middle-content .resource input {
-  width: 40px;
-  height: 40px;
+  width: 35px;
+  height: 35px;
 }
 .shinobiNoSho #middle-content .resource label {
   font-size: 11px;
