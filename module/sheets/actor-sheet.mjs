@@ -362,6 +362,9 @@ export class ShinobiActorSheet extends ActorSheet {
 				} else if (game.i18n.has(`shinobiNoSho.skills.social.${dataset.key}`)) {
 					getLabel = game.i18n.localize(`shinobiNoSho.skills.social.${dataset.key}`);
 				}
+				
+				if (data.nome) getLabel = system.skills.geral.pericia_1.nome;
+
 				const label =  'Fazendo um teste de ' + getLabel + ':';
         const roll = await d8Roll({
 					data,
