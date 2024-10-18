@@ -37,9 +37,6 @@ export class ShinobiActor extends Actor {
     if (actorData.type !== 'Ninja') return;
 
     const system = actorData.system;
-		const details = system.details;
-		const attributes = system.attributes;
-		const abilities = system.abilities;
   }
 
 	_prepareNinjaDerived(actorData) {
@@ -133,11 +130,11 @@ export class ShinobiActor extends Actor {
 			}
 		}
 
+		this._sizeCalculations(system);
+
 		// Vitalidade e Chakra
 		attributes.vitalidade.max = 10 + 3*abilities.vig.tbonus + 5*details.nivelCampanha + attributes.vitalidade.bonus;
 		attributes.chakra.max = 10 + 3*abilities.esp.tbonus + attributes.chakra.bonus;
-
-		this._sizeCalculations(system);
 	}
 
 	_sizeCalculations(system) {
@@ -147,46 +144,64 @@ export class ShinobiActor extends Actor {
 				system.skills.geral.furtividade.total += 5;
 				system.skills.social.intimidacao.total += -2;
 				system.attributes.movement.andar += -12;
+				system.abilities.vig.tbonus += -7;
+				system.abilities.for.tbonus += -7;
 			break;
 			case "diminuto":
 				system.skills.geral.furtividade.total += 3;
 				system.skills.social.intimidacao.total += -2;
 				system.attributes.movement.andar += -9;
+				system.abilities.vig.tbonus += -5;
+				system.abilities.for.tbonus += -5;
 			break;
 			case "miudo":
 				system.skills.geral.furtividade.total += 2;
 				system.skills.social.intimidacao.total += -1;
 				system.attributes.movement.andar += -6;
+				system.abilities.vig.tbonus += -3;
+				system.abilities.for.tbonus += -3;
 			break;
 			case "pequeno":
 				system.skills.geral.furtividade.total += 1;
 				system.skills.social.intimidacao.total += -1;
 				system.attributes.movement.andar += -3;
+				system.abilities.vig.tbonus += -1;
+				system.abilities.for.tbonus += -1;
 			break;
 			case "grande":
 				system.skills.geral.furtividade.total += -1;
 				system.skills.social.intimidacao.total += 1;
 				system.attributes.movement.andar += 3;
+				system.abilities.vig.tbonus += 1;
+				system.abilities.for.tbonus += 1;
 			break;
 			case "enorme":
 				system.skills.geral.furtividade.total += -2;
 				system.skills.social.intimidacao.total += 1;
 				system.attributes.movement.andar += 6;
+				system.abilities.vig.tbonus += 3;
+				system.abilities.for.tbonus += 3;
 			break;
 			case "imenso":
 				system.skills.geral.furtividade.total += -3;
 				system.skills.social.intimidacao.total += 2;
 				system.attributes.movement.andar += 9;
+				system.abilities.vig.tbonus += 5;
+				system.abilities.for.tbonus += 5;
 			break;
 			case "colossal":
 				system.skills.geral.furtividade.total += -5;
 				system.skills.social.intimidacao.total += 2;
 				system.attributes.movement.andar += 12;
+				system.abilities.vig.tbonus += 7;
+				system.abilities.for.tbonus += 7;
 			break;
 			case "incrivel":
 				system.skills.geral.furtividade.total += -7;
 				system.skills.social.intimidacao.total += 3;
 				system.attributes.movement.andar += 15;
+				system.abilities.vig.tbonus += 9;
+				system.abilities.for.tbonus += 9;
 			break;
 		}
 	}
