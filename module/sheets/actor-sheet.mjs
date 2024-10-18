@@ -226,13 +226,42 @@ export class ShinobiActorSheet extends ActorSheet {
     }
 
 		for (const input of this.form.querySelectorAll("input[type='number']")) {
-			input.addEventListener("change", this._onChangeInput.bind(this));
+			input.addEventListener("change", this._onChangeInputShinobi.bind(this));
 		}
 
 		for (const button of this.form.querySelectorAll(".adjustment-button")) {
 			button.addEventListener("click", this._onAdjustInput.bind(this));
 		}
 
+  }
+
+	async _onAdjustInput(event) {
+		const button = event.currentTarget;
+		const { action } = button.dataset;
+		const input = button.parentElement.querySelector("input");
+		const min = input.min ? Number(input.min) : -Infinity;
+		const max = input.max ? Number(input.max) : Infinity;
+		let value = Number(input.value);
+		if (isNaN(value)) return;
+		value += action === "increase" ? 1 : -1;
+		input.value = Math.clamp(value, min, max);
+		input.dispatchEvent(new Event("change"));
+	}
+
+	async _onChangeInputShinobi(event) {
+    const itemId = event.target.closest("[data-item-id]")?.dataset.itemId;
+    if ( !itemId ) return;
+
+    event.stopImmediatePropagation();
+    const item = this.document.items.get(itemId);
+    const min = event.target.min !== "" ? Number(event.target.min) : -Infinity;
+    const max = event.target.max !== "" ? Number(event.target.max) : Infinity;
+    const value = Math.clamp(event.target.valueAsNumber, min, max);
+
+    if ( !item || Number.isNaN(value) ) return;
+
+    event.target.value = value;
+    item.update({[event.target.dataset.name]: value});
   }
 
 	async _onRelationsControl(event){
@@ -281,35 +310,6 @@ export class ShinobiActorSheet extends ActorSheet {
 
     // Finally, create the item!
     return await Item.create(itemData, { parent: this.actor });
-  }
-
-	_onAdjustInput(event) {
-		const button = event.currentTarget;
-		const { action } = button.dataset;
-		const input = button.parentElement.querySelector("input");
-		const min = input.min ? Number(input.min) : -Infinity;
-		const max = input.max ? Number(input.max) : Infinity;
-		let value = Number(input.value);
-		if (isNaN(value)) return;
-		value += action === "increase" ? 1 : -1;
-		input.value = Math.clamp(value, min, max);
-		input.dispatchEvent(new Event("change"));
-	}
-
-	async _onChangeInput(event) {
-    const itemId = event.target.closest("[data-item-id]")?.dataset.itemId;
-    if ( !itemId ) return;
-
-    event.stopImmediatePropagation();
-    const item = this.document.items.get(itemId);
-    const min = event.target.min !== "" ? Number(event.target.min) : -Infinity;
-    const max = event.target.max !== "" ? Number(event.target.max) : Infinity;
-    const value = Math.clamp(event.target.valueAsNumber, min, max);
-
-    if ( !item || Number.isNaN(value) ) return;
-
-    event.target.value = value;
-    item.update({[event.target.dataset.name]: value});
   }
 
   /**
