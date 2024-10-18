@@ -296,14 +296,14 @@ shinobiNoSho.tamanhos = {
 };
 
 shinobiNoSho.tokenSizes = {
-	minusculo: 1,
-	diminuto: 2,
-	miudo: 3,
-	pequeno: 4,
-	medio: 5,
-	grande: 6,
-	enorme: 7,
-	imenso: 8,
-	colossal: 9,
-	incrivel: 10,
-}
+	minusculo: 0.5,
+	diminuto: 0.5,
+	miudo: 0.5,
+	pequeno: 0.5,
+	medio: 1,
+	grande: 2,
+	enorme: 3,
+	imenso: 4,
+	colossal: 5,
+	incrivel: 6,
+};
