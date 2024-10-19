@@ -1,5 +1,39 @@
 # CHANGELOG
 
+## [1.11.0](https://github.com/SouOWendel/shinobi-no-sho/compare/v1.10.2...v1.11.0) (2024-10-19)
+
+
+### Features
+
+* **actor ninja sheet:** added 'tamanho' field on sheet with localizations and data ([448d750](https://github.com/SouOWendel/shinobi-no-sho/commit/448d7505e016c5aca01d7bd65ea29e60862b0188))
+* **actor ninja sheet:** added new row on inventory for device items ([2c95141](https://github.com/SouOWendel/shinobi-no-sho/commit/2c951419e70b75764776fe898e52a763148c0da4))
+* **actor ninja sheet:** changed the path of 'dureza' data and some breaklines ([a393313](https://github.com/SouOWendel/shinobi-no-sho/commit/a393313304ba2b582ce933df7f42ade7bc430f40))
+* **css/sass:** added styles for new skills and increase/decrease system ([74fea53](https://github.com/SouOWendel/shinobi-no-sho/commit/74fea53e127e777ee2279ddba9c71ede6e480d23))
+* **css/sass:** refactor the header fields with second version and added input center utils class ([ff48508](https://github.com/SouOWendel/shinobi-no-sho/commit/ff48508c960d61049474ac36dcd77193625deeed))
+* **dynamic token size:** now the size of tokens are changed dynamically ([f840159](https://github.com/SouOWendel/shinobi-no-sho/commit/f840159b13a156befe82a0f5f6925fecdcb88f9e))
+* **field dureza:** added the data structure, styles and dureza field ([71a6970](https://github.com/SouOWendel/shinobi-no-sho/commit/71a69705fdd498c79b4ff8b8a6ad2e737cea276e))
+* **general item sheet:** rearrangement of the layout and added 'usos' fields ([113cf48](https://github.com/SouOWendel/shinobi-no-sho/commit/113cf48d4b7c315cc9072121f2a1abdc5b0860ab))
+* **general item:** added new types for techniques and general items and damage type for weapons ([d14a66a](https://github.com/SouOWendel/shinobi-no-sho/commit/d14a66a82ea9eedfe171e1b7df9590b1a7e7d308))
+* **increase/decrease + new skills:** added 'voo' and an open expertise, overmore, added increase and decrease system with fields ([c68e6cc](https://github.com/SouOWendel/shinobi-no-sho/commit/c68e6cc1935a360c23a68243fe7303770262a2fa))
+* **item geral sheet:** centralized the quantity label ([fafceb2](https://github.com/SouOWendel/shinobi-no-sho/commit/fafceb2f01673cfc10183888cc399a35e5750f55))
+* **ninja actor inventory:** now 'dispositivos' are created on the own category ([5201996](https://github.com/SouOWendel/shinobi-no-sho/commit/52019967608cdf31f9fbc7eae6aaa749d6b8e98f))
+* **onRoll:** added the name of 'pericia livre' now are displayed on chat rolls ([fa270aa](https://github.com/SouOWendel/shinobi-no-sho/commit/fa270aa23d7942797fe485f4acc05f3b627175e6))
+* **size feature:** added dynamic changes on 'vigor' and 'força' ([b45050d](https://github.com/SouOWendel/shinobi-no-sho/commit/b45050d64a73c8f9bace1caf4cccfa3ed9ef1257))
+* **size feature:** makes changes when the size changes on actors ([edb7a4c](https://github.com/SouOWendel/shinobi-no-sho/commit/edb7a4c781efa47ba30612c28082540b74efb135))
+* **skills:** added two new skills: 'voo' and 'pericia livre' ([ae1aed6](https://github.com/SouOWendel/shinobi-no-sho/commit/ae1aed679fe37fb09864fa9ee2f6cf388f0947aa))
+* **template.json:** added 'usos' for general items ([beaa5dc](https://github.com/SouOWendel/shinobi-no-sho/commit/beaa5dc45ba71d0b3708b21f793ecf3bff38b843))
+* **tokenSizes:** adjust sizes ([adf9980](https://github.com/SouOWendel/shinobi-no-sho/commit/adf9980e072f0ece4aec9c3045a00c5e4c094990))
+
+
+### Bug Fixes
+
+* **dynamic inputs:** changed the method name because is reservad name ([9378f3e](https://github.com/SouOWendel/shinobi-no-sho/commit/9378f3eb1912edd56900c367b83e725226940b68))
+
+
+### Reverts
+
+* **template.json:** removed bonus on dureza attribute ([3c34676](https://github.com/SouOWendel/shinobi-no-sho/commit/3c34676c3bd7c6f997ef73acaae00b1a4eaf38c8))
+
 ## [1.10.2](https://github.com/SouOWendel/shinobi-no-sho/compare/v1.10.1...v1.10.2) (2024-10-10)
 
 
