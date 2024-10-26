@@ -273,6 +273,14 @@
 				"obterInfo": "Obter Informação"
 			}
 		},
+		"skillsAbbr": {
+			"geral": {
+				"animais": "Animais"
+			},
+			"social": {
+				"obterInfo": "Obter Info."
+			}
+		},
 		"ITEMS": {
 				"aptidoes": {
 					"tipoAptidao": {
@@ -382,6 +390,10 @@
 					"tipo": {
 						"leve": "Armadura Leve",
 						"pesada": "Armadura Pesada"
+					},
+					"tipoAbbr": {
+						"leve": "Leve",
+						"pesada": "Pesada"
 					}
 				},
 				"geral": {

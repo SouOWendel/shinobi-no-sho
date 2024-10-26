@@ -79,6 +79,39 @@ shinobiNoSho.skills = {
 	}
 };
 
+shinobiNoSho.skillsAbbr = {
+	geral: {
+		acrobacia: "shinobiNoSho.skills.geral.acrobacia",
+		arte: "shinobiNoSho.skills.geral.arte",
+		atletismo: "shinobiNoSho.skills.geral.atletismo",
+		ciencias: "shinobiNoSho.skills.geral.ciencias",
+		cultura: "shinobiNoSho.skills.geral.cultura",
+		ocultismo: "shinobiNoSho.skills.geral.ocultismo",
+		concentracao: "shinobiNoSho.skills.geral.concentracao",
+		disfarces: "shinobiNoSho.skills.geral.disfarces",
+		escapar: "shinobiNoSho.skills.geral.escapar",
+		furtividade: "shinobiNoSho.skills.geral.furtividade",
+		animais: "shinobiNoSho.skillsAbbr.geral.animais",
+		mecanismos: "shinobiNoSho.skills.geral.mecanismos",
+		medicina: "shinobiNoSho.skills.geral.medicina",
+		prestidigitacao: "shinobiNoSho.skills.geral.prestidigitacao",
+		procurar: "shinobiNoSho.skills.geral.procurar",
+		prontidao: "shinobiNoSho.skills.geral.prontidao",
+		rastrear: "shinobiNoSho.skills.geral.rastrear",
+		veneficio: "shinobiNoSho.skills.geral.veneficio",
+		voo: "shinobiNoSho.skills.geral.voo",
+		pericia_1: "shinobiNoSho.skills.geral.pericia_1"
+	},
+	social: {
+		atuacao: "shinobiNoSho.skills.social.atuacao",
+		mudarAtitude: "shinobiNoSho.skills.social.mudarAtitude",
+		barganha: "shinobiNoSho.skills.social.barganha",
+		blefar: "shinobiNoSho.skills.social.blefar",
+		intimidacao: "shinobiNoSho.skills.social.intimidacao",
+		obterInfo: "shinobiNoSho.skillsAbbr.social.obterInfo",
+	}
+};
+
 shinobiNoSho.header = {
 	lateralidade: {
 		destro: "shinobiNoSho.NinjaSheet.lateralidade.destro",
