@@ -66,7 +66,11 @@
   }
 }
 
-.sheet-tabs, .pericias-sheet-tab {
+.pericias-sheet-tabs {
+	margin-top: 0px !important;
+}
+
+.sheet-tabs, .pericias-sheet-tabs {
   flex: 0;
 	font-size: small;
 
@@ -78,12 +82,6 @@
 .sheet-body,
 .sheet-body .tab,
 .sheet-body .tab .editor {
-  height: 100%;
-}
-
-.pericias-sheet-body,
-.pericias-sheet-body .tab,
-.pericias-sheet-body .tab .editor {
   height: 100%;
 }
 
@@ -254,6 +252,11 @@ form {
 #periciasGerais {
 	position: relative;
 	margin-bottom: 6px;
+
+	.periciaLivre {
+		padding-right: 0;
+	}
+
 	.resource-content i {
 		padding: 0 5px;
 	}
@@ -278,7 +281,7 @@ form {
 
 .rollPericiaLivre {
 	position: absolute;
-	left: 63.5%;
+	left: 63%;
 	right: 0px;
 	width: 24px;
 }

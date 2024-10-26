@@ -475,21 +475,19 @@
   height: 100%;
   margin: 0;
 }
-.shinobiNoSho .sheet-tabs, .shinobiNoSho .pericias-sheet-tab {
+.shinobiNoSho .pericias-sheet-tabs {
+  margin-top: 0px !important;
+}
+.shinobiNoSho .sheet-tabs, .shinobiNoSho .pericias-sheet-tabs {
   flex: 0;
   font-size: small;
 }
-.shinobiNoSho .sheet-tabs .item, .shinobiNoSho .pericias-sheet-tab .item {
+.shinobiNoSho .sheet-tabs .item, .shinobiNoSho .pericias-sheet-tabs .item {
   padding: 8px !important;
 }
 .shinobiNoSho .sheet-body,
 .shinobiNoSho .sheet-body .tab,
 .shinobiNoSho .sheet-body .tab .editor {
-  height: 100%;
-}
-.shinobiNoSho .pericias-sheet-body,
-.shinobiNoSho .pericias-sheet-body .tab,
-.shinobiNoSho .pericias-sheet-body .tab .editor {
   height: 100%;
 }
 .shinobiNoSho .tab {
@@ -631,6 +629,9 @@
   position: relative;
   margin-bottom: 6px;
 }
+.shinobiNoSho #periciasGerais .periciaLivre {
+  padding-right: 0;
+}
 .shinobiNoSho #periciasGerais .resource-content i {
   padding: 0 5px;
 }
@@ -650,7 +651,7 @@
 }
 .shinobiNoSho .rollPericiaLivre {
   position: absolute;
-  left: 63.5%;
+  left: 63%;
   right: 0px;
   width: 24px;
 }
