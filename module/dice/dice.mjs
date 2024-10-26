@@ -6,7 +6,10 @@ export async function d8Roll({
 }={}) {
 
   // Handle input arguments
-  const formula = ["2d8"].concat(parts).join(" + ");
+  let formula = ["2d8"];
+	parts = parts.filter((x) => (x !== null && x !== 0));
+	if (parts) formula = formula.concat(parts).join(" + ");
+	
   const defaultRollMode = rollMode || game.settings.get("core", "rollMode");
 
   // Construct the D8Roll instance
