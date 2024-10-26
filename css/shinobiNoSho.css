@@ -648,7 +648,7 @@
   grid-row-gap: 3px;
   grid-auto-flow: column;
 }
-.shinobiNoSho #periciasGerais .rollPericiaLivre {
+.shinobiNoSho .rollPericiaLivre {
   position: absolute;
   left: 63.5%;
   right: 0px;
@@ -705,6 +705,133 @@
   border: none;
   text-align: center;
   width: 30px !important;
+}
+.shinobiNoSho .NPC header {
+  margin: 0;
+}
+.shinobiNoSho .NPC .profile {
+  flex: none;
+  padding: 0;
+}
+.shinobiNoSho .NPC .profile img {
+  border-radius: 4px;
+}
+.shinobiNoSho .NPC .atributos-npc {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.shinobiNoSho .NPC .atributos-npc .charname {
+  margin: 0;
+}
+.shinobiNoSho .NPC .atributos-npc .charname input {
+  height: 52px;
+  border-radius: 4px;
+}
+.shinobiNoSho .NPC .atributos-npc .atributos-area {
+  display: flex;
+  justify-content: space-between;
+}
+.shinobiNoSho .NPC .atributos-npc .atributos-area .resource {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.shinobiNoSho .NPC .atributos-npc .atributos-area .resource input {
+  width: 34px;
+  height: 34px;
+  text-align: center;
+}
+.shinobiNoSho .NPC .info-area {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-column-gap: 12px;
+  grid-row-gap: 10px;
+  grid-auto-flow: column;
+  margin-top: 6px;
+}
+.shinobiNoSho .NPC .resource-npc {
+  display: flex;
+  background: rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(122, 121, 113, 0.3137254902);
+  height: 23px;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+.shinobiNoSho .NPC .resource-npc label {
+  text-transform: uppercase;
+  font-size: 12px;
+}
+.shinobiNoSho .NPC .resource-npc input {
+  border: 0;
+  background: none;
+  width: 30px;
+  height: 24px;
+  text-align: end;
+}
+.shinobiNoSho .NPC #pericias {
+  display: flex;
+}
+.shinobiNoSho .NPC #pericias .section-title {
+  font-size: 14px;
+  font-weight: bold;
+}
+.shinobiNoSho .NPC #pericias .gerais .grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+  grid-column-gap: 12px;
+  grid-row-gap: 6px;
+  grid-auto-flow: column;
+  margin-top: 6px;
+}
+.shinobiNoSho .NPC #pericias .sociais {
+  margin-left: 12px;
+}
+.shinobiNoSho .NPC #pericias .sociais .resource-content {
+  display: flex;
+  flex-direction: column;
+}
+.shinobiNoSho .NPC #pericias .sociais .resource-npc {
+  margin-bottom: 6px;
+}
+.shinobiNoSho .NPC #pericias label {
+  text-transform: capitalize;
+}
+.shinobiNoSho .NPC #pericias .rollPericiaLivre {
+  position: absolute;
+  left: 52.5%;
+  right: 0px;
+  width: 24px;
+}
+.shinobiNoSho .NPC #pericias .periciaLivre {
+  text-align: start;
+  font-size: 12px;
+}
+.shinobiNoSho .NPC .item-quantity input {
+  width: 15px !important;
+  height: 20px;
+}
+.shinobiNoSho .NPC .item-small {
+  padding: 0;
+}
+.shinobiNoSho .NPC .tamanho-npc {
+  background: none;
+  border: 0;
+  text-align: end;
+  padding: 0;
+  flex: 0 0 90px;
+  height: 20px;
+}
+.shinobiNoSho .NPC .descricao .editor, .shinobiNoSho .NPC .descricao {
+  height: 100%;
+}
+.shinobiNoSho .NPC .tox-editor-container button {
+  width: 42px !important;
 }
 .shinobiNoSho .resource-label {
   font-weight: bold;

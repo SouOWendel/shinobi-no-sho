@@ -274,13 +274,13 @@ form {
 		grid-row-gap: 3px;
 		grid-auto-flow: column;
 	}
+}
 
-	.rollPericiaLivre {
-		position: absolute;
-		left: 63.5%;
-		right: 0px;
-		width: 24px;
-	}
+.rollPericiaLivre {
+	position: absolute;
+	left: 63.5%;
+	right: 0px;
+	width: 24px;
 }
 
 #periciasSociais {
@@ -346,5 +346,151 @@ form {
 		border: none;
 		text-align: center;
 		width: 30px !important;
+	}
+}
+
+// NPC
+.NPC {
+	header {
+		margin: 0;
+	}
+
+	.profile {
+		flex: none;
+		padding: 0;
+		img { border-radius: 4px; }
+	}
+	.atributos-npc {
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+		.charname {
+			margin: 0;
+			input {
+				height: 52px;
+				border-radius: 4px;
+			}
+		}
+		.atributos-area {
+			display: flex;
+			justify-content: space-between;
+			.resource {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+			}
+			.resource input {
+				width: 34px;
+				height: 34px;
+				text-align: center;
+			}
+		}
+	}
+
+	.info-area {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: repeat(4, 1fr);
+		grid-column-gap: 12px;
+		grid-row-gap: 10px;
+		grid-auto-flow: column;
+		margin-top: 6px;
+	}
+
+	.resource-npc {
+		display: flex;
+		background: rgba(0, 0 ,0 , 0.05);
+		border: 1px solid #7a797150;
+		height: 23px;
+		justify-content: space-between;
+		align-items: center;
+		font-weight: bold;
+		padding: 2px 6px;
+		border-radius: 4px;
+		label { 
+			text-transform: uppercase;
+			font-size: 12px;
+		}
+		input {
+			border: 0;
+			background: none;
+			width: 30px;
+			height: 24px;
+			text-align: end;
+		}
+	}
+
+	#pericias {
+		display: flex;
+		.section-title {
+			font-size: 14px;
+			font-weight: bold;
+		}
+		.gerais .grid {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			grid-template-rows: repeat(10, 1fr);
+			grid-column-gap: 12px;
+			grid-row-gap: 6px;
+			grid-auto-flow: column;
+			margin-top: 6px;	
+		}
+	
+		.sociais {
+			margin-left: 12px;
+			.resource-content {
+				display: flex;
+				flex-direction: column;
+			}
+			.resource-npc {
+				margin-bottom: 6px;
+			}
+		}
+
+		label { 
+			text-transform: capitalize;
+		}
+
+		.rollPericiaLivre {
+			position: absolute;
+			left: 52.5%;
+			right: 0px;
+			width: 24px;
+		}
+
+		.periciaLivre {
+			text-align: start;
+			font-size: 12px;
+		}
+	}
+
+	.item-quantity {
+		input {
+			width: 15px !important;
+			height: 20px;
+		}
+	}
+
+	.item-small {
+		padding: 0;
+	}
+
+	.tamanho-npc {
+		background: none;
+		border: 0;
+		text-align: end;
+		padding: 0;
+		flex: 0 0 90px;
+		height: 20px;
+	}
+
+	.descricao .editor, .descricao {
+		height: 100%;
+	}
+
+	.tox-editor-container {
+		button {
+			width: 42px !important;
+		}
 	}
 }
