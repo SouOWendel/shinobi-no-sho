@@ -329,17 +329,16 @@
 		{{!-- Owned Notes Tab --}}
     <div class="tab anotacoes" data-group="primary" data-tab="anotacoes">
 			<div class="content">
-			<div class="anotacoes container">
-				{{editor system.details.anotacoes target="system.details.anotacoes" 
-				rollData=rollData button=true owner=owner editable=editable}}
-			</div>
+				<div class="anotacoes container">
+					{{editor system.details.anotacoes target="system.details.anotacoes" 
+					rollData=rollData button=true owner=owner editable=editable}}
+				</div>
 			</div>
     </div>
 
     {{!-- Active Effects Tab --}}
     <div class="tab efeitos flexcol" data-group="primary" data-tab="efeitos">
       {{> "systems/shinobinosho/templates/actor/parts/actor-efeitos.hbs"}}
-			</div>
     </div>
 
   </section>
