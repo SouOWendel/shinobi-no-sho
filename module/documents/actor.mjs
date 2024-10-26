@@ -17,7 +17,6 @@ export class ShinobiActor extends Actor {
     // Data modifications in this step occur before processing embedded
     // documents or derived data.
 		const actorData = this;
-		this._prepareNinjaBase(actorData);
   }
 
 	prepareEmbbededData() {
@@ -27,17 +26,10 @@ export class ShinobiActor extends Actor {
 	}
 
 	prepareDerivedData() {
-		this._prepareNinjaDerived(this);
+		if (this.type == "Ninja") this._prepareNinjaDerived(this);
+		if (this.type == "NPC") this._prepareNPCDerived(this);
 		this.items.forEach(i => i._prepareTemplate(i));
 	}
-
-  
-
-  _prepareNinjaBase(actorData) {
-    if (actorData.type !== 'Ninja') return;
-
-    const system = actorData.system;
-  }
 
 	_prepareNinjaDerived(actorData) {
 		const system = actorData.system;
@@ -135,6 +127,36 @@ export class ShinobiActor extends Actor {
 		// Vitalidade e Chakra
 		attributes.vitalidade.max = 10 + 3*abilities.vig.tbonus + 5*details.nivelCampanha + attributes.vitalidade.bonus;
 		attributes.chakra.max = 10 + 3*abilities.esp.tbonus + attributes.chakra.bonus;
+	}
+
+	_prepareNPCDerived(actorData) {
+		const system = actorData.system;
+		const details = system.details;
+		const attributes = system.attributes;
+		const abilities = system.abilities;
+
+		// Loop de Atributos
+		for (let [abilityKey, ability] of Object.entries(abilities)) {
+			// Soma de bônus em atributos
+			if (abilityKey !== 'combate') ability.tbonus = ability.value + ability.bonus;
+		}
+
+		for (let [skillKey, skill] of Object.entries(system.skills.geral)) {
+			skill.tbonus = skill.value + skill.bonus;
+		}
+
+		for (let [skillKey, skill] of Object.entries(system.skills.social)) {
+			skill.tbonus = skill.value + skill.bonus;
+		}
+
+		// Habilidades de Combate
+		for (let [cKey, c] of Object.entries(abilities.combate)) {
+			c.tbonus = c.value + c.bonus;
+			if (cKey == 'E') c.tbonus += 9; 
+		}
+
+		// Cálculo de Iniciativa
+		attributes.init.tbonus = attributes.init.value + attributes.init.bonus;
 	}
 
 	_sizeCalculations(system) {
