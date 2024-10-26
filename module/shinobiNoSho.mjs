@@ -4,6 +4,7 @@ import { ShinobiItem } from "./documents/item.mjs";
 // Import sheet classes.
 import { ShinobiActorSheet } from "./sheets/actor-sheet.mjs";
 import { ShinobiItemSheet } from "./sheets/item-sheet.mjs";
+import { ShinobiNPCSheet } from "./sheets/npc-sheet.mjs";
 // Import helper/utility classes and constants.
 import { preloadHandlebarsTemplates } from "./helpers/templates.mjs";
 import { shinobiNoSho } from "./helpers/config.mjs";
@@ -26,6 +27,7 @@ Hooks.once('init', function () {
     ShinobiItem,
 		ShinobiActorSheet,
 		ShinobiItemSheet,
+		ShinobiNPCSheet,
     rollItemMacro,
 		D8Roll
   };
@@ -59,7 +61,8 @@ Hooks.once('init', function () {
   // Register sheet application classes
   Actors.unregisterSheet('core', ActorSheet);
 	Items.unregisterSheet('core', ItemSheet);
-  Actors.registerSheet('shinobiNoSho', ShinobiActorSheet, { makeDefault: true });
+  Actors.registerSheet('shinobiNoSho', ShinobiActorSheet, { types: ['Ninja'], makeDefault: true });
+	Actors.registerSheet('shinobiNoSho', ShinobiNPCSheet, { types: ['NPC'], makeDefault: true });
   Items.registerSheet('shinobiNoSho', ShinobiItemSheet, { makeDefault: true });
 
   // Preload Handlebars templates.

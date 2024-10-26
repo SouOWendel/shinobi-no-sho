@@ -1,13 +1,9 @@
 {
 	"Actor": {
-		"types": ["Ninja"],
-		"template": {
-			"base": {
-				"teste": ""
-			}
-		},
+		"types": ["Ninja", "NPC"],
+		"template": {},
 		"Ninja": {
-			"templates": ["base"],
+			"templates": [],
 			"abilities": {
 				"for": { 
 					"value": 1,
@@ -433,6 +429,361 @@
 						"value": null,
 						"bonus": null,
 						"custom": "int",
+						"caract": {
+							"social": true,
+							"treinada": false,
+							"armadura": false
+						}
+					}
+				}
+			}
+		},
+		"NPC": {
+			"templates": [],
+			"abilities": {
+				"for": { 
+					"value": 1,
+					"bonus": null 
+				},
+				"des": { 
+					"value": 1,
+					"bonus": null 
+				},
+				"agi": { 
+					"value": 1,
+					"bonus": null 
+				},
+				"per": { 
+					"value": 1,
+					"bonus": null 
+				},
+				"int": { 
+					"value": 1,
+					"bonus": null 
+				},
+				"vig": { 
+					"value": 1,
+					"bonus": null 
+				},
+				"esp": { 
+					"value": 1,
+					"bonus": null 
+				},
+				"car": { 
+					"value": 1,
+					"bonus": null 
+				},
+				"man": { 
+					"value": 1,
+					"bonus": null 
+				},
+				"combate": {
+					"CC": {
+						"value": null,
+						"bonus": null
+					},
+					"CD": {
+						"value": null,
+						"bonus": null
+					},
+					"E": {
+						"value": null,
+						"bonus": null
+					},
+					"LM": {
+						"value": null,
+						"bonus": null
+					}
+				}
+			},
+			"attributes": {
+				"vitalidade": {
+					"max": 10,
+					"temp": 0,
+					"tempmax": 0,
+					"value": 0,
+					"bonus": null
+				},
+				"chakra": {
+					"max": 0,
+					"temp": 0,
+					"tempmax": 0,
+					"value": 0,
+					"bonus": null
+				},
+				"movement": {
+					"unidade": "m",
+					"base": 10,
+					"bonus": null,
+					"andar": 0,
+					"nadar": 0
+				},
+				"init": {
+					"bonus": null,
+					"value": null,
+					"roll": {
+						"max": null,
+						"min": null,
+						"mode": 0
+					}
+				},
+				"reacaoEsquiva": {
+					"value": null,
+					"bonus": null,
+					"variavel": 9
+				},
+				"absorcao": {
+						"max": 0,
+						"temp": 0,
+						"tempmax": 0,
+						"value": 0
+					},
+				"dureza": {
+					"value": null
+				}
+			},
+			"details": {
+				"nivelCampanha": 4,
+				"nivelShinobi": "Genin",
+				"tamanho": "medio",
+				"nome": "",
+				"descricao": ""
+			},
+			"skills": {
+				"geral": {
+					"acrobacia": {
+						"value": null,
+						"bonus": null,
+						"caract": {
+							"social": false,
+							"treinada": false,
+							"armadura": true
+						}
+					},
+					"arte": {
+						"value": null,
+						"bonus": null,
+						"caract": {
+							"social": false,
+							"treinada": false,
+							"armadura": false
+						}
+					},
+					"atletismo": {
+						"value": null,
+						"bonus": null,
+						"caract": {
+							"social": false,
+							"treinada": false,
+							"armadura": true
+						}
+					},
+					"ciencias": {
+						"value": null,
+						"bonus": null,
+						"caract": {
+							"social": false,
+							"treinada": false,
+							"armadura": false
+						}
+					},
+					"cultura": {
+						"value": null,
+						"bonus": null,
+						"caract": {
+							"social": false,
+							"treinada": false,
+							"armadura": false
+						}
+					},
+					"ocultismo": {
+						"value": null,
+						"bonus": null,
+						"caract": {
+							"social": false,
+							"treinada": true,
+							"armadura": false
+						}
+					},
+					"concentracao": {
+						"value": null,
+						"bonus": null,
+						"caract": {
+							"social": false,
+							"treinada": false,
+							"armadura": false
+						}
+					},
+					"disfarces": {
+						"value": null,
+						"bonus": null,
+						"caract": {
+							"social": false,
+							"treinada": false,
+							"armadura": false
+						}
+					},
+					"escapar": {
+						"value": null,
+						"bonus": null,
+						"caract": {
+							"social": false,
+							"treinada": false,
+							"armadura": false
+						}
+					},
+					"furtividade": {
+						"value": null,
+						"bonus": null,
+						"caract": {
+							"social": false,
+							"treinada": false,
+							"armadura": true
+						}
+					},
+					"animais": {
+						"value": null,
+						"bonus": null,
+						"caract": {
+							"social": false,
+							"treinada": true,
+							"armadura": false
+						}
+					},
+					"mecanismos": {
+						"value": null,
+						"bonus": null,
+						"caract": {
+							"social": false,
+							"treinada": true,
+							"armadura": false
+						}
+					},
+					"medicina": {
+						"value": null,
+						"bonus": null,
+						"caract": {
+							"social": false,
+							"treinada": true,
+							"armadura": false
+						}
+					},
+					"prestidigitacao": {
+						"value": null,
+						"bonus": null,
+						"caract": {
+							"social": false,
+							"treinada": false,
+							"armadura": false
+						}
+					},
+					"procurar": {
+						"value": null,
+						"bonus": null,
+						"caract": {
+							"social": false,
+							"treinada": false,
+							"armadura": false
+						}
+					},
+					"prontidao": {
+						"value": null,
+						"bonus": null,
+						"caract": {
+							"social": false,
+							"treinada": false,
+							"armadura": false
+						}
+					},
+					"rastrear": {
+						"value": null,
+						"bonus": null,
+						"caract": {
+							"social": false,
+							"treinada": false,
+							"armadura": false
+						}
+					},
+					"veneficio": {
+						"value": null,
+						"bonus": null,
+						"caract": {
+							"social": false,
+							"treinada": true,
+							"armadura": false
+						}
+					},
+					"voo": {
+						"value": null,
+						"bonus": null,
+						"caract": {
+							"social": false,
+							"treinada": true,
+							"armadura": false
+						}
+					},
+					"pericia_1": {
+						"nome": "",
+						"value": null,
+						"bonus": null,
+						"caract": {
+							"social": false,
+							"treinada": false,
+							"armadura": false,
+							"livre": true
+						}
+					}
+				},
+				"social": {
+					"atuacao": {
+						"value": null,
+						"bonus": null,
+						"custom": "arte",
+						"caract": {
+							"social": true,
+							"treinada": false,
+							"armadura": false
+						}
+					},
+					"mudarAtitude": {
+						"value": null,
+						"bonus": null,
+						"caract": {
+							"social": true,
+							"treinada": false,
+							"armadura": false
+						}
+					},
+					"barganha": {
+						"value": null,
+						"bonus": null,
+						"caract": {
+							"social": true,
+							"treinada": false,
+							"armadura": false
+						}
+					},
+					"blefar": {
+						"value": null,
+						"bonus": null,
+						"caract": {
+							"social": true,
+							"treinada": false,
+							"armadura": false
+						}
+					},
+					"intimidacao": {
+						"value": null,
+						"bonus": null,
+						"caract": {
+							"social": true,
+							"treinada": false,
+							"armadura": false
+						}
+					},
+					"obterInfo": {
+						"value": null,
+						"bonus": null,
 						"caract": {
 							"social": true,
 							"treinada": false,
