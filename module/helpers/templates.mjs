@@ -14,5 +14,11 @@ export const preloadHandlebarsTemplates = async function () {
 		'systems/shinobinosho/templates/actor/parts/actor-tecnicas.hbs',
     // Item partials
     'systems/shinobinosho/templates/item/parts/item-efeitos.hbs',
+		// NPC partials
+		'systems/shinobinosho/templates/npc/parts/actor-efeitos.hbs',
+		'systems/shinobinosho/templates/npc/parts/actor-aptidoesPoderes.hbs',
+    'systems/shinobinosho/templates/npc/parts/actor-inventario.hbs',
+		'systems/shinobinosho/templates/npc/parts/actor-pericias.hbs',
+		'systems/shinobinosho/templates/npc/parts/actor-tecnicas.hbs',		
   ]);
 };
