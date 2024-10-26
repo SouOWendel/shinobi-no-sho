@@ -292,15 +292,17 @@
 
     {{!-- Owned Skills Tab --}}
     <div class="tab pericias" data-group="primary" data-tab="pericias">
-			<nav class="pericias-sheet-tabs sheet-tabs tabs" data-group="pericias">
-				<a class="item" data-tab="gerais">Perícias Gerais</a>
-				<a class="item" data-tab="sociais">Perícias Sociais</a>
-			</nav>
+			<div class="content">
+				<nav class="pericias-sheet-tabs sheet-tabs tabs" data-group="pericias">
+					<a class="item" data-tab="gerais">Perícias Gerais</a>
+					<a class="item" data-tab="sociais">Perícias Sociais</a>
+				</nav>
 
-			<div class="pericias-sheet-body">
-				<div class="content">
-       		{{> "systems/shinobinosho/templates/actor/parts/actor-pericias.hbs"}}
-			 </div>
+				<div class="pericias-sheet-body">
+					<div class="content">
+						{{> "systems/shinobinosho/templates/actor/parts/actor-pericias.hbs"}}
+					</div>
+				</div>
 			</div>
     </div>
 
