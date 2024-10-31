@@ -122,18 +122,19 @@
       "Inactive": "Efeitos inativos"
     },
 		"TYPES": {
-    "Actor": {
-      "Ninja": "Ninja"
-    },
-    "Item": {
-      "armas": "Armas",
-      "armaduras": "Armaduras",
-      "gerais": "Itens Gerais",
-			"aptidoes": "Aptidões",
-      "poderes": "Poderes",
-			"tecnicas": "Técnicas"
-    }
-  },
+			"Actor": {
+				"Ninja": "Ninja",
+				"NPC": "NPC"
+			},
+			"Item": {
+				"armas": "Armas",
+				"armaduras": "Armaduras",
+				"gerais": "Itens Gerais",
+				"aptidoes": "Aptidões",
+				"poderes": "Poderes",
+				"tecnicas": "Técnicas"
+			}
+ 	 },
 		"NinjaSheet": {
 			"vida": "Pontos de Vida",
 			"nome": "Nome",
