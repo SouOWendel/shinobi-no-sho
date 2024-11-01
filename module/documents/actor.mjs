@@ -246,6 +246,7 @@ export class ShinobiActor extends Actor {
 	/** @inheritdoc */
 	async _preUpdate(changed, options, user) {
 		await super._preUpdate(changed, options, user);
+		if (!game.settings.get('shinobinosho', 'changeSizeOfTokensDynamically')) return;
 		// Apply changes in Actor Size to Token Width and Height.
 		const newSize = foundry.utils.getProperty(changed, "system.details.tamanho");
 		if (newSize) {
@@ -254,6 +255,12 @@ export class ShinobiActor extends Actor {
 				changed.prototypeToken = changed.prototypeToken || {};
 				changed.prototypeToken.height = size;
 				changed.prototypeToken.width = size;
+				this.getActiveTokens().forEach((x) => {
+					x.document.update({
+						"width": size,
+						"height": size
+					});
+				});
 			}
 		}
 	}
