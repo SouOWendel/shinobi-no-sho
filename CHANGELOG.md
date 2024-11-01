@@ -1,5 +1,32 @@
 # CHANGELOG
 
+## [1.12.0](https://github.com/SouOWendel/shinobi-no-sho/compare/v1.11.0...v1.12.0) (2024-11-01)
+
+
+### Features
+
+* **actor:** added derived data to NPC sheet, this only include calculations for bonus ([0243f35](https://github.com/SouOWendel/shinobi-no-sho/commit/0243f354308eb67c2706652de99b3b392bbc7775))
+* **d8roll:** adjust the parts of formula to exclude null and zero values ([ba863bf](https://github.com/SouOWendel/shinobi-no-sho/commit/ba863bf31dc1683ac1e5fd045fb371b15ecd5d00))
+* **localization:** added abbreviations for skills to add on NPC sheet ([995e198](https://github.com/SouOWendel/shinobi-no-sho/commit/995e19884cc592a021f30932cbf0aab0996abeea))
+* **localization:** added NPC type localization ([4d13e6b](https://github.com/SouOWendel/shinobi-no-sho/commit/4d13e6ba7afb9c95d5ef5e27f12ffad9ca35ccce))
+* **localization:** added texts for token size configuration ([5d40301](https://github.com/SouOWendel/shinobi-no-sho/commit/5d40301b20416b0b44bc9102dbb5b663d8281306))
+* **migration, settings, token bar:** added migration and his conditions, configured the token bar for system and brawl bar module ([9f3cf28](https://github.com/SouOWendel/shinobi-no-sho/commit/9f3cf28f68184533a63ca126b4a0185899530fbb))
+* **migration:** added migration system with migrations for 'absorcao' on ninja sheet ([8b12911](https://github.com/SouOWendel/shinobi-no-sho/commit/8b129112df47ca4abc483628c9fbd85836f596b5))
+* **NPC sheet templates:** created the layout of NPC sheet with tabs, new skills layout, modifications on combat abilities and more, similar to ninja sheet ([92f3c64](https://github.com/SouOWendel/shinobi-no-sho/commit/92f3c648c671ce052594639782cb3bb7f52845f2))
+* **NPC:** created the NPC sheet with data structure, item organization, and some functions of the ninja sheet ([5325ea3](https://github.com/SouOWendel/shinobi-no-sho/commit/5325ea3f1138cdf4c19360cdf491fec04f78cad2))
+* **settings:** settings for token syze system and migration version ([75fbec1](https://github.com/SouOWendel/shinobi-no-sho/commit/75fbec1f2ab4167739061ae21b60a2ecf79cdc2c))
+* **templates.mjs:** added template parts of npc sheet with respective partials ([1c5f589](https://github.com/SouOWendel/shinobi-no-sho/commit/1c5f589d982cccf4da3b91d213725c22eb1cb0c9))
+* **token sizes:** the active tokens on the scene now changes the size too. Added an option to deactive the changes on token size ([55c5efd](https://github.com/SouOWendel/shinobi-no-sho/commit/55c5efd56bb50acf12151820b1fa6db35921f6a8))
+
+
+### Bug Fixes
+
+* **actor ninja sheet:** deleted unnecessary div tag ([201831f](https://github.com/SouOWendel/shinobi-no-sho/commit/201831f99e805a3f359015ae7dde3fd4aade4a08))
+* **actor ninja sheet:** fixed the scrollbar on skill tab ([1f68b02](https://github.com/SouOWendel/shinobi-no-sho/commit/1f68b02e939003fba50be1cc4103125bcf4e7331))
+* **field:** fixed a name and value on sheet (absorcao) ([512d6ce](https://github.com/SouOWendel/shinobi-no-sho/commit/512d6ce425a68313dd14d7596677db7b325896e9))
+* **ninja sheet:** changed the margin and padding of 'pericia livre' ([701ab15](https://github.com/SouOWendel/shinobi-no-sho/commit/701ab157140fd5c91cc6776870ab1f31c0f1a088))
+* **ninja sheet:** fixed the icons of font awesome on combat tab ([c9c6217](https://github.com/SouOWendel/shinobi-no-sho/commit/c9c6217037a35ded77d0b11ccccf0cf4bc90fe86))
+
 ## [1.11.0](https://github.com/SouOWendel/shinobi-no-sho/compare/v1.10.2...v1.11.0) (2024-10-19)
 
 

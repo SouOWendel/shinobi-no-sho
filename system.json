@@ -19,7 +19,7 @@
   "readme": "README.md",
   "bugs": "https://github.com/SouOWendel/shinobi-no-sho/issues",
   "changelog": "CHANGELOG.md",
-  "version": "1.11.0",
+  "version": "1.12.0",
   "compatibility": {
     "minimum": "11",
     "verified": "12"
@@ -58,7 +58,7 @@
         "lang"
       ]
     },
-		"needsMigrationVersion": "1.12.0"
+    "needsMigrationVersion": "1.12.0"
   },
   "packs": [
     {
@@ -77,7 +77,9 @@
   "socket": true,
   "manifest": "https://raw.githubusercontent.com/souowendel/shinobi-no-sho/main/system.json",
   "download": "https://github.com/SouOWendel/shinobi-no-sho/releases/download/v1.11.0/shinobinosho-v1.11.0.zip",
-  "grid": { "units": "m" },
+  "grid": {
+    "units": "m"
+  },
   "primaryTokenAttribute": "attributes.vitalidade",
   "secondaryTokenAttribute": "attributes.chakra"
 }
