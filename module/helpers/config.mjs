@@ -340,3 +340,12 @@ shinobiNoSho.tokenSizes = {
 	colossal: 5,
 	incrivel: 6,
 };
+
+/**
+ * A selection of actor attributes that can be tracked on token resource bars.
+ * @type {string[]}
+ * @deprecated since v10
+ */
+shinobiNoSho.trackableAttributes = [
+  "attributes.vitalidade", "attributes.chakra", "attributes.absorcao"
+];

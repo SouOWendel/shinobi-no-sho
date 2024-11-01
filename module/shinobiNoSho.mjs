@@ -8,8 +8,10 @@ import { ShinobiNPCSheet } from "./sheets/npc-sheet.mjs";
 // Import helper/utility classes and constants.
 import { preloadHandlebarsTemplates } from "./helpers/templates.mjs";
 import { shinobiNoSho } from "./helpers/config.mjs";
+import registerSystemSettings from "./settings.mjs";
 import D8Roll from "./dice/d8-roll.mjs";
 import * as chat from './helpers/chat-message.mjs';
+import * as migrations from './migrations.mjs';
 
 globalThis.shinobinosho = {
 	chat
@@ -65,6 +67,9 @@ Hooks.once('init', function () {
 	Actors.registerSheet('shinobiNoSho', ShinobiNPCSheet, { types: ['NPC'], makeDefault: true });
   Items.registerSheet('shinobiNoSho', ShinobiItemSheet, { makeDefault: true });
 
+	// Register System Settings.
+	registerSystemSettings();
+
   // Preload Handlebars templates.
   return preloadHandlebarsTemplates();
 });
@@ -95,13 +100,37 @@ Handlebars.registerHelper('ifInequals', function (arg1, arg2, options) {
 /**
  * Prepare attribute lists.
  */
-// Hooks.once("setup", function() {
-// 	CONFIG.Actor.trackableAttributes = {
-//     Ninja: {
-//       bar: ['attributes.vitalidade', 'attributes.chakra'],
-//     }
-//   };
-// });
+Hooks.once("setup", function() {
+	const creature = {
+		bar: ["attributes.vitalidade", "attributes.chakra", "attributes.absorcao"],
+		value: ["attributes.dureza"]
+	}
+
+	CONFIG.Actor.trackableAttributes = {
+    Ninja: {
+      bar: [...creature.bar],
+			value: [...creature.value]
+    },
+		NPC: {
+			bar: [...creature.bar],
+			value: [...creature.value]
+		}
+  };
+
+	CONFIG.shinobiNoSho.trackableAttributes = expandAttributeList(CONFIG.shinobiNoSho.trackableAttributes);
+});
+
+/**
+ * Expand a list of attribute paths into an object that can be traversed.
+ * @param {string[]} attributes  The initial attributes configuration.
+ * @returns {object}  The expanded object structure.
+ */
+function expandAttributeList(attributes) {
+  return attributes.reduce((obj, attr) => {
+    foundry.utils.setProperty(obj, attr, true);
+    return obj;
+  }, {});
+}
 
 /* -------------------------------------------- */
 /*  Ready Hook                                  */
@@ -110,6 +139,23 @@ Handlebars.registerHelper('ifInequals', function (arg1, arg2, options) {
 Hooks.once('ready', function () {
   // Wait to register hotbar drop hook on ready so that modules could register earlier if they want to
   Hooks.on('hotbarDrop', (bar, data, slot) => createItemMacro(data, slot));
+
+	// Determine whether a system migration is required and feasible
+	if ( !game.user.isGM ) return;
+	const cv = game.settings.get('shinobinosho', 'systemMigrationVersion') || game.world.flags.shinobinosho?.version;
+	const totalDocuments = game.actors.size + game.scenes.size + game.items.size;
+	if ( !cv && totalDocuments === 0 ) return game.settings.set('shinobinosho', 'systemMigrationVersion', game.system.version);
+	// When the flag is greater than the current migration version, the migration is perfomed.
+	console.log(`Verificando a necessidade de migração...`);
+	console.log(cv, game.system.flags.needsMigrationVersion, !foundry.utils.isNewerVersion(game.system.flags.needsMigrationVersion, cv));
+	if ( cv && !foundry.utils.isNewerVersion(game.system.flags.needsMigrationVersion, cv) ) {
+		console.log("Migração não é necessária.")
+		return;
+	};
+	console.log("Iniciando a migração de dados!")
+
+	// Determine whether a system migration is required and feasible
+	migrations.migrateWorld();
 });
 
 Hooks.on('renderChatMessage', chat.onRenderChatMessage);
@@ -241,9 +287,46 @@ Hooks.on('renderSettings', async (app, [html]) => {
 });
 
 Hooks.on('preCreateActor', function (actor, data) {
-	// Filtrando por tipos de Actors disponíveis no sistema.
-	if (actor.type === 'Ninja') {
-		const prototypeToken = { actorLink: true }; // Set disposition to "Friendly"
-		actor.updateSource({ prototypeToken });
-	}
+	let prototypeToken = { actorLink: (actor.type === 'Ninja') ? true : false };
+	actor.updateSource({prototypeToken});
+	console.log(actor);
+	const teste = actor.updateSource({
+		'prototypeToken.flags.barbrawl.resourceBars': {
+			'vitalidade': {
+				id: 'vitalidade',
+				attribute: 'attributes.vitalidade',
+				label: 'Vitalidade',
+				style: 'fraction',
+				mincolor: '#ff1a1a',
+				maxcolor: '#80ff00',
+				position: 'bottom-outer',
+				ownerVisibility: CONST.TOKEN_DISPLAY_MODES.HOVER,
+        otherVisibility: CONST.TOKEN_DISPLAY_MODES.NONE,
+			},
+			'chakra': {
+				id: 'chakra',
+				attribute: 'attributes.chakra',
+				label: 'Chakra',
+				style: 'fraction',
+				mincolor: '#242899',
+				maxcolor: '#66a8ff',
+				position: 'bottom-outer',
+				ownerVisibility: CONST.TOKEN_DISPLAY_MODES.HOVER,
+        otherVisibility: CONST.TOKEN_DISPLAY_MODES.NONE,
+			},
+			'absorcao': {
+				id: 'absorcao',
+				attribute: 'attributes.absorcao',
+				label: 'Absorção',
+				style: 'fraction',
+				mincolor: '#000000',
+				maxcolor: '#000000',
+				position: 'bottom-outer',
+				ownerVisibility: CONST.TOKEN_DISPLAY_MODES.HOVER,
+        otherVisibility: CONST.TOKEN_DISPLAY_MODES.NONE,
+			},
+		}
+	}, {diff: false, recursive: false});
+	console.log(actor);
+	console.log(teste);
 });
