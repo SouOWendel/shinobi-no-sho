@@ -461,6 +461,10 @@
 	"EFFECT": {
 		"TabDuration": "Duração"
 	},
+	"SETTINGS": {
+		"changeSizeOfTokensDynamically": "Ativar Mudança Dinâmica de Tamanho de Token",
+		"changeSizeOfTokensDynamicallyHint": "Essa configuração define se os tokens terão seu tamanho alterado de acordo com o tamanho definido em ficha."
+	},
 	"DOCUMENT.Create": "Criar novo(a) {type}",
   "DOCUMENT.Delete": "Excluir {type}",
   "DOCUMENT.New": "Novo(a) {type}",
