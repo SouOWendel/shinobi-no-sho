@@ -451,6 +451,11 @@
 				},
 				"regraDeArea": {
 					"porEspirito": "Por Espírito",
+					"porInteligencia": "Por Inteligência",
+					"porArte": "Por Arte",
+					"porLidarAnimais": "Por Lidar com Animais",
+					"porMecanismos": "Por Mecanismo",
+					"porRastrear": "Por Rastrear",
 					"custom": "Customizado"
 				}
 			}

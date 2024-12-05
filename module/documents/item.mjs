@@ -43,11 +43,16 @@ export class ShinobiItem extends Item {
 		const data = itemData;
 		if (data.type !== "tecnicas" && data.type !== "gerais" && data.type !== "armas") return;
 		if (data?.system?.areaTemplate.length === 0 && !data.parent.system.abilities.esp.tbonus) return;
-		const esp = data.parent.system.abilities.esp;
+		const system = data.parent.system;
 
 		for ( let area of data.system.areaTemplate) {
-			if (area[3] === "porEspirito") area[4] = area[1] + area[2] * esp.tbonus;
-			else area[4] = area[1] + area[2];
+			if (area[3] === "porEspirito") area[4] = area[1] + area[2] * system.abilities.esp.tbonus;
+			else if (area[3] === "porInteligencia") area[4] = area[1] + area[2] * system.abilities.int.tbonus;
+			else if (area[3] === "porArte") area[4] = area[1] + area[2] * system.skills.geral.arte.total;
+			else if (area[3] === "porLidarAnimais") area[4] = area[1] + area[2] * system.skills.geral.animais.total;
+			else if (area[3] === "porMecanismos") area[4] = area[1] + area[2] * system.skills.geral.mecanismos.total;
+			else if (area[3] === "porRastrear") area[4] = area[1] + area[2] * system.skills.geral.rastrear.total;
+			else if (area[3] === "custom") area[4] = area[1] + (area[2] * area[5]);
 		}
 		this.render();
 	}

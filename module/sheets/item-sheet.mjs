@@ -85,7 +85,7 @@ export class ShinobiItemSheet extends ItemSheet {
 			// Handle Area array
 			if (system.areaTemplate) {
 				system.areaTemplate = Object.values(system.areaTemplate || {}).map((d) => [
-					d[0] || '', d[1] || '', d[2] || '', d[3] || '', d[4] || '']);
+					d[0] || '', d[1] || '', d[2] || '', d[3] || '', d[4] || '', d[5] || '']);
 			}
 	
 			// Return the flattened submission data
@@ -169,7 +169,7 @@ export class ShinobiItemSheet extends ItemSheet {
 			await this._onSubmit(event);
 			const areas = this.item.system.areaTemplate;
 			return this.item.update({
-				'system.areaTemplate': areas.concat([['','','','','']]),
+				'system.areaTemplate': areas.concat([['','','','','','']]),
 			});
 		}
 

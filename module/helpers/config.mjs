@@ -312,6 +312,11 @@ shinobiNoSho.templateAreas = {
 
 shinobiNoSho.regraDeArea = {
 	porEspirito: "shinobiNoSho.ITEMS.regraDeArea.porEspirito",
+	porInteligencia: "shinobiNoSho.ITEMS.regraDeArea.porInteligencia",
+	porArte: "shinobiNoSho.ITEMS.regraDeArea.porArte",
+	porLidarAnimais: "shinobiNoSho.ITEMS.regraDeArea.porLidarAnimais",
+	porMecanismos: "shinobiNoSho.ITEMS.regraDeArea.porMecanismos",
+	porRastrear: "shinobiNoSho.ITEMS.regraDeArea.porRastrear",
 	custom: "shinobiNoSho.ITEMS.regraDeArea.custom"
 };
 
