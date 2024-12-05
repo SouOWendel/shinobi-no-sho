@@ -1,5 +1,18 @@
 # CHANGELOG
 
+## [1.13.0](https://github.com/SouOWendel/shinobi-no-sho/compare/v1.12.0...v1.13.0) (2024-12-05)
+
+
+### Features
+
+* **areaTemplate:** added more options to calculate the area and modified the custom option ([30e9aa9](https://github.com/SouOWendel/shinobi-no-sho/commit/30e9aa929c6e8dc9a120530e3be3aea37127650b))
+
+
+### Bug Fixes
+
+* **general item:** changed the 'medium device' for 'default device' ([3169942](https://github.com/SouOWendel/shinobi-no-sho/commit/316994256f2ddbc522471d45aa1c20aa3df06114))
+* **sheets:** translated 'name' placeholder for portuguese ([dd024d8](https://github.com/SouOWendel/shinobi-no-sho/commit/dd024d8ed0741c50ebdcf71c6316efb5a04f8464))
+
 ## [1.12.0](https://github.com/SouOWendel/shinobi-no-sho/compare/v1.11.0...v1.12.0) (2024-11-01)
 
 
