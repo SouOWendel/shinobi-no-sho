@@ -404,7 +404,7 @@
 						"veiculos": "Veículo",
 						"servicos": "Serviços",
 						"dispositivoLeve": "Dispositivo Leve",
-						"dispositivoMedio": "Dispositivo Médio",
+						"dispositivoPadrao": "Dispositivo Padrão",
 						"dispositivoPesado": "Dispositivo Pesado"
 					},
 					"tipoAbv": {
@@ -412,7 +412,7 @@
 						"animais": "Animal",
 						"veiculos": "Veículo",
 						"dispositivoLeve": "Leve",
-						"dispositivoMedio": "Médio",
+						"dispositivoPadrao": "Padrão",
 						"dispositivoPesado": "Pesado"
 					}
 				},

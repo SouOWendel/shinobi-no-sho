@@ -269,7 +269,7 @@ shinobiNoSho.ITEMS = {
 				veiculos: "shinobiNoSho.ITEMS.geral.tipo.veiculos",
 				servicos: "shinobiNoSho.ITEMS.geral.tipo.servicos",
 				dispositivoLeve: "shinobiNoSho.ITEMS.geral.tipo.dispositivoLeve",
-				dispositivoMedio: "shinobiNoSho.ITEMS.geral.tipo.dispositivoMedio",
+				dispositivoPadrao: "shinobiNoSho.ITEMS.geral.tipo.dispositivoPadrao",
 				dispositivoPesado: "shinobiNoSho.ITEMS.geral.tipo.dispositivoPesado",
 			}
 		},
