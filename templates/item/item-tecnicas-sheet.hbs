@@ -181,6 +181,9 @@
 								<select name="system.areaTemplate.{{i}}.3">
 									{{selectOptions ../regraArea selected=(lookup this "3") localize=true}}
 								</select>
+								{{#ifEquals (lookup this "3") "custom"}}
+									<input type="text" name="system.areaTemplate.{{i}}.5" value="{{lookup this "5"}}" data-dtype="Number"/>
+								{{/ifEquals}}
 								<i class="fa-solid fa-equals"></i>
 								<input type="text" name="system.areaTemplate.{{i}}.4" value="{{lookup this "4"}}" data-dtype="Number" disabled/>
 								<a class="areaTemplate-control delete-areaTemplate"><i class="fa-solid fa-trash"></i></a>
