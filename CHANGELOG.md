@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## [1.13.1](https://github.com/SouOWendel/shinobi-no-sho/compare/v1.13.0...v1.13.1) (2024-12-06)
+
+
+### Bug Fixes
+
+* **area template:** added custom field on 'armas' and 'tecnicas' ([a2e0466](https://github.com/SouOWendel/shinobi-no-sho/commit/a2e04660805405d681068aa48eef4b0030d9f280))
+
 ## [1.13.0](https://github.com/SouOWendel/shinobi-no-sho/compare/v1.12.0...v1.13.0) (2024-12-05)
 
 
