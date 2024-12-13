@@ -76,7 +76,7 @@
   ],
   "socket": true,
   "manifest": "https://raw.githubusercontent.com/souowendel/shinobi-no-sho/main/system.json",
-  "download": "https://github.com/SouOWendel/shinobi-no-sho/releases/download/v1.13.1/shinobinosho-v1.13.1.zip",
+  "download": "https://github.com/SouOWendel/shinobi-no-sho/releases/download/v1.13.2/shinobinosho-v1.13.2.zip",
   "grid": {
     "units": "m"
   },
