@@ -1,5 +1,13 @@
 # CHANGELOG
 
+## [1.13.2](https://github.com/SouOWendel/shinobi-no-sho/compare/v1.13.1...v1.13.2) (2024-12-13)
+
+
+### Bug Fixes
+
+* **initiative:** fixed the initiative for NPC sheet (it was not calculated) ([22cee97](https://github.com/SouOWendel/shinobi-no-sho/commit/22cee97b561c41e3fa0c7a2e23a5613e8409dbc1))
+* **macros:** fixed the macros of system to work on NPC sheet ([0b033a0](https://github.com/SouOWendel/shinobi-no-sho/commit/0b033a0bde3adcd2bf1c1ff987ae0e7ce658c1bb))
+
 ## [1.13.1](https://github.com/SouOWendel/shinobi-no-sho/compare/v1.13.0...v1.13.1) (2024-12-06)
 
 
