@@ -269,8 +269,7 @@ export class ShinobiActor extends Actor {
    * Prepare character roll data.
    */
   _getCharacterRollData(data) {
-    if (this.type !== 'Ninja') return;
-
-		data.rollIniciativa = "1d8 + " + data.attributes.init.total;
+    // if (this.type !== 'Ninja') return;
+		data.rollIniciativa = "1d8 + " + (data.attributes.init.total || data.attributes.init.tbonus);
   }
 }
