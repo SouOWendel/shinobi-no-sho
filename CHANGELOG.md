@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## [1.13.3](https://github.com/SouOWendel/shinobi-no-sho/compare/v1.13.2...v1.13.3) (2024-12-14)
+
+
+### Bug Fixes
+
+* **macros:** fixed the defense macro for NPCs ([351029d](https://github.com/SouOWendel/shinobi-no-sho/commit/351029d20f7ad52b0eb651845ba8c6218688089a))
+
 ## [1.13.2](https://github.com/SouOWendel/shinobi-no-sho/compare/v1.13.1...v1.13.2) (2024-12-13)
 
 
