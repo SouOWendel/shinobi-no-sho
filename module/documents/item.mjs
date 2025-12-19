@@ -87,7 +87,11 @@ export class ShinobiItem extends Item {
 	 * @param {HTML} html  Rendered chat message.
 	 */
 	static chatListeners(html) {
-		html.on('click', '.card-buttons button', this._onChatCardAction.bind(this));
+		html = (game.version.slice(0, 2) === '12') ? html[0] : html;
+		html.addEventListener('click', event => {
+			const button = event.target.closest('.card-buttons button');
+			if (button) this._onChatCardAction(event);
+		});
 	}
 
 	/**
@@ -101,7 +105,7 @@ export class ShinobiItem extends Item {
 		event.stopPropagation();
 
 		// Extract card data
-		const button = event.currentTarget;
+		const button = event.target;
 		// button.disabled = true;
 		const card = button.closest('.chat-card');
 		const messageId = card.closest('.message').dataset.messageId;

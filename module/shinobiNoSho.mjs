@@ -158,7 +158,7 @@ Hooks.once('ready', function () {
 	migrations.migrateWorld();
 });
 
-Hooks.on('renderChatMessage', chat.onRenderChatMessage);
+// Hooks.on('renderChatMessage', chat.onRenderChatMessage);
 Hooks.on('renderChatLog', (app, html, data) => ShinobiItem.chatListeners(html));
 Hooks.on('renderChatPopout', (app, html, data) => ShinobiItem.chatListeners(html));
 
