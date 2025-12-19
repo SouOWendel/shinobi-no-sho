@@ -1,7 +1,7 @@
 <div class="shinobiNoSho chat-card item-card" data-actor-id="{{actor._id}}" data-item-id="{{item._id}}">
 	<div class="header container">
 		<img src="{{item.img}}" title="{{item.name}}" width="36px" height="36px" style="float: left;" />
-		<div class="item-name">
+		<div class="card-item-name">
 			<h2>{{item.name}}</h2>
 		</div>
 		{{#if item.system.detalhes.tipoCustoChakra}}
@@ -152,7 +152,6 @@
 					</tr> {{/each}}
 					{{/if}}
 				</table>
-				<hr>
 			{{/ifEquals}}
 			<footer class="card-footer">
 				{{#each info}}
