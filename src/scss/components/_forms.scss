@@ -1,10 +1,12 @@
+@use "../utils/colors";
+@use '../utils/typography';
 .actor {
 	min-width: 600px !important;
 	min-height: 820px !important;
 }
 
 .item-form {
-  font-family: $font-primary;
+  font-family: typography.$font-primary;
 }
 
 .window-content {
@@ -112,7 +114,7 @@ form {
 
 .tox {
   .tox-editor-container {
-    background: $c-white;
+    background: colors.$c-white;
   }
 
   .tox-edit-area {

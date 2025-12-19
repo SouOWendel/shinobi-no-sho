@@ -1,33 +1,36 @@
+@use "sass:meta";
+
+// Import utilities.
+@use 'utils/typography';
+@use 'utils/colors';
+@use 'utils/mixins';
+@use 'utils/variables';
+
+/* Global styles */
+@use 'global/window';
+@use 'global/grid';
+@use 'global/flex';
+
+/* Sidebar */
+@use 'components/sidebar';
+
+/* Dice */
+@use 'components/dice';
+
+/* Area Template Application */
+@use 'components/areaTemplate';
+
 // Add custom fonts by visiting and search https://fonts.google.com
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
-// Import utilities.
-@import 'utils/typography';
-@import 'utils/colors';
-@import 'utils/mixins';
-@import 'utils/variables';
-
-/* Global styles */
-@import 'global/window';
-@import 'global/grid';
-@import 'global/flex';
-
-/* Sidebar */
-@import 'components/sidebar';
-
-/* Dice */
-@import 'components/dice';
-
-/* Area Template Application */
-@import 'components/areaTemplate';
-
 /* Styles limited to shinobiNoSho sheets */
 .shinobiNoSho {
-  @import 'components/forms';
-  @import 'components/resource';
-  @import 'components/items';
-  @import 'components/effects';
+
+  @include meta.load-css( 'components/forms');
+  @include meta.load-css( 'components/resource');
+  @include meta.load-css( 'components/items');
+  @include meta.load-css( 'components/effects');
 
 	/* Chat */
-	@import 'components/itemcard';
+	@include meta.load-css( 'components/itemcard');
 }

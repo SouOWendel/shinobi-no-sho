@@ -412,8 +412,8 @@
 }
 
 /* Styles limited to shinobiNoSho sheets */
-.shinobiNoSho {
-  /* Chat */
+.shinobiNoSho .inputCenter {
+  text-align: center !important;
 }
 .shinobiNoSho .actor {
   min-width: 600px !important;
@@ -1092,9 +1092,14 @@
 .shinobiNoSho .effects .item .effect-controls {
   border: none;
 }
-.shinobiNoSho.item-card h2 {
+.shinobiNoSho {
+  /* Chat */
+}
+.shinobiNoSho .card-item-name h2 {
   border: 0;
   margin: 0;
+  padding: 0;
+  font-size: 1.8em;
 }
 .shinobiNoSho .header {
   display: flex;
@@ -1103,7 +1108,7 @@
   align-items: center;
   height: 100%;
 }
-.shinobiNoSho .header .item-name {
+.shinobiNoSho .header .card-item-name {
   padding-left: 5px;
   width: 100%;
 }
@@ -1123,6 +1128,18 @@
 .shinobiNoSho main table {
   border-top: 0;
   border-bottom: 0;
+  margin: 0;
+}
+.shinobiNoSho .descricao-chat-card,
+.shinobiNoSho .caracteristicas-chat-card {
+  margin: 6px 0;
+}
+.shinobiNoSho .descricao-chat-card p,
+.shinobiNoSho .caracteristicas-chat-card p {
+  margin: 4px 0;
+  font-size: 13px;
+  line-height: 1.4em;
+  font-weight: normal;
 }
 .shinobiNoSho .descricao-chat-card,
 .shinobiNoSho .caracteristicas-chat-card {
@@ -1131,6 +1148,9 @@
 .shinobiNoSho .descricao-chat-card summary,
 .shinobiNoSho .caracteristicas-chat-card summary {
   padding-left: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
 }
 .shinobiNoSho .descricao-chat-card:hover,
 .shinobiNoSho .caracteristicas-chat-card:hover {
@@ -1144,6 +1164,19 @@
 }
 .shinobiNoSho .card-buttons {
   margin-top: 6px;
+}
+.shinobiNoSho .card-buttons button {
+  margin-right: 4px;
+  width: 100%;
+}
+.shinobiNoSho .card-footer {
+  margin-top: 8px;
+  text-align: center;
+  font-size: 12px;
+  color: #555555;
+}
+.shinobiNoSho .card-footer span {
+  margin: 0 1px;
 }
 
 /*# sourceMappingURL=shinobiNoSho.css.map */
