@@ -1,5 +1,18 @@
 # CHANGELOG
 
+## [1.14.0](https://github.com/SouOWendel/shinobi-no-sho/compare/v1.13.3...v1.14.0) (2025-12-19)
+
+
+### Features
+
+* **card:** update class names and improve styles for item card component ([6e6061c](https://github.com/SouOWendel/shinobi-no-sho/commit/6e6061c54a18d31e5a4263f02bff8e0c3208b2dd))
+
+
+### Bug Fixes
+
+* **chat:** update event listener for chat card buttons to support game version 12 ([4e79882](https://github.com/SouOWendel/shinobi-no-sho/commit/4e798827a635b1212acd9c3ba6a3dcd4e8498088))
+* **gitignore:** add packs/** binary to ignore list ([18bb760](https://github.com/SouOWendel/shinobi-no-sho/commit/18bb760ed3c4e80089b00392daccfe27b05ed767))
+
 ## [1.13.3](https://github.com/SouOWendel/shinobi-no-sho/compare/v1.13.2...v1.13.3) (2024-12-14)
 
 
