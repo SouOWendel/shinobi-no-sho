@@ -4,3 +4,4 @@
 /project
 /nodes_modules
 *.txt
+packs/** binary
