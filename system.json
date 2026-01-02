@@ -19,7 +19,7 @@
   "readme": "README.md",
   "bugs": "https://github.com/SouOWendel/shinobi-no-sho/issues",
   "changelog": "CHANGELOG.md",
-  "version": "1.14.0",
+  "version": "1.14.1",
   "compatibility": {
     "minimum": "12",
     "verified": "13.351"
