@@ -2,6 +2,6 @@
 *.map
 *.rar
 /project
-/nodes_modules
+node_modules/
 *.txt
 packs/** binary
