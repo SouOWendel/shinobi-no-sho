@@ -1,5 +1,13 @@
 # CHANGELOG
 
+## [1.14.1](https://github.com/SouOWendel/shinobi-no-sho/compare/v1.14.0...v1.14.1) (2026-01-02)
+
+
+### Bug Fixes
+
+* **card:** align text in card footer to the left ([8910d25](https://github.com/SouOWendel/shinobi-no-sho/commit/8910d25aa056a3678cad4b74bb75aa826e42734e))
+* **gitignore:** correct typo in node_modules entry ([2298726](https://github.com/SouOWendel/shinobi-no-sho/commit/229872699fabc7a5eaf00a873c56619394332160))
+
 ## [1.14.0](https://github.com/SouOWendel/shinobi-no-sho/compare/v1.13.3...v1.14.0) (2025-12-19)
 
 
