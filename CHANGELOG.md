@@ -1,5 +1,14 @@
 # CHANGELOG
 
+## [1.14.2](https://github.com/SouOWendel/shinobi-no-sho/compare/v1.14.1...v1.14.2) (2026-06-25)
+
+
+### Bug Fixes
+
+* **actor:** refactor the main methods of Actor to v14 changes (added applyActiveEffects and prepareBaseData) ([7851834](https://github.com/SouOWendel/shinobi-no-sho/commit/78518341f35d8fbd717c57c4a6dc8403498d4b76))
+* **d8roll:** refactored Die and OperatorTerm references with v14 core changes ([8f663fd](https://github.com/SouOWendel/shinobi-no-sho/commit/8f663fd8a7b5eb27fdb29495f05b61d56cb2cad8))
+* **sheets:** refactored 'duplicate' method with v14 core changes ([7a1065b](https://github.com/SouOWendel/shinobi-no-sho/commit/7a1065b23f6f28fc584c3e5a267b37749152bde9))
+
 ## [1.14.1](https://github.com/SouOWendel/shinobi-no-sho/compare/v1.14.0...v1.14.1) (2026-01-02)
 
 
