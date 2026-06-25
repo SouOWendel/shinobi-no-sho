@@ -41,7 +41,7 @@ export default class D8Roll extends Roll {
    * @type {boolean}
    */
   get validD8Roll() {
-    return (this.terms[0] instanceof Die) && (this.terms[0].faces === 8);
+    return (this.terms[0] instanceof foundry.dice.terms.Die) && (this.terms[0].faces === 8);
   }
 
   /* -------------------------------------------- */
@@ -216,16 +216,16 @@ export default class D8Roll extends Roll {
 
 		if (form.bonus.value) {
 			const bonus = new Roll(form.bonus.value, this.data);
-			if ( !(bonus.terms[0] instanceof OperatorTerm) ) {
-				this.terms.push(new OperatorTerm({operator: "+"}));
+			if ( !(bonus.terms[0] instanceof foundry.dice.terms.OperatorTerm) ) {
+				this.terms.push(new foundry.dice.terms.OperatorTerm({operator: "+"}));
 			}
 			this.terms = this.terms.concat(bonus.terms);
 		}
 
 		if (form.dropdown?.value) {
 			const dropdown = new Roll(form.dropdown.value, this.data);
-			if ( !(dropdown.terms[0] instanceof OperatorTerm) ) {
-				this.terms.push(new OperatorTerm({operator: "+"}));
+			if ( !(dropdown.terms[0] instanceof foundry.dice.terms.OperatorTerm) ) {
+				this.terms.push(new foundry.dice.terms.OperatorTerm({operator: "+"}));
 			}
 			this.terms = this.terms.concat(dropdown.terms);
 			this.options.selectedIndex = form.dropdown.selectedIndex;
