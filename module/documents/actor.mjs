@@ -14,18 +14,11 @@ export class ShinobiActor extends Actor {
 
   /** @override */
   prepareBaseData() {
-    // Data modifications in this step occur before processing embedded
-    // documents or derived data.
-		const actorData = this;
+		super.prepareBaseData();
   }
 
-	prepareEmbbededData() {
-		// TODOS OS ITENS
-		// TODOS OS EFEITOS
-		// applyActiveEffects();
-	}
-
 	prepareDerivedData() {
+		super.prepareDerivedData();
 		if (this.type == "Ninja") this._prepareNinjaDerived(this);
 		if (this.type == "NPC") this._prepareNPCDerived(this);
 		this.items.forEach(i => i._prepareTemplate(i));
@@ -226,6 +219,15 @@ export class ShinobiActor extends Actor {
 				system.abilities.for.tbonus += 9;
 			break;
 		}
+	}
+
+	/** @inheritDoc */
+	applyActiveEffects(phase) {
+		if (game.release.generation < 14) phase ??= "initial";
+		if (this.system?.prepareEmbeddedData instanceof Function && phase === "initial") {
+			this.system.prepareEmbeddedData();
+		}
+		return super.applyActiveEffects(phase);
 	}
 
   /**
